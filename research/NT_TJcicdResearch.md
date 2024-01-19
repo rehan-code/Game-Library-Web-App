@@ -1,13 +1,14 @@
 Research for CI/CD by Nour Tayem & Thulasi Jothiravi
 
 ## Resources:
-https://docs.gitlab.com/ee/ci/quick_start/index.html
-https://www.youtube.com/watch?v=mnYbOrj-hLY
-https://www.youtube.com/watch?v=qP8kir2GUgo
+1. https://docs.gitlab.com/ee/ci/quick_start/index.html
+1. https://www.youtube.com/watch?v=mnYbOrj-hLY
+1. https://www.youtube.com/watch?v=qP8kir2GUgo
+1. https://www.youtube.com/watch?v=tQy0O1EGixs
 
 
 
-## What is GitLab CI/CD?
+## 1. What is GitLab CI/CD?
 GitLab CI/CD is essential in automating software development and deployment by creating pipelines in the GitLab repository for building, testing, and deploying applications.
 
 
@@ -31,7 +32,7 @@ To create the pipeline, navigate to 'Build' --> Pipelines in the GitLab menu and
 Upon creating a pipeline, navigate to 'Build' --> Pipelines in the GitLab menu and select 'Run pipeline' to execute pipeline.
 
 
-## 5. YAML Structure and Template
+## 5. Basic YAML Structure and Template
 
 The structure of the .gitlab-ci.yml file is commonly as follows:
 
@@ -57,7 +58,50 @@ deploy_job:
     - echo "Deploying to server..."
 
 
-## 6. Build, Test, and Deploy Stages Explained
+## 6. How to Configure CI/CD
+
+To add tests to a CI/CD pipeline in GitLab, first, you'll edit the .gitlab-ci.yml file in your project's root directory. 
+
+This file is where you define the stages of your pipeline, such as building, testing, and deploying. 
+
+Example configuration in YAML file (.gitlab-ci.yml):
+
+```
+stages:
+  - build
+  - lint
+  - test
+  - staging
+  - production
+```
+
+
+
+Within this file, you'll create specific 'jobs' for each test under the 'test' stage.
+
+
+Example configuration in YAML file (.gitlab-ci.yml):
+
+```
+test_server:
+  stage: test
+  script:
+    - cd ./backend
+    - npm install
+    - npm run test # runs the test script in package.json to run the tests
+  dependencies:
+    - lint_server
+  allow_failure: false
+```
+
+
+Note: You can take advantage of GitLab's built-in templates for common test types or develop your own scripts for more specific tests. Remember to create artifacts for sharing data across jobs and stages. This approach effortlessly includes your tests into the CI/CD workflow, guaranteeing that your code is immediately tested every time it is committed to the repository. This can help you during code reviews and also improve code quality and stability.
+
+A good resource to support you with this: https://www.youtube.com/watch?v=tQy0O1EGixs 
+
+
+
+## 7. Build, Test, and Deploy Stages Explained
 
 # Build Stage
 
