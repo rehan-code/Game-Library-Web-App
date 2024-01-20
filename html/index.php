@@ -22,7 +22,7 @@
             <? $pagename = basename($_SERVER['PHP_SELF']);?>
           <ul class="nav_menu_list">
             <li class="nav_menu_item">
-              <a <?php if($pagename=="test.php") {echo 'class="current"';}?> href="test.php" class="nav_menu_link">About Us</a>
+              <a <?php if($pagename=="test.php") {echo 'class="current"';}?> href="aboutus.php" class="nav_menu_link">About Us</a>
             </li>
           </ul>
         </div>
