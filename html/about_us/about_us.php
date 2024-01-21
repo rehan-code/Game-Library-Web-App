@@ -104,7 +104,7 @@
                     </div>
                     <div class="profile-details">
                         <?php 
-                            include "snippets/NT_snippet.php";
+                            include "snippets/nour_snippet.php";
                         ?>
                     </div>
                 </div>
