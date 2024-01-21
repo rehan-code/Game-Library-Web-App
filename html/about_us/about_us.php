@@ -39,18 +39,24 @@
 
     <section class="wrapper">
         <div class="container">
-            <h1 class="about-main-heading">Who We Are</h1>
-            <h2>Our project: </h2>
-            <p>This is where our project information will go. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <div class="header-container">
+            <div class="overlay"></div>
+                <h1 class="about-main-heading">Who We Are</h1>
+            </div>
+            <h2 class="heading2">Our project </h2>
+            <p class="heading2para">This is where our project information will go. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
-            <h2>Meet our team members:</h2>
+            <h2 class="heading2">Meet our team members</h2>
             <div class="profile-cards-grid">
                 <div class="card">
+                    <a href="https://www.linkedin.com/in/harikrishansingh/" target="_blank" class="linkedin-icon">
+                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
+                    </a>
                     <div class="profile-picture">
-                        <img src='../images/user.jpg' alt="Profile Picture">
+                        <img src='../images/hari.jpg' alt="Harikrishan Profile Picture">
                     </div>
                     <div class="profile-details">
                         <?php 
@@ -59,8 +65,11 @@
                     </div>
                 </div>
                 <div class="card">
+                    <a href="https://www.linkedin.com/in/ivanodielmagtangob/" target="_blank" class="linkedin-icon">
+                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
+                    </a>
                     <div class="profile-picture">
-                        <img src='../images/user.jpg' alt="Profile Picture">
+                        <img src='../images/ivan.png' alt="Ivan Profile Picture">
                     </div>
                     <div class="profile-details">
                         <?php 
@@ -69,8 +78,11 @@
                     </div>
                 </div>
                 <div class="card">
+                    <a href="https://www.linkedin.com/in/rehan-nagoor-mohideen-6b3156202/" target="_blank" class="linkedin-icon">
+                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
+                    </a>
                     <div class="profile-picture">
-                        <img src='../images/user.jpg' alt="Profile Picture">
+                        <img src='../images/rehan.jpg' alt="Rehan Profile Picture">
                     </div>
                     <div class="profile-details">
                         <?php 
@@ -79,8 +91,11 @@
                     </div>
                 </div>
                 <div class="card">
+                    <a href="https://www.linkedin.com/in/thulasijothiravi/" target="_blank" class="linkedin-icon">
+                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
+                    </a>
                     <div class="profile-picture">
-                        <img src='../images/user.jpg' alt="Profile Picture">
+                        <img src='../images/thulasi.jpg' alt="Thulasi Profile Picture">
                     </div>
                     <div class="profile-details">
                         <?php 
@@ -89,8 +104,11 @@
                     </div>
                 </div>
                 <div class="card">
+                    <a href="https://www.linkedin.com/in/harir-hammadi-944aa4135/" target="_blank" class="linkedin-icon">
+                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
+                    </a>
                     <div class="profile-picture">
-                        <img src='../images/user.jpg' alt="Profile Picture">
+                        <img src='../images/user.jpg' alt="Harir Profile Picture">
                     </div>
                     <div class="profile-details">
                         <?php 
@@ -99,8 +117,11 @@
                     </div>
                 </div>
                 <div class="card">
+                    <a href="https://www.linkedin.com/in/nour-tayem-softwareeng/" target="_blank" class="linkedin-icon">
+                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
+                    </a>
                     <div class="profile-picture">
-                        <img src='../images/user.jpg' alt="Profile Picture">
+                        <img src='../images/user.jpg' alt="Nour Profile Picture">
                     </div>
                     <div class="profile-details">
                         <?php 
