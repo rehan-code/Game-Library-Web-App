@@ -1,9 +1,9 @@
-# Project Title : W24 CIS*4250 Team 8 Sprint 1
+# W24 CIS*4250 Team 8 Sprint 1
 
 ## Authors
  Harir Al-Rubaye, 
 
-# Contents of this file
+## Contents of this file
  * Description
  * Visuals
  * Requirements
