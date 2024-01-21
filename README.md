@@ -40,7 +40,7 @@ $ git clone --branch sprint-1 https://github.com/USERNAME/REPOSITORY
 1. pull branch sprint-1
 2. Make sure your docker engine is running (by launching docker)
 3. run: `make` which will run the `docker compose up` and nginx/php will run on localhost:8000
-4. run: `make down`: which will run `docker compose down` and close the docker enviroment 
+4. run: `make down`: which will run `docker compose down` and close the docker enviroment [After you are done]
 
  * Access the web application at the following URL: http://localhost:8000/
 
