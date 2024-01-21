@@ -1,93 +1,167 @@
-# team_8
+# W24 CIS*4250 Team 8 Sprint 1
 
+## Authors
+ Harir Al-Rubaye, Nour Tayem, Thulasi Jothiravi, Rehan Nagoor Mohideen, Harikrishan Singh, and Ivan Odiel Magtangob 
 
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.socs.uoguelph.ca/cis4250_w24/team_8.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.socs.uoguelph.ca/cis4250_w24/team_8/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
+## Contents of this file
+ * Description
+ * Visuals
+ * Requirements
+ * Installation 
+ * Usage (Local Development)
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+We have a team VM hosted on a SoCS server. The Debian Linux VM has NGINX, PHP,
+and MySQL installed. The web server is configured and is already running with HTTPS
+enabled. The website PHP directory is /var/www/html
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+The website includes: 
+1. Landing Page
+2. About Us Page. 
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## Requirements 
+
+### To run in local development 
+1. install Docker engine: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+2. install Docker Desktop: https://www.docker.com/products/docker-desktop/
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+1. Go to the page of the repository that you want to clone (sprint-1 branch) 
+2. Click on “Clone or download” and copy the URL.
+3. Use the git clone command along with the copied URL from earlier.
+4. Run the following on the command line: 
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+```
+$ git clone --branch sprint-1 https://github.com/USERNAME/REPOSITORY
+```
+5. Press Enter.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## Usage (Local Development)
+1. pull branch sprint-1
+2. Make sure your docker engine is running (by launching docker)
+3. run: `make` which will run the `docker compose up` and nginx/php will run on localhost:8000
+4. run: `make down`: which will run `docker compose down` and close the docker enviroment [After you are done]
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+ * Access the web application at the following URL: http://localhost:8000/
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+## Additional Research
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+### Continuous Integration and Continuous Deployment (CI/CD)
+Research for CI/CD by Nour Tayem & Thulasi Jothiravi
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+#### Resources:
+1. https://docs.gitlab.com/ee/ci/quick_start/index.html
+1. https://www.youtube.com/watch?v=mnYbOrj-hLY
+1. https://www.youtube.com/watch?v=qP8kir2GUgo
+1. https://www.youtube.com/watch?v=tQy0O1EGixs
 
-## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
+#### 1. What is GitLab CI/CD?
+GitLab CI/CD is essential in automating software development and deployment by creating pipelines in the GitLab repository for building, testing, and deploying applications.
+
+
+#### 2. CI/CD Overall
+
+In the CI/CD sequence, code modifications lead to testing, building, and VM release. Automation is achieved through GitLab pipelines, activated by events such as code merges. The pipeline outlines the process, covering tests, building, packaging, and deployment to a server.
+
+
+
+#### 3. Pipeline Creation OPTION 1: Creating a YAML file
+
+Define your GitLab pipeline with a YAML file (.gitlab-ci.yml) at the repository's root. This file outlines stages and jobs, where jobs specify actions (like testing or deploying) organized into stages for sequential execution.
+
+Upon adding the .gitlab-ci.yml file, this should trigger the pipeline to run automatically during different events such as code merges.
+
+
+#### 4. Pipeline Creation OPTION 2: Creating the Pipeline on GitLab
+
+To create the pipeline, navigate to 'Build' --> Pipelines in the GitLab menu and select 'Create new CI/CD pipeline'. This will generate a basic pipeline template which you can then customize for your project
+
+Upon creating a pipeline, navigate to 'Build' --> Pipelines in the GitLab menu and select 'Run pipeline' to execute pipeline.
+
+
+#### 5. Basic YAML Structure and Template
+
+The structure of the .gitlab-ci.yml file is commonly as follows:
+
+image: python
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Building the application..."
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying to server..."
+
+
+#### 6. How to Configure CI/CD
+
+To add tests to a CI/CD pipeline in GitLab, first, you'll edit the .gitlab-ci.yml file in your project's root directory. 
+
+This file is where you define the stages of your pipeline, such as building, testing, and deploying. 
+
+Example configuration in YAML file (.gitlab-ci.yml):
+
+```
+stages:
+  - build
+  - lint
+  - test
+  - staging
+  - production
+```
+
+
+
+Within this file, you'll create specific 'jobs' for each test under the 'test' stage.
+
+
+Example configuration in YAML file (.gitlab-ci.yml):
+
+```
+test_server:
+  stage: test
+  script:
+    - cd ./backend
+    - npm install
+    - npm run test # runs the test script in package.json to run the tests
+  dependencies:
+    - lint_server
+  allow_failure: false
+```
+
+
+Note: You can take advantage of GitLab's built-in templates for common test types or develop your own scripts for more specific tests. Remember to create artifacts for sharing data across jobs and stages. This approach effortlessly includes your tests into the CI/CD workflow, guaranteeing that your code is immediately tested every time it is committed to the repository. This can help you during code reviews and also improve code quality and stability.
+
+A good resource to support you with this: https://www.youtube.com/watch?v=tQy0O1EGixs 
+
+
+
+#### 7. Build, Test, and Deploy Stages Explained
+
+##### Build Stage
+
+If requires, compile source code into executable programs or scripts, constructing the application.
+
+##### Test Stage
+
+CI/CD pipeline runs automated tests, including unit and integration tests as instructed in the YAML file, ensuring code behaves as intended. Crucial for maintaining code quality and preventing disruptions to existing functionality.
+
+##### Deploy Stage
+
+Transfers the built application to a server or production environment. Involves actions such as script execution for environment setup. Modern workflows often deploy to cloud services or container platforms like Kubernetes and Docker.
+
