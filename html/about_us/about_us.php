@@ -44,10 +44,14 @@
                 <h1 class="about-main-heading">Who We Are</h1>
             </div>
             <h2 class="heading2">Our project </h2>
-            <p class="heading2para">This is where our project information will go. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <p class="heading2para">We have a team VM hosted on a SoCS server. The Debian Linux VM has NGINX, PHP,
+                and MySQL installed. The web server is configured and is already running with HTTPS
+                enabled. The website PHP directory is /var/www/html
+                The website includes:
+                <dl class="heading2para">
+                    <li>Landing Page</li>
+                    <li>About Us Page.</li>
+                </dl>
             </p>
             <h2 class="heading2">Meet our team members</h2>
             <div class="profile-cards-grid">
