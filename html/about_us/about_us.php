@@ -121,7 +121,7 @@
                         <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
                     </a>
                     <div class="profile-picture">
-                        <img src='../images/user.jpg' alt="Nour Profile Picture">
+                        <img src='../images/nour.jpeg' alt="Nour Profile Picture">
                     </div>
                     <div class="profile-details">
                         <?php 
