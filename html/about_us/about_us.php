@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CIS 4250 - Team 8 </title>
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="aboutus.css" />
+    <link rel="stylesheet" href="about_us.css" />
   </head>
   <body>
   <header class="container header">
