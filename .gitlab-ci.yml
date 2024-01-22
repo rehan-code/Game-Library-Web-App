@@ -22,6 +22,5 @@ deploy-prod:
     - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
     - if [ "$CI_COMMIT_BRANCH" = "main" ]; then
       echo "On main branch, copying html files...";
-      # scp -r html/* socs@cis4250w24-08.socs.uoguelph.ca:/var/www/html/;
       fi
   environment: production
