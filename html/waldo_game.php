@@ -19,7 +19,7 @@
     </nav>
 
     <div class="image-container" onclick="zoomIn(event)">
-         <img src="http://4.bp.blogspot.com/-NjohvYgHUQU/Ttcs_ommPRI/AAAAAAAABA0/wm6M6HxbI28/s1600/Play+Wheres+Waldo+Online+Puzzle+Game+Department+Store+Shopping+Mall.jpg" draggable="false" alt="Zoomable Image">
+         <img src="images/findwaldo.jpg" draggable="false" alt="Zoomable Image">
     </div>
     <script src="script.js"></script>
 </body>
