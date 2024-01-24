@@ -18,10 +18,12 @@ test-job2:
 
 deploy-prod:
   stage: deploy
+  image: debian:12.4
   before_script:
-  - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )' 
+  - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
   - eval $(ssh-agent -s)
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - chmod 400 "$SSH_PRIVATE_KEY"
+  - ssh-add "$SSH_PRIVATE_KEY"
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
   - ssh-keyscan cis4250w24-08.socs.uoguelph.ca >> ~/.ssh/known_hosts
