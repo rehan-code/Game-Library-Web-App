@@ -42,7 +42,7 @@
                 </h1>
                 <p class="info-text">
                     We're looking for a guy. He could be anywhere.
-                    Can you find Waldo (Wally) in the picture below?
+                    Can you find Waldo (Wally) in the picture?
                 </p>
 
                 <div>
