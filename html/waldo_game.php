@@ -14,7 +14,7 @@
 
     <nav>
         <a href="index.php">Home</a>
-        <a href="#">Instructions</a>
+        <a href="instruction/instruction.php">Instructions</a>
         <a href="about_us/about_us.php">About</a>
     </nav>
 

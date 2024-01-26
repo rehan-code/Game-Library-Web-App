@@ -24,7 +24,7 @@
                         <a <?php if($pagename=="about_us/about_us.php") {echo 'class="current"';}?> href="about_us/about_us.php" class="nav_menu_link">About Us</a>
                     </li>
                     <li class="nav_menu_item">
-                        <a href="#" class="nav_menu_link">Instructions</a>
+                        <a href="instruction/instruction.php" class="nav_menu_link">Instructions</a>
                     </li>
                 </ul>
             </div>
