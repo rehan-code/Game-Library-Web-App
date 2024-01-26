@@ -20,6 +20,7 @@
 
     <div class="image-container" onclick="zoomIn(event)">
          <img src="images/findwaldo.jpg" draggable="false" alt="Zoomable Image">
+         <button class="found-button" onclick="isFound(event)"></button>
     </div>
     <script src="script.js"></script>
 </body>
