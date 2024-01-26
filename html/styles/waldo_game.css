@@ -63,14 +63,23 @@ nav a {
 }
 
 #gameOverScreen {
-    z-index: 3;
+    z-index: 6;
     width: 100%;
     height: 100%;
     top: 25rem;
     position: absolute;
-    /* text-align: center; */
+    text-align: center;
     align-items: center;
     justify-content: center;
     display: flex;
     display: none;
+}
+
+#gameOverScreen h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.blur {
+    filter: blur(2px) brightness(50%);
 }

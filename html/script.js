@@ -27,9 +27,9 @@ function zoomIn(event) {
 
 function isFound() {
   var screen = document.getElementById("gameOverScreen");
-  var image = document.getElementsByClassName("image-container");
+  var image = document.querySelector(".image-container img");
   // Make image visible
   screen.style.display = "block";
   // blur background image
-  image.style.filter = 'blur(3px)';
+  image.classList.add("blur");
 }

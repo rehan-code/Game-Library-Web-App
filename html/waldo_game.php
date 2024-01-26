@@ -21,14 +21,10 @@
         <div id="gameOverScreen">
             <h1>Game Over</h1>
         </div>
-        
-        <div class="image-container" onclick="zoomIn(event)">
-            <img src="images/findwaldo.jpg" draggable="false" alt="Zoomable Image">
-        </div>
 
-        <div class="image-container" onclick="zoomIn(event)">
+        <div class="image-container" ondblclick="zoomIn(event)">
             <img src="images/findwaldo.jpg" draggable="false" alt="Zoomable Image">
-            <button class="found-button" onclick="isFound(event)"></button>
+            <button class="found-button" onclick="isFound()"></button>
         </div>
         
         <script src="script.js"></script>
