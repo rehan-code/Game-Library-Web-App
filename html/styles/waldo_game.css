@@ -46,3 +46,15 @@ nav a {
 .image-container.zoomed img {
     transform: scale(2);
 }
+
+/* Styles for the found button on Waldo*/
+.found-button {
+    position: absolute;
+    top: 152px; 
+    left: 770px; 
+    width: 60px;
+    height: 85px; 
+    background-color: rgba(128, 0, 128, 0);
+    border: none;
+    cursor: pointer;
+}
