@@ -8,20 +8,29 @@
         <link rel="stylesheet" href="styles/waldo_game.css" />
     </head>
     <body>
-    <header>
-        <h1>Where's Waldo Game</h1>
-    </header>
+        <header>
+            <h1>Where's Waldo Game</h1>
+        </header>
 
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="#">Instructions</a>
-        <a href="about_us/about_us.php">About</a>
-    </nav>
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="#">Instructions</a>
+            <a href="about_us/about_us.php">About</a>
+        </nav>
+        
+        <div id="gameOverScreen">
+            <h1>Game Over</h1>
+        </div>
+        
+        <div class="image-container" onclick="zoomIn(event)">
+            <img src="images/findwaldo.jpg" draggable="false" alt="Zoomable Image">
+        </div>
 
-    <div class="image-container" onclick="zoomIn(event)">
-         <img src="images/findwaldo.jpg" draggable="false" alt="Zoomable Image">
-         <button class="found-button" onclick="isFound(event)"></button>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <div class="image-container" onclick="zoomIn(event)">
+            <img src="images/findwaldo.jpg" draggable="false" alt="Zoomable Image">
+            <button class="found-button" onclick="isFound(event)"></button>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
 </html>
