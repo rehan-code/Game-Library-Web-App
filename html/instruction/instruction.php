@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CIS 4250 - Team 8 </title>
+        <title>Instruction</title>
         <link rel="stylesheet" href="instruction.css" />
         <link rel="stylesheet" href="../styles/style.css" />
         <link rel="stylesheet" href="../about_us/about_us.css" />

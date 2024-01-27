@@ -160,6 +160,9 @@ button {
   border-radius: 7px;
   letter-spacing: 1px;
   transition: 0.4s;
+  background-image: url('html/images/gameBG.jpg'); 
+  background-size: cover;
+  background-position: center;
 }
 .btn:hover {
   transform: translateY(-3px);
