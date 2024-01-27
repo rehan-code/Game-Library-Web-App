@@ -46,9 +46,9 @@ button {
 .container {
   width: 100%;
 }
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1040px) {
   .container {
-    width: 1800px;
+    width: 1040px;
     margin: 0 auto;
   }
 }
@@ -64,11 +64,13 @@ button {
   height: 100%;
   display: flex;
   align-items: center;
+  background-color: #ffffff;
   justify-content: space-between;
 }
 /* Logo */
 .logo h2 {
   font-size: 28px;
+  padding-left: 20px;
   color: var(--primary-color);
 }
 /* Nav Menu */
@@ -142,7 +144,8 @@ button {
   margin-top: 1.5rem;
   font-size: 19px;
   line-height: 28px;
-  color: #334157;
+  color: #ffffff;
+  max-width: fit-content;
 }
 .btn_wrapper {
   margin-top: 3.5rem;
@@ -504,3 +507,49 @@ footer {
     box-shadow: 0 0 15px rgba(black, 0.3);
     position: relative;
   }
+
+  .movie-card {
+    background-image: url('../images/gamecard.jpeg');
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-top: 20px;
+    cursor: pointer; /* Add this to show a clickable cursor */
+    color: #fff;
+  }
+
+  .movie-card .info-text {
+    font-weight: bold; 
+    font-size: 22px;
+    line-height: 28px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0);
+    position: relative;
+    color: #ffffff; /* Set the text color explicitly */
+  }
+
+  .movie-card .main-heading {
+    font-weight: bold; /* Make the text bold */
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    position: relative; /* Set the position of the container to relative */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0); /* Add text shadow */
+  }
+  .movie-card:hover .tooltip {
+    display: block;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 88%; /* Position it just below the cursor */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+}

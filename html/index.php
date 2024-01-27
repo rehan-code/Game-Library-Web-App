@@ -41,29 +41,23 @@
     <section class="container">
             <div class="grid-item-1-center">
                 <h1 class="main-heading">
-                    Welcome to <span>Team 8</span>
-                    <br />
+                    Welcome to Team 8
                     website
                 </h1>
                 <p class="info-text">
-                    This is our landing Page for our CIS 4250 Site. Click below to learn more...
+                We, Team 8, are dedicated to developing engaging online games. Our inaugural release is an expanded edition of the classic 'Where's Waldo?' game.
+                 In this immersive experience, your challenge goes beyond locating Waldo himself, as you discover a myriad of additional objectives. 
+                As our team continues to work diligently, we envision a future where you can explore a diverse range of games crafted by our dedicated team.
                 </p>
-                <h1 class="main-heading">
-                    Where's <span>Waldo</span> Game
-                </h1>
-                <p class="info-text">
-                    We're looking for a guy. He could be anywhere.
-                    Can you find Waldo (Wally) in the picture?
-                </p>
-
-                <div>
-                  <div> 
-                      <div class="btn_wrapper">
-                        <form action="gamepage/games.php" method="get">
-                            <input type="submit" class="btn view_more_btn" value="Start Game">
-                        </form>
-                      </div>
-                  </div>
+                <div class="movie-card" onclick="window.location.href='gamepage/games.php';">
+                    <h1 class="main-heading">
+                        Where's Waldo Game
+                    </h1>
+                    <p class="info-text">
+                        We're looking for a guy. He could be anywhere.
+                        Can you find Waldo (Wally) in the picture? (Click to go to Waldo game page)
+                    </p>
+                    <div class="tooltip">Click to go to Waldo game page</div>
                 </div>
             </div>
     </section>
