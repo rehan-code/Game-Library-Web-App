@@ -6,11 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CIS 4250 Team 8</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <style>
+        /* Add your CSS code here */
+        .logo {
+            display: flex;
+            align-items: center;
+            padding-left: 20px; /* Adjust as needed */
+        }
+
+        .logo img {
+            width: 50px; /* Adjust width as needed */
+            height: auto; /* Keep the aspect ratio */
+            margin-right: 10px; /* Space between the logo and the text */
+        }
+
+        .logo h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin: 0; /* Removes default margin */
+        }
+    </style>
 </head>
 <body>
     <header class="container header">
         <nav class="nav">
             <div class="logo">
+                <img src="images/8.png" alt="Logo"> 
                 <h2>Team 8</h2>
             </div>
 
