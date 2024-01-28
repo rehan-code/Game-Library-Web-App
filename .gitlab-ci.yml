@@ -3,6 +3,15 @@ build-job:
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
 
+php-lint:
+  stage: lint
+  image: php:latest
+  allow_failure: true
+  before_script:
+    - php --version
+  script:
+    - php phpcs.phar html
+
 test-job1:
   stage: test
   script:
