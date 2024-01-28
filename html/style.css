@@ -14,14 +14,14 @@
 }
 
 /* css variables */
-/* :root {
+:root {
   --primary-color: #335eea;
   --link-color: #506690;
   --btn-hover-color: #2b50c7;
   --lg-heading: #161c2d;
   --text-content: #869ab8;
   --fixed-header-height: 4.5rem;
-} */
+}
 
 /* reset html*/
 body {
@@ -30,7 +30,9 @@ body {
   overflow-x: hidden;
   background-color: #fafbfb;
 }
-
+ul li {
+  list-style-type: none;
+}
 a {
   text-decoration: none;
 }
@@ -50,49 +52,49 @@ button {
     margin: 0 auto;
   }
 }
-
-/* navbar */
-.nav_bar_menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #000000;
+/* header */
+.header {
+  height: var(--fixed-header-height);
+  padding: 0 1.7rem;
 }
 
-.nav_bar_list {
-  float: left;
-  font-size: 24px;
+/* Nav */
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.nav_bar_list_logo img {
-  width: 125px;
-  height: 125px;
-  vertical-align: middle;
+/* Logo */
+.logo h2 {
+  font-size: 28px;
+  color: var(--primary-color);
 }
-
-.nav_bar_list a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 22px 32px;
-  text-decoration: none;
-  margin-top: 20px;
+.nav_menu_list {
+  display: flex;
+  align-items: center;
 }
-
-.nav_bar_list a:hover {
-  background-color: #6a6a6a;
-  text-decoration: underline;
+.nav_menu_list .nav_menu_item {
+  margin: 0 2rem;
 }
-
-
+.nav_menu_item .nav_menu_link {
+  font-size: 16.5px;
+  line-height: 27px;
+  color: var(--link-color);
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+.nav_menu_link:hover {
+  color: var(--primary-color);
+}
 .toggle_btn {
   font-size: 20px;
   font-weight: 600;
   color: var(--lg-heading);
   z-index: 4;
 }
-
+.nav_menu,
 .close_btn {
   display: none;
 }
@@ -114,12 +116,16 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
 }
+.grid-item-1 {
+  padding-top: 5rem;
+  padding-left: 1.5rem;
+}
 .grid-item-1-left {
   padding-top: 5rem;
   padding-left: 1.5rem;
 }
 .grid-item-1-center {
-  padding-top: 10rem;
+  padding: 15rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -337,11 +343,6 @@ footer {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
 
-  /* Main Heading */
-  .main-heading {
-    color: #335eea;
-  }
-
   /* Info Text */
   .info-text {
     color: #334157;
@@ -426,11 +427,6 @@ footer {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
 
-  /* Main Heading */
-  .main-heading {
-    color: #335eea;
-  }
-
   /* Info Text */
   .info-text {
     color: #334157;
@@ -460,18 +456,6 @@ footer {
     position: relative;
   }
 }
-
-  /* Wrapper */
-  .wrapper {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Main Heading */
-  .main-heading {
-    color: #335eea;
-  }
 
   /* Info Text */
   .info-text {
@@ -503,32 +487,37 @@ footer {
   }
 
   .movie-card {
-    background-image: url('../images/gamecard.jpeg');
+    background-image: url('images/waldo.png');
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 20px;
     margin-top: 20px;
     cursor: pointer; 
     color: #fff;
+    width: 100%;
   }
 
   .movie-card .info-text {
+    padding-left: 10rem;
+    width: 100%;
     font-weight: bold; 
     font-size: 22px;
     line-height: 28px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1.0);
     position: relative;
     color: #ffffff; 
+    text-align: center;
+    
   }
 
   .movie-card .main-heading {
     font-weight: bold; 
     font-size: 50px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 30px;
     position: relative; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0); 
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0);  */
   }
   .movie-card:hover .tooltip {
     display: block;
@@ -546,4 +535,9 @@ footer {
     border-radius: 5px;
     font-size: 14px;
     white-space: nowrap;
+}
+
+.btn {
+  accent-color: var(--primary-color);
+  background-color: var(--primary-color);
 }

@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function zoomIn(event) {
+    score++;
+    score++;
+    updateScoreboard();
+    
     const imageContainer = document.querySelector(".image-container");
     const image = document.querySelector(".image-container img");
 
