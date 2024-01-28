@@ -46,7 +46,7 @@ nav a {
 }
 
 .image-container.zoomed img {
-    transform: scale(2);
+    transform: scale(2); 
 }
 
 /* Styles for the found button on Waldo*/
@@ -54,10 +54,10 @@ nav a {
     z-index: 2;
     position: absolute;
     top: 152px; 
-    left: 770px; 
-    width: 60px;
+    left: 720px;
+    width: 65px;
     height: 85px; 
-    background-color: rgba(128, 0, 128, 0);
+    background-color: rgba(128, 0, 128, 0); 
     border: none;
     cursor: pointer;
 }
@@ -82,4 +82,18 @@ nav a {
 
 .blur {
     filter: blur(2px) brightness(50%);
+}
+
+#scoreboard {
+    width: 100%;
+    text-align: left;
+    background-color: transparent; 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    transform: translateY(calc(100% + 4.0rem)); 
+    z-index: 5;
+    font-size: 1.0rem;
+    color: #333; 
+    box-shadow: none; 
 }
