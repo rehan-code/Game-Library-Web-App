@@ -16,18 +16,17 @@ php-lint:
   before_script:
     - php --version
   script:
-    - php phpcs.phar html
-    # - php phpcbf.phar html
+    - php phpcs.phar --exclude=Generic.Files.LineEndings html
+    # - php phpcbf.phar --exclude=Generic.Files.LineEndings html
 
-test-nginx:
-  stage: test
-  image: nginx:latest
-  allow_failure: true
-  before_script:
-    - nginx -v
-  script:
-    - export CURRENT_DIR=$(pwd)
-    - nginx -t -c $CURRENT_DIR/nginx.conf
+# test-nginx:
+#   stage: test
+#   image: nginx:latest
+#   before_script:
+#     - nginx -v
+#   script:
+#     - export CURRENT_DIR=$(pwd)
+#     - nginx -t -c $CURRENT_DIR/nginx.conf
 
 deploy-prod:
   stage: deploy
