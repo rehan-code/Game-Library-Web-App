@@ -508,7 +508,7 @@ footer {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 20px;
     margin-top: 20px;
-    cursor: pointer; /* Add this to show a clickable cursor */
+    cursor: pointer; 
     color: #fff;
   }
 
@@ -518,17 +518,17 @@ footer {
     line-height: 28px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0);
     position: relative;
-    color: #ffffff; /* Set the text color explicitly */
+    color: #ffffff; 
   }
 
   .movie-card .main-heading {
-    font-weight: bold; /* Make the text bold */
+    font-weight: bold; 
     font-size: 50px;
     color: white;
     text-align: center;
     padding: 30px;
-    position: relative; /* Set the position of the container to relative */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0); /* Add text shadow */
+    position: relative; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0); 
   }
   .movie-card:hover .tooltip {
     display: block;
@@ -537,9 +537,9 @@ footer {
 .tooltip {
     display: none;
     position: absolute;
-    top: 88%; /* Position it just below the cursor */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Center it horizontally */
+    top: 88%; 
+    left: 50%; 
+    transform: translateX(-50%); 
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     padding: 5px;
