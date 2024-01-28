@@ -19,6 +19,15 @@ php-lint:
     - php phpcs.phar html
     - php phpcbf.phar html
 
+test-nginx:
+  stage: test
+  image: nginx:latest
+  before_script:
+    - nginx -v
+    - pwd
+  script:
+    - echo "Test"
+
 test-job1:
   stage: test
   script:
