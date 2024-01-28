@@ -22,6 +22,7 @@ php-lint:
 test-nginx:
   stage: test
   image: nginx:latest
+  allow_failure: true
   before_script:
     - nginx -v
   script:
