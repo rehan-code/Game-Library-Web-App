@@ -3,6 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 header {
@@ -28,9 +29,10 @@ nav a {
 }
 
 .image-container {
+    width: 98%;
     text-align: center;
     margin: 2rem;
-    position: relative;
+    position: absolute;
     overflow: hidden;
 }
 
@@ -45,4 +47,39 @@ nav a {
 
 .image-container.zoomed img {
     transform: scale(2);
+}
+
+/* Styles for the found button on Waldo*/
+.found-button {
+    z-index: 2;
+    position: absolute;
+    top: 152px; 
+    left: 770px; 
+    width: 60px;
+    height: 85px; 
+    background-color: rgba(128, 0, 128, 0);
+    border: none;
+    cursor: pointer;
+}
+
+#gameOverScreen {
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    top: 25rem;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    display: none;
+}
+
+#gameOverScreen h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.blur {
+    filter: blur(2px) brightness(50%);
 }

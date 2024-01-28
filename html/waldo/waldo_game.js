@@ -24,3 +24,12 @@ function zoomIn(event) {
   imageContainer.classList.toggle("zoomed", !isZoomed);
   isZoomed = !isZoomed;
 }
+
+function isFound() {
+  var screen = document.getElementById("gameOverScreen");
+  var image = document.querySelector(".image-container img");
+  // Make image visible
+  screen.style.display = "block";
+  // blur background image
+  image.classList.add("blur");
+}
