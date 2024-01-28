@@ -12,7 +12,7 @@ build-job:
 lint-php:
   stage: lint
   image: php:latest
-  allow_faliure: true
+  allow_failure: true
   before_script:
     - php --version
   script:
