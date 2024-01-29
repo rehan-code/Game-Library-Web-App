@@ -25,6 +25,17 @@ Other updates include:
 
 ### Landing Page
 ![Landing_Page_1](html/images/landing_page1.png)
+![Landing_Page_2](html/images/landing_page2.png)
+
+### Where's Waldo Game
+![starting_game](html/images/starting_game.png)
+![find_Waldo](html/images/find_waldo.png)
+
+### Instructions
+![Insturctions](html/images/instructions.png)
+
+### About Us
+![About_Us](html/images/about_us.png)
 
 ## Requirements 
 
