@@ -24,8 +24,8 @@ Other updates include:
 ## Visuals
 
 ### Landing Page
-![Landing_Page_1](html/images/landing_page1.png | width=100)
-![Landing_Page_2](html/images/landing_page2.png =250x250)
+![Landing_Page_1](html/images/landing_page1.png){width=40%}
+![Landing_Page_2](html/images/landing_page2.png)
 
 ### Where's Waldo Game
 ![starting_game](html/images/starting_game.png)
