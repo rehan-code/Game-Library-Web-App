@@ -25,18 +25,17 @@ Other updates include:
 
 ### Landing Page
 ![Landing_Page_1](html/images/landing_page1.png){width=70%}
-![Landing_Page_2](html/images/landing_page2.png)
+![Landing_Page_2](html/images/landing_page2.png){width=70%}
 
 ### Where's Waldo Game
-![starting_game](html/images/starting_game.png)
-![find_Waldo](html/images/find_waldo.png)
+![starting_game](html/images/starting_game.png){width=70%}
+![find_Waldo](html/images/find_waldo.png){width=70%}
 
 ### Instructions
-![Insturctions](html/images/instructions.png)
+![Insturctions](html/images/instructions.png){width=70%}
 
 ### About Us
-![About_Us](html/images/about_us.png)
-
+![About_Us](html/images/about_us.png){width=70%}
 ## Requirements 
 
 ### To run in local development 
