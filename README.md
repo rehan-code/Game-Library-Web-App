@@ -26,12 +26,12 @@ Other updates include:
 ### Landing Page
 Landing Page - part 1 |  landing Page - part 2
 :-------------------------:|:-------------------------:
-![Landing_Page_1](html/images/landing_page1.png) {width=50%}|  ![Landing_Page_2](html/images/landing_page2.png){width=50%}
+![Landing_Page_1](html/images/landing_page1.png) {width=70%}|  ![Landing_Page_2](html/images/landing_page2.png){width=70%}
 
 ### Where's Waldo Game
 Game Start Page         | Game Page
 :-------------------------:|:-------------------------:
-![starting_game](html/images/starting_game.png){width=50%}|  ![find_Waldo](html/images/find_waldo.png){width=50%}
+![starting_game](html/images/starting_game.png){width=70%}|  ![find_Waldo](html/images/find_waldo.png){width=70%}
 
 ### Instructions
 ![Insturctions](html/images/instructions.png){width=50%}
@@ -41,7 +41,7 @@ Game Start Page         | Game Page
 
 Instructions Page | About Us Page
 :-------------------------:|:-------------------------:
-![Insturctions](html/images/instructions.png){width=50%}|  ![About_Us](html/images/about_us.png){width=50%}
+![Insturctions](html/images/instructions.png){width=70%}|  ![About_Us](html/images/about_us.png){width=70%}
 
 ## Requirements 
 
