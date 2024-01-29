@@ -33,11 +33,7 @@ Game Start Page         | Game Page
 :-------------------------:|:-------------------------:
 ![starting_game](html/images/starting_game.png)|  ![find_Waldo](html/images/find_waldo.png)
 
-### Instructions
-![Insturctions](html/images/instructions.png){width=50%}
-
-### About Us
-![About_Us](html/images/about_us.png){width=50%}
+### Learn More
 
 Instructions Page | About Us Page
 :-------------------------:|:-------------------------:
