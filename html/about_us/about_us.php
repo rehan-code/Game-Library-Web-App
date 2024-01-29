@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CIS 4250 - Team 8 </title>
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="about_us.css" />
+    <title>About Us</title>
+    
+    <!-- CSS style -->
+    <style>
+        <?php include './about_us.css'; ?>
+        <?php include '../style.css'; ?>
+    </style>
   </head>
   <body>
-  <header class="container header">
-    <!-- Navbar -->
-    <nav class="nav">
+
+  <!-- Navbar -->
+    <header class="container header">
+        <nav class="nav">
         <div class="logo">
             <h2>CIS 4250</h2>
         </div>
@@ -22,20 +27,35 @@
             </button>
             <? $pagename = basename($_SERVER['PHP_SELF']);?>
             <ul class="nav_menu_list">
-            <li class="nav_menu_item">
-                <a <?php if($pagename=="home.php") {echo 'class="current"';}?> href="../index.php" class="nav_menu_link">Home</a>
-            </li>
-            <li class="nav_menu_item">
-                <a <?php if($pagename=="test.php") {echo 'class="current"';}?> href="about_us.php" class="nav_menu_link">About Us</a>
-            </li>
+                <li class="nav_menu_item">
+                    <a <?php if($pagename=="home.php") {echo 'class="current"';}?> href="../index.php" class="nav_menu_link">Home</a>
+                </li>
+                <li class="nav_menu_item">
+                    <a href="about_us/about_us.php" class="nav_menu_link">About Us</a>
+                </li>
+                <li class="nav_menu_item">
+                    <a href="../instruction/instruction.php" class="nav_menu_link">Instructions</a>
+                </li>
             </ul>
         </div>
 
         <button class="toggle_btn" id="toggle_btn">
             <i class="ri-menu-line"></i>
         </button>
-    </nav>
+        </nav>
     </header>
+
+  <!-- Navigation bar
+  <div class="nav_bar">
+        <ul class="nav_bar_menu">
+            <li class="nav_bar_list nav_bar_list_logo">
+                <img id="portrait" src="../images/8.png" alt="Logo">
+            </li>
+            <li class="nav_bar_list"><a href="../index.php">Home</a></li>
+            <li class="nav_bar_list"><a href="./about_us.php">About Us</a></li>
+            <li class="nav_bar_list"><a href="../instruction/instruction.php">Instructions</a></li>
+        </ul>
+    </div> -->
 
     <section class="wrapper">
         <div class="container">
