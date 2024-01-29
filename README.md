@@ -21,6 +21,11 @@ Other updates include:
 - Added an Instructions page
 - Added PHP linting as a part of the CI/CD pipeline
 
+## Visuals
+
+### Landing Page
+![Landing_Page_1](html/images/landing_page1.png)
+
 ## Requirements 
 
 ### To run in local development 
