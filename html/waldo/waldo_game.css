@@ -117,7 +117,7 @@ body {
     /* display: flex; */
 }
 
-#scoreboard h2{
+.scoreboard h2{
     text-align: center;
 }
 
@@ -144,18 +144,30 @@ body {
 
 /* Styles for the found button on Waldo*/
 .found-button {
-    z-index: 2;
-    position: absolute;
-    top: 10.5rem; 
-    left: 49rem;
-    width: 45px;
-    height: 60px; 
-    background-color: rgba(128, 0, 128, 0); 
-    border: none;
-    cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 10.5rem; 
+  left: 49rem;
+  width: 45px;
+  height: 60px; 
+  background-color: rgba(128, 0, 128, 0); 
+  border: none;
+  cursor: pointer;
 }
 
-#gameOverScreen {
+.found-button-2 {
+  z-index: 2;
+  position: absolute;
+  top: 25.3rem; 
+  left: 70.5rem;
+  width: 45px;
+  height: 62px; 
+  background-color: rgba(128, 0, 128, 0); 
+  border: none;
+  cursor: pointer;
+}
+
+.gameOverScreen {
     z-index: 6;
     width: 100%;
     height: 100%;
@@ -168,7 +180,7 @@ body {
     display: none;
 }
 
-#gameOverScreen h1 {
+.gameOverScreen h1 {
     color: white;
     font-size: 2.5rem;
 }
@@ -177,7 +189,7 @@ body {
     filter: blur(2px) brightness(50%);
 }
 
-#scoreboard {
+.scoreboard {
     width: 100%;
     text-align: left;
     background-color: transparent; 
