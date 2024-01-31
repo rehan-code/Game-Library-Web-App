@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Where's Waldo Game</title>
-    <link rel="stylesheet" href="waldo_game.css" />
+   
+    <style>
+        <?php include 'waldo_game.css'; ?>
+    </style>
 </head>
 
 <body>
@@ -40,7 +43,7 @@
     </header>
 
     <header class="main-heading">
-        <h1>Where's Waldo Game</h1>
+        <h1>Trojan Castle</h1>
     </header>
 
     <div id="gameOverScreen">
@@ -48,14 +51,17 @@
     </div>
 
     <div class="image-container" onclick="notFound(event)" ondblclick="zoomIn(event)">
-        <img src="../images/findwaldo.jpg" draggable="false" alt="Zoomable Image" id="waldoImage">
-        <button class="found-button" onclick="isFound(event)"></button>
+        <img src="../images/trojan.jpg" draggable="false" alt="Zoomable Image" id="waldoImage" width="90%">
+        <button class="found-button-3" onclick="isFound(event)"></button>
     </div>
     
     <div id="scoreboard">
         <h2>Lives: <span id="score">10</span></h2>
     </div>
     
-    <script src="waldo_game.js"></script>
+    
+    <?php
+        echo '<script src="waldo_game.js"></script>';
+    ?>
 </body>
 </html>

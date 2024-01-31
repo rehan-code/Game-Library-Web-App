@@ -51,7 +51,7 @@
                 <div>
                   <div> 
                       <div class="btn_wrapper">
-                        <form action="../waldo/waldo_game.php" method="get">
+                        <form action="../waldo/waldo_game_3.php" method="get">
                             <input type="submit" class="btn view_more_btn" value="Start Game">
                         </form>
                       </div>

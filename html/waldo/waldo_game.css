@@ -155,6 +155,7 @@ body {
     cursor: pointer;
 }
 
+
 #gameOverScreen {
     z-index: 6;
     width: 100%;
@@ -201,3 +202,15 @@ body {
     height: var(--fixed-header-height);
     padding: 0 1.7rem;
   }
+  .found-button-3 {
+    z-index: 2;
+    position: absolute;
+    top: 46rem; 
+    left: 18rem;
+    width: 45px;
+    height: 60px; 
+    background-color: rgba(128, 0, 128, 0); 
+    border: none;
+    cursor: pointer;
+  }
+  

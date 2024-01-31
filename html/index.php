@@ -9,8 +9,6 @@
 
 </head>
 <body>
-
-    <!-- Navbar -->
     <header class="container header">
         <nav class="nav">
         <div class="logo">
@@ -53,12 +51,6 @@
                 a myriad of additional objectives. As our team continues to work diligently, we envision a future where you can explore a 
                 diverse range of games crafted by our dedicated team.
             </p>
-
-            <!-- <div class="btn_wrapper">
-                <button class="btn view_more_btn" onclick="">
-                Learn More <i class="ri-arrow-right-line"></i>
-                </button>
-            </div> -->
             </div>
             <div class="grid-item-2">
             <div class="team_img_wrapper">
@@ -83,7 +75,6 @@
                     <br>
                     Can you help us find him?
                 </p>
-                <!-- <div class="tooltip">Click to go to Waldo game page</div> -->
             </div>
         </div>
     </section>
