@@ -46,7 +46,7 @@
         <h1>Trojan Castle</h1>
     </header>
 
-    <div id="gameOverScreen">
+    <div class="gameOverScreen">
         <h1>Game Over</h1>
     </div>
 
@@ -55,7 +55,7 @@
         <button class="found-button-3" onclick="isFound(event)"></button>
     </div>
     
-    <div id="scoreboard">
+    <div class="scoreboard">
         <h2>Lives: <span id="score">10</span></h2>
     </div>
     
