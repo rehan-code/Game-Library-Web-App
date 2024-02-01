@@ -30,12 +30,6 @@ body {
   overflow-x: hidden;
   background-color: #fafbfb;
 }
-ul li {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
 button {
   background-color: transparent;
   border: none;
@@ -52,54 +46,16 @@ button {
     margin: 0 auto;
   }
 }
+ul li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
 /* header */
 .header {
   height: var(--fixed-header-height);
   padding: 0 1.7rem;
-}
-
-/* Nav */
-.nav {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-/* Logo */
-.logo h2 {
-  font-size: 28px;
-  color: var(--primary-color);
-}
-.nav_menu_list {
-  display: flex;
-  align-items: center;
-}
-.nav_menu_list .nav_menu_item {
-  margin: 0 2rem;
-}
-.nav_menu_item .nav_menu_link {
-  font-size: 16.5px;
-  line-height: 27px;
-  color: var(--link-color);
-  text-transform: capitalize;
-  letter-spacing: 0.5px;
-}
-.nav_menu_link:hover {
-  color: var(--primary-color);
-}
-.toggle_btn {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--lg-heading);
-  z-index: 4;
-}
-.nav_menu,
-.close_btn {
-  display: none;
-}
-.show {
-  right: 3% !important;
 }
 /* Wrapper */
 .wrapper {
@@ -163,7 +119,7 @@ button {
   border-radius: 7px;
   letter-spacing: 1px;
   transition: 0.4s;
-  background-image: url('html/images/gameBG.jpg'); 
+  background-image: url("html/images/gameBG.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -265,54 +221,8 @@ footer {
 }
 
 /* responsive design */
-@media screen and (min-width: 768px) {
-  .toggle_btn {
-    display: none;
-  }
-  .nav_menu {
-    display: block;
-  }
-}
 
 @media screen and (max-width: 768px) {
-  .logo h2 {
-    font-size: 23px;
-  }
-  .nav_menu {
-    position: fixed;
-    width: 93%;
-    height: 100%;
-    display: block;
-    top: 2.5%;
-    right: -100%;
-    background-color: #fff;
-    padding: 3rem;
-    border-radius: 10px;
-    box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
-    z-index: 50;
-    transition: 0.4s;
-  }
-  .nav_menu_list {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 4rem;
-  }
-  .nav_menu_list .nav_menu_item {
-    margin: 1rem 0;
-  }
-  .nav_menu_item .nav_menu_link {
-    font-size: 18px;
-  }
-  .close_btn {
-    display: block;
-    position: absolute;
-    right: 10%;
-    font-size: 25px;
-    color: #50689e;
-  }
-  .close_btn:hover {
-    color: #000;
-  }
   .wrapper {
     padding: 0 0.7rem;
   }
@@ -361,7 +271,7 @@ footer {
   .view_more_btn {
     background-color: #e8491d;
   }
-    
+
   .image-container {
     width: 80vw;
     height: 80vh;
@@ -419,7 +329,6 @@ footer {
     font-size: 19px;
   }
 
-
   /* Wrapper */
   .wrapper {
     background-color: #fff;
@@ -445,7 +354,7 @@ footer {
   .view_more_btn {
     background-color: #e8491d;
   }
-    
+
   .image-container {
     width: 80vw;
     height: 80vh;
@@ -457,84 +366,83 @@ footer {
   }
 }
 
-  /* Info Text */
-  .info-text {
-    color: #334157;
-  }
+/* Info Text */
+.info-text {
+  color: #334157;
+}
 
-  /* Buttons */
-  .btn {
-    background-color: #335eea;
-    color: #fff;
-  }
+/* Buttons */
+.btn {
+  background-color: #335eea;
+  color: #fff;
+}
 
-  .btn:hover {
-    background-color: #2b50c7;
-  }
+.btn:hover {
+  background-color: #2b50c7;
+}
 
-  .view_more_btn {
-    background-color: #e8491d;
-  }
-    
-  .image-container {
-    width: 80vw;
-    height: 80vh;
-    max-width: 1080px;
-    max-height: 698px;
-    border: 10px solid white;
-    box-shadow: 0 0 15px rgba(black, 0.3);
-    position: relative;
-  }
+.view_more_btn {
+  background-color: #e8491d;
+}
 
-  .movie-card {
-    background-image: url('images/waldo_stage_2.png');
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    margin-top: 20px;
-    cursor: pointer; 
-    color: #fff;
-    width: 100%;
-  }
+.image-container {
+  width: 80vw;
+  height: 80vh;
+  max-width: 1080px;
+  max-height: 698px;
+  border: 10px solid white;
+  box-shadow: 0 0 15px rgba(black, 0.3);
+  position: relative;
+}
 
-  .movie-card .info-text {
-    padding-left: 10rem;
-    width: 100%;
-    font-weight: bold; 
-    font-size: 22px;
-    line-height: 28px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1.0);
-    position: relative;
-    color: #ffffff; 
-    text-align: center;
-    
-  }
+.movie-card {
+  background-image: url("images/waldo_stage_2.png");
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+}
 
-  .movie-card .main-heading {
-    font-weight: bold; 
-    font-size: 50px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 30px;
-    position: relative; 
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0);  */
-  }
-  .movie-card:hover .tooltip {
-    display: block;
+.movie-card .info-text {
+  padding-left: 10rem;
+  width: 100%;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+
+.movie-card .main-heading {
+  font-weight: bold;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0);  */
+}
+.movie-card:hover .tooltip {
+  display: block;
 }
 
 .tooltip {
-    display: none;
-    position: absolute;
-    top: 88%; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ffffff;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
+  display: none;
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .btn {
