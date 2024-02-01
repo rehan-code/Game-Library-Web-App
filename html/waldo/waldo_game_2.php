@@ -16,7 +16,7 @@
         <h1>The Beach</h1>
     </div>
     
-    <div class="gameOverScreen">
+    <div class="game-over-screen">
         <h1>Game Over</h1>
     </div>
 

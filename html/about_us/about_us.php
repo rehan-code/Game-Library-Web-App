@@ -10,7 +10,7 @@
     <!-- CSS style -->
     <style>
         <?php include '../style.css'; ?>
-        <?php include './about_us.css'; ?>
+        <?php include 'about_us.css'; ?>
     </style>
 </head>
 
@@ -24,18 +24,18 @@
                 <div class="overlay"></div>
                 <h1 class="about-main-heading">Who We Are</h1>
             </div>
-            <h2 class="heading2">Our project</h2>
-            <p class="heading2para">
+            <h2 class="heading">Our project</h2>
+            <p class="heading-paragraph">
                 We have a team VM hosted on a SoCS server. The Debian Linux VM has NGINX, PHP,
                 and MySQL installed. The web server is configured and is already running with HTTPS
                 enabled. The website PHP directory is /var/www/html
                 The website includes:
-            <dl class="heading2para">
+            <dl class="heading-paragraph">
                 <li>Landing Page</li>
                 <li>About Us Page.</li>
             </dl>
             </p>
-            <h2 class="heading2">Meet our team members</h2>
+            <h2 class="heading">Meet our team members</h2>
             <div class="profile-cards-grid">
                 <?php
                 $team_members = array(

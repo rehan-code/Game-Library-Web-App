@@ -21,18 +21,18 @@
                 <div class="overlay1"></div>
                 <h1 class="about-main-heading1">INSTRUCTIONS</h1>
             </div>
-            <h2 class="heading2">Overview</h2>
-            <p class="heading2para">
+            <h2 class="heading">Overview</h2>
+            <p class="heading-paragraph">
                 "Where's Waldo?" is a puzzle book series created by British illustrator Martin Handford. 
                 The books feature detailed, crowded scenes filled with people, objects, 
                 and various activities, and the goal is to find the character Waldo—a glassed man wearing eccentric red and white striped
                 clothes—within the image.
             </p>
-            <h2 class="heading2">Objective</h2>
-            <p class="heading2para">
+            <h2 class="heading">Objective</h2>
+            <p class="heading-paragraph">
                 Find Waldo hiding within each scene.
             </p>
-            <h2 class="heading2">Instructions</h2>
+            <h2 class="heading">Instructions</h2>
             <div class="bottom-margin-setting">
                 <div class="rounded-box">
                     <p> 

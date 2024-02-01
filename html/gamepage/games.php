@@ -24,9 +24,9 @@
 
                 <div>
                   <div> 
-                      <div class="btn_wrapper">
+                      <div class="btn-wrapper">
                         <form action="../waldo/waldo_game_3.php" method="get">
-                            <input type="submit" class="btn view_more_btn" value="Start Game">
+                            <input type="submit" class="btn view-more-btn" value="Start Game">
                         </form>
                       </div>
                   </div>

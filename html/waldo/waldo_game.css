@@ -1,5 +1,3 @@
-/* css variables */
-/* reset html*/
 body {
   width: 100%;
   height: 100vh;
@@ -76,7 +74,7 @@ body {
 
 
 /* Game over screen stylesa */
-.gameOverScreen {
+.game-over-screen {
   z-index: 6;
   width: 100%;
   height: 100%;
@@ -89,7 +87,7 @@ body {
   display: none;
 }
 
-.gameOverScreen h1 {
+.game-over-screen h1 {
   color: white;
   font-size: 2.5rem;
 }

@@ -29,7 +29,7 @@
             </p>
             </div>
             <div class="grid-item-2">
-            <div class="team_img_wrapper">
+            <div class="team-img-wrapper">
                 <img src="https://raw.githubusercontent.com/ananikets18/Responsive-landing-page-using-HTML-CSS-JS-/1b56418e1b24d1f997134084e9214d78a9f91780/img/team.svg" alt="team-img" />
             </div>
             </div>

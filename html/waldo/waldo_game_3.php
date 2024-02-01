@@ -17,7 +17,7 @@
         <h1>The Trojan Castle</h1>
     </div>
 
-    <div class="gameOverScreen">
+    <div class="game-over-screen">
         <h1>Game Over</h1>
     </div>
 
@@ -27,7 +27,7 @@
     </div>
     
     <div class="scoreboard">
-        <h2>Lives: <span id="score">10</span></h2>
+        <h2>Lives: <span class="score">10</span></h2>
     </div>
     
     

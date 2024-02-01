@@ -18,7 +18,7 @@
         <h1>The Shopping Center</h1>
     </div>
 
-    <div id="gameOverScreen">
+    <div id="game-over-screen">
         <h1>Game Over</h1>
     </div>
 

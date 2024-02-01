@@ -24,8 +24,11 @@
 }
 
 .header-container {
-  height: var(--fixed-header-height);
+  /* height: var(--fixed-header-height); */
   padding: 0 1.7rem;
+  position: relative;
+  height: 300px;
+  overflow: hidden; 
 }
 
 .about-main-heading1 {
