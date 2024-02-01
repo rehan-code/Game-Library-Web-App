@@ -67,7 +67,7 @@ body {
   left: 22.5rem;
   width: 30px;
   height: 45px;
-  background-color: rgba(128, 0, 128, 0.5);
+  background-color: rgba(128, 0, 128, 0);
   border: none;
   cursor: pointer;
 }
