@@ -53,7 +53,7 @@ function notFound(event) {
 
 function isFound(event) {
     if (event) event.stopPropagation(); // Prevent triggering notFound when isFound is directly called
-    var screen = document.querySelector(".gameOverScreen");
+    var screen = document.querySelector(".game-over-screen");
     var image = document.querySelector(".image-container img");
     // Make image visible and blur background image
     screen.style.display = "block";
@@ -62,5 +62,5 @@ function isFound(event) {
 
 // Update scoreboard display
 function updateScoreboard() {
-    document.getElementByClass('score').innerText = score;
+    document.querySelector('.score').innerText = score;
 }

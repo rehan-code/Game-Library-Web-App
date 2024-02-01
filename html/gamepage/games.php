@@ -5,38 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game</title>
-    <link rel="stylesheet" href="../style.css" />
+    <style>
+        <?php include '../style.css'; ?>
+    </style>
 </head>
 <body>
-    <header class="container header">
-        <nav class="nav">
-            <div class="logo">
-                <h2>Where's Waldo</h2>
-            </div>
-
-            <div class="nav_menu" id="nav_menu">
-                <button class="close_btn" id="close_btn">
-                    <i class="ri-close-fill"></i>
-                </button>
-                <?php $pagename = basename($_SERVER['PHP_SELF']);?>
-                <ul class="nav_menu_list">
-                    <li>
-                        <a <?php if($pagename=="home.php") {echo 'class="current"';}?> href="../index.php" class="nav_menu_link">Home</a>
-                    </li>
-                    <li class="nav_menu_item">
-                        <a <?php if($pagename=="about_us/about_us.php") {echo 'class="current"';}?> href="../about_us/about_us.php" class="nav_menu_link">About Us</a>
-                    </li>
-                    <li class="nav_menu_item">
-                        <a href="../instruction/instruction.php" class="nav_menu_link">Instructions</a>
-                    </li>
-                </ul>
-            </div>
-
-            <button class="toggle_btn" id="toggle_btn">
-                <i class="ri-menu-line"></i>
-            </button>
-        </nav>
-    </header>
+    <?php include("../components/navbar/navbar.php"); ?>
 
     <section class="container">
             <div class="grid-item-1-center">
@@ -50,9 +24,9 @@
 
                 <div>
                   <div> 
-                      <div class="btn_wrapper">
+                      <div class="btn-wrapper">
                         <form action="../waldo/waldo_game_3.php" method="get">
-                            <input type="submit" class="btn view_more_btn" value="Start Game">
+                            <input type="submit" class="btn view-more-btn" value="Start Game">
                         </form>
                       </div>
                   </div>
