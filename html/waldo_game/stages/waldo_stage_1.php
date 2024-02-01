@@ -18,7 +18,7 @@
         <h1>The Shopping Center</h1>
     </div>
 
-    <div id="game-over-screen">
+    <div class="game-over-screen">
         <h1>Game Over</h1>
     </div>
 
@@ -27,11 +27,13 @@
         <button class="found-button-1" onclick="isFound(event)"></button>
     </div>
 
-    <div id="scoreboard">
-        <h2>Lives: <span id="score">10</span></h2>
+    <div class="scoreboard">
+        <h2>Lives: <span class="score">10</span></h2>
     </div>
 
-    <script src="waldo_game.js"></script>
+    <script>
+        <?php include 'waldo_game.js'; ?>
+    </script>
 </body>
 
 </html>

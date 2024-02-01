@@ -26,20 +26,25 @@
             </p>
 
             <!-- stages -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <h1 class="main-heading">
                 <span>Stages</span>
             </h1>
-            <div class="movie-card movie-card-1" onclick="window.location.href='waldo_stage_1.php';">
+            <div class="movie-card movie-card-1" onclick="window.location.href='stages/waldo_stage_1.php';">
                 <h1 class="main-heading">
                     The Shopping Center
                 </h1>
             </div>
-            <div class="movie-card movie-card-2" onclick="window.location.href='waldo_stage_2.php';">
+            <div class="movie-card movie-card-2" onclick="window.location.href='stages/waldo_stage_2.php';">
                 <h1 class="main-heading">
                     The Beach
                 </h1>
             </div>
-            <div class="movie-card movie-card-3" onclick="window.location.href='waldo_stage_3.php';">
+            <div class="movie-card movie-card-3" onclick="window.location.href='stages/waldo_stage_3.php';">
                 <h1 class="main-heading">
                     The Trojan Horse
                 </h1>

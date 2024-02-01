@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,13 +10,14 @@
         <?php include 'waldo_game.css'; ?>
     </style>
 </head>
+
 <body>
     <?php include("../../components/navbar/navbar.php"); ?>
 
     <div class="main-heading">
         <h1>The Beach</h1>
     </div>
-    
+
     <div class="game-over-screen">
         <h1>Game Over</h1>
     </div>
@@ -24,14 +26,14 @@
         <img src="../../images/waldo_stage_2.png" draggable="false" alt="Zoomable Image" id="waldoImage">
         <button class="found-button-2" onclick="isFound(event)"></button>
     </div>
-    
+
     <div class="scoreboard">
-        <h2>Lives: <span id="score">10</span></h2>
+        <h2>Lives: <span class="score">10</span></h2>
     </div>
-    
-    <!-- <script src="waldo_game.js"></script> -->
+
     <script>
         <?php include 'waldo_game.js'; ?>
     </script>
 </body>
+
 </html>

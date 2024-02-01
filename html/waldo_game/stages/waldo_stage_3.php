@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,14 +26,14 @@
         <img src="../../images/waldo_stage_3.jpg" draggable="false" alt="Zoomable Image" id="waldoImage" width="90%">
         <button class="found-button-3" onclick="isFound(event)"></button>
     </div>
-    
+
     <div class="scoreboard">
         <h2>Lives: <span class="score">10</span></h2>
     </div>
-    
-    
-    <?php
-        echo '<script src="waldo_game.js"></script>';
-    ?>
+
+    <script>
+        <?php include 'waldo_game.js'; ?>
+    </script>
 </body>
+
 </html>

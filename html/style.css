@@ -400,26 +400,33 @@ footer {
   position: relative;
 }
 
-.movie-card-1 {
-  background-image: url("images/waldo_stage_1.jpg");
-}
-
-.movie-card-2 {
-  background-image: url("images/waldo_stage_2.png");
-}
-
-.movie-card-3 {
-  background-image: url("images/waldo_stage_3.jpg");
-}
-
 .movie-card {
+  background-image: url("images/waldo_stage_2.png");
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   padding: 20px;
   margin-top: 20px;
   cursor: pointer;
-  /* color: #fff; */
+  color: #fff;
   width: 100%;
+}
+
+.movie-card-1 {
+  background-image: url("../images/waldo_stage_1.jpg");
+  /* background-size: cover; */
+  /* background-position: top; */
+}
+
+.movie-card-2 {
+  background-image: url("../images/waldo_stage_2.png");
+  /* background-size: cover; */
+  /* background-position: top; */
+}
+
+.movie-card-3 {
+  background-image: url("../images/waldo_stage_3.jpg");
+  /* background-size: cover; */
+  background-position: 20% 7%;
 }
 
 .movie-card .info-text {
@@ -441,7 +448,7 @@ footer {
   text-align: center;
   padding: 30px;
   position: relative;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.0);  */
+  text-shadow: 0px 0px 8px rgb(255, 255, 255); 
 }
 .movie-card:hover .tooltip {
   display: block;
