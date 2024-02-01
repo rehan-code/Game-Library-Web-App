@@ -111,3 +111,10 @@
         grid-template-columns: 1fr;
     }
 }
+.header-line-height {
+    line-height: 1.6;
+}
+.heading-left {
+    text-align: left;
+    font-size: 20px;
+}

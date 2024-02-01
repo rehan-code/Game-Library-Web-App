@@ -30,21 +30,28 @@
             </p>
             <h2 class="heading">Objective</h2>
             <p class="heading-paragraph">
-                Find Waldo hiding within each scene.
+                Find Waldo hiding within each scene:
+                <ul class="list-class center-text">
+                    <li><strong>Scene 1:</strong> The Beach</li>
+                    <li><strong>Scene 2:</strong> The Mall</li>
+                    <li><strong>Scene 3:</strong> The Trojan Castle</li>
+                </ul>
             </p>
+
             <h2 class="heading">Instructions</h2>
             <div class="bottom-margin-setting">
                 <div class="rounded-box">
                     <p> 
-                        <ul class="list-class">
-                            <li>- Click on Waldo using the <strong>Mouse</strong> button upon locating Waldo</li>
-                            <li>- Double-click to zoom in</li>
-                            <li>- Failing to click on Waldo deducts <strong>1 point</strong> from your score</li>
-                            <li>- Losing all points results in a <strong>Game Over</strong></li>
-                        </ul>
+                        <dl class="list-class">
+                            <li> Click on Waldo using the <strong>Mouse</strong> button upon locating Waldo</li>
+                            <li> Double-click to zoom in</li>
+                            <li> Failing to click on Waldo deducts <strong>1 point</strong> from your score</li>
+                            <li> Losing all points results in a <strong>Game Over</strong></li>
+                        </dl>
                     </p>
                 </div>
             </div>
+
             <div class="bottom-margin-setting">
                 <div class="heading3">
                     <h2></h2>

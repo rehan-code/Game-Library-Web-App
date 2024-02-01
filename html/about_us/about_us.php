@@ -25,16 +25,21 @@
                 <h1 class="about-main-heading">Who We Are</h1>
             </div>
             <h2 class="heading">Our project</h2>
-            <p class="heading-paragraph">
-                We have a team VM hosted on a SoCS server. The Debian Linux VM has NGINX, PHP,
-                and MySQL installed. The web server is configured and is already running with HTTPS
-                enabled. The website PHP directory is /var/www/html
-                The website includes:
-            <dl class="heading-paragraph">
-                <li>Landing Page</li>
-                <li>About Us Page.</li>
-            </dl>
+        <!-- <div class="paragraph-container"> -->
+            <p class="heading-left">
+                We are developing a website hosted on a SoCS server. The Debian Linux VM includes NGINX, PHP,
+                and MySQL. Our web server is configured and running with HTTPS enabled, and the PHP directory
+                for the website is located at /var/www/html.
+
+                The website features:
+                <dl class="heading-left header-line-height">
+                    <dt><strong>Landing Page:</strong> Serves as the entry point to our website, offering navigation to various sections and games.</dt>
+                    <dt><strong>Instruction Page:</strong> Provides detailed instructions and guidance for users, including how to play our games.</dt>
+                    <dt><strong>About Us Page:</strong> Here, visitors can learn about our team, our mission, and our values.</dt>
+                    <dt><strong>Game Page:</strong> Currently, we have the "Where's Waldo" game available for play.</dt>
+                </dl>  
             </p>
+      
             <h2 class="heading">Meet our team members</h2>
             <div class="profile-cards-grid">
                 <?php
