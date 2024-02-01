@@ -42,12 +42,12 @@
             <h1 class="main-heading">
                 <span>Our Games</span>
             </h1>
-            <div class="movie-card" onclick="window.location.href='gamepage/games.php';">
+            <div class="movie-card movie-card-2" onclick="window.location.href='waldo_game/waldo_select.php';">
                 <h1 class="main-heading">
                     Where's Waldo Game
                 </h1>
                 <p class="info-text">
-                    We're looking for a guy named Waldo. He could be anywhere.
+                    Our friend Waldo has gone missing! He could be anywhere.
                     <br>
                     Can you help us find him?
                 </p>

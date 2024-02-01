@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <?php include("../components/navbar/navbar.php"); ?>
+    <?php include("../../components/navbar/navbar.php"); ?>
 
     <div class="main-heading">
         <h1>The Beach</h1>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="image-container" onclick="notFound(event)" ondblclick="zoomIn(event)">
-        <img src="../images/waldo_stage_2.png" draggable="false" alt="Zoomable Image" id="waldoImage">
+        <img src="../../images/waldo_stage_2.png" draggable="false" alt="Zoomable Image" id="waldoImage">
         <button class="found-button-2" onclick="isFound(event)"></button>
     </div>
     

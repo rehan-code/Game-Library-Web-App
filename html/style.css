@@ -400,14 +400,25 @@ footer {
   position: relative;
 }
 
-.movie-card {
+.movie-card-1 {
+  background-image: url("images/waldo_stage_1.jpg");
+}
+
+.movie-card-2 {
   background-image: url("images/waldo_stage_2.png");
+}
+
+.movie-card-3 {
+  background-image: url("images/waldo_stage_3.jpg");
+}
+
+.movie-card {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   padding: 20px;
   margin-top: 20px;
   cursor: pointer;
-  color: #fff;
+  /* color: #fff; */
   width: 100%;
 }
 
