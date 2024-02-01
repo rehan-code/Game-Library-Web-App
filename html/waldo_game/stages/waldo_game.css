@@ -63,11 +63,11 @@ body {
 .found-button-3 {
   z-index: 2;
   position: absolute;
-  top: 46rem;
-  left: 18rem;
-  width: 45px;
-  height: 60px;
-  background-color: rgba(128, 0, 128, 0);
+  top: 56.5rem;
+  left: 22.5rem;
+  width: 30px;
+  height: 45px;
+  background-color: rgba(128, 0, 128, 0.5);
   border: none;
   cursor: pointer;
 }
