@@ -1,0 +1,111 @@
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #fafbfb;
+}
+
+.main-heading {
+  text-align: center;
+  /* display: flex; */
+}
+
+.scoreboard h2 {
+  text-align: center;
+}
+
+.image-container {
+  width: 98%;
+  text-align: center;
+  margin: 2rem;
+  position: absolute;
+  overflow: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container.zoomed img {
+  transform: scale(2);
+}
+
+/* Styles for the found button on Waldo*/
+.found-button-1 {
+  z-index: 2;
+  position: absolute;
+  top: 10.5rem;
+  left: 49rem;
+  width: 45px;
+  height: 60px;
+  background-color: rgba(128, 0, 128, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.found-button-2 {
+  z-index: 2;
+  position: absolute;
+  top: 25.3rem;
+  left: 70.5rem;
+  width: 45px;
+  height: 62px;
+  background-color: rgba(128, 0, 128, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.found-button-3 {
+  z-index: 2;
+  position: absolute;
+  top: 56.5rem;
+  left: 22.5rem;
+  width: 30px;
+  height: 45px;
+  background-color: rgba(128, 0, 128, 0);
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Game over screen stylesa */
+.game-over-screen {
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  top: 25rem;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  display: none;
+}
+
+.game-over-screen h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.blur {
+  filter: blur(2px) brightness(50%);
+}
+
+.scoreboard {
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(100% + 4rem));
+  z-index: 5;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: none;
+}
