@@ -4,20 +4,20 @@ stages:
   - test
   - deploy
 
-build-job:
-  stage: build
-  script:
-    - echo "Hello, $GITLAB_USER_LOGIN!"
+# build-job:
+#   stage: build
+#   script:
+#     - echo "Hello, $GITLAB_USER_LOGIN!"
 
-php-lint:
-  stage: lint
-  image: php:latest
-  allow_failure: true
-  before_script:
-    - php --version
-  script:
-    - php phpcs.phar --exclude=Generic.Files.LineEndings html
-    # - php phpcbf.phar --exclude=Generic.Files.LineEndings html
+#php-lint:
+ # stage: lint
+#  image: php:latest
+  # allow_failure: true
+  # before_script:
+  #   - php --version
+  # script:
+  #   - php phpcs.phar --exclude=Generic.Files.LineEndings html
+  #   # - php phpcbf.phar --exclude=Generic.Files.LineEndings html
 
 # test-nginx:
 #   stage: test
@@ -31,15 +31,17 @@ unit-test:
   image: node:latest
   stage: test
   before_script:
+    - cd html
+    - cd test
     - npm install --save-dev jsdom 
     - npm install --save-dev jest-environment-jsdom
   script:
     - npm run waldo_game.test.js
-  #coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
-  #artifacts:
-  #  paths:
-  #    - coverage/
-  #  when: always
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - junit.xml
 
 deploy-prod:
   stage: deploy
