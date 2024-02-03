@@ -36,6 +36,7 @@ unit-test:
     - npm install --save-dev jsdom 
     - npm install --save-dev jest-environment-jsdom
   script:
+    - ls
     - npm run waldo_game.test.js
   artifacts:
     when: always
