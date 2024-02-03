@@ -5,6 +5,7 @@
     <!--Rules to exclude in general-->
     <rule ref="PEAR">
         <exclude name="Generic.Files.LineEndings"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingAuthorTag"/>
         <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag"/>
         <exclude name="PEAR.Commenting.FileComment.MissingPackageTag"/>
         <exclude name="PEAR.Commenting.FileComment.MissingLicenseTag"/>

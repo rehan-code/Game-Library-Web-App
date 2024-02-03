@@ -1,9 +1,9 @@
 <?php
 /**
- * Blah blah blah
+ * Main index page
  * php version 8.1.2
- * 
- * @author Rehan Nagoor Muhmannanaa <rnahoorm@uoguelph.ca>
+ * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
+ *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
 ?>
 
