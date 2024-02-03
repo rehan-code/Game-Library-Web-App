@@ -30,6 +30,7 @@ stages:
 unit-test:
   image: node:latest
   stage: test
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
   before_script:
     - cd html
     - cd test
@@ -39,6 +40,8 @@ unit-test:
     - ls
     - npx jest waldo_game.test.js
   artifacts:
+    paths:
+      - coverage/
     when: always
     reports:
       junit:
