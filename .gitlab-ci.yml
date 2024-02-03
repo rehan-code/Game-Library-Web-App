@@ -10,8 +10,8 @@ build-job:
     - echo "Hello, $GITLAB_USER_LOGIN!"
 
 php-lint:
- stage: lint
- image: php:latest
+  stage: lint
+  image: php:latest
   allow_failure: true
   before_script:
     - php --version
