@@ -35,11 +35,11 @@ unit-test:
     - npm install --save-dev jest-environment-jsdom
   script:
     - npm run test:ci
-  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
-  artifacts:
-    paths:
-      - coverage/
-    when: always
+  #coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  #artifacts:
+  #  paths:
+  #    - coverage/
+  #  when: always
 
 deploy-prod:
   stage: deploy
