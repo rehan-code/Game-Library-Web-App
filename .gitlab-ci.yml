@@ -27,6 +27,19 @@ php-lint:
 #   script:
 #     - export CURRENT_DIR=$(pwd)
 #     - nginx -t -c $CURRENT_DIR/nginx.conf
+unit-test:
+  image: node:latest
+  stage: test
+  before_script:
+    - npm install --save-dev jsdom 
+    - npm install --save-dev jest-environment-jsdom
+  script:
+    - npm run test:ci
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  artifacts:
+    paths:
+      - coverage/
+    when: always
 
 deploy-prod:
   stage: deploy
