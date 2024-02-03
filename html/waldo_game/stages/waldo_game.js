@@ -9,7 +9,7 @@ function zoomIn(event) {
     score++;
     score++;
     updateScoreboard();
-    
+
     const imageContainer = document.querySelector(".image-container");
     const image = document.querySelector(".image-container img");
 
@@ -37,7 +37,7 @@ function zoomIn(event) {
 function notFound(event) {
     // Prevent the score from decreasing if the found button is clicked
     if (event.target.className.includes('found-button')) {
-        event.stopPropagation(); 
+        event.stopPropagation();
         return;
     }
 
@@ -64,3 +64,11 @@ function isFound(event) {
 function updateScoreboard() {
     document.querySelector('.score').innerText = score;
 }
+
+// Export the functions
+module.exports = {
+    zoomIn,
+    notFound,
+    isFound,
+    updateScoreboard
+};
