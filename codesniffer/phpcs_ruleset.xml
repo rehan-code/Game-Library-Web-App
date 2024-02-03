@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="CustomRuleset">
+    <description>Custom ruleset to exclude specific sniffs.</description>
+    
+    <!--Rules to exclude in general-->
+    <rule ref="PEAR">
+        <exclude name="Generic.Files.LineEndings"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingPackageTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLicenseTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLinkTag"/>
+    </rule>
+
+    <!--File-specific rule exclusions-->
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <exclude-pattern>../html/index.php</exclude-pattern>
+    </rule>
+</ruleset>
