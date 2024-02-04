@@ -1,163 +1,132 @@
+<?php
+/**
+ * Team About Us page.
+ * php version 8.1.2
+ * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
+ *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    
+
     <!-- CSS style -->
     <style>
-        <?php include './about_us.css'; ?>
-        <?php include '../style.css'; ?>
+        <?php require '../style.css'; ?>
+        <?php require 'about_us.css'; ?>
     </style>
-  </head>
-  <body>
+</head>
 
-  <!-- Navbar -->
-    <header class="container header">
-        <nav class="nav">
-        <div class="logo">
-            <h2>CIS 4250</h2>
-        </div>
+<body>
+    <?php require "../components/navbar/navbar.php"; ?>
 
-        <div class="nav_menu" id="nav_menu">
-            <button class="close_btn" id="close_btn">
-            <i class="ri-close-fill"></i>
-            </button>
-            <? $pagename = basename($_SERVER['PHP_SELF']);?>
-            <ul class="nav_menu_list">
-                <li class="nav_menu_item">
-                    <a <?php if($pagename=="home.php") {echo 'class="current"';}?> href="../index.php" class="nav_menu_link">Home</a>
-                </li>
-                <li class="nav_menu_item">
-                    <a href="about_us/about_us.php" class="nav_menu_link">About Us</a>
-                </li>
-                <li class="nav_menu_item">
-                    <a href="../instruction/instruction.php" class="nav_menu_link">Instructions</a>
-                </li>
-            </ul>
-        </div>
-
-        <button class="toggle_btn" id="toggle_btn">
-            <i class="ri-menu-line"></i>
-        </button>
-        </nav>
-    </header>
-
-  <!-- Navigation bar
-  <div class="nav_bar">
-        <ul class="nav_bar_menu">
-            <li class="nav_bar_list nav_bar_list_logo">
-                <img id="portrait" src="../images/8.png" alt="Logo">
-            </li>
-            <li class="nav_bar_list"><a href="../index.php">Home</a></li>
-            <li class="nav_bar_list"><a href="./about_us.php">About Us</a></li>
-            <li class="nav_bar_list"><a href="../instruction/instruction.php">Instructions</a></li>
-        </ul>
-    </div> -->
-
+    <!-- Main Content -->
     <section class="wrapper">
         <div class="container">
-        <div class="header-container">
-            <div class="overlay"></div>
+            <div class="header-container">
+                <div class="overlay"></div>
                 <h1 class="about-main-heading">Who We Are</h1>
             </div>
-            <h2 class="heading2">Our project </h2>
-            <p class="heading2para">We have a team VM hosted on a SoCS server. The Debian Linux VM has NGINX, PHP,
-                and MySQL installed. The web server is configured and is already running with HTTPS
-                enabled. The website PHP directory is /var/www/html
-                The website includes:
-                <dl class="heading2para">
-                    <li>Landing Page</li>
-                    <li>About Us Page.</li>
-                </dl>
-            </p>
-            <h2 class="heading2">Meet our team members</h2>
-            <div class="profile-cards-grid">
-                <div class="card">
-                    <a href="https://www.linkedin.com/in/harikrishansingh/" target="_blank" class="linkedin-icon">
-                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
-                    </a>
-                    <div class="profile-picture">
-                        <img src='../images/hari.jpg' alt="Harikrishan Profile Picture">
-                    </div>
-                    <div class="profile-details">
-                        <?php 
-                            include "snippets/hari_snippet.php";
-                        ?>
-                    </div>
-                </div>
-                <div class="card">
-                    <a href="https://www.linkedin.com/in/ivanodielmagtangob/" target="_blank" class="linkedin-icon">
-                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
-                    </a>
-                    <div class="profile-picture">
-                        <img src='../images/ivan.png' alt="Ivan Profile Picture">
-                    </div>
-                    <div class="profile-details">
-                        <?php 
-                            include "snippets/ivan_snippet.php";
-                        ?>
-                    </div>
-                </div>
-                <div class="card">
-                    <a href="https://www.linkedin.com/in/rehan-nagoor-mohideen-6b3156202/" target="_blank" class="linkedin-icon">
-                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
-                    </a>
-                    <div class="profile-picture">
-                        <img src='../images/rehan.jpg' alt="Rehan Profile Picture">
-                    </div>
-                    <div class="profile-details">
-                        <?php 
-                            include "snippets/rehan_snippet.php";
-                        ?>
-                    </div>
-                </div>
-                <div class="card">
-                    <a href="https://www.linkedin.com/in/thulasijothiravi/" target="_blank" class="linkedin-icon">
-                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
-                    </a>
-                    <div class="profile-picture">
-                        <img src='../images/thulasi.jpg' alt="Thulasi Profile Picture">
-                    </div>
-                    <div class="profile-details">
-                        <?php 
-                            include "snippets/thulasi_snippet.php";
-                        ?>
-                    </div>
-                </div>
-                <div class="card">
-                    <a href="https://www.linkedin.com/in/harir-hammadi-944aa4135/" target="_blank" class="linkedin-icon">
-                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
-                    </a>
-                    <div class="profile-picture">
-                        <img src='../images/user.jpg' alt="Harir Profile Picture">
-                    </div>
-                    <div class="profile-details">
-                        <?php 
-                            include "snippets/harir_snippet.php";
-                        ?>
-                    </div>
-                </div>
-                <div class="card">
-                    <a href="https://www.linkedin.com/in/nour-tayem-softwareeng/" target="_blank" class="linkedin-icon">
-                        <img src="../images/linkedin_icon.png" alt="LinkedIn Icon">
-                    </a>
-                    <div class="profile-picture">
-                        <img src='../images/nour.jpeg' alt="Nour Profile Picture">
-                    </div>
-                    <div class="profile-details">
-                        <?php 
-                            include "snippets/nour_snippet.php";
-                        ?>
-                    </div>
-                </div>
-            </div>
+            <h2 class="heading">Our project</h2>
+        <!-- <div class="paragraph-container"> -->
+            <p class="heading-left">
+                We are developing a website hosted on a SoCS server. The Debian
+                Linux VM includes NGINX, PHP, and MySQL. Our web server is
+                configured and running with HTTPS enabled, and the PHP
+                directory for the website is located at /var/www/html.
 
+                The website features:
+                <dl class="heading-left header-line-height">
+                    <dt>
+                        <strong>Landing Page:</strong>
+                        Serves as the entry point to our website, offering
+                        navigation to various sections and games.
+                    </dt>
+                    <dt>
+                        <strong>Instruction Page:</strong>
+                        Provides detailed instructions and guidance for users,
+                        including how to play our games.
+                    </dt>
+                    <dt>
+                        <strong>About Us Page:</strong>
+                        Here, visitors can learn about our team, our mission,
+                        and our values.
+                    </dt>
+                    <dt>
+                        <strong>Game Page:</strong>
+                        Currently, we have the <strong>I-Spot</strong> game
+                        available for play.
+                    </dt>
+                </dl>  
+            </p>
+      
+            <h2 class="heading">Meet our team members</h2>
+            <div class="profile-cards-grid">
+                <?php
+                $team_members = array(
+                    array(
+                        "name" => "Hari",
+                        "image" => "hari.jpg",
+                        "linkedin" => "https://www.linkedin.com/in/harikrishansingh/"
+                    ),
+                    array(
+                        "name" => "Ivan",
+                        "image" => "ivan.png",
+                        "linkedin" => "https://www.linkedin.com/in/ivanodielmagtangob/"
+                    ),
+                    array(
+                        "name" => "Rehan",
+                        "image" => "rehan.jpg",
+                        "linkedin" => "https://www.linkedin.com/in/rehan-nagoor-mohideen-6b3156202/"
+                    ),
+                    array(
+                        "name" => "Thulasi",
+                        "image" => "thulasi.jpg",
+                        "linkedin" => "https://www.linkedin.com/in/thulasijothiravi/"
+                    ),
+                    array(
+                        "name" => "Harir",
+                        "image" => "user.jpg",
+                        "linkedin" => "https://www.linkedin.com/in/harir-hammadi-944aa4135/"
+                    ),
+                    array(
+                        "name" => "Nour",
+                        "image" => "nour.jpeg",
+                        "linkedin" => "https://www.linkedin.com/in/nour-tayem-softwareeng/"
+                    )
+                );
+
+                foreach ($team_members as $member) {
+                    echo '<div class="card">';
+                    echo '<a href="'
+                        . $member["linkedin"]
+                        . '" target="_blank" class="linkedin-icon">';
+                    echo '<img src="../images/linkedin_icon.png" alt="LinkedIn Icon">';
+                    echo '</a>';
+                    echo '<div class="profile-picture">';
+                    echo '<img src="../images/'
+                        . $member["image"]
+                        . '" alt="'
+                        . $member["name"]
+                        . ' Profile Picture">';
+                    echo '</div>';
+                    echo '<div class="profile-details">';
+                    include "snippets/"
+                        . strtolower($member["name"])
+                        . "_snippet.php";
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
         </div>
     </section>
-
-
 </body>
+
 </html>
