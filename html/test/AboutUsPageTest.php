@@ -29,6 +29,16 @@ class AboutUsPageTest extends TestCase
         $this->assertStringContainsString('navbar/navbar.php', $this->aboutUsPhpContent);
     }
 
+    public function testProfilesExist()
+    {
+        $teamMemberNames = ['Hari', 'Ivan', 'Rehan', 'Thulasi', 'Harir', 'Nour'];
+
+        foreach ($teamMemberNames as $memberName) {
+            $expectedSnippetFileName = strtolower($memberName) . "_snippet.php";
+            $this->assertFileExists(__DIR__ . "/../about_us/snippets/" . $expectedSnippetFileName);
+        }
+    }
+
     public function testProfileSnippetsIncluded()
     {
         $teamMemberNames = ['Harikrishan', 'Ivan', 'Rehan', 'Thulasi', 'Harir', 'Nour'];
