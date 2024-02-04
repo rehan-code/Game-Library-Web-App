@@ -32,9 +32,6 @@ phpunit-tests:
     - composer install
   script:
     - ./vendor/bin/phpunit html/test/
-  # Specify when this job should run
-  rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
 
 # Uncomment and adjust if you have a specific testing configuration for Nginx
 # test-nginx:
