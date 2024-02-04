@@ -23,18 +23,20 @@
             </div>
             <h2 class="heading">Overview</h2>
             <p class="heading-paragraph">
-                "Where's Waldo?" is a puzzle book series created by British illustrator Martin Handford. 
-                The books feature detailed, crowded scenes filled with people, objects, 
-                and various activities, and the goal is to find the character Waldo—a glassed man wearing eccentric red and white striped
-                clothes—within the image.
+            Our Game, is inspired by the concept of 'Where's Waldo?' by British illustrator Martin Handford,
+             presents a fresh twist on the classic search-and-find adventure. In these vibrant scenes, bustling with an array 
+             of unique icons, objects, and characters engaged in diverse activities, the challenge remains the same: locating 
+             our elusive icon among the crowd. Much like Waldo, our distinctive figure stands out with its own quirky 
+             characteristics amidst the intricately illustrated landscape. Get ready to embark on a captivating journey 
+             of observation and discovery as you hunt for our signature icon within each captivating image!
             </p>
             <h2 class="heading">Objective</h2>
             <p class="heading-paragraph">
-                Find Waldo hiding within each scene:
+                Within each scene find:
                 <ul class="list-class center-text">
-                    <li><strong>Scene 1:</strong> The Beach</li>
-                    <li><strong>Scene 2:</strong> The Mall</li>
-                    <li><strong>Scene 3:</strong> The Trojan Castle</li>
+                    <li><strong>Scene 1:</strong> Find the Lion in the Wild </li>
+                    <li><strong>Scene 2:</strong> Find Mickey Mouse in Disney Land</li>
+                    <li><strong>Scene 3:</strong> Find Ivan between the Avatars </li>
                 </ul>
             </p>
 

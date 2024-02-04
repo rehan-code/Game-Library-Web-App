@@ -15,11 +15,33 @@
     <?php include("../../components/navbar/navbar.php"); ?>
 
     <div class="main-heading">
-        <h1>The Beach</h1>
+        <h1>Mickey Mouse</h1>
     </div>
+
+    <!-- Full-Screen Toggle Button -->
+    <button class="fullscreen-toggle">Toggle Full Screen</button>
 
     <div class="game-over-screen">
         <h1>Game Over</h1>
+        <div class="options">
+            <button class="option-button button1" onclick="window.location.href='../../index.php'"></button>
+            <button class="option-button button2" onclick="window.location.href='waldo_stage_2.php'"></button>
+        </div>
+        <div class="other-stages-text">
+            <h1>Other stages available to play:</h1>
+        </div>
+        <div class="movie-cards-container">
+            <div class="movie-card movie-card-1" onclick="window.location.href='waldo_stage_1.php';">
+                <h1 class="main-heading">
+                Forest
+                </h1>
+            </div>
+            <div class="movie-card movie-card-3" onclick="window.location.href='waldo_stage_3.php';">
+                <h1 class="main-heading">
+                Ivan
+                </h1>
+            </div>
+        </div>
     </div>
 
     <div class="image-container" onclick="notFound(event)" ondblclick="zoomIn(event)">
