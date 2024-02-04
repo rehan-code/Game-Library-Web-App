@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class WaldoSelectPageTest extends TestCase
+class WaldoSelectTest extends TestCase
 {
     private $waldoSelectPhpContent;
 

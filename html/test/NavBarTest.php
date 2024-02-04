@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class NavbarTest extends TestCase
+class NavBarTest extends TestCase
 {
     private $navbarPhpContent;
 
