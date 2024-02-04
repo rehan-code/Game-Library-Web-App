@@ -44,7 +44,7 @@
             <div class="profile-cards-grid">
                 <?php
                 $team_members = array(
-                    array("name" => "Harikrishan", "image" => "hari.jpg", "linkedin" => "https://www.linkedin.com/in/harikrishansingh/"),
+                    array("name" => "Hari", "image" => "hari.jpg", "linkedin" => "https://www.linkedin.com/in/harikrishansingh/"),
                     array("name" => "Ivan", "image" => "ivan.png", "linkedin" => "https://www.linkedin.com/in/ivanodielmagtangob/"),
                     array("name" => "Rehan", "image" => "rehan.jpg", "linkedin" => "https://www.linkedin.com/in/rehan-nagoor-mohideen-6b3156202/"),
                     array("name" => "Thulasi", "image" => "thulasi.jpg", "linkedin" => "https://www.linkedin.com/in/thulasijothiravi/"),
