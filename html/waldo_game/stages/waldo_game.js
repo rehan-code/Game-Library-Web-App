@@ -6,9 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const element = document.querySelector(".image-container");
     toggleFullScreen(element);
   });
+
+  const el = document.querySelector(".your-fullscreen-button");
+  if (el) {
+    el.addEventListener("click", () => {
+        const element = document.querySelector(".image-container");
+        toggleFullScreen(element);
+      });
+  }
 });
 
-function toggleFullScreen(element) {}
 function zoomIn(event) {
   score++;
   score++;
@@ -91,9 +98,4 @@ function toggleFullScreen(element) {
     }
   }
 }
-document
-  .querySelector(".your-fullscreen-button")
-  .addEventListener("click", () => {
-    const element = document.querySelector(".image-container");
-    toggleFullScreen(element);
-  });
+
