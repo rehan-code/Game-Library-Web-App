@@ -17,12 +17,12 @@
     <section class="container">
         <div class="grid-item-1-center">
             <h1 class="main-heading">
-                Where's <span>Waldo</span> Game
+                I - <span> Spy </span> Game
             </h1>
             <p class="info-text">
-                Our friend Waldo has gone missing! He could be anywhere.
+                Our friends have gone missing! They could be anywhere.
                 <br>
-                Can you help us find him?
+                Can you help us find Them?
             </p>
 
             <!-- stages -->
