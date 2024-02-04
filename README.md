@@ -34,7 +34,7 @@ These enhancements represent significant progress in refining the "I - Spot" gam
 | :------------------------------------------------------: | :------------------------------------------------------: |
 | ![Landing_Page_1](html/images/screens/landing_page1.png) | ![Landing_Page_2](html/images/screens/landing_page2.png) |
 
-### Where's Waldo Game
+### I-Spot Game
 |                   Game Start Page                    |                         Game Page                          |
 | :--------------------------------------------------: | :--------------------------------------------------------: |
 | ![starting_game](html/images/screens/start_game.png) | ![select_stage](html/images/screens/select_stage_screen.png) |
