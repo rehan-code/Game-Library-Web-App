@@ -14,11 +14,26 @@ php-lint:
   image: php:latest
   allow_failure: true
   before_script:
-    - php --version
+    - cd codesniffer
   script:
-    - php phpcs.phar --exclude=Generic.Files.LineEndings html
-    # - php phpcbf.phar --exclude=Generic.Files.LineEndings html
+    - php phpcs.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
+    - php phpcbf.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
 
+phpunit-tests:
+  stage: test
+  image: php:latest
+  before_script:
+    # Install composer if not already present in the image
+    - 'command -v composer >/dev/null || ( curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer )'
+    - composer --version
+    # Navigate to the directory containing your composer.json, if necessary
+    - cd html/
+    # Install project dependencies, including PHPUnit
+    - composer install
+  script:
+    - ./vendor/bin/phpunit html/test/
+
+# Uncomment and adjust if you have a specific testing configuration for Nginx
 # test-nginx:
 #   stage: test
 #   image: nginx:latest

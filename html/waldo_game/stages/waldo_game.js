@@ -1,8 +1,19 @@
 let isZoomed = false;
 let score = 10; // Initialize score
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    updateScoreboard(); // Initial scoreboard update
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".fullscreen-toggle").addEventListener("click", () => {
+        const element = document.querySelector(".image-container");
+        toggleFullScreen(element);
+    });
+
+    const el = document.querySelector(".your-fullscreen-button");
+    if (el) {
+        el.addEventListener("click", () => {
+            const element = document.querySelector(".image-container");
+            toggleFullScreen(element);
+        });
+    }
 });
 
 function zoomIn(event) {
@@ -14,7 +25,6 @@ function zoomIn(event) {
     const image = document.querySelector(".image-container img");
 
     if (!isZoomed) {
-        // Get the coordinates of the click relative to the image container
         const clickX = event.offsetX;
         const clickY = event.offsetY;
 
@@ -52,17 +62,41 @@ function notFound(event) {
 }
 
 function isFound(event) {
-    if (event) event.stopPropagation(); // Prevent triggering notFound when isFound is directly called
+    if (event) event.stopPropagation();
     var screen = document.querySelector(".game-over-screen");
     var image = document.querySelector(".image-container img");
-    // Make image visible and blur background image
+
     screen.style.display = "block";
     image.classList.add("blur");
 }
 
 // Update scoreboard display
 function updateScoreboard() {
-    document.querySelector('.score').innerText = score;
+    document.querySelector(".score").innerText = score;
+}
+
+function toggleFullScreen(element) {
+    if (!document.fullscreenElement) {
+        if (element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
 }
 
 // Export the functions
