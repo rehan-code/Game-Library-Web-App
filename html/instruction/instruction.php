@@ -23,7 +23,7 @@
             </div>
             <h2 class="heading">Overview</h2>
             <p class="heading-paragraph">
-            Our latest puzzle book series, inspired by the concept of 'Where's Waldo?' by British illustrator Martin Handford,
+            Our Game, is inspired by the concept of 'Where's Waldo?' by British illustrator Martin Handford,
              presents a fresh twist on the classic search-and-find adventure. In these vibrant scenes, bustling with an array 
              of unique icons, objects, and characters engaged in diverse activities, the challenge remains the same: locating 
              our elusive icon among the crowd. Much like Waldo, our distinctive figure stands out with its own quirky 
