@@ -40,11 +40,11 @@ body {
 .found-button-1 {
   z-index: 2;
   position: absolute;
-  top: 34rem;
-  left: 33rem;
+  top: 40rem;
+  left: 10rem;
   width: 45px;
   height: 60px;
-  background-color: rgba(128, 0, 128, 0);
+  background-color: rgba(128, 0, 128, 0.5);
   border: none;
   cursor: pointer;
 }
