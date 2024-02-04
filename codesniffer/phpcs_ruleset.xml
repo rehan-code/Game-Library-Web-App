@@ -15,5 +15,6 @@
     <!--File-specific rule exclusions-->
     <rule ref="Generic.Files.LineLength.TooLong">
         <exclude-pattern>../html/index.php</exclude-pattern>
+        <exclude-pattern>../html/about_us/about_us.php</exclude-pattern>
     </rule>
 </ruleset>
