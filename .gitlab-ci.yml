@@ -19,6 +19,24 @@ php-lint:
     - php phpcs.phar --exclude=Generic.Files.LineEndings html
     # - php phpcbf.phar --exclude=Generic.Files.LineEndings html
 
+phpunit-tests:
+  stage: test
+  image: php:latest
+  before_script:
+    # Install composer if not already present in the image
+    - 'command -v composer >/dev/null || ( curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer )'
+    - composer --version
+    # Navigate to the directory containing your composer.json, if necessary
+    - cd html/
+    # Install project dependencies, including PHPUnit
+    - composer install
+  script:
+    - ./vendor/bin/phpunit html/test/
+  # Specify when this job should run
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+
+# Uncomment and adjust if you have a specific testing configuration for Nginx
 # test-nginx:
 #   stage: test
 #   image: nginx:latest
