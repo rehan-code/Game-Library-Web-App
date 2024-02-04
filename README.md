@@ -1,4 +1,4 @@
-# W24 CIS*4250 Team 8 Sprint 2
+# W24 CIS*4250 Team 8 Sprint 3
 
 ## Authors
  Harir Al-Rubaye, Nour Tayem, Thulasi Jothiravi, Rehan Nagoor Mohideen, Harikrishan Singh, and Ivan Odiel Magtangob 
