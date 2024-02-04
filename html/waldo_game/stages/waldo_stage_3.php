@@ -15,7 +15,7 @@
     <?php include("../../components/navbar/navbar.php"); ?>
 
     <div class="main-heading">
-        <h1>Ivan</h1>
+        <h1>Find the Skull Shirt Girl!</h1>
     </div>
 
     <!-- Full-Screen Toggle Button -->
@@ -38,7 +38,7 @@
             </div>
             <div class="movie-card movie-card-2" onclick="window.location.href='waldo_stage_2.php';">
                 <h1 class="main-heading">
-                Disneyland
+                Kingdom
                 </h1>
             </div>
         </div>

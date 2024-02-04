@@ -23,12 +23,12 @@
             </div>
             <h2 class="heading">Overview</h2>
             <p class="heading-paragraph">
-            Our Game, is inspired by the concept of 'Where's Waldo?' by British illustrator Martin Handford,
-             presents a fresh twist on the classic search-and-find adventure. In these vibrant scenes, bustling with an array 
-             of unique icons, objects, and characters engaged in diverse activities, the challenge remains the same: locating 
-             our elusive icon among the crowd. Much like Waldo, our distinctive figure stands out with its own quirky 
-             characteristics amidst the intricately illustrated landscape. Get ready to embark on a captivating journey 
-             of observation and discovery as you hunt for our signature icon within each captivating image!
+                Our Game, is inspired by the concept of 'Where's Waldo?' by British illustrator Martin Handford,
+                presents a fresh twist on the classic search-and-find adventure. In these vibrant scenes, bustling with an array 
+                of unique icons, objects, and characters engaged in diverse activities, the challenge remains the same: locating 
+                our elusive icon among the crowd. Much like Waldo, our distinctive figure stands out with its own quirky 
+                characteristics amidst the intricately illustrated landscape. Get ready to embark on a captivating journey 
+                of observation and discovery as you hunt for our signature icon within each captivating image!
             </p>
             <h2 class="heading">Objective</h2>
             <p class="heading-paragraph">

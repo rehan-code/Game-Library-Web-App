@@ -30,7 +30,8 @@
          <ul class="nav-menu-list">
             <li class="nav-menu-item">
                <?php if ($pagename != "index.php") {
-                  echo '<a href="../../index.php" class="nav-menu-link"> Home </a>';
+                    echo '<a href="../../index.php"
+                    class="nav-menu-link"> Home </a>';
                } ?>
             </li>
             <li class="nav-menu-item">

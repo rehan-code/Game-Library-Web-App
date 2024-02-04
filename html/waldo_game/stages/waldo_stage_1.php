@@ -15,7 +15,7 @@
     <?php include("../../components/navbar/navbar.php"); ?>
 
     <div class="main-heading">
-        <h1>Lion</h1>
+        <h1>Find the Lion!</h1>
     </div>
 
     <!-- Full-Screen Toggle Button -->
@@ -33,12 +33,12 @@
         <div class="movie-cards-container">
             <div class="movie-card movie-card-2" onclick="window.location.href='waldo_stage_2.php';">
                 <h1 class="main-heading">
-                Disneyland
+                Kingdom
                 </h1>
             </div>
             <div class="movie-card movie-card-3" onclick="window.location.href='waldo_stage_3.php';">
                 <h1 class="main-heading">
-                Ivan
+                Neighbourhood
                 </h1>
             </div>
         </div>

@@ -17,7 +17,7 @@
     <section class="container">
         <div class="grid-item-1-center">
             <h1 class="main-heading">
-                I <span> - Spot </span>
+                <span>I-Spot</span>
             </h1>
             <p class="info-text">
                 Our friends have gone missing! They could be anywhere.
@@ -41,12 +41,12 @@
             </div>
             <div class="movie-card movie-card-2" onclick="window.location.href='stages/waldo_stage_2.php';">
                 <h1 class="main-heading">
-                    Disneyland
+                    Kingdom
                 </h1>
             </div>
             <div class="movie-card movie-card-3" onclick="window.location.href='stages/waldo_stage_3.php';">
                 <h1 class="main-heading">
-                    Ivan
+                    Neighbourhood
                 </h1>
             </div>
         </div>
