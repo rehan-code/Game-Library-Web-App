@@ -16,8 +16,8 @@ php-lint:
   before_script:
     - cd codesniffer
   script:
-    - php phpcs.phar -s --standard=phpcs_ruleset.xml --ignore=*.js html
-    - php phpcbf.phar -s --standard=phpcs_ruleset.xml --ignore=*.js html
+    - php phpcs.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
+    - php phpcbf.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
 
 # test-nginx:
 #   stage: test
