@@ -17,7 +17,7 @@
     <section class="container">
         <div class="grid-item-1-center">
             <h1 class="main-heading">
-                I <span> Spot </span> Game
+                I <span> - Spot </span>
             </h1>
             <p class="info-text">
                 Our friends have gone missing! They could be anywhere.
