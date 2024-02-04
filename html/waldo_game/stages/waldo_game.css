@@ -208,10 +208,17 @@ body {
   background-image: url("../../images/waldo_stage_2.png");
   background-size: cover;
   background-position: top;
+  color: black;
 }
 
 .movie-card-3 {
   background-image: url("../../images/waldo_stage_3.jpg");
   background-size: cover;
   background-position: 20% 7%;
+  color: black;
+}
+
+.movie-card-2 h1.main-heading,
+.movie-card-3 h1.main-heading {
+  color: black;
 }
