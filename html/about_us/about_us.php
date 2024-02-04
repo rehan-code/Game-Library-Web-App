@@ -36,7 +36,7 @@
                     <dt><strong>Landing Page:</strong> Serves as the entry point to our website, offering navigation to various sections and games.</dt>
                     <dt><strong>Instruction Page:</strong> Provides detailed instructions and guidance for users, including how to play our games.</dt>
                     <dt><strong>About Us Page:</strong> Here, visitors can learn about our team, our mission, and our values.</dt>
-                    <dt><strong>Game Page:</strong> Currently, we have the "Where's Waldo" game available for play.</dt>
+                    <dt><strong>Game Page:</strong> Currently, we have the "I - Spy" game available for play.</dt>
                 </dl>  
             </p>
       
