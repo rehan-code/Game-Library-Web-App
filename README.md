@@ -37,16 +37,16 @@ These enhancements represent significant progress in refining the "I - Spot" gam
 ### Where's Waldo Game
 |                   Game Start Page                    |                         Game Page                          |
 | :--------------------------------------------------: | :--------------------------------------------------------: |
-| ![starting_game](html/images/screens/start_game.png) | ![find_Waldo](html/images/screens/select_stage_Screen.png) |
+| ![starting_game](html/images/screens/start_game.png) | ![select_stage](html/images/screens/select_stage_Screen.png) |
 
 ### Stages
 |                         Stage 1                         |                       Stage 2                        |
 | :-----------------------------------------------------: | :--------------------------------------------------: |
-| ![starting_game](html/images/screens/stage1_screen.png) | ![find_Waldo](html/images/screens/stage2_screen.png) |
+| ![stage_1](html/images/screens/stage1_screen.png) | ![stage_2](html/images/screens/stage2_screen.png) |
 
 |                         Stage 3                         |                        Game Over                        |
 | :-----------------------------------------------------: | :-----------------------------------------------------: |
-| ![starting_game](html/images/screens/stage3_screen.png) | ![find_Waldo](html/images/screens/game_over_screen.png) |
+| ![stage_3](html/images/screens/stage3_screen.png) | ![game_over](html/images/screens/game_over_screen.png) |
 
 ### Learn More
 
