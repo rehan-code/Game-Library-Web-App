@@ -40,8 +40,8 @@ body {
 .found-button-1 {
   z-index: 2;
   position: absolute;
-  top: 33rem;
-  left: 32.3rem;
+  top: 30rem;
+  left: 29.6rem;
   width: 45px;
   height: 60px;
   background-color: rgba(128, 0, 128, 0);
@@ -52,8 +52,8 @@ body {
 .found-button-2 {
   z-index: 2;
   position: absolute;
-  top: 15rem;
-  left: 71.5rem;
+  top: 14rem;
+  left: 66rem;
   width: 45px;
   height: 62px;
   background-color: rgba(128, 0, 128, 0);
@@ -64,8 +64,8 @@ body {
 .found-button-3 {
   z-index: 2;
   position: absolute;
-  top: 11rem;
-  left: 44.7rem;
+  top: 13em;
+  left: 41rem;
   width: 30px;
   height: 45px;
   background-color: rgba(128, 0, 128, 0);
@@ -129,7 +129,7 @@ body {
   background-color: #2b50c7;
 }
 
-.options{
+.options {
   background-color: rgb(242, 242, 242);
   opacity: 0.75;
   border-radius: 10px;
@@ -142,33 +142,39 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding:20px;
+  padding: 20px;
 }
 
 .option-button {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: rgb(242, 242, 242); /* Green, you can change the color */
+  background-color: rgb(242, 242, 242);
+  /* Green, you can change the color */
   color: black;
   cursor: pointer;
   width: 16px;
   height: 20px;
   padding: 12%;
 }
+
 .button1 {
-  background-image: url('../../images/home_button.png'); /* Set the path to your image */
+  background-image: url('../../images/home_button.png');
+  /* Set the path to your image */
   background-size: cover;
 }
 
 .button2 {
-  background-image: url('../../images/replay.png'); /* Set the path to your image */
+  background-image: url('../../images/replay.png');
+  /* Set the path to your image */
   background-size: cover;
 }
 
 .other-stages-text {
-  text-align: center; /* Adjust as needed */
-  margin-top: 50px;   /* Adjust as needed */
+  text-align: center;
+  /* Adjust as needed */
+  margin-top: 50px;
+  /* Adjust as needed */
   padding-top: 50px;
 
 }
@@ -189,7 +195,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   padding: 20px;
-  margin: 0 10px; /* Adjust the margin as needed */
+  margin: 0 10px;
+  /* Adjust the margin as needed */
   cursor: pointer;
   color: #000000;
   width: 20%;
