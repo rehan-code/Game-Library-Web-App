@@ -113,6 +113,8 @@ class AboutUsPageTest extends TestCase
             '<title>About Us</title>', $this->_aboutUsPhpContent
         );
         $this->assertStringContainsString('Who We Are', $this->_aboutUsPhpContent);
-        $this->assertMatchesRegularExpression('<div class="profile-details">',$this->_aboutUsPhpContent);
+        $this->assertMatchesRegularExpression(
+            '<div class="profile-details">', $this->_aboutUsPhpContent
+        );
     }
 }
