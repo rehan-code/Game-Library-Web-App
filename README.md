@@ -11,33 +11,48 @@
  * Usage (Local Development)
 
 ## Description
-The majority of Sprint 2 was spent brainstorming what games to add into the website. The team ended up choosing
-to create our implementation of the "Where's Waldo" game.
+During Sprint 3, the team focused on updating the game functionality, which was renamed to "I - Spot". Several features and improvements were implemented:
 
-The site has been updated to support navigation to a new game page where Where's Waldo can be played. Basic functionalities
-like a scoring system and game over screen have been implemented.
+1. **New Levels**: The game now features additional levels, enhancing the gameplay experience and providing more challenges for players.
 
-Other updates include:
-- Added an Instructions page
-- Added PHP linting as a part of the CI/CD pipeline
+2. **Custom Images**: Visuals have been revamped with custom images, enhancing the overall aesthetic appeal and uniqueness of the game.
+
+3. **Unit Tests**: Unit tests have been integrated into the codebase to ensure robustness and reliability, allowing for smoother development and maintenance cycles.
+
+4. **Linting Issues**: Various linting issues were addressed and fixed, improving code quality and consistency across the project.
+
+5. **Updated UI/Frontend**: The user interface and frontend elements, including the game over screen, have been updated for improved usability and visual coherence.
+
+6. **Fullscreen Option**: A fullscreen option has been added to provide players with a more immersive gaming experience and greater flexibility in how they engage with the game.
+
+These enhancements represent significant progress in refining the "I - Spot" game, making it more engaging, visually appealing, and user-friendly.
 
 ## Visuals
 
 ### Landing Page
-Landing Page - part 1 |  landing Page - part 2
-:-------------------------:|:-------------------------:
-![Landing_Page_1](html/images/landing_page1.png) |  ![Landing_Page_2](html/images/landing_page2.png)
+|                  Landing Page - part 1                   |                  landing Page - part 2                   |
+| :------------------------------------------------------: | :------------------------------------------------------: |
+| ![Landing_Page_1](html/images/screens/landing_page1.png) | ![Landing_Page_2](html/images/screens/landing_page2.png) |
 
-### Where's Waldo Game
-Game Start Page         | Game Page
-:-------------------------:|:-------------------------:
-![starting_game](html/images/starting_game.png)|  ![find_Waldo](html/images/find_waldo.png)
+### I-Spot Game
+|                   Game Start Page                    |                         Game Page                          |
+| :--------------------------------------------------: | :--------------------------------------------------------: |
+| ![starting_game](html/images/screens/start_game.png) | ![select_stage](html/images/screens/select_stage_screen.png) |
+
+### Stages
+|                         Stage 1                         |                       Stage 2                        |
+| :-----------------------------------------------------: | :--------------------------------------------------: |
+| ![stage_1](html/images/screens/stage1_screen.png) | ![stage_2](html/images/screens/stage2_screen.png) |
+
+|                         Stage 3                         |                        Game Over                        |
+| :-----------------------------------------------------: | :-----------------------------------------------------: |
+| ![stage_3](html/images/screens/stage3_screen.png) | ![game_over](html/images/screens/game_over_screen.png) |
 
 ### Learn More
 
-Instructions Page | About Us Page
-:-------------------------:|:-------------------------:
-![Insturctions](html/images/instructions.png) |  ![About_Us](html/images/about_us.png)
+|                   Instructions Page                   |                 About Us Page                 |
+| :---------------------------------------------------: | :-------------------------------------------: |
+| ![Insturctions](html/images/screens/instructions.png) | ![About_Us](html/images/screens/about_us.png) |
 
 ## Requirements 
 
