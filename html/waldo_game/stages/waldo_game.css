@@ -15,11 +15,12 @@ body {
 }
 
 .image-container {
-  width: 98%;
+  width: 90%;
   text-align: center;
   margin: 2rem;
   position: absolute;
   overflow: hidden;
+  margin: 5%;
 }
 
 .image-container img {
@@ -93,7 +94,7 @@ body {
 }
 
 .blur {
-  filter: blur(2px) brightness(50%);
+  filter: blur(4px) brightness(50%);
 }
 
 .scoreboard {
@@ -126,4 +127,98 @@ body {
 
 .fullscreen-toggle:hover {
   background-color: #2b50c7;
+}
+
+.options{
+  background-color: rgb(242, 242, 242);
+  opacity: 0.75;
+  border-radius: 10px;
+  width: 15%;
+  height: 10%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding:20px;
+}
+
+.option-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(242, 242, 242); /* Green, you can change the color */
+  color: black;
+  cursor: pointer;
+  width: 16px;
+  height: 20px;
+  padding: 12%;
+}
+.button1 {
+  background-image: url('../../images/home_button.png'); /* Set the path to your image */
+  background-size: cover;
+}
+
+.button2 {
+  background-image: url('../../images/replay.png'); /* Set the path to your image */
+  background-size: cover;
+}
+
+.other-stages-text {
+  text-align: center; /* Adjust as needed */
+  margin-top: 50px;   /* Adjust as needed */
+  padding-top: 50px;
+
+}
+
+.other-stages-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.movie-cards-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.movie-card {
+  background-image: url("../../images/waldo_stage_2.png");
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 0 10px; /* Adjust the margin as needed */
+  cursor: pointer;
+  color: #000000;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.movie-card-1 {
+  background-image: url("../../images/waldo_stage_1.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.movie-card-2 {
+  background-image: url("../../images/waldo_stage_2.png");
+  background-size: cover;
+  background-position: top;
+  color: black;
+}
+
+.movie-card-3 {
+  background-image: url("../../images/waldo_stage_3.jpg");
+  background-size: cover;
+  background-position: 20% 7%;
+  color: black;
+}
+
+.movie-card-2 h1.main-heading,
+.movie-card-3 h1.main-heading {
+  color: black;
 }

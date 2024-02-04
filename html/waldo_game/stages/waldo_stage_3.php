@@ -23,6 +23,25 @@
 
     <div class="game-over-screen">
         <h1>Game Over</h1>
+        <div class="options">
+            <button class="option-button button1" onclick="window.location.href='../../index.php'"></button>
+            <button class="option-button button2" onclick="window.location.href='waldo_stage_3.php'"></button>
+        </div>
+        <div class="other-stages-text">
+            <h1>Other stages available to play:</h1>
+        </div>
+        <div class="movie-cards-container">
+            <div class="movie-card movie-card-1" onclick="window.location.href='waldo_stage_1.php';">
+                <h1 class="main-heading">
+                Forest
+                </h1>
+            </div>
+            <div class="movie-card movie-card-2" onclick="window.location.href='waldo_stage_2.php';">
+                <h1 class="main-heading">
+                Disneyland
+                </h1>
+            </div>
+        </div>
     </div>
 
     <div class="image-container" onclick="notFound(event)" ondblclick="zoomIn(event)">
