@@ -14,10 +14,10 @@ php-lint:
   image: php:latest
   allow_failure: true
   before_script:
-    - php --version
+    - cd codesniffer
   script:
-    - php phpcs.phar --exclude=Generic.Files.LineEndings html
-    # - php phpcbf.phar --exclude=Generic.Files.LineEndings html
+    - php phpcs.phar -s --standard=phpcs_ruleset.xml --ignore=*.js html
+    - php phpcbf.phar -s --standard=phpcs_ruleset.xml --ignore=*.js html
 
 # test-nginx:
 #   stage: test
