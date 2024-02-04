@@ -15,8 +15,11 @@
     <?php include("../../components/navbar/navbar.php"); ?>
 
     <div class="main-heading">
-        <h1>The Trojan Castle</h1>
+        <h1>Ivan</h1>
     </div>
+
+    <!-- Full-Screen Toggle Button -->
+    <button class="fullscreen-toggle">Toggle Full Screen</button>
 
     <div class="game-over-screen">
         <h1>Game Over</h1>

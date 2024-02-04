@@ -36,17 +36,17 @@
             </h1>
             <div class="movie-card movie-card-1" onclick="window.location.href='stages/waldo_stage_1.php';">
                 <h1 class="main-heading">
-                    The Shopping Center
+                    Forest
                 </h1>
             </div>
             <div class="movie-card movie-card-2" onclick="window.location.href='stages/waldo_stage_2.php';">
                 <h1 class="main-heading">
-                    The Beach
+                    Disneyland
                 </h1>
             </div>
             <div class="movie-card movie-card-3" onclick="window.location.href='stages/waldo_stage_3.php';">
                 <h1 class="main-heading">
-                    The Trojan Horse
+                    Ivan
                 </h1>
             </div>
         </div>

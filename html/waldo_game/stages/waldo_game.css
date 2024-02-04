@@ -109,3 +109,21 @@ body {
   color: #333;
   box-shadow: none;
 }
+
+.fullscreen-toggle {
+  position: fixed; 
+  top: 25px; 
+  right: 30px; 
+  padding: 10px 20px;
+  background-color: #335eea; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 10; 
+}
+
+.fullscreen-toggle:hover {
+  background-color: #2b50c7; 
+}
