@@ -23,7 +23,7 @@
             </h1>
             <p class="info-text">
                 
-            Team 8 proudly presents our unique version of the beloved 'I - Spy' game. In this expanded edition, 
+            Team 8 proudly presents our unique version of the beloved 'Where's waldo' game. In this expanded edition, 
             your quest goes beyond spotting Waldo as you uncover a multitude of additional objectives within our captivating 
             images. Instead of searching for Waldo, you'll be on the lookout for our own icons, adding a fresh twist to the
              classic gameplay. Join us on a journey through a diverse range of engaging games crafted by our dedicated team.
