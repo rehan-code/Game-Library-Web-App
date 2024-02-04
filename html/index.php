@@ -22,10 +22,11 @@
                 website
             </h1>
             <p class="info-text">
-                We, Team 8, are dedicated to developing engaging online games. Our inaugural release is an expanded edition of the classic 
-                'Where's Waldo?' game. In this immersive experience, your challenge goes beyond locating Waldo himself, as you discover 
-                a myriad of additional objectives. As our team continues to work diligently, we envision a future where you can explore a 
-                diverse range of games crafted by our dedicated team.
+                
+            Team 8 proudly presents our unique version of the beloved 'Where's Waldo?' game. In this expanded edition, 
+            your quest goes beyond spotting Waldo as you uncover a multitude of additional objectives within our captivating 
+            images. Instead of searching for Waldo, you'll be on the lookout for our own icons, adding a fresh twist to the
+             classic gameplay. Join us on a journey through a diverse range of engaging games crafted by our dedicated team.
             </p>
             </div>
             <div class="grid-item-2">
@@ -47,9 +48,9 @@
                     Where's Waldo Game
                 </h1>
                 <p class="info-text">
-                    Our friend Waldo has gone missing! He could be anywhere.
+                    Our friends have gone missing! They could be anywhere.
                     <br>
-                    Can you help us find him?
+                    Can you help us find Them?
                 </p>
             </div>
         </div>
