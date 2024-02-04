@@ -46,7 +46,7 @@ function zoomIn(event) {
 
 function notFound(event) {
     // Prevent the score from decreasing if the found button is clicked
-    if (event.target.className.includes("found-button")) {
+    if (event.target.className.includes('found-button')) {
         event.stopPropagation();
         return;
     }
@@ -98,3 +98,11 @@ function toggleFullScreen(element) {
         }
     }
 }
+
+// Export the functions
+module.exports = {
+    zoomIn,
+    notFound,
+    isFound,
+    updateScoreboard
+};

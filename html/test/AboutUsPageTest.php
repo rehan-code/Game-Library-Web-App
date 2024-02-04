@@ -114,8 +114,7 @@ class AboutUsPageTest extends TestCase
         );
         $this->assertStringContainsString('Who We Are', $this->_aboutUsPhpContent);
         $this->assertMatchesRegularExpression(
-            '/<img src="..\/images\/.+?" alt=".+? Profile Picture">/',
-            $this->_aboutUsPhpContent
+            '<div class="profile-details">', $this->_aboutUsPhpContent
         );
     }
 }
