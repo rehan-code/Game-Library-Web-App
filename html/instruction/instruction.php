@@ -36,7 +36,7 @@
                 <ul class="list-class center-text">
                     <li><strong>Scene 1:</strong> Find the Lion in the Wild </li>
                     <li><strong>Scene 2:</strong> Find Mickey Mouse in Disney Land</li>
-                    <li><strong>Scene 3:</strong> Find Ivan between the Avatars </li>
+                    <li><strong>Scene 3:</strong> Find The Skull Shirt Girl  between the Avatars </li>
                 </ul>
             </p>
 

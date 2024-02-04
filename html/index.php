@@ -45,7 +45,7 @@
             </h1>
             <div class="movie-card movie-card-2" onclick="window.location.href='waldo_game/waldo_select.php';">
                 <h1 class="main-heading">
-                    I - Spot Game
+                    I - Spot
                 </h1>
                 <p class="info-text">
                     Our friends have gone missing! They could be anywhere.

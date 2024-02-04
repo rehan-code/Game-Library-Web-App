@@ -41,12 +41,12 @@
             </div>
             <div class="movie-card movie-card-2" onclick="window.location.href='stages/waldo_stage_2.php';">
                 <h1 class="main-heading">
-                    Disneyland
+                    Princess Land
                 </h1>
             </div>
             <div class="movie-card movie-card-3" onclick="window.location.href='stages/waldo_stage_3.php';">
                 <h1 class="main-heading">
-                    Ivan
+                    The Skull Shirt Girl
                 </h1>
             </div>
         </div>

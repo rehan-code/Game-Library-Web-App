@@ -38,7 +38,7 @@
             </div>
             <div class="movie-card movie-card-3" onclick="window.location.href='waldo_stage_3.php';">
                 <h1 class="main-heading">
-                Ivan
+                Skull Shirt Girl
                 </h1>
             </div>
         </div>
