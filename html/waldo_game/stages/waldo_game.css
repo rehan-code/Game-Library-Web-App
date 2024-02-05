@@ -40,11 +40,11 @@ body {
 .found-button-1 {
   z-index: 2;
   position: absolute;
-  top: 40rem;
-  left: 10rem;
+  top: 34.5rem;
+  left: 34rem;
   width: 45px;
   height: 60px;
-  background-color: rgba(128, 0, 128, 0.5);
+  background-color: rgba(128, 0, 128, 0);
   border: none;
   cursor: pointer;
 }
@@ -64,8 +64,8 @@ body {
 .found-button-3 {
   z-index: 2;
   position: absolute;
-  top: 32em;
-  left: 48rem;
+  top: 33em;
+  left: 49.3rem;
   width: 30px;
   height: 45px;
   background-color: rgba(128, 0, 128, 0);
