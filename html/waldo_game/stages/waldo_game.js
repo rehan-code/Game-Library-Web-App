@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const element = document.querySelector(".image-container");
         toggleFullScreen(element);
     });
+    
 
     const el = document.querySelector(".your-fullscreen-button");
     if (el) {
@@ -15,8 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
 function zoomIn(event) {
+    // Check if the score is 1 and the user is attempting to zoom in
+    if (score === 1) {
+        event.stopPropagation(); // Prevent further event propagation
+        return; // Do not proceed with zooming in
+    }
+
     score++;
     score++;
     updateScoreboard();
@@ -42,7 +48,20 @@ function zoomIn(event) {
 
     imageContainer.classList.toggle("zoomed", !isZoomed);
     isZoomed = !isZoomed;
+
+    // Check if the score is still 1 after the zoom
+    // If the score is 1, return without calling isFound
+    if (score === 1) {
+        return;
+    }
+
+    // Call isFound if the score is not 1
+    if (score <= 0) {
+        isFound();
+    }
 }
+
+
 
 function notFound(event) {
     // Prevent the score from decreasing if the found button is clicked
@@ -55,6 +74,7 @@ function notFound(event) {
     score--;
     updateScoreboard();
 
+    
     // Check if score has reached 0 and call isFound if it has
     if (score <= 0) {
         isFound();
@@ -106,3 +126,4 @@ module.exports = {
     isFound,
     updateScoreboard
 };
+
