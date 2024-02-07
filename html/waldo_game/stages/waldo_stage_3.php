@@ -13,6 +13,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Where's Waldo Game</title>
     <style>
@@ -28,7 +30,6 @@
     </div>
 
     <!-- Full-Screen Toggle Button -->
-    <button class="fullscreen-toggle">Toggle Full Screen</button>
 
     <div class="game-over-screen">
         <h1>Game Over</h1>
@@ -57,10 +58,10 @@
         </div>
     </div>
 
-    <div class="image-container" onclick="notFound(event)" 
-    ondblclick="zoomIn(event)">
+    <div class="image-container" style="position: relative;" onclick="notFound(event)" ondblclick="zoomIn(event)">
         <img src="../../images/waldo_stage_3.jpg" draggable="false" 
-        alt="Zoomable Image" id="waldoImage" width="90%">
+        alt="Zoomable Image" id="waldoImage">
+        <button class="fullscreen-toggle2 "><i class="fa fa-arrows-alt"></i></button>
         <button class="found-button-3" onclick="isFound(event)"></button>
     </div>
 
