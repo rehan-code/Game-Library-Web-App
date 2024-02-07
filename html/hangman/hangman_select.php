@@ -1,6 +1,6 @@
 <?php
 /**
- * I-spot stage select screen
+ * Hangman select screen
  * php version 8.1.2
  * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
@@ -14,7 +14,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game</title>
+    <title>Hangman Game</title>
     <style>
         <?php require '../style.css'; ?>
     </style>
@@ -45,7 +45,7 @@
                 <span>Stages</span>
             </h1>
             <div class="movie-card-main-2 movie-card-hangman" 
-            onclick="window.location.href='stages/hangman__stage_1.php';">
+            onclick="window.location.href='stages/hangman_stage_1.php';">
                 <h1 class="main-heading">
                     Easy
                 </h1>
