@@ -14,3 +14,4 @@ services:
     image: php:8.2-fpm
     volumes:
       - ./html:/app/public
+      - ./codesniffer:/app/codesniffer
