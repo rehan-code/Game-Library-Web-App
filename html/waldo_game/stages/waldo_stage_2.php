@@ -57,11 +57,10 @@
         </div>
     </div>
 
-    <div class="image-container" onclick="notFound(event)" 
-    ondblclick="zoomIn(event)">
+    <div class="image-container">
         <img src="../../images/waldo_stage_2.png" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
-        <button class="found-button-2" onclick="isFound(event)"></button>
+        <button class="found-button-2"></button>
     </div>
 
     <div class="scoreboard">
