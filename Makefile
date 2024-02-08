@@ -5,6 +5,6 @@ build:
 down:
 	docker compose -f server.docker-compose.yml down
 lint:
-	php codesniffer/phpcs.phar -s --standard=./codesniffer/phpcs_ruleset.xml --ignore=*.js html
+	docker exec --workdir /app team_8-php-1 php codesniffer/phpcs.phar -s --standard=./codesniffer/phpcs_ruleset.xml --ignore=*.js public
 lint-fix:
-	php codesniffer/phpcbf.phar -s --standard=./codesniffer/phpcs_ruleset.xml --ignore=*.js html
+	docker exec --workdir /app team_8-php-1 php codesniffer/phpcbf.phar -s --standard=./codesniffer/phpcs_ruleset.xml --ignore=*.js public

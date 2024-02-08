@@ -21,11 +21,11 @@
 
     <!--File-specific rule exclusions-->
     <rule ref="Generic.Files.LineLength.TooLong">
-        <exclude-pattern>../html/index.php</exclude-pattern>
-        <exclude-pattern>../html/about_us/about_us.php</exclude-pattern>
+        <exclude-pattern>../public/index.php</exclude-pattern>
+        <exclude-pattern>../public/about_us/about_us.php</exclude-pattern>
     </rule>
 
     <rule ref="PEAR.Commenting.FunctionComment.MissingReturn">
-        <exclude-pattern>../html/test/*.php</exclude-pattern>
+        <exclude-pattern>../public/test/*.php</exclude-pattern>
     </rule>
 </ruleset>
