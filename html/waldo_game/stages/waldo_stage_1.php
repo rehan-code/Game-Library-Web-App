@@ -67,7 +67,7 @@
         <h2>Lives: <span class="score">10</span></h2>
     </div>
 
-    <script>
+    <script type='module'>
         <?php require 'waldo_game.js'; ?>
     </script>
 </body>
