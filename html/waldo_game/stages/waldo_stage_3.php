@@ -58,7 +58,7 @@
     </div>
 
     <div class="image-container">
-        <img src="../../images/waldo_stage_3.jpg" draggable="false" 
+        <img src="../../images/waldo/waldo_stage_3.jpg" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
         <button class="found-button-3"></button>
     </div>
