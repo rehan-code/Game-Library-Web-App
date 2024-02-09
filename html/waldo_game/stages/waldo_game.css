@@ -24,8 +24,9 @@ body {
 }
 
 .image-container img {
-  max-width: 100%;
-  height: auto;
+  /* max-width: 100%; */
+  width: 100%;
+  height: 100%;
   border: 5px solid white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -40,10 +41,10 @@ body {
 .found-button-1 {
   z-index: 2;
   position: absolute;
-  top: 34.5rem;
-  left: 34rem;
-  width: 45px;
-  height: 60px;
+  top: 72%;
+  left: 33.75%;
+  width: 1%;
+  height: 4%;
   background-color: rgba(128, 0, 128, 0);
   border: none;
   cursor: pointer;
@@ -52,10 +53,10 @@ body {
 .found-button-2 {
   z-index: 2;
   position: absolute;
-  top: 13.5rem;
-  left: 26rem;
-  width: 45px;
-  height: 62px;
+  top: 56%;
+  left: 26.2%;
+  width: 2%;
+  height: 7%;
   background-color: rgba(128, 0, 128, 0);
   border: none;
   cursor: pointer;
@@ -64,10 +65,10 @@ body {
 .found-button-3 {
   z-index: 2;
   position: absolute;
-  top: 33em;
-  left: 49.3rem;
-  width: 30px;
-  height: 45px;
+  top: 57.5%;
+  left: 47.5%;
+  width: 2%;
+  height: 7%;
   background-color: rgba(128, 0, 128, 0);
   border: none;
   cursor: pointer;
@@ -135,8 +136,8 @@ body {
   border-radius: 10px;
   width: 15%;
   height: 10%;
-  position: absolute;
-  top: 15%;
+  position: relative;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

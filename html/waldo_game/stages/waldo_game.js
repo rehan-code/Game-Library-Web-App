@@ -130,7 +130,7 @@ function toggleFullScreen(element) {
 }
 
 // Export the functions
-module.exports = {
+export {
     zoomIn,
     notFound,
     isFound,
