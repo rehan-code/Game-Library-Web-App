@@ -88,6 +88,7 @@ function notFound(event) {
     // Check if score has reached 0 and call isFound if it has
     if (score <= 0) {
         isFound();
+        score++;
     }
 }
 
