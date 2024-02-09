@@ -110,7 +110,7 @@
                     echo '<img src="../images/linkedin_icon.png" alt="LinkedIn Icon">';
                     echo '</a>';
                     echo '<div class="profile-picture">';
-                    echo '<img src="../images/'
+                    echo '<img src="../images/about_us/'
                         . $member["image"]
                         . '" alt="'
                         . $member["name"]
