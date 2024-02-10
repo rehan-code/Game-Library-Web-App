@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const element = document.querySelector(".image-container");
         toggleFullScreen(element);
     });
+    
 
     const el = document.querySelector(".your-fullscreen-button");
     if (el) {
@@ -85,6 +86,7 @@ function notFound(event) {
     score--;
     updateScoreboard();
 
+    
     // Check if score has reached 0 and call isFound if it has
     if (score <= 0) {
         isFound();

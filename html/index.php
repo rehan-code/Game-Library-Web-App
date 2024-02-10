@@ -69,6 +69,17 @@
                     Can you help us find Them?
                 </p>
             </div>
+            <div
+                class="movie-card-main-2 movie-card-hangman"
+                onclick="window.location.href='hangman/hangman_select.php';"
+            >
+                <h1 class="main-heading">
+                    Hangman
+                </h1>
+                <p class="info-text">
+                    Unravel the mystery word before the hangman's fate is sealed!
+                </p>
+            </div>
         </div>
     </section>
 </body>
