@@ -29,10 +29,11 @@
                 <span>Hangman</span>
             </h1>
             <p class="info-text">
-                Someone's words have been concealed, and it's up to you to reveal them letter by letter. <br>
-                A mystery word awaits decryption. Every correct guess brings you closer to unveiling <br>
-               the hidden message, but be cautious — too many wrong guesses, and the hangman's noose tightens! <br>
-               Are you up for the challenge? <br>
+                Someone's words have been concealed, and it's up to you to reveal 
+                them letter by letter. <br>A mystery word awaits decryption. Every 
+                correct guess brings you closer to unveiling <br>the hidden 
+                message, but be cautious — too many wrong guesses, and the 
+                hangman's noose tightens! <br>Are you up for the challenge? <br>
             </p>
 
             <!-- stages -->

@@ -16,17 +16,41 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    let clickTimer = null;
+    const imageContainer = document.querySelector('.image-container');
+
+    imageContainer.addEventListener('click', function(event) {
+        // Prevent triggering on button clicks inside the container
+        if (event.target.tagName !== 'BUTTON') {
+            if (clickTimer == null) {
+                clickTimer = setTimeout(function() {
+                    clickTimer = null;
+                    notFound(event);
+                }, 300); // Wait for 300ms to check for double click
+            } else {
+                clearTimeout(clickTimer);
+                clickTimer = null;
+            }
+        }
+    });
+
+    imageContainer.addEventListener('dblclick', function(event) {
+        if (event.target.tagName !== 'BUTTON') {
+            zoomIn(event);
+        }
+    });
+
+    document.querySelectorAll('.found-button-1, .found-button-2, .found-button-3').forEach(button => {
+        button.addEventListener('click', function(event) {
+            isFound(event);
+        });
+    });
+});
+
 function zoomIn(event) {
-    // Check if the score is 1 and the user is attempting to zoom in
-    if (score === 1) {
-        event.stopPropagation(); // Prevent further event propagation
-        return; // Do not proceed with zooming in
-    }
-
-    score++;
-    score++;
-    updateScoreboard();
-
+    
     const imageContainer = document.querySelector(".image-container");
     const image = document.querySelector(".image-container img");
 
@@ -48,19 +72,7 @@ function zoomIn(event) {
 
     imageContainer.classList.toggle("zoomed", !isZoomed);
     isZoomed = !isZoomed;
-
-    // Check if the score is still 1 after the zoom
-    // If the score is 1, return without calling isFound
-    if (score === 1) {
-        return;
-    }
-
-    // Call isFound if the score is not 1
-    if (score <= 0) {
-        isFound();
-    }
 }
-
 
 
 function notFound(event) {
@@ -78,6 +90,7 @@ function notFound(event) {
     // Check if score has reached 0 and call isFound if it has
     if (score <= 0) {
         isFound();
+        score++;
     }
 }
 
@@ -120,10 +133,9 @@ function toggleFullScreen(element) {
 }
 
 // Export the functions
-module.exports = {
+export {
     zoomIn,
     notFound,
     isFound,
     updateScoreboard
 };
-
