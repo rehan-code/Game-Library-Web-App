@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const index = Math.floor(Math.random() * words.length);
     const word = words[index].toUpperCase();
 
+    let lives = 0;
     let displayedWord = Array.from(word, function(character) {
         if (character !== ' ') {
             return '_';
@@ -17,20 +18,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     updateDisplay();
 
+    // Add a event listener for every key click
     document.querySelectorAll('.key').forEach(function(key) {
         key.addEventListener('click', function() {
             const letter = this.textContent.toUpperCase();
-            if (word.includes(letter)) {
+            
+            if (word.includes(letter)) { // letter is correct
                 this.classList.add('correct');
                 isCorrectLetter(letter);
-            } else {
+            } else { // letter is incorrect
                 this.classList.add('incorrect');
                 isWrongLetter(letter);
             }
-            this.disabled = true;
+            this.disabled = true; //disable letter clickability
         });
     });
 
+    /**
+     * Gets the word list from the json files
+     * @param {*} difficulty 
+     * @returns the array of words based on the difficulty
+     */
     function getWordPool(difficulty) {
         var words = [];
 
@@ -51,6 +59,10 @@ document.addEventListener("DOMContentLoaded", function() {
         return words;
     }
 
+    /**
+     * Updates the correct letter on the displayed word
+     * @param {*} letter 
+     */
     function isCorrectLetter(letter) {
         word.split('').forEach((char, index) => {
             if (char === letter) {
@@ -58,14 +70,38 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
         updateDisplay();
+        
+        // If word is complete then display game over
+        if (!displayedWord.includes('_')) {
+            document.querySelector(".game-over-screen h1").innerHTML = "Congratulations! </br> You're a Winner!"
+            gameover();
+        }
     }
 
-    function isWrongLetter(letter) {
-        console.log(letter + " is incorrect");
-
-        // Add functionality here
+    /**
+     * Updates the hangman figure
+     */
+    function isWrongLetter() {
+        lives++;
+        var hangman = document.querySelector(".image-container img");
+        lives < 10 ? hangman.src="../../images/hangman/hangman"+lives+".png" : null; // update hangman image
+        lives == 1 ? hangman.style.display = "block" : null; // show hangman on first life lost
+        if (lives == 9) {
+            gameover();
+        }
     }
 
+    /**
+     * Function to show the game over page
+     */
+    function gameover() {
+        document.querySelector(".game-over-screen").classList.add("active");
+        document.querySelector(".game-content").classList.add("blur");
+    }
+
+    /**
+     * Update the displayed letter/underscores on the screen
+     */
     function updateDisplay() {
         document.getElementById('word-display').textContent = displayedWord.join(' ');
     }
