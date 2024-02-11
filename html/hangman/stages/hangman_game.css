@@ -219,7 +219,6 @@ body {
 }
 
 .image-container {
-  width: 20%;
   height: 400px;
 }
 
@@ -228,6 +227,6 @@ body {
 }
 
 #hangmanImage {
-  width: 100%; /* Set the image width to 100% of its container */
-  height: auto; /* Maintain the aspect ratio */
+  width: auto; /* Maintain the aspect ratio */
+  height: 100%; /* Set the image height to 100% of its container */
 }
