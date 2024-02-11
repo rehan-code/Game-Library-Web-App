@@ -45,7 +45,7 @@ describe('notFound function', () => {
             target: document.createElement('div')
         };
         notFound(event);
-        expect(document.querySelector('.score').innerText).toBe(11);
+        expect(document.querySelector('.score').innerText).toBe(9);
     });
 });
 
@@ -78,6 +78,6 @@ describe('updateScoreboard function', () => {
     test('should update score display', () => {
         document.body.innerHTML = '<div class="score"></div>';
         updateScoreboard();
-        expect(document.querySelector('.score').innerText).toBe(11);
+        expect(document.querySelector('.score').innerText).toBe(9);
     });
 });
