@@ -171,73 +171,21 @@ body {
   background-size: cover;
 }
 
-.other-stages-text {
-  text-align: center;
-  /* Adjust as needed */
-  margin-top: 50px;
-  /* Adjust as needed */
-  padding-top: 50px;
-
-}
-
-.other-stages-text {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.movie-cards-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
-}
-
-.movie-card {
-  background-image: url("../../images/waldo/waldo_stage_2.png");
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  margin: 0 10px;
-  /* Adjust the margin as needed */
+/* Existing styles */
+.key {
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   cursor: pointer;
-  color: #000000;
-  width: 20%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  font-size: 16px;
+  text-align: center;
+  user-select: none;
 }
 
-.movie-card-1 {
-  background-image: url("../../images/waldo/waldo_stage_1.jpg");
-  background-size: cover;
-  background-position: top;
-}
-
-.movie-card-2 {
-  background-image: url("../../images/waldo/waldo_stage_2.png");
-  background-size: cover;
-  background-position: top;
-  color: black;
-}
-
-.movie-card-hangman {
-  background-image: url("../../images/hangman.jpg");
-  background-size: cover;
-  background-position: top;
-  color: black;
-}
-
-
-.movie-card-3 {
-  background-image: url("../../images/waldo/waldo_stage_3.jpg");
-  background-size: cover;
-  background-position: 20% 7%;
-  color: black;
-}
-
-.movie-card-1 h1.main-heading,
-.movie-card-2 h1.main-heading,
-.movie-card-hangman h1.main-heading,
-.movie-card-3 h1.main-heading {
-  color: black;
-  text-shadow: 0px 0px 8px rgb(255, 255, 255);
+/* Updated style for clicked state */
+.key.clicked {
+  background-color: red; /* Change to red when clicked */
+  color: #ffffff;
 }
