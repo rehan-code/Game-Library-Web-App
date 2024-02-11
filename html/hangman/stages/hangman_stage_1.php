@@ -40,6 +40,10 @@
             onclick="window.location.href='hangman_stage_1.php'"></button>
         </div>
     </div>
+    
+    <div class="word-container">
+        <h2 id="word-display"></h2>
+    </div>
 
     <div id="keyboard">
     <button class="key">A</button>

@@ -162,5 +162,17 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
+
+  .word-container {
+    text-align: center; /* Centers the content horizontally */
+    margin-top: 20px; /* Adds some space above the container */
+}
+
+#word-display {
+    font-size: 24px; /* Makes the underscores larger */
+    letter-spacing: 5px; /* Adds spacing between underscores */
+    word-break: break-all; /* Ensures the content fits in smaller screens */
+}
+
   
   
