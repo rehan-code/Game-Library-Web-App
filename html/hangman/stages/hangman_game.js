@@ -1,6 +1,22 @@
+import wordsJSON from '../words.json' assert { type: 'json' };
+
+const currentScript = document.querySelector('script[src="hangman_game.js"]')
+
 document.addEventListener("DOMContentLoaded", function() {
-    const word = "algorithm".toUpperCase();
-    let displayedWord = Array.from(word, () => '_');
+    const words = getWordPool(currentScript.getAttribute('difficulty'));
+    const index = Math.floor(Math.random() * words.length);
+    const word = words[index].toUpperCase();
+
+    let displayedWord = Array.from(word, function(character) {
+        if (character !== ' ') {
+            return '_';
+        } else {
+            return '\u00A0\u00A0'; //whitespace
+        }
+    });
+
+    console.log(`DEBUG: Word is ${word}`);
+
     updateDisplay();
 
     document.querySelectorAll('.key').forEach(function(key) {
@@ -16,6 +32,26 @@ document.addEventListener("DOMContentLoaded", function() {
             this.disabled = true;
         });
     });
+
+    function getWordPool(difficulty) {
+        var words = [];
+
+        switch (difficulty) {
+            case 'easy':
+                words = wordsJSON.easy_words;
+                break;
+            case 'medium':
+                words = wordsJSON.medium_words;
+                break;
+            case 'hard':
+                words = wordsJSON.hard_words;
+                break;
+            default:
+                break;
+        }
+
+        return words;
+    }
 
     function isCorrectLetter(letter) {
         word.split('').forEach((char, index) => {
