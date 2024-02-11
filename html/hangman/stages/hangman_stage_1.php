@@ -28,9 +28,6 @@
         <h1>Guess the CS word!</h1>
     </div>
 
-    <!-- Full-Screen Toggle Button -->
-    <button class="fullscreen-toggle">Toggle Full Screen</button>
-
     <div class="game-over-screen">
         <h1>Game Over</h1>
         <div class="options">

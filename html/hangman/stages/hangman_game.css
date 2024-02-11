@@ -174,5 +174,16 @@ body {
     word-break: break-all; /* Ensures the content fits in smaller screens */
 }
 
-  
-  
+#hangman-image-container {
+    text-align: center; /* Center the image */
+}
+
+.word-container {
+    text-align: center;
+    margin-top: 20px; /* Space above the container */
+}
+
+#word-display {
+    font-size: 24px; /* Larger underscores */
+    letter-spacing: 5px;
+}
