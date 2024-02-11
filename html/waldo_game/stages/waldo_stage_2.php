@@ -29,9 +29,6 @@
         <h1>Find the Dragon!</h1>
     </div>
 
-    <!-- Full-Screen Toggle Button -->
-    <!-- <button class="fullscreen-toggle">Toggle Full Screen</button> -->
-
     <div class="game-over-screen">
         <h1>Game Over</h1>
         <div class="options">
@@ -62,6 +59,7 @@
     <div class="image-container">
         <img src="../../images/waldo/waldo_stage_2.png" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
+        <button class="fullscreen-toggle2 "><i class="fa fa-arrows-alt"></i></button>
         <button class="found-button-2"></button>
     </div>
 

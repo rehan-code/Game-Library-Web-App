@@ -27,8 +27,6 @@
     <div class="main-heading">
         <h1>Find the Lion!</h1>
     </div>
-
-    <!-- Full-Screen Toggle Button -->
     
     <div class="game-over-screen">
         <h1>Game Over</h1>
@@ -60,9 +58,9 @@
     <div class="image-container">
         <img src="../../images/waldo/waldo_stage_1.jpg" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
+        <button class="fullscreen-toggle "><i class="fa fa-arrows-alt"></i></button>
         <button class="found-button-1"></button>
     </div>
-
 
     <div class="scoreboard">
         <h2>Lives: <span class="score">10</span></h2>
