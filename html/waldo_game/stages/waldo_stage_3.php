@@ -58,18 +58,17 @@
         </div>
     </div>
 
-    <div class="image-container" style="position: relative;" onclick="notFound(event)" ondblclick="zoomIn(event)">
-        <img src="../../images/waldo_stage_3.jpg" draggable="false" 
+    <div class="image-container">
+        <img src="../../images/waldo/waldo_stage_3.jpg" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
-        <button class="fullscreen-toggle2 "><i class="fa fa-arrows-alt"></i></button>
-        <button class="found-button-3" onclick="isFound(event)"></button>
+        <button class="found-button-3"></button>
     </div>
 
     <div class="scoreboard">
         <h2>Lives: <span class="score">10</span></h2>
     </div>
 
-    <script>
+    <script type='module'>
         <?php require 'waldo_game.js'; ?>
     </script>
 </body>

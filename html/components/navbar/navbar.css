@@ -142,3 +142,25 @@
     color: #000;
   } */
 }
+
+/* media queries for mobile screens */
+@media screen and (max-width: 767px) {
+  .nav{
+    flex-direction: column;
+  }
+  .nav-menu {
+    display: block;
+    /* align-items: center; */
+  }
+
+  .nav-menu-list .nav-menu-item {
+    margin: 0 1rem;
+  }
+
+  .nav-container.nav-header{
+    height: auto;
+    padding: 0 1.7rem;
+    width: 100%;
+  }
+  
+}

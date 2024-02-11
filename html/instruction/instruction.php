@@ -45,19 +45,19 @@
             </p>
             <h2 class="heading">Objective</h2>
             <p class="heading-paragraph">
-                Within each scene find:
+                Within each scene:
                 <ul class="list-class center-text">
                     <li>
                         <strong>Scene 1:</strong>
-                         Find the Lion in the Wild 
+                         Find the Lion in the Forest.
                     </li>
                     <li>
                         <strong>Scene 2:</strong>
-                         Find Mickey Mouse in Princess Land
+                         Find the Dragon in the Kingdom.
                     </li>
                     <li>
                         <strong>Scene 3:</strong>
-                         Find The Skull Shirt Girl  between the Avatars 
+                         Find The Skull Shirt Girl in the Neighbourhood.
                     </li>
                 </ul>
             </p>

@@ -1,5 +1,6 @@
 /* ==== "Inter" FONT-FAMILY FROM FONTS.GOOGLE.COM  ==== */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
 /*root reset */
 * {
   margin: 10;
@@ -7,6 +8,7 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
 *,
 *::before,
 *::after {
@@ -30,25 +32,30 @@ body {
   overflow-x: hidden;
   background-color: #fafbfb;
 }
+
 button {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
 }
+
 /* container */
 .container {
   width: 100%;
 }
+
 @media screen and (min-width: 1040px) {
   .container {
     width: 1040px;
     margin: 0 auto;
   }
 }
+
 ul li {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -61,6 +68,7 @@ a {
   padding-top: 5rem;
   margin-bottom: 5rem;
 }
+
 .grid-cols-2 {
   width: 100%;
   height: 100%;
@@ -68,14 +76,17 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
 }
+
 .grid-item-1 {
   padding-top: 5rem;
   padding-left: 1.5rem;
 }
+
 .grid-item-1-left {
   padding-top: 5rem;
   padding-left: 1.5rem;
 }
+
 .grid-item-1-center {
   padding: 14rem 0rem;
   display: flex;
@@ -84,14 +95,17 @@ a {
   justify-content: center;
   text-align: center;
 }
+
 .main-heading {
   font-weight: 300;
   font-size: 40px;
   line-height: 55px;
 }
+
 .main-heading span {
   color: var(--primary-color);
 }
+
 .info-text {
   margin-top: 1.5rem;
   font-size: 19px;
@@ -99,11 +113,13 @@ a {
   color: #334157;
   max-width: fit-content;
 }
+
 .btn-wrapper {
   margin-top: 3.5rem;
   display: flex;
   width: 100%;
 }
+
 .btn {
   width: 110px;
   height: 50px;
@@ -119,10 +135,12 @@ a {
   background-size: cover;
   background-position: center; */
 }
+
 .btn:hover {
   transform: translateY(-3px);
   background-color: var(--btn-hover-color);
 }
+
 .view-more-btn {
   width: 180px;
   height: 55px;
@@ -136,12 +154,15 @@ a {
   margin-right: 10px;
   box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
 }
+
 .view-more-btn i {
   margin-left: 0.7rem;
 }
+
 .view-more-btn:hover {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
+
 .documentation-btn {
   width: 150px;
   height: 55px;
@@ -153,24 +174,29 @@ a {
   color: #0e2a86;
   box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
 }
+
 .documentation-btn:hover {
   background-color: #d7ddf1;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
+
 .grid-item-2 {
   width: 100%;
   height: 100%;
 }
+
 .team-img-wrapper {
   width: 500px;
   max-width: 100%;
   height: 440px;
 }
+
 .team-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
+
 .grid-cols-3 {
   width: 100%;
   height: 100%;
@@ -180,13 +206,16 @@ a {
   row-gap: 2rem;
   padding: 1rem;
 }
+
 .grid-col-item {
   height: 100%;
 }
+
 .icon {
   width: 100%;
   line-height: 40px;
 }
+
 .icon svg {
   width: 30px;
   height: 30px;
@@ -200,6 +229,7 @@ a {
   line-height: 33px;
   color: var(--lg-heading);
 }
+
 .featured-info p {
   display: block;
   width: 100%;
@@ -209,6 +239,7 @@ a {
   line-height: 25px;
   font-size: 15.5px;
 }
+
 footer {
   width: 100%;
   background-color: var(--primary-color);
@@ -222,21 +253,26 @@ footer {
   .wrapper {
     padding: 0 0.7rem;
   }
+
   .grid-item-1 {
     padding-left: 0rem;
   }
+
   .main-heading {
     font-size: 35px;
   }
+
   .view-more-btn {
     width: 140px;
     height: 55px;
     font-size: 13.5px;
     margin-right: 1rem;
   }
+
   .grid-cols-3 {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
+
   .featured-info p {
     line-height: 23px;
     font-size: 14px;
@@ -280,15 +316,15 @@ footer {
 }
 
 @media screen and (max-width: 991px) {
-  
+
   .wrapper {
     padding-top: 3rem;
   }
-  
+
   .grid-cols-2 {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
-  
+
   .grid-item-1 {
     order: 2;
     display: flex;
@@ -401,7 +437,7 @@ footer {
 }
 
 .movie-card {
-  background-image: url("images/waldo_stage_2.png");
+  background-image: url("images/waldo/waldo_stage_1.png");
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -411,20 +447,35 @@ footer {
   width: 100%;
 }
 
+.movie-card-main-2 {
+  /* background-image: url("images/waldo/hangman.jpg"); */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+}
+
+.movie-card-hangman {
+  background-image: url("../images/hangman/hangman.jpg");
+}
+
 .movie-card-1 {
-  background-image: url("../images/waldo_stage_1.jpg");
+  background-image: url("../images/waldo/waldo_stage_1.jpg");
   /* background-size: cover; */
   /* background-position: top; */
 }
 
 .movie-card-2 {
-  background-image: url("../images/waldo_stage_2.png");
+  background-image: url("../images/waldo/waldo_stage_2.png");
   /* background-size: cover; */
   /* background-position: top; */
 }
 
 .movie-card-3 {
-  background-image: url("../images/waldo_stage_3.jpg");
+  background-image: url("../images/waldo/waldo_stage_3.jpg");
   /* background-size: cover; */
   background-position: 20% 7%;
 }
@@ -448,8 +499,29 @@ footer {
   text-align: center;
   padding: 30px;
   position: relative;
-  text-shadow: 0px 0px 8px rgb(255, 255, 255); 
+  text-shadow: 0px 0px 8px rgb(255, 255, 255);
 }
+
+.movie-card-main-2 .main-heading {
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+}
+
+.movie-card-main-2 .info-text {
+  padding-left: 10rem;
+  width: 100%;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+
 .movie-card:hover .tooltip {
   display: block;
 }
