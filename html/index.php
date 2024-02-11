@@ -60,7 +60,7 @@
                 <span>Our Games</span>
             </h1>
             <div
-                class="movie-card movie-card-2"
+                class="movie-card movie-card-waldo-2"
                 onclick="window.location.href='waldo_game/waldo_select.php';"
             >
                 <h1 class="main-heading">
@@ -73,10 +73,10 @@
                 </p>
             </div>
             <div
-                class="movie-card-main-2 movie-card-hangman"
+                class="movie-card movie-card-hangman-3"
                 onclick="window.location.href='hangman/hangman_select.php';"
             >
-                <h1 class="main-heading">
+                <h1 class="main-heading-2">
                     Hangman
                 </h1>
                 <p class="info-text">
