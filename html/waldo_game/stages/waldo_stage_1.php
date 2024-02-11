@@ -14,6 +14,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Where's Waldo Game</title>
     <style>
         <?php require 'waldo_game.css'; ?>
@@ -28,8 +29,7 @@
     </div>
 
     <!-- Full-Screen Toggle Button -->
-    <button class="fullscreen-toggle">Toggle Full Screen</button>
-
+    
     <div class="game-over-screen">
         <h1>Game Over</h1>
         <div class="options">
@@ -62,6 +62,7 @@
         alt="Zoomable Image" id="waldoImage">
         <button class="found-button-1"></button>
     </div>
+
 
     <div class="scoreboard">
         <h2>Lives: <span class="score">10</span></h2>

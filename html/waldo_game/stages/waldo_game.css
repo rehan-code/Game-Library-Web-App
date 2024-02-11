@@ -112,22 +112,50 @@ body {
   box-shadow: none;
 }
 
-.fullscreen-toggle {
-  position: fixed;
-  top: 25px;
-  right: 30px;
-  padding: 10px 20px;
-  background-color: #335eea;
+
+.fullscreen-toggle:hover {
+  background-color: #2b50c7;
   color: white;
-  border: none;
+}
+
+.fullscreen-toggle2 {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  padding: 10px 20px;
+  color: black;
+  border: 1;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   z-index: 10;
+  background-color: rgba(128, 0, 128, 0);
 }
+
+.fullscreen-toggle2:hover {
+  background-color: #2b50c7;
+  color: white;
+}
+
+
+.fullscreen-toggle {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  padding: 10px 20px;
+  color: #2b50c7;
+  border: 1;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 10;
+  /* background-color: rgba(128, 0, 128, 0); */
+}
+
 
 .fullscreen-toggle:hover {
   background-color: #2b50c7;
+  color: white;
 }
 
 .options {
