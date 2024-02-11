@@ -1,6 +1,7 @@
 /* ==== "Inter" FONT-FAMILY FROM FONTS.GOOGLE.COM  ==== */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 
+
 /*root reset */
 * {
   margin: 10;
@@ -8,6 +9,7 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
 
 *,
 *::before,
@@ -33,6 +35,7 @@ body {
   background-color: #fafbfb;
 }
 
+
 button {
   background-color: transparent;
   border: none;
@@ -40,10 +43,12 @@ button {
   cursor: pointer;
 }
 
+
 /* container */
 .container {
   width: 100%;
 }
+
 
 @media screen and (min-width: 1040px) {
   .container {
@@ -52,9 +57,11 @@ button {
   }
 }
 
+
 ul li {
   list-style-type: none;
 }
+
 
 a {
   text-decoration: none;
@@ -69,6 +76,7 @@ a {
   margin-bottom: 5rem;
 }
 
+
 .grid-cols-2 {
   width: 100%;
   height: 100%;
@@ -77,18 +85,22 @@ a {
   gap: 4rem;
 }
 
+
 .grid-item-1 {
-  padding-top: 5rem;
-  padding-left: 1.5rem;
+  /* padding-top: 5rem;
+  padding-left: 1.5rem; */
+  padding-top: 0rem;
 }
+
 
 .grid-item-1-left {
   padding-top: 5rem;
   padding-left: 1.5rem;
 }
 
+
 .grid-item-1-center {
-  padding: 14rem 0rem;
+  padding: 5rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,15 +108,18 @@ a {
   text-align: center;
 }
 
+
 .main-heading {
   font-weight: 300;
   font-size: 40px;
   line-height: 55px;
 }
 
+
 .main-heading span {
   color: var(--primary-color);
 }
+
 
 .info-text {
   margin-top: 1.5rem;
@@ -114,11 +129,13 @@ a {
   max-width: fit-content;
 }
 
+
 .btn-wrapper {
   margin-top: 3.5rem;
   display: flex;
   width: 100%;
 }
+
 
 .btn {
   width: 110px;
@@ -136,10 +153,12 @@ a {
   background-position: center; */
 }
 
+
 .btn:hover {
   transform: translateY(-3px);
   background-color: var(--btn-hover-color);
 }
+
 
 .view-more-btn {
   width: 180px;
@@ -155,13 +174,16 @@ a {
   box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
 }
 
+
 .view-more-btn i {
   margin-left: 0.7rem;
 }
 
+
 .view-more-btn:hover {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
+
 
 .documentation-btn {
   width: 150px;
@@ -175,15 +197,19 @@ a {
   box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
 }
 
+
 .documentation-btn:hover {
   background-color: #d7ddf1;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
+
 .grid-item-2 {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .team-img-wrapper {
   width: 500px;
@@ -191,11 +217,13 @@ a {
   height: 440px;
 }
 
+
 .team-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
+
 
 .grid-cols-3 {
   width: 100%;
@@ -207,14 +235,17 @@ a {
   padding: 1rem;
 }
 
+
 .grid-col-item {
   height: 100%;
 }
+
 
 .icon {
   width: 100%;
   line-height: 40px;
 }
+
 
 .icon svg {
   width: 30px;
@@ -230,6 +261,7 @@ a {
   color: var(--lg-heading);
 }
 
+
 .featured-info p {
   display: block;
   width: 100%;
@@ -239,6 +271,7 @@ a {
   line-height: 25px;
   font-size: 15.5px;
 }
+
 
 footer {
   width: 100%;
@@ -254,13 +287,16 @@ footer {
     padding: 0 0.7rem;
   }
 
+
   .grid-item-1 {
     padding-left: 0rem;
   }
 
+
   .main-heading {
     font-size: 35px;
   }
+
 
   .view-more-btn {
     width: 140px;
@@ -269,9 +305,11 @@ footer {
     margin-right: 1rem;
   }
 
+
   .grid-cols-3 {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
+
 
   .featured-info p {
     line-height: 23px;
@@ -317,13 +355,16 @@ footer {
 
 @media screen and (max-width: 991px) {
 
+
   .wrapper {
     padding-top: 3rem;
   }
 
+
   .grid-cols-2 {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
+
 
   .grid-item-1 {
     order: 2;
@@ -500,7 +541,29 @@ footer {
   padding: 30px;
   position: relative;
   text-shadow: 0px 0px 8px rgb(255, 255, 255);
+  text-shadow: 0px 0px 8px rgb(255, 255, 255);
 }
+
+.movie-card-main-2 .main-heading {
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+}
+
+.movie-card-main-2 .info-text {
+  padding-left: 10rem;
+  width: 100%;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+
 
 .movie-card-main-2 .main-heading {
   font-weight: bold;
