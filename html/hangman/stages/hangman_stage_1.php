@@ -19,7 +19,7 @@
         <?php require 'hangman_game.css'; ?>
     </style>
 </head>
-<script type='module' src="hangman_game.js"></script>
+<script type='module' src="hangman_game.js" difficulty='easy'></script>
 
 <body>
     <?php require "../../components/navbar/navbar.php"; ?>
