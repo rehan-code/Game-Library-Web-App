@@ -1,7 +1,15 @@
 <?php
+/**
+ * About Us Page Cases
+ * php version 8.1.2
+ * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
+ *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
+ */
 
 use PHPUnit\Framework\TestCase;
-
+/**
+ * Front end unit tests for Waldo Stage 2 Page
+ */
 class WaldoStage2Test extends TestCase
 {
     /**
