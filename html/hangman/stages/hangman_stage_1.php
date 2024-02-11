@@ -38,6 +38,13 @@
         </div>
     </div>
     
+    <div class="content-container">
+        <div class="image-container">
+            <img src="../../images/hangman/hangman9.png" draggable="false"
+            alt="Zoomable Image" id="hangmanImage">
+        </div>
+    </div>
+
     <div class="word-container">
         <h2 id="word-display"></h2>
     </div>

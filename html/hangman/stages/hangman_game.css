@@ -187,3 +187,20 @@ body {
     font-size: 24px; /* Larger underscores */
     letter-spacing: 5px;
 }
+.content-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding-top: 50px;
+  align-items: center;
+}
+
+.image-container {
+  width: 20%;
+}
+
+#hangmanImage {
+  width: 100%; /* Set the image width to 100% of its container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
