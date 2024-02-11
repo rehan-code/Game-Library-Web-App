@@ -102,6 +102,33 @@ class AboutUsPageTest extends TestCase
     }
 
     /**
+     * Checks if all team member images exist.
+     */
+    public function testTeamMemberImagesExist()
+    {
+        $images = [
+            'hari.jpg',
+            'ivan.png',
+            'rehan.jpg',
+            'thulasi.jpg',
+            'user.jpg',
+            'nour.jpeg',
+        ];
+
+        foreach ($images as $image) {
+            $this->assertFileExists(__DIR__ . '/../images/about_us/' . $image);
+        }
+    }
+
+    /**
+     * Checks if the LinkedIn icon image exists.
+     */
+    public function testLinkedinIconImageExists()
+    {
+        $this->assertFileExists(__DIR__ . '/../images/linkedin_icon.png');
+    }
+
+    /**
      * Functional test to simulate a user accessing the about_us.php page; 
      * test is intended to verify that all components render as expected
      */
