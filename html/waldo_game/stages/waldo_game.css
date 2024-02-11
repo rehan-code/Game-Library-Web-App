@@ -142,15 +142,9 @@ body {
   position: absolute;
   top: 2vh;
   right: 2vw;
-  position: fixed;
-  top: 25px;
-  right: 30px;
   padding: 10px 20px;
   color: #2b50c7;
   border: 1;
-  background-color: #335eea;
-  color: white;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
@@ -163,6 +157,7 @@ body {
   background-color: #2b50c7;
   color: white;
 }
+
 
 .options {
   background-color: rgb(242, 242, 242);
