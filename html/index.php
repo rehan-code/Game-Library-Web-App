@@ -31,12 +31,15 @@
                 website
             </h1>
             <p class="info-text">
-                Team 8 proudly presents our unique version of the beloved 'Where's waldo' game.
-                In this expanded edition, your quest goes beyond spotting Waldo as you uncover
-                a multitude of additional objectives within our captivating images. Instead of
-                searching for Waldo, you'll be on the lookout for our own icons, adding a fresh
-                twist to the classic gameplay. Join us on a journey through a diverse range of
-                engaging games crafted by our dedicated team.
+                Team 8 presents two exciting games. I-Spot,
+                inspired by "Where's Waldo," takes you beyond
+                the search for Waldo, adding unique icons
+                for a fresh twist. Join us in diverse and
+                engaging gameplay. Our second game, 'Hangman,'
+                challenges you to guess names of monuments,
+                places, and famous people. With limited
+                guesses, reveal the hangman's fate for
+                a thrilling gaming experience!
             </p>
             </div>
             <div class="grid-item-2">

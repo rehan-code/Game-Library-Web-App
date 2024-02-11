@@ -28,7 +28,8 @@
   padding: 0 1.7rem;
   position: relative;
   height: 300px;
-  overflow: hidden; 
+  overflow: hidden;
+  margin-bottom: 100px;
 }
 
 .about-main-heading1 {
@@ -83,8 +84,19 @@
 
 .bottom-margin-setting {
   margin-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .center-text {
   text-align: center;
+}
+
+.game2 {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 15px;
+  background-color: #fcfcfc;
+  text-align: left;
+  margin-bottom: auto;
 }
