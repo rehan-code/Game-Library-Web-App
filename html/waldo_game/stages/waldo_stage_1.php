@@ -14,6 +14,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
     <title>Where's Waldo Game</title>
     <style>
         <?php require 'waldo_game.css'; ?>
@@ -26,9 +30,6 @@
     <div class="main-heading">
         <h1>Find the Lion!</h1>
     </div>
-
-    <!-- Full-Screen Toggle Button -->
-    <button class="fullscreen-toggle">Toggle Full Screen</button>
 
     <div class="game-over-screen">
         <h1>Game Over</h1>
@@ -57,18 +58,18 @@
         </div>
     </div>
 
-    <div class="image-container" onclick="notFound(event)" 
-    ondblclick="zoomIn(event)">
-        <img src="../../images/waldo_stage_1.jpg" draggable="false" 
+    <div class="image-container">
+        <img src="../../images/waldo/waldo_stage_1.jpg" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
-        <button class="found-button-1" onclick="isFound(event)"></button>
+        <button class="fullscreen-toggle"><i class="fa fa-arrows-alt"></i></button>
+        <button class="found-button-1"></button>
     </div>
 
     <div class="scoreboard">
         <h2>Lives: <span class="score">10</span></h2>
     </div>
 
-    <script>
+    <script type='module'>
         <?php require 'waldo_game.js'; ?>
     </script>
 </body>

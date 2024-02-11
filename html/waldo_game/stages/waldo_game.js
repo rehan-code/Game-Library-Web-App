@@ -2,11 +2,20 @@ let isZoomed = false;
 let score = 10; // Initialize score
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector(".fullscreen-toggle").addEventListener("click", () => {
-        const element = document.querySelector(".image-container");
-        toggleFullScreen(element);
+    document.querySelectorAll(".fullscreen-toggle").forEach(button => {
+        button.addEventListener("click", () => {
+            const element = button.closest(".image-container");
+            toggleFullScreen(element);
+        });
     });
 
+    document.querySelectorAll(".fullscreen-toggle2").forEach(button => {
+        button.addEventListener("click", () => {
+            const element = button.closest(".image-container");
+            toggleFullScreen(element);
+        });
+    });
+    
     const el = document.querySelector(".your-fullscreen-button");
     if (el) {
         el.addEventListener("click", () => {
@@ -16,11 +25,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-function zoomIn(event) {
-    score++;
-    score++;
-    updateScoreboard();
 
+document.addEventListener('DOMContentLoaded', function() {
+    let clickTimer = null;
+    const imageContainer = document.querySelector('.image-container');
+
+    imageContainer.addEventListener('click', function(event) {
+        // Prevent triggering on button clicks inside the container
+        if (event.target.tagName !== 'BUTTON') {
+            if (clickTimer == null) {
+                clickTimer = setTimeout(function() {
+                    clickTimer = null;
+                    notFound(event);
+                }, 300); // Wait for 300ms to check for double click
+            } else {
+                clearTimeout(clickTimer);
+                clickTimer = null;
+            }
+        }
+    });
+
+    imageContainer.addEventListener('dblclick', function(event) {
+        if (event.target.tagName !== 'BUTTON') {
+            zoomIn(event);
+        }
+    });
+
+    document.querySelectorAll('.found-button-1, .found-button-2, .found-button-3').forEach(button => {
+        button.addEventListener('click', function(event) {
+            isFound(event);
+        });
+    });
+});
+
+function zoomIn(event) {
+    
     const imageContainer = document.querySelector(".image-container");
     const image = document.querySelector(".image-container img");
 
@@ -44,6 +83,7 @@ function zoomIn(event) {
     isZoomed = !isZoomed;
 }
 
+
 function notFound(event) {
     // Prevent the score from decreasing if the found button is clicked
     if (event.target.className.includes('found-button')) {
@@ -55,9 +95,11 @@ function notFound(event) {
     score--;
     updateScoreboard();
 
+    
     // Check if score has reached 0 and call isFound if it has
     if (score <= 0) {
         isFound();
+        score++;
     }
 }
 

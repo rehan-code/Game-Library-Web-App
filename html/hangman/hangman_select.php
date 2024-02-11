@@ -26,12 +26,14 @@
     <section class="container">
         <div class="grid-item-1-center">
             <h1 class="main-heading">
-                <span>I-Spot</span>
+                <span>Hangman</span>
             </h1>
             <p class="info-text">
-                Our friends have gone missing! They could be anywhere.
-                <br>
-                Can you help us find Them?
+                Someone's words have been concealed, and it's up to you to reveal 
+                them letter by letter. <br>A mystery word awaits decryption. Every 
+                correct guess brings you closer to unveiling <br>the hidden 
+                message, but be cautious — too many wrong guesses, and the 
+                hangman's noose tightens! <br>Are you up for the challenge? <br>
             </p>
 
             <!-- stages -->
@@ -43,22 +45,22 @@
             <h1 class="main-heading">
                 <span>Stages</span>
             </h1>
-            <div class="movie-card movie-card-waldo-1" 
-            onclick="window.location.href='stages/waldo_stage_1.php';">
-                <h1 class="main-heading">
-                    Forest
+            <div class="movie-card movie-card-hangman-1" 
+            onclick="window.location.href='stages/hangman_stage_1.php';">
+                <h1 class="main-heading-2">
+                    Easy
                 </h1>
             </div>
-            <div class="movie-card movie-card-waldo-2" 
-            onclick="window.location.href='stages/waldo_stage_2.php';">
-                <h1 class="main-heading">
-                    Kingdom
+            <div class="movie-card movie-card-hangman-2" 
+            onclick="window.location.href='stages/hangman_stage_2.php';">
+                <h1 class="main-heading-2">
+                    Medium
                 </h1>
             </div>
-            <div class="movie-card movie-card-waldo-3" 
-            onclick="window.location.href='stages/waldo_stage_3.php';">
-                <h1 class="main-heading">
-                    Neighbourhood
+            <div class="movie-card movie-card-hangman-3" 
+            onclick="window.location.href='stages/hangman_stage_3.php';">
+                <h1 class="main-heading-2">
+                    Hard
                 </h1>
             </div>
         </div>

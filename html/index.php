@@ -31,12 +31,15 @@
                 website
             </h1>
             <p class="info-text">
-                Team 8 proudly presents our unique version of the beloved 'Where's waldo' game.
-                In this expanded edition, your quest goes beyond spotting Waldo as you uncover
-                a multitude of additional objectives within our captivating images. Instead of
-                searching for Waldo, you'll be on the lookout for our own icons, adding a fresh
-                twist to the classic gameplay. Join us on a journey through a diverse range of
-                engaging games crafted by our dedicated team.
+                Team 8 presents two exciting games. I-Spot,
+                inspired by "Where's Waldo," takes you beyond
+                the search for Waldo, adding unique icons
+                for a fresh twist. Join us in diverse and
+                engaging gameplay. Our second game, 'Hangman,'
+                challenges you to guess names of monuments,
+                places, and famous people. With limited
+                guesses, reveal the hangman's fate for
+                a thrilling gaming experience!
             </p>
             </div>
             <div class="grid-item-2">
@@ -57,7 +60,7 @@
                 <span>Our Games</span>
             </h1>
             <div
-                class="movie-card movie-card-2"
+                class="movie-card movie-card-waldo-2"
                 onclick="window.location.href='waldo_game/waldo_select.php';"
             >
                 <h1 class="main-heading">
@@ -67,6 +70,17 @@
                     Our friends have gone missing! They could be anywhere.
                     <br>
                     Can you help us find Them?
+                </p>
+            </div>
+            <div
+                class="movie-card movie-card-hangman-3"
+                onclick="window.location.href='hangman/hangman_select.php';"
+            >
+                <h1 class="main-heading-2">
+                    Hangman
+                </h1>
+                <p class="info-text">
+                    Unravel the mystery word before the hangman's fate is sealed!
                 </p>
             </div>
         </div>

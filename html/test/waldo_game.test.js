@@ -9,24 +9,35 @@ const { zoomIn, notFound, isFound, updateScoreboard } = require(
     '../waldo_game/stages/waldo_game.js'
 );
 
-/**
- * Tests if the image can be scaled by the zoom in function
- */
-describe('zoomIn function', () => {
-    test('should increment score by 2', () => {
-        document.body.innerHTML = `
-            <div class="image-container">
-                <img src="test.jpg" width="500" height="500">
-            </div>
-            <div class="score"></div>
-        `;
-        const event = {
-            offsetX: 250,
-            offsetY: 250
-        };
-        zoomIn(event);
-        expect(document.querySelector('.score').innerText).toBe(12);
-    });
+document.body.innerHTML = `
+  <div class="image-container">
+    <img src="your-image-source" alt="Test Image">
+  </div>
+`;
+
+
+let isZoomed = false;
+
+
+describe('Test zoomIn function', () => {
+  beforeEach(() => {
+    document.body.innerHTML = `
+      <div class="image-container">
+        <img src="your-image-source" alt="Test Image">
+      </div>
+    `;
+    isZoomed = false;
+  });
+
+  test('should set transform origin when not zoomed', () => {
+    const mockEvent = {
+      offsetX: 50,
+      offsetY: 50,
+    };
+    zoomIn(mockEvent);
+    const image = document.querySelector('.image-container img');
+    expect(image.style.transformOrigin).not.toBe('');
+  });
 });
 
 /**
@@ -45,7 +56,7 @@ describe('notFound function', () => {
             target: document.createElement('div')
         };
         notFound(event);
-        expect(document.querySelector('.score').innerText).toBe(11);
+        expect(document.querySelector('.score').innerText).toBe(9);
     });
 });
 
@@ -78,6 +89,6 @@ describe('updateScoreboard function', () => {
     test('should update score display', () => {
         document.body.innerHTML = '<div class="score"></div>';
         updateScoreboard();
-        expect(document.querySelector('.score').innerText).toBe(11);
+        expect(document.querySelector('.score').innerText).toBe(9);
     });
 });
