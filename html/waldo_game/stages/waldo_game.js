@@ -2,12 +2,20 @@ let isZoomed = false;
 let score = 10; // Initialize score
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector(".fullscreen-toggle").addEventListener("click", () => {
-        const element = document.querySelector(".image-container");
-        toggleFullScreen(element);
+    document.querySelectorAll(".fullscreen-toggle").forEach(button => {
+        button.addEventListener("click", () => {
+            const element = button.closest(".image-container");
+            toggleFullScreen(element);
+        });
+    });
+
+    document.querySelectorAll(".fullscreen-toggle2").forEach(button => {
+        button.addEventListener("click", () => {
+            const element = button.closest(".image-container");
+            toggleFullScreen(element);
+        });
     });
     
-
     const el = document.querySelector(".your-fullscreen-button");
     if (el) {
         el.addEventListener("click", () => {
@@ -16,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     let clickTimer = null;
