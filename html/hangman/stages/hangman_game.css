@@ -1,0 +1,166 @@
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px; /* Adjust based on your layout */
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.key {
+    padding: 10px 15px;
+    background-color: pink;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    user-select: none; /* Prevents the text within the button from being selectable */
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.key-clicked {
+    background-color: red;
+    pointer-events: none; /* Prevents the button from being clicked again */
+}
+
+.key:hover {
+    background-color: #e0e0e0; /* Light grey background on hover */
+}
+
+.key.correct {
+    background-color: green; /* Green for correct letters */
+    color: #ffffff;
+}
+
+.key.incorrect {
+    background-color: red; /* Red for incorrect letters */
+    color: #ffffff;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #fafbfb;
+  }
+  
+  .main-heading {
+    text-align: center;
+    /* display: flex; */
+  }
+  
+  
+  /* Game over screen stylesa */
+  .game-over-screen {
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    top: 25rem;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    display: none;
+  }
+  
+  .game-over-screen h1 {
+    color: white;
+    font-size: 2.5rem;
+  }
+  
+  .blur {
+    filter: blur(4px) brightness(50%);
+  }
+  
+  .scoreboard {
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(100% + 4rem));
+    z-index: 5;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: none;
+  }
+  
+  .fullscreen-toggle {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: #335eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 10;
+  }
+  
+  .fullscreen-toggle:hover {
+    background-color: #2b50c7;
+  }
+  
+  .options {
+    background-color: rgb(242, 242, 242);
+    opacity: 0.75;
+    border-radius: 10px;
+    width: 15%;
+    height: 10%;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+  
+  .option-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(242, 242, 242);
+    /* Green, you can change the color */
+    color: black;
+    cursor: pointer;
+    width: 16px;
+    height: 20px;
+    padding: 12%;
+  }
+  
+  .button1 {
+    background-image: url('../../images/home_button.png');
+    /* Set the path to your image */
+    background-size: cover;
+  }
+  
+  .button2 {
+    background-image: url('../../images/replay.png');
+    /* Set the path to your image */
+    background-size: cover;
+  }
+  
+  .other-stages-text {
+    text-align: center;
+    /* Adjust as needed */
+    margin-top: 50px;
+    /* Adjust as needed */
+    padding-top: 50px;
+  
+  }
+  
+  .other-stages-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
