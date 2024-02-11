@@ -1,6 +1,26 @@
+import wordsJSON from '../words.json' assert { type: 'json' };
+
+const easyWords = wordsJSON.easy_words;
+const mediumWords = wordsJSON.medium_words;
+const hardWords = wordsJSON.hard_words;
+
 document.addEventListener("DOMContentLoaded", function() {
-    const word = "algorithm".toUpperCase();
-    let displayedWord = Array.from(word, () => '_');
+
+    const wordPool = hardWords;
+
+    const index = Math.floor(Math.random() * wordPool.length);
+    const word = wordPool[index].toUpperCase();
+
+    let displayedWord = Array.from(word, function(character) {
+        if (character !== ' ') {
+            return '_';
+        } else {
+            return '\u00A0\u00A0'; //whitespace
+        }
+    });
+
+    console.log(`DEBUG: Word = ${word}`);
+
     updateDisplay();
 
     document.querySelectorAll('.key').forEach(function(key) {
