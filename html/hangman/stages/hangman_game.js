@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    console.log(`DEBUG: Word is ${word}`);
-
     updateDisplay();
 
     document.querySelectorAll('.key').forEach(function(key) {
