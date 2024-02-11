@@ -46,7 +46,7 @@
                 <span>Stages</span>
             </h1>
             <div class="movie-card-main-2 movie-card-hangman" 
-            onclick="window.location.href='stages/hangman__stage_1.php';">
+            onclick="window.location.href='hangman1.php';">
                 <h1 class="main-heading">
                     Easy
                 </h1>
