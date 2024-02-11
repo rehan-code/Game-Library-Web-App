@@ -45,10 +45,22 @@
             <h1 class="main-heading">
                 <span>Stages</span>
             </h1>
-            <div class="movie-card-main-2 movie-card-hangman" 
+            <div class="movie-card movie-card-hangman-1" 
             onclick="window.location.href='stages/hangman_stage_1.php';">
-                <h1 class="main-heading">
+                <h1 class="main-heading-2">
                     Easy
+                </h1>
+            </div>
+            <div class="movie-card movie-card-hangman-2" 
+            onclick="window.location.href='stages/hangman_stage_2.php';">
+                <h1 class="main-heading-2">
+                    Medium
+                </h1>
+            </div>
+            <div class="movie-card movie-card-hangman-3" 
+            onclick="window.location.href='stages/hangman_stage_3.php';">
+                <h1 class="main-heading-2">
+                    Hard
                 </h1>
             </div>
         </div>

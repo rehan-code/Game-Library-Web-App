@@ -19,7 +19,7 @@
         <?php require 'hangman_game.css'; ?>
     </style>
 </head>
-<script type='module' src="hangman_game.js" difficulty='easy'></script>
+<script type='module' src="hangman_game.js" difficulty='hard'></script>
 
 <body>
     <?php require "../../components/navbar/navbar.php"; ?>
@@ -30,14 +30,14 @@
             <button class="option-button button1" 
              onclick="window.location.href='../../index.php'"></button>
             <button class="option-button button2" 
-             onclick="window.location.href='hangman_stage_1.php'"></button>
+             onclick="window.location.href='hangman_stage_3.php'"></button>
         </div>
     </div>
 
     <div class="game-content">
 
         <div class="main-heading">
-            <h1>Guess the CS word! (Easy)</h1>
+            <h1>Guess the CS word! (Hard)</h1>
         </div>
 
         <div class="content-container">

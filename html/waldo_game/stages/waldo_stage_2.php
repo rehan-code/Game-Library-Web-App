@@ -45,7 +45,7 @@
         <div class="movie-cards-container">
             <div class="movie-card movie-card-1" 
             onclick="window.location.href='waldo_stage_1.php';">
-                <h1 class="main-heading">
+                <h1 class="main-heading-2">
                     Forest
                 </h1>
             </div>
