@@ -38,7 +38,7 @@ These enhancements represent significant progress in refining the "I - Spot" gam
 | :--------------------------------------------------: | :--------------------------------------------------------: |
 | ![starting_game](html/images/screens/hangman_game.png) | ![select_stage](html/images/screens/hangman_menu.png) |
 
-### Hangman Game (Different Stages)
+### [NEW] Hangman Game (Different Stages)
 |                         Easy Level                         |                       Medium Level                        |
 | :-----------------------------------------------------: | :--------------------------------------------------: |
 | ![stage_1](html/images/screens/hangman_easy.png) | ![stage_2](html/images/screens/hangman_medium.png) |
