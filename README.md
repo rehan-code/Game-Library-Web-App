@@ -25,21 +25,40 @@ During Sprint 3, the team focused on updating the game functionality, which was 
 
 6. **Fullscreen Option**: A fullscreen option has been added to provide players with a more immersive gaming experience and greater flexibility in how they engage with the game.
 
+7. **User Testing**: User testing to gather feedback, making sure our app is user-friendly, functions properly, and engages users by meeting their expectations effortlessly. We follow our User Testing Script for consistency (can be found in _'user_testing/user_test_script.txt'_). Results from Sprint 4 are detailed below.
+
+
+
 These enhancements represent significant progress in refining the "I - Spot" game, making it more engaging, visually appealing, and user-friendly.
 
 ## Visuals
+
+### [NEW] Hangman Game Menu
+|                   Game Start Page                    |                         Game Menu                          |
+| :--------------------------------------------------: | :--------------------------------------------------------: |
+| ![starting_game](html/images/screens/hangman_game.png) | ![select_stage](html/images/screens/hangman_menu.png) |
+
+### Hangman Game (Different Stages)
+|                         Easy Level                         |                       Medium Level                        |
+| :-----------------------------------------------------: | :--------------------------------------------------: |
+| ![stage_1](html/images/screens/hangman_easy.png) | ![stage_2](html/images/screens/hangman_medium.png) |
+
+|                         Hard Level                         |                        Game Over                        |
+| :-----------------------------------------------------: | :-----------------------------------------------------: |
+| ![stage_3](html/images/screens/hangman_hard.png) | ![game_over](html/images/screens/hangman_gameover.png) |
+
 
 ### Landing Page
 |                  Landing Page - part 1                   |                  landing Page - part 2                   |
 | :------------------------------------------------------: | :------------------------------------------------------: |
 | ![Landing_Page_1](html/images/screens/landing_page1.png) | ![Landing_Page_2](html/images/screens/landing_page2.png) |
 
-### I-Spot Game
-|                   Game Start Page                    |                         Game Page                          |
+### I-Spot Game Menu
+|                   Game Start Page                    |                         Game Menu                          |
 | :--------------------------------------------------: | :--------------------------------------------------------: |
 | ![starting_game](html/images/screens/start_game.png) | ![select_stage](html/images/screens/select_stage_screen.png) |
 
-### Stages
+### I-Spot Game (Different Stages)
 |                         Stage 1                         |                       Stage 2                        |
 | :-----------------------------------------------------: | :--------------------------------------------------: |
 | ![stage_1](html/images/screens/stage1_screen.png) | ![stage_2](html/images/screens/stage2_screen.png) |
@@ -47,6 +66,12 @@ These enhancements represent significant progress in refining the "I - Spot" gam
 |                         Stage 3                         |                        Game Over                        |
 | :-----------------------------------------------------: | :-----------------------------------------------------: |
 | ![stage_3](html/images/screens/stage3_screen.png) | ![game_over](html/images/screens/game_over_screen.png) |
+
+
+### Landing Page
+|                  Landing Page - part 1                   |                  landing Page - part 2                   |
+| :------------------------------------------------------: | :------------------------------------------------------: |
+| ![Landing_Page_1](html/images/screens/landing_page1.png) | ![Landing_Page_2](html/images/screens/landing_page2.png) |
 
 ### Learn More
 
