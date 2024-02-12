@@ -79,6 +79,20 @@ These enhancements represent significant progress in refining the "I - Spot" gam
 | :---------------------------------------------------: | :-------------------------------------------: |
 | ![Insturctions](html/images/screens/instructions.png) | ![About_Us](html/images/screens/about_us.png) |
 
+## User Testing Results
+(Please find User Testing Script and Result documentation in _user_testing/results_ directory)
+
+| Task & Question                             | Tester 1                                          | Tester 2                                          | Tester 3                                          | Tester 4                                          | Tester 5                                          |
+|---------------------------------------------|---------------------------------------------------|---------------------------------------------------|---------------------------------------------------|---------------------------------------------------|---------------------------------------------------|
+| **Task 1: Onboarding Process**              | Found “Games” section after initial confusion; clear once seen. | Could be more interactive.                        | Used phone; not specified.                        | Clear enough to understand the game process.      | Straightforward, nice overview.                   |
+| **Task 2: Visual Style & Engagement**       | Likes different levels/themes; progressively harder. | Fullscreen stretches image; game is fun.          | Pretty nice; works well.                          | Friendly UI; straightforward rules.               | Nice visuals; could be better with multiple objects. |
+| **Task 3: Transition Between Levels**       | Smooth transition; intuitive controls.             | Made sense; zoom controls not obvious.            | Inconvenient navigation; game over screen not phone compatible. | Smooth; clear indicators of goal achievement.     | Easy transition; suggests showing target object image. |
+| **Task 4: Full-Screen Mode & Zoom**         | Intuitive controls; full-screen appreciated.       | Full-screen button confusion.                     | Loses lives in full-screen on phone.              | Easy navigation; zoom enhances experience.        | Easy-to-use full-screen button; suggests hint for zoom. |
+| **Task 5: Finding Developer Info**          | “About Us” button was helpful.                     | Not specified.                                    | Not difficult to find.                            | Depends on game popularity and developer openness. | Easy to use “About Us” link; can access developer LinkedIn. |
+| **Task 6: Website Navigation**              | Prefers clicking logo for home; simple game but engaging. | Navigation is nice; some levels difficult at first. | Easy; logo should return to homepage.             | Simple and intuitive; medium difficulty to locate game. | Consistent navigation bar; easy to access different webpages. |
+| **Task 7: Overall Impressions**             | Would recommend; likes the game concept.          | Might play again; 4/5 stars.                      | It’s fine; would not play but recognizes potential. | Positive; likely to recommend.                    | Likely to play again; rates 8.8/10.               |
+
+
 ## Requirements 
 
 ### To run in local development 
