@@ -1,4 +1,5 @@
-# W24 CIS*4250 Team 8 Sprint 3
+# W24 CIS*4250 Team 8 Sprint 4
+Team Lead: Thulasi Jothiravi
 
 ## Authors
  Harir Al-Rubaye, Nour Tayem, Thulasi Jothiravi, Rehan Nagoor Mohideen, Harikrishan Singh, and Ivan Odiel Magtangob 
