@@ -25,7 +25,8 @@
 
 <body>
     <?php require "../components/navbar/navbar.php"; ?>
-
+    
+   
     <!-- Main Content -->
     <section class="wrapper">
         <div class="container">
@@ -116,16 +117,33 @@
                         . $member["name"]
                         . ' Profile Picture">';
                     echo '</div>';
-                    echo '<div class="profile-details">';
-                    include "snippets/"
-                        . strtolower($member["name"])
-                        . "_snippet.php";
-                    echo '</div>';
+                    if ($member["name"] == "Thulasi") {
+                        // data-word is the clue word that the user has to find
+                        echo '<div class="profile-details" id="wordContainer" data-word="Discover">';
+                        include "snippets/"
+                            . strtolower($member["name"])
+                            . "_snippet.php";
+                        
+                        echo '<p id="binaryOutput"> </p></div>';
+                    } else {
+                        // For all other members, just show the profile details without binary conversion
+                        echo '<div class="profile-details">';
+                        include "snippets/"
+                            . strtolower($member["name"])
+                            . "_snippet.php";
+                        
+                        echo '</div>';
+                    }
                     echo '</div>';
                 }
                 ?>
+                
+            <script>
+                <?php require "../word_puzzle/clues/puzzle_clues.js"; ?>
+            </script>
             </div>
         </div>
+        
     </section>
 </body>
 
