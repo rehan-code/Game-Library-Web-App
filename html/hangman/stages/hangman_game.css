@@ -1,3 +1,37 @@
+/*root reset */
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* css variables */
+:root {
+  --primary-color: #335eea;
+  --link-color: #506690;
+  --btn-hover-color: #2b50c7;
+  --lg-heading: #161c2d;
+  --text-content: #869ab8;
+  --fixed-header-height: 4.5rem;
+}
+
+/* reset html*/
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #fafbfb;
+}
+
+
 #keyboard {
   display: flex;
   flex-wrap: wrap;
@@ -37,15 +71,6 @@
 .key.incorrect {
   background-color: red; /* Red for incorrect letters */
   color: #ffffff;
-}
-
-body {
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background-color: #fafbfb;
-  margin: 0;
 }
 
 .main-heading {
@@ -100,38 +125,6 @@ body {
   transition: all 1s ease-out 1s;
 }
 
-.scoreboard {
-  width: 100%;
-  text-align: left;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(calc(100% + 4rem));
-  z-index: 5;
-  font-size: 1rem;
-  color: #333;
-  box-shadow: none;
-}
-
-.fullscreen-toggle {
-  position: fixed;
-  top: 25px;
-  right: 30px;
-  padding: 10px 20px;
-  background-color: #335eea;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  z-index: 10;
-}
-
-.fullscreen-toggle:hover {
-  background-color: #2b50c7;
-}
-
 .options {
   background-color: rgb(242, 242, 242);
   opacity: 0.75;
@@ -171,19 +164,6 @@ body {
   background-image: url("../../images/replay.png");
   /* Set the path to your image */
   background-size: cover;
-}
-
-.other-stages-text {
-  text-align: center;
-  /* Adjust as needed */
-  margin-top: 50px;
-  /* Adjust as needed */
-  padding-top: 50px;
-}
-
-.other-stages-text {
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 .word-container {
@@ -226,7 +206,7 @@ body {
   display: none;
 }
 
-#hangmanImage {
+#hangman-image {
   width: auto; /* Maintain the aspect ratio */
   height: 100%; /* Set the image height to 100% of its container */
 }

@@ -77,6 +77,10 @@
   text-decoration: none;
 }
 
+.nav-logo a {
+  text-decoration: none;
+}
+
 /* responsive styling */
 
 .nav-menu {

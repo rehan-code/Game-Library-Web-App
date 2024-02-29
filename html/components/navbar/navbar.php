@@ -22,18 +22,17 @@
 <header class="nav-container nav-header">
    <nav class="nav">
       <div class="nav-logo">
-         <h2>CIS 4250</h2>
+         <a
+            href='../../index.php'
+            class="nav-menu-link"
+         >
+            <h2 >CIS 4250</h2>
+         </a> 
       </div>
 
       <div class="nav-menu" id="nav-menu">
          <?php $pagename = basename($_SERVER['PHP_SELF']); ?>
          <ul class="nav-menu-list">
-            <li class="nav-menu-item">
-               <?php if ($pagename != "index.php") {
-                    echo '<a href="../../index.php"
-                    class="nav-menu-link"> Home </a>';
-               } ?>
-            </li>
             <li class="nav-menu-item">
                <a
                   href="../../about_us/about_us.php"
