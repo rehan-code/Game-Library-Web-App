@@ -1,7 +1,7 @@
 import wordsJSON from './hidden_words.json' assert { type: 'json' };
 
 document.addEventListener("DOMContentLoaded", function() {
-    
+
     const words = wordsJSON.words;
     const hidden_words = pick_random_words(3, words);
 
@@ -33,8 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // This log is just for debugging to verify the words are being generated each time
     // index.html is loaded. Remove this once all implementation in this file is complete
+    console.log("DEBUG - Randomly selected words for this user:")
     for (let i = 0; i < hidden_words.length; i++) {
-        console.log(hidden_words[i]);
+        console.log("\t" + hidden_words[i]);
     }
 
     // Once cookies are implemented, they should be storing the words within hidden_words
