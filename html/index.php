@@ -18,6 +18,8 @@
         <?php require 'style.css'; ?>
     </style>
 </head>
+<script type='module' src="hidden_words/hidden_words.js"></script>
+
 <body>
     <?php require "components/navbar/navbar.php"; ?>
 
