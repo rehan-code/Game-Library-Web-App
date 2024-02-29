@@ -43,7 +43,7 @@
         <div class="content-container">
             <div class="image-container">
                 <img src="../../images/hangman/hangman1.png" 
-                 draggable="false" alt="Zoomable Image" id="hangmanImage">
+                 draggable="false" alt="Zoomable Image" id="hangman-image">
             </div>
         </div>
 
