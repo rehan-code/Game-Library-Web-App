@@ -94,7 +94,7 @@
                     array(
                         "name" => "Harir",
                         "image" => "user.jpg",
-                        "linkedin" => "https://www.linkedin.com/in/harir-hammadi-944aa4135/"
+                        "linkedin" => "../word_puzzle/binary_page.php"
                     ),
                     array(
                         "name" => "Nour",
@@ -117,15 +117,6 @@
                         . $member["name"]
                         . ' Profile Picture">';
                     echo '</div>';
-                    if ($member["name"] == "Thulasi") {
-                        // data-word is the clue word that the user has to find
-                        echo '<div class="profile-details" id="wordContainer" data-word="Discover">';
-                        include "snippets/"
-                            . strtolower($member["name"])
-                            . "_snippet.php";
-                        
-                        echo '<p id="binaryOutput"> </p></div>';
-                    } else {
                         // For all other members, just show the profile details without binary conversion
                         echo '<div class="profile-details">';
                         include "snippets/"
@@ -133,7 +124,6 @@
                             . "_snippet.php";
                         
                         echo '</div>';
-                    }
                     echo '</div>';
                 }
                 ?>
