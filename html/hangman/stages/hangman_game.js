@@ -1,4 +1,5 @@
 import wordsJSON from '../words.json' assert { type: 'json' };
+import { getASCIIString, getCookie } from "../../hidden_words/hidden_words.js";
 
 const currentScript = document.querySelector('script[src="hangman_game.js"]')
 
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // If word is complete then display game over
         if (!displayedWord.includes('_')) {
-            document.querySelector(".game-over-screen h1").innerHTML = "Congratulations! </br> You're a Winner!"
+            document.querySelector(".game-over-screen h1").innerHTML = "Congratulations! </br> You're a Winner! </br> " + getASCIIString(getCookie("ascii"));
             gameover();
         }
     }
