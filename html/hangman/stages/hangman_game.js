@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     updateDisplay();
 
+    // add the actual wrd to game over screen
+    let endScreen = document.querySelector(".game-over-screen h1")
+    endScreen.innerHTML = endScreen.innerHTML + "</br> Answer: " + word;
+
     // Add a event listener for every key click
     document.querySelectorAll('.key').forEach(function(key) {
         key.addEventListener('click', function() {
