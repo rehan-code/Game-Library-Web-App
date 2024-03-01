@@ -8,7 +8,6 @@ body {
 .container {
     max-width: 800px;
     margin: 280px auto;
-    background-color: #fff;
     padding: 40px;
     border-radius: 10px;
     text-align: center;
@@ -24,9 +23,6 @@ body {
     display: inline-block;
     /* Makes the background wrap around the text */
     padding: 10px;
-    /* Increased padding around the binary text */
-    margin-top: 20%;
-    margin-left: 30%;
     /* Increased space above the binary output */
     border-radius: 6px;
     /* Slightly larger rounded corners for the binary output background */

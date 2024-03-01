@@ -22,11 +22,9 @@
 
 <body>
     <?php require "../components/navbar/navbar.php"; ?>
-    <!-- <div class="container"> -->
-        <div id="wordContainer" data-word="Discover">
+        <div class="container" id="wordContainer" data-word="Discover">
             <p><span id="binaryOutput"></span></p>
         </div>
-    <!-- </div> -->
     
     <script>
         <?php require "./clues/puzzle_clues.js"; ?>

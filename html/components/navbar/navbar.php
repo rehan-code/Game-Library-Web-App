@@ -50,14 +50,14 @@
                </a>
             </li>
             <!--  Testing Purposes -->
-            <li class="nav-menu-item">
+            <!-- <li class="nav-menu-item">
                <a
                   href="../../word_puzzle/secret_page/secret_page.php"
                   class="nav-menu-link"
                >
                   Hidden Page
                </a>
-            </li>
+            </li> -->
              <!--  Testing Purposes -->
          </ul>
       </div>
