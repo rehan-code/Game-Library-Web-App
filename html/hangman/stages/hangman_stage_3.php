@@ -18,6 +18,7 @@
     <style>
         <?php require 'hangman_game.css'; ?>
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <script type='module' src="hangman_game.js" difficulty='hard'></script>
 
@@ -44,6 +45,13 @@
             <div class="image-container">
                 <img src="../../images/hangman/hangman1.png" 
                  draggable="false" alt="Zoomable Image" id="hangman-image">
+            </div>
+
+            <div class="hint-button-container">
+                <button class="hint-button" onclick="showHint()">
+                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                </button>
+                <div class="speech-bubble" style="display: none;">Your hint goes here!</div>
             </div>
         </div>
 

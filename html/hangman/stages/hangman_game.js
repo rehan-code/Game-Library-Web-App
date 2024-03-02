@@ -2,6 +2,7 @@ import wordsJSON from '../words.json' assert { type: 'json' };
 import { getASCIIString, getCookie } from "../../hidden_words/hidden_words.js";
 
 const currentScript = document.querySelector('script[src="hangman_game.js"]')
+let isSpeechBubbleVisible = false;
 
 document.addEventListener("DOMContentLoaded", function() {
     const words = getWordPool(currentScript.getAttribute('difficulty'));
@@ -37,6 +38,24 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             this.disabled = true; //disable letter clickability
         });
+    });
+
+    window.showHint = function() {
+        const hintMessage = "This is your dynamically generated hint!"; // Example hint
+        const speechBubble = document.querySelector('.speech-bubble');
+        if (speechBubble) {
+            speechBubble.textContent = hintMessage;
+            speechBubble.style.display = 'block';
+            isSpeechBubbleVisible = true;
+        }
+    };
+
+    document.addEventListener('click', function(e) {
+        const speechBubble = document.querySelector('.speech-bubble');
+        if (isSpeechBubbleVisible && !e.target.classList.contains('hint-button')) {
+            speechBubble.style.display = 'none';
+            isSpeechBubbleVisible = false;
+        }
     });
 
     /**
@@ -94,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (lives == 9) {
             gameover();
         }
-    }
+    } 
 
     /**
      * Function to show the game over page
@@ -109,5 +128,5 @@ document.addEventListener("DOMContentLoaded", function() {
      */
     function updateDisplay() {
         document.getElementById('word-display').textContent = displayedWord.join(' ');
-    }
+    }    
 });
