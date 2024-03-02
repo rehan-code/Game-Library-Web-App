@@ -1,5 +1,21 @@
 import wordsJSON from './hidden_words.json' assert { type: 'json' };
 
+function validateWords() {
+    const secretWords = [
+        getCookie('invisible'),
+        getCookie('ascii'),
+        getCookie('hidden')
+    ].sort().map(word => word.toLowerCase());
+
+    const inputWords = [
+        document.querySelector('#secret_one').value,
+        document.querySelector('#secret_two').value,
+        document.querySelector('#secret_three').value,    
+    ].sort().map(word => word.toLowerCase());
+
+    return secretWords.join(',') === inputWords.join(',')
+}
+
 document.addEventListener("DOMContentLoaded", function() {
 
     const words = wordsJSON.words;
@@ -21,6 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
         setCookie("ascii", hidden_words[1], 1);
         setCookie("hidden", hidden_words[2], 1);
     }
+
+    const form = document.querySelector('.submission-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault()
+        validateWords()
+    });
 
 });
 

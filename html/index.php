@@ -18,8 +18,7 @@
         <?php require 'style.css'; ?>
     </style>
 </head>
-<script type='module' src="hidden_words/hidden_words.js"></script>
-
+<script type='module' src="./hidden_words/hidden_words.js"></script>
 <body>
     <?php require "components/navbar/navbar.php"; ?>
 
@@ -57,8 +56,8 @@
     </section>
 
     <section class="container">
-          <!-- This is the clue word that the user has to find -->
-          <p class="invisible-text info-text"> Invisible <p>
+        <!-- This is the clue word that the user has to find -->
+        <p class="invisible-text info-text"> Invisible <p>
         <div class="grid-item-1-center">
             <h1 class="main-heading">
                 <span>Our Games</span>
@@ -89,5 +88,18 @@
             </div>
         </div>
     </section>
+    
+    <form class="submission-form">
+        <h1 class="secret-submission-heading mx-auto" style="width: 400px">
+            <i>Found a <span>hidden</span> word? Enter them here...</i>
+        </h1>
+        <div class="mx-auto" style="width: 400px;">
+            <input type="text" id="secret_one" name="secret_one" class="form-control"><br><br>
+            <input type="text" id="secret_two" name="secret_two" class="form-control"><br><br>
+            <input type="text" id="secret_three" name="secret_three" class="form-control"><br><br>
+            <input type="submit" value="Submit" id="btn" class="btn btn-primary">
+        </div>
+    </form>
+
 </body>
 </html>
