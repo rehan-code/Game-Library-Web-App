@@ -51,7 +51,7 @@
                 <button class="hint-button" onclick="showHint('easy')">
                     <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                 </button>
-                <div class="speech-bubble" style="display: none;">Your hint goes here!</div>
+                <div class="speech-bubble" style="display: none;"></div>
             </div>
 
         </div>
