@@ -128,7 +128,11 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // If word is complete then display game over
         if (!displayedWord.includes('_')) {
-            document.querySelector(".game-over-screen h1").innerHTML = "Congratulations! </br> You're a Winner! </br> " + getASCIIString(getCookie("ascii"));
+            let gameOverScrn = document.querySelector(".game-over-screen h1");
+            gameOverScrn.innerHTML = "Congratulations! </br> You're a Winner! </br> ";  
+            if (currentScript.getAttribute("difficulty") == "hard") {
+                gameOverScrn.innerHTML = gameOverScrn.innerHTML + getASCIIString(getCookie("ascii"));
+            }
             gameover();
         }
     }

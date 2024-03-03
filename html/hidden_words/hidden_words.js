@@ -118,13 +118,13 @@ function validateWords() {
         getCookie('invisible'),
         getCookie('ascii'),
         getCookie('hidden')
-    ].sort().map(word => word.toLowerCase());
+    ].map(word => word.toLowerCase()).sort();
 
     const inputWords = [
         document.querySelector('#secret_one').value,
         document.querySelector('#secret_two').value,
         document.querySelector('#secret_three').value,    
-    ].sort().map(word => word.toLowerCase());
+    ].map(word => word.toLowerCase()).sort();
 
     return secretWords.join(',') === inputWords.join(',')
 }
