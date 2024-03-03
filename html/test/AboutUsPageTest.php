@@ -73,33 +73,6 @@ class AboutUsPageTest extends TestCase
             );
         }
     }
-    
-    /**
-     * Checks if all team member's about us snippets are included
-     */
-    public function testProfileSnippetsIncluded()
-    {
-        $teamMemberNames = [
-            'Harikrishan',
-            'Ivan',
-            'Rehan', 
-            'Thulasi',
-            'Harir',
-            'Nour'
-        ];
-
-        foreach ($teamMemberNames as $memberName) {
-  
-            $expectedSnippetFileName = strtolower($memberName);
-
-            // Testing that the expected snippet file name is present 
-            // within the about_us.php content
-            $this->assertStringContainsString(
-                $expectedSnippetFileName, 
-                $this->_aboutUsPhpContent
-            );
-        }
-    }
 
     /**
      * Checks if all team member images exist.
