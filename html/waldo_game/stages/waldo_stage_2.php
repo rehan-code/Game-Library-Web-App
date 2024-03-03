@@ -69,6 +69,15 @@
         <h2>Lives: <span class="score">10</span></h2>
     </div>
 
+    <div class="hint-cant">
+        <div class="hint-button-container">
+            <button class="hint-button" onclick="showHint('Dragon')">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+            </button>
+            <div class="speech-bubble" style="display: none;">Your hint goes here!</div>
+        </div>
+    <div>
+        
     <script type='module'>
         <?php require 'waldo_game.js'; ?>
     </script>

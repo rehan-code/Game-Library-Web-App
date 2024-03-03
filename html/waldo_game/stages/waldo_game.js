@@ -140,7 +140,36 @@ function toggleFullScreen(element) {
         }
     }
 }
+window.showHint = function(level) {
+    var hintMessage = 'Sample hint message';
+    switch (level) {
+        case 'lion':
+                hintMessage = 'The giraffe is amazing';
+            break;
+        case 'Dragon':
+                hintMessage = 'Something is visible around the castle';
+            break;
+        case 'Girl':
+                hintMessage = 'What can you see though the windows?';
+            break;
+        default:
+            break;
+    }
+    const speechBubble = document.querySelector('.speech-bubble');
+    if (speechBubble) {
+        speechBubble.textContent = hintMessage;
+        speechBubble.style.display = 'block';
+        isSpeechBubbleVisible = true;
+    }
+};
 
+document.addEventListener('click', function(e) {
+    const speechBubble = document.querySelector('.speech-bubble');
+    if (isSpeechBubbleVisible && !e.target.classList.contains('hint-button')) {
+        speechBubble.style.display = 'none';
+        isSpeechBubbleVisible = false;
+    }
+});
 // Export the functions
 module.exports = {
     zoomIn,
