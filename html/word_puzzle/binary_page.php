@@ -26,7 +26,7 @@
             <p><span id="binaryOutput"></span></p>
         </div>
     
-    <script>
+    <script type="module">
         <?php require "./clues/puzzle_clues.js"; ?>
     </script>
 </body>
