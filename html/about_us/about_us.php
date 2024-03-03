@@ -74,13 +74,13 @@
                     array(
                         "name" => "Hari",
                         "image" => "hari.jpg",
-                        "email" => "",
+                        "email" => "mailto:harikris@uoguelph.ca",
                         "linkedin" => "https://www.linkedin.com/in/harikrishansingh/"
                     ),
                     array(
                         "name" => "Ivan",
                         "image" => "ivan.png",
-                        "email" => "imagtang@uoguelph.ca",
+                        "email" => "mailto:imagtang@uoguelph.ca",
                         "linkedin" => "https://www.linkedin.com/in/ivanodielmagtangob/"
                     ),
                     array(
@@ -92,19 +92,19 @@
                     array(
                         "name" => "Thulasi",
                         "image" => "thulasi.jpg",
-                        "email" => "",
+                        "email" => "mailto:tjothira@uoguelph.ca",
                         "linkedin" => "https://www.linkedin.com/in/thulasijothiravi/"
                     ),
                     array(
                         "name" => "Harir",
                         "image" => "user.jpg",
-                        "email" => "halrubay@uoguelph.ca",
+                        "email" => "mailto:halrubay@uoguelph.ca",
                         "linkedin" => "../word_puzzle/binary_page.php"
                     ),
                     array(
                         "name" => "Nour",
                         "image" => "nour.jpeg",
-                        "email" => "ntayem@uoguelph.ca",
+                        "email" => "mailto:ntayem@uoguelph.ca",
                         "linkedin" => "https://www.linkedin.com/in/nour-tayem-softwareeng/"
                     )
                 );
