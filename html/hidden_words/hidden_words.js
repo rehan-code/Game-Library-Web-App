@@ -22,6 +22,15 @@ document.addEventListener("DOMContentLoaded", function() {
         setCookie("hidden", hidden_words[2], 1);
     }
 
+    // add the event listener for hidden words input
+    const form = document.querySelector('.submission-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault()
+        if (validateWords()) {
+            window.location.href = "../word_puzzle/secret_page/secret_page.php";
+        }
+    });
+
 });
 
 /**
@@ -86,10 +95,36 @@ export function getCookie(cname) {
 };
 
 // ====================HIDDEN PUZZLE FUNCTIONS====================
+/**
+ * function converts the letters in a string to its ascii value counterparts
+ * @param {*} word to convert to its ascii values
+ * @returns space seperated list of ascii values
+ */
 export function getASCIIString(word) {
     let newStr = "";
     for (const letter of word) {
         newStr = newStr + letter.charCodeAt(0) + " ";
     }
     return newStr;
+}
+
+/**
+ * checks whether the words inputed into hidden words 
+ * text boxes match the cookie values
+ * @returns true if all words match (in any order) or false otherwise
+ */
+function validateWords() {
+    const secretWords = [
+        getCookie('invisible'),
+        getCookie('ascii'),
+        getCookie('hidden')
+    ].sort().map(word => word.toLowerCase());
+
+    const inputWords = [
+        document.querySelector('#secret_one').value,
+        document.querySelector('#secret_two').value,
+        document.querySelector('#secret_three').value,    
+    ].sort().map(word => word.toLowerCase());
+
+    return secretWords.join(',') === inputWords.join(',')
 }
