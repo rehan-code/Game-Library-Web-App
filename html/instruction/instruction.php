@@ -81,7 +81,8 @@
                             <li> Losing all points results in a
                                 <strong>Game Over</strong>
                             </li>
-                            <li>Press the light bulb-shaped <strong>Hint Button</strong> 
+                            <li>Press the light bulb-shaped 
+                                <strong>Hint Button</strong> 
                             for a clue about the hidden item.
                             </li>
                         </dl>
@@ -135,7 +136,8 @@
                                 guessing the word. Leading to
                                 <strong>Game Over</strong>
                             </li>
-                            <li>Press the light bulb-shaped <strong>Hint Button</strong> 
+                            <li>Press the light bulb-shaped 
+                                <strong>Hint Button</strong> 
                             for a clue about the CS word to guess.
                             </li>
                         </dl>
