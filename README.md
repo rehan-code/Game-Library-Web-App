@@ -1,45 +1,40 @@
-# W24 CIS*4250 Team 8 Sprint 4
-Team Lead: Thulasi Jothiravi
+# W24 CIS*4250 Team 8 Sprint 5
+Team Lead: Nour Tayem
 
 ## Authors
- Harir Al-Rubaye, Nour Tayem, Thulasi Jothiravi, Rehan Nagoor Mohideen, Harikrishan Singh, and Ivan Odiel Magtangob 
+ Harir Al-Rubaye, Nour Tayem, Thulasi Jothiravi, Rehan Nagoor Mohideen, Harikrishan Singh, and Ivan Odiel Magtangob
 
 ## Contents of this file
  * Description
  * Visuals
  * Requirements
- * Installation 
+ * Installation
  * Usage (Local Development)
 
-## Description
-During Sprint 3, the team focused on updating the game functionality, which was renamed to "I - Spot". Several features and improvements were implemented:
+## Description [NEW]
+During Sprint 5, the team focused on updating the game functionality. Several features and improvements were implemented:
 
-1. **New Levels**: The game now features additional levels, enhancing the gameplay experience and providing more challenges for players.
+1. **Hint button**: In both the games a hint button was added. This button generates a corresponding hint to the level when playing 'i-spot'games.
 
-2. **Custom Images**: Visuals have been revamped with custom images, enhancing the overall aesthetic appeal and uniqueness of the game.
+2. **Hint I-spot**: The hint button generates a corresponding hint to the level when playing 'i-spot'games.
 
-3. **Unit Tests**: Unit tests have been integrated into the codebase to ensure robustness and reliability, allowing for smoother development and maintenance cycles.
+3. **Hint Hangman**: The hint button in the game produces a brief explanation on the word the user is trying to guess.
 
-4. **Linting Issues**: Various linting issues were addressed and fixed, improving code quality and consistency across the project.
+4. **Seceret Page**: There is a secret page that user reaches by finding the 3 clues spread throughout the website.
 
-5. **Updated UI/Frontend**: The user interface and frontend elements, including the game over screen, have been updated for improved usability and visual coherence.
+5. **Secrets**: A secret word is added on the homepage, gameoverpage and about us page. These are stored in cokkies and changed each time the webpage reloads.
 
-6. **Fullscreen Option**: A fullscreen option has been added to provide players with a more immersive gaming experience and greater flexibility in how they engage with the game.
+6. **See word if u lose hangman**:Now you can see the words on the game over screen after you lose the hangman game.
 
-7. **User Testing**: User testing to gather feedback, making sure our app is user-friendly, functions properly, and engages users by meeting their expectations effortlessly. We follow our User Testing Script for consistency (can be found in _'user_testing/user_test_script.txt'_). Results from Sprint 4 are detailed below.
-
-
-
-These enhancements represent significant progress in refining the "I - Spot" game, making it more engaging, visually appealing, and user-friendly.
 
 ## Visuals
 
-### [NEW] Hangman Game Menu
+### Hangman Game Menu
 |                   Game Start Page                    |                         Game Menu                          |
 | :--------------------------------------------------: | :--------------------------------------------------------: |
 | ![starting_game](html/images/screens/hangman_game.png) | ![select_stage](html/images/screens/hangman_menu.png) |
 
-### [NEW] Hangman Game (Different Stages)
+### Hangman Game (Different Stages)
 |                         Easy Level                         |                       Medium Level                        |
 | :-----------------------------------------------------: | :--------------------------------------------------: |
 | ![stage_1](html/images/screens/hangman_easy.png) | ![stage_2](html/images/screens/hangman_medium.png) |
@@ -94,17 +89,17 @@ These enhancements represent significant progress in refining the "I - Spot" gam
 | **Task 7: Overall Impressions**             | Would recommend; likes the game concept.          | Might play again; 4/5 stars.                      | It’s fine; would not play but recognizes potential. | Positive; likely to recommend.                    | Likely to play again; rates 8.8/10.               |
 
 
-## Requirements 
+## Requirements
 
-### To run in local development 
+### To run in local development
 1. Install Docker engine: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 2. Install Docker Desktop: https://www.docker.com/products/docker-desktop/
 
 ## Installation
-1. Go to the page of the repository that you want to clone (sprint-2 branch) 
+1. Go to the page of the repository that you want to clone (sprint-2 branch)
 2. Click on “Clone or download” and copy the URL.
 3. Use the git clone command along with the copied URL from earlier.
-4. Run the following on the command line: 
+4. Run the following on the command line:
 
 ```
 $ git clone --branch sprint-2 https://github.com/USERNAME/REPOSITORY

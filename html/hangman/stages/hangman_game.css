@@ -232,7 +232,7 @@ body {
   height: 50px; /* Circle size */
   border-radius: 50%; /* Makes it a circle */
   padding: 0;
-  background-color: #f9f9f9; /* Light background color */
+  background-color: #2b50c7; /* Light background color */
   box-shadow: 0 0 5px #ccc; /* Shadow for a "lifted" effect */
   border: none;
   cursor: pointer;
@@ -240,7 +240,7 @@ body {
 }
 
 .hint-button i {
-  color: #f0ad4e; /* Lightbulb color */
+  color: #ffffff; /* Lightbulb color */
   text-shadow: 0 0 3px #fff;
   font-size: 24px; /* Icon size, adjust as needed */
 }
