@@ -37,10 +37,10 @@
                 the search for Waldo, adding unique icons
                 for a fresh twist. Join us in diverse and
                 engaging gameplay. Our second game, 'Hangman,'
-                challenges you to guess names of monuments,
-                places, and famous people. With limited
-                guesses, reveal the hangman's fate for
-                a thrilling gaming experience!
+                challenges you to guess terms and concepts from 
+                the world of computer science. From programming 
+                languages and algorithms to fundamental technologies, 
+                each guess brings you closer to unveiling the hangman's fate!
             </p>
             </div>
             <div class="grid-item-2">
