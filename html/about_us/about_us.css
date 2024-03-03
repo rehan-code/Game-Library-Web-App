@@ -57,6 +57,22 @@
     transform: scale(1.2); 
 }
 
+.email-icon {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+}
+
+.email-icon img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.email-icon img:hover {
+    transform: scale(1.2); 
+}
+
 .header-container {
     position: relative;
     height: 300px;
