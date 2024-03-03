@@ -89,11 +89,12 @@
         </div>
     </section>
     
+    
     <form class="submission-form">
-        <h1 class="secret-submission-heading mx-auto" style="width: 400px">
-            <i>Found a <span>hidden</span> word? Enter them here...</i>
+        <h1 class="main-heading mx-auto" style="width: 400px">
+            <i>Found the <span>hidden</span> words? Enter them here...</i>
         </h1>
-        <div class="mx-auto" style="width: 400px;">
+        <div class="form-items mx-auto" style="width: 400px;">
             <input type="text" id="secret_one" name="secret_one" class="form-control"><br><br>
             <input type="text" id="secret_two" name="secret_two" class="form-control"><br><br>
             <input type="text" id="secret_three" name="secret_three" class="form-control"><br><br>
