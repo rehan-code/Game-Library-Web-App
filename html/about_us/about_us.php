@@ -25,7 +25,8 @@
 
 <body>
     <?php require "../components/navbar/navbar.php"; ?>
-
+    
+   
     <!-- Main Content -->
     <section class="wrapper">
         <div class="container">
@@ -73,31 +74,37 @@
                     array(
                         "name" => "Hari",
                         "image" => "hari.jpg",
+                        "email" => "mailto:harikris@uoguelph.ca",
                         "linkedin" => "https://www.linkedin.com/in/harikrishansingh/"
                     ),
                     array(
                         "name" => "Ivan",
                         "image" => "ivan.png",
+                        "email" => "mailto:imagtang@uoguelph.ca",
                         "linkedin" => "https://www.linkedin.com/in/ivanodielmagtangob/"
                     ),
                     array(
                         "name" => "Rehan",
                         "image" => "rehan.jpg",
+                        "email" => "mailto:rnagoorm@uoguelph.com",
                         "linkedin" => "https://www.linkedin.com/in/rehan-nagoor-mohideen-6b3156202/"
                     ),
                     array(
                         "name" => "Thulasi",
                         "image" => "thulasi.jpg",
+                        "email" => "mailto:tjothira@uoguelph.ca",
                         "linkedin" => "https://www.linkedin.com/in/thulasijothiravi/"
                     ),
                     array(
                         "name" => "Harir",
                         "image" => "user.jpg",
-                        "linkedin" => "https://www.linkedin.com/in/harir-hammadi-944aa4135/"
+                        "email" => "mailto:halrubay@uoguelph.ca",
+                        "linkedin" => "../word_puzzle/binary_page.php"
                     ),
                     array(
                         "name" => "Nour",
                         "image" => "nour.jpeg",
+                        "email" => "mailto:ntayem@uoguelph.ca",
                         "linkedin" => "https://www.linkedin.com/in/nour-tayem-softwareeng/"
                     )
                 );
@@ -108,6 +115,10 @@
                         . $member["linkedin"]
                         . '" target="_blank" class="linkedin-icon">';
                     echo '<img src="../images/linkedin_icon.png" alt="LinkedIn Icon">';
+                    echo '<a href="'
+                        . $member["email"]
+                        . '" target="_blank" class="email-icon">';
+                    echo '<img src="../images/email_icon.png" alt="Email Icon">';
                     echo '</a>';
                     echo '<div class="profile-picture">';
                     echo '<img src="../images/about_us/'
@@ -116,16 +127,23 @@
                         . $member["name"]
                         . ' Profile Picture">';
                     echo '</div>';
-                    echo '<div class="profile-details">';
-                    include "snippets/"
-                        . strtolower($member["name"])
-                        . "_snippet.php";
-                    echo '</div>';
+                        // For all other members, just show the profile details without binary conversion
+                        echo '<div class="profile-details">';
+                        include "snippets/"
+                            . strtolower($member["name"])
+                            . "_snippet.php";
+                        
+                        echo '</div>';
                     echo '</div>';
                 }
                 ?>
+                
+            <script>
+                <?php require "../word_puzzle/clues/puzzle_clues.js"; ?>
+            </script>
             </div>
         </div>
+        
     </section>
 </body>
 

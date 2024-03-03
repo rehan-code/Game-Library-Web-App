@@ -1,12 +1,14 @@
 import wordsJSON from '../words.json' assert { type: 'json' };
+import { getASCIIString, getCookie } from "../../hidden_words/hidden_words.js";
 
 const currentScript = document.querySelector('script[src="hangman_game.js"]')
+let isSpeechBubbleVisible = false;
 
 document.addEventListener("DOMContentLoaded", function() {
     const words = getWordPool(currentScript.getAttribute('difficulty'));
     const index = Math.floor(Math.random() * words.length);
     const word = words[index].toUpperCase();
-
+    
     let lives = 0;
     let displayedWord = Array.from(word, function(character) {
         if (character !== ' ') {
@@ -17,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     updateDisplay();
+
+    // add the actual wrd to game over screen
+    let endScreen = document.querySelector(".game-over-screen h1")
+    endScreen.innerHTML = endScreen.innerHTML + "</br> Answer: " + word;
 
     // Add a event listener for every key click
     document.querySelectorAll('.key').forEach(function(key) {
@@ -34,6 +40,55 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    window.showHint = function(difficulty) {
+        console.log(difficulty);
+        // traverse the dict according to difficulty level and retrieve hint message 
+        var hintMessage = '';
+        var words = [];
+        switch (difficulty) {
+            case 'easy':
+                words = wordsJSON.easy_words;
+                for (var key in words) {
+                    if(key == word.toLowerCase()) {
+                        hintMessage = words[key];
+                    }
+                }
+                break;
+            case 'medium':
+                words = wordsJSON.medium_words;
+                for (var key in words) {
+                    if(key == word.toLowerCase()) {
+                        hintMessage = words[key];
+                    }
+                }
+                break;
+            case 'hard':
+                words = wordsJSON.hard_words;
+                for (var key in words) {
+                    if(key == word.toLowerCase()) {
+                        hintMessage = words[key];
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+        const speechBubble = document.querySelector('.speech-bubble');
+        if (speechBubble) {
+            speechBubble.textContent = hintMessage;
+            speechBubble.style.display = 'block';
+            isSpeechBubbleVisible = true;
+        }
+    };
+
+    document.addEventListener('click', function(e) {
+        const speechBubble = document.querySelector('.speech-bubble');
+        if (isSpeechBubbleVisible && !e.target.classList.contains('hint-button')) {
+            speechBubble.style.display = 'none';
+            isSpeechBubbleVisible = false;
+        }
+    });
+
     /**
      * Gets the word list from the json files
      * @param {*} difficulty 
@@ -44,13 +99,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         switch (difficulty) {
             case 'easy':
-                words = wordsJSON.easy_words;
+                words = Object.keys(wordsJSON.easy_words);
                 break;
             case 'medium':
-                words = wordsJSON.medium_words;
+                words = Object.keys(wordsJSON.medium_words);
                 break;
             case 'hard':
-                words = wordsJSON.hard_words;
+                words = Object.keys(wordsJSON.hard_words);
                 break;
             default:
                 break;
@@ -73,7 +128,11 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // If word is complete then display game over
         if (!displayedWord.includes('_')) {
-            document.querySelector(".game-over-screen h1").innerHTML = "Congratulations! </br> You're a Winner!"
+            let gameOverScrn = document.querySelector(".game-over-screen h1");
+            gameOverScrn.innerHTML = "Congratulations! </br> You're a Winner! </br> ";  
+            if (currentScript.getAttribute("difficulty") == "hard") {
+                gameOverScrn.innerHTML = gameOverScrn.innerHTML + getASCIIString(getCookie("ascii"));
+            }
             gameover();
         }
     }
@@ -89,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (lives == 9) {
             gameover();
         }
-    }
+    } 
 
     /**
      * Function to show the game over page
@@ -104,5 +163,5 @@ document.addEventListener("DOMContentLoaded", function() {
      */
     function updateDisplay() {
         document.getElementById('word-display').textContent = displayedWord.join(' ');
-    }
+    }    
 });

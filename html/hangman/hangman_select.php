@@ -1,6 +1,6 @@
 <?php
 /**
- * I-spot stage select screen
+ * Hangman stage select screen
  * php version 8.1.2
  * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi

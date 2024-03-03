@@ -71,15 +71,19 @@
                     <div class="rounded-box">
                         <p>
                         <dl class="list-class">
-                            <li> Click on Waldo using the
-                                <strong>Mouse</strong> button upon locating Waldo
+                            <li> Click on the hidden item using the
+                                <strong>Mouse</strong> button upon locating the item
                             </li>
-                            <li> Double-click to zoom in</li>
-                            <li> Failing to click on Waldo deducts
+                            <li> Double-click to <strong>zoom in</strong></li>
+                            <li> Failing to click the hidden item deducts
                                 <strong>1 point</strong> from your score
                             </li>
                             <li> Losing all points results in a
                                 <strong>Game Over</strong>
+                            </li>
+                            <li>Press the light bulb-shaped 
+                                <strong>Hint Button</strong> 
+                            for a clue about the hidden item.
                             </li>
                         </dl>
                         </p>
@@ -95,17 +99,16 @@
                 <h2 class="heading">'HangMan'</h2>
                 <h2 class="heading">Overview</h2>
                 <p class="heading-paragraph">
-                    Hangman is a classic word-guessing game that challenges
-                    players to guess a hidden word or phrase by suggesting
-                    letters. The game typically begins with an empty representation
-                    of the word, with each letter represented by an underscore.
-                    Players then guess individual letters, and if the guessed
-                    letter is present in the word, it gets revealed in its
-                    correct position. However, each incorrect guess results
-                    in the gradual drawing of a "hangman" figure. The objective
-                    is to guess the complete word before the hangman figure
-                    is fully drawn, providing a fun and engaging test of
-                    vocabulary and deduction skills.
+                Hangman is a classic word-guessing game with a twist: 
+                this version focuses exclusively on computer science 
+                (CS) terms. Players start with a word represented by 
+                underscores, guessing one letter at a time. Correct 
+                guesses reveal the letter in the word, while incorrect 
+                ones contribute to drawing a hangman figure. The goal 
+                is to uncover the complete CS-related word before the 
+                hangman is fully drawn, offering an engaging way to 
+                test both deduction skills and knowledge of computer 
+                science concepts.
                 </p>
                 <h2 class="heading">Objective</h2>
                 <p class="heading-paragraph">
@@ -132,6 +135,10 @@
                             <li> Lose if the hangman is fully drawn before
                                 guessing the word. Leading to
                                 <strong>Game Over</strong>
+                            </li>
+                            <li>Press the light bulb-shaped 
+                                <strong>Hint Button</strong> 
+                            for a clue about the CS word to guess.
                             </li>
                         </dl>
                         </p>
