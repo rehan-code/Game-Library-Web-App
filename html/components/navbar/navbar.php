@@ -52,10 +52,18 @@
             <!--  Testing Purposes -->
             <!-- <li class="nav-menu-item">
                <a
+                  href="../../cryptogram/congrats/congrats_page.php"
+                  class="nav-menu-link"
+               >
+                  Congrats Page
+               </a>
+            </li>
+            <li class="nav-menu-item">
+               <a
                   href="../../word_puzzle/secret_page/secret_page.php"
                   class="nav-menu-link"
                >
-                  Hidden Page
+               secret page
                </a>
             </li> -->
              <!--  Testing Purposes -->
