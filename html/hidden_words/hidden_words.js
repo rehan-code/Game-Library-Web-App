@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault()
         if (validateWords()) {
-            window.location.href = "../word_puzzle/secret_page/secret_page.php";
+            window.location.href = "../../cryptogram/game/cryptogram.php";
         }
     });
 
