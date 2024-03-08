@@ -1,0 +1,93 @@
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 150px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /* Soften the shadow for subtlety */
+    text-align: center;
+}
+
+#cryptogram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+}
+
+.word-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4px;
+}
+
+.source {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+    /* A slightly lighter shade of gray */
+    margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.source::after {
+    content: "▼";
+    color: #0a5396;
+    /* A more muted shade of red */
+    font-size: 18px;
+    position: absolute;
+    right: -25px;
+    top: -4px;
+    /* Adjust the top position to align the arrow */
+}
+
+.block,
+.input-block {
+    border: 1px solid #ddd;
+    /* Lighter border color for the blocks */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.block {
+    background-color: #dae0e9;
+    /* A softer yellow color */
+    margin-bottom: 4px;
+}
+
+.input-block input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: large;
+    font-family: 'Courier New', monospace;
+    outline-color: #0a5396;
+    /* A muted red outline color when the input is focused */
+}
+
+.word {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.letter-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}

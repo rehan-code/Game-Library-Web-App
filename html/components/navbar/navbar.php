@@ -66,6 +66,14 @@
                secret page
                </a>
             </li> -->
+            <!-- <li class="nav-menu-item">
+               <a
+                  href="../../cryptogram/game/cryptogram.php"
+                  class="nav-menu-link"
+               >
+               cryptogram page
+               </a>
+            </li> -->
              <!--  Testing Purposes -->
          </ul>
       </div>

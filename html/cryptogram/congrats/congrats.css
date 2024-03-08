@@ -7,14 +7,14 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 180px auto;
+    margin: 50px auto;
+    padding-top: 20px;
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
-
 
 h1 {
     color: #0a5396;
@@ -27,6 +27,22 @@ p {
     font-size: 18px;
     margin-bottom: 20px;
     line-height: 1;
+}
+
+h1.alternate {
+    color: #0a5396;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+p.alternate {
+    color: black;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
 }
 
 .image-size {
