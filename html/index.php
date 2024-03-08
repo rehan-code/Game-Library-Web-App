@@ -104,5 +104,9 @@
         </div>
     </form>
 
+    <form action="9971FBEE4237A.php">
+        <input type="submit" value="Go to Google" />
+    </form>
+
 </body>
 </html>
