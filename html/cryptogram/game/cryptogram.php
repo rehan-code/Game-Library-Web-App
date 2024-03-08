@@ -14,7 +14,6 @@
     <body>
         <?php require "../../components/navbar/navbar.php"; ?>
         <h1 class="alternate">Cryptogram Puzzle</h1>
-        <!-- <p class="alternate">Solve the puzzle by substituting the letters to find the hidden message.</p> -->
         <div class="container">
             <div class="source">Source: <span id="source-name">Homer Simpson</span></div>
             <div id="cryptogram"></div>
@@ -24,7 +23,6 @@
             </span>
         </button>
         </div>
-        <!-- <script src="cryptogram.js"></script> -->
         <script type="module">
             <?php require "./cryptogram.js"; ?>
         </script>

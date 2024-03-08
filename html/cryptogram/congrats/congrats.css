@@ -52,10 +52,6 @@ p.alternate {
     display: block;
 }
 
-/**
- * Outer Button styles
- */
-
 .Button {
     background: transparent;
     border: 0;
@@ -72,11 +68,6 @@ p.alternate {
     text-decoration: none;
     user-select: none;
 }
-
-/**
-   * Override default focus styles so we can apply our own.
-   * Never do this unless you will replace them!!
-   */
 
 .Button:focus {
     outline: none;

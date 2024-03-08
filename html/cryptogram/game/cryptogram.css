@@ -12,7 +12,6 @@ body {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    /* Soften the shadow for subtlety */
     text-align: center;
 }
 
@@ -34,7 +33,6 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     color: #555;
-    /* A slightly lighter shade of gray */
     margin-bottom: 20px;
     display: inline-block;
     position: relative;
@@ -43,18 +41,15 @@ body {
 .source::after {
     content: "▼";
     color: #0a5396;
-    /* A more muted shade of red */
     font-size: 18px;
     position: absolute;
     right: -25px;
     top: -4px;
-    /* Adjust the top position to align the arrow */
 }
 
 .block,
 .input-block {
     border: 1px solid #ddd;
-    /* Lighter border color for the blocks */
     width: 30px;
     height: 30px;
     text-align: center;
@@ -63,7 +58,6 @@ body {
 
 .block {
     background-color: #dae0e9;
-    /* A softer yellow color */
     margin-bottom: 4px;
 }
 
@@ -75,7 +69,6 @@ body {
     font-size: large;
     font-family: 'Courier New', monospace;
     outline-color: #0a5396;
-    /* A muted red outline color when the input is focused */
 }
 
 .word {
