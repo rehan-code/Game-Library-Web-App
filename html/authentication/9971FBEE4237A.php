@@ -30,7 +30,7 @@
                 Authentication
             </h1>
             <div class="form-items mx-auto" style="width: 400px;">
-                <input type="text" id="auth_text" class="form-control"><br><br>
+                <input type="password" id="auth_pass" class="form-control"><br><br>
                 <input type="submit" value="Submit" id="btn" class="btn btn-primary mx-auto">
             </div>
         </form>
