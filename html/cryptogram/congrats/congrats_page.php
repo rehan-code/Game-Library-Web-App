@@ -16,17 +16,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to the Secret Page</title>
     <style>
-        <?php require './secret_page.css'; ?>
+        <?php require './congrats.css'; ?>
     </style>
 </head>
 
 <body>
     <?php require "../../components/navbar/navbar.php"; ?>
     <div class="container">
-        <h1>Welcome to the Secret Page!</h1>
-        <p>We're glad you made it here.</p>
-        <p>Thank you for participating in our scavenger hunt puzzle game.</p>
-        <p>Feel free to explore and enjoy!</p>
+        <img src="../../images/cryptogram/reward.png" alt="reward" class="image-size">
+        <h1>Congratulations!</h1>
+        <p>You have solved the mystery cryptogram puzzle.</p>
+        <p>Feel free to click below to go the next website.</p>
+        <button class="Button" onclick = "window.location.href='https://www.google.ca/';">
+            <span class="Button-inner">
+                Next Website
+            </span>
+        </button>
     </div>
 </body>
 

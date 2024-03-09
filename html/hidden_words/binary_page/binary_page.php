@@ -16,18 +16,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>You Found A Clue!</title>
     <style>
-        <?php require './clues/puzzle_clues.css'; ?>
+        <?php require './binary_page.css'; ?>
     </style>
 </head>
 
 <body>
-    <?php require "../components/navbar/navbar.php"; ?>
-        <div class="container" id="wordContainer" data-word="Discover">
-            <p><span id="binaryOutput"></span></p>
-        </div>
+    <?php require "../../components/navbar/navbar.php"; ?>
+    
+    <div class="container" id="wordContainer" data-word="Discover">
+        <p><span id="binaryOutput"></span></p>
+    </div>
     
     <script type="module">
-        <?php require "./clues/puzzle_clues.js"; ?>
+        <?php require "./binary_page.js"; ?>
     </script>
 </body>
 

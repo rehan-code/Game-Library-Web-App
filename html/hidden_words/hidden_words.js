@@ -5,29 +5,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const words = wordsJSON.words;
     const hidden_words = pick_random_words(3, words);
 
-
-    // This log is just for debugging to verify the words are being generated each time
-    // index.html is loaded. Remove this once all implementation in this file is complete
-    console.log("DEBUG - Randomly selected words for this user:")
-    for (let i = 0; i < hidden_words.length; i++) {
-        console.log("\t" + hidden_words[i]);
-    }
-
     // Set the hidden cookie (with the words for the puzzles) if it is not set
-    let cookie = getCookie("hidden");
-    if (cookie == "") {
+    if (getCookie("invisible") == "" || getCookie("ascii") == "" || getCookie("binary") == "") {
         //set the cookie that expires in one day
         setCookie("invisible", hidden_words[0], 1);
         setCookie("ascii", hidden_words[1], 1);
-        setCookie("hidden", hidden_words[2], 1);
+        setCookie("binary", hidden_words[2], 1);
     }
+
+    document.getElementById('invisible-word').innerText = getCookie('invisible');
 
     // add the event listener for hidden words input
     const form = document.querySelector('.submission-form');
     form.addEventListener('submit', function(event) {
         event.preventDefault()
         if (validateWords()) {
-            window.location.href = "../word_puzzle/secret_page/secret_page.php";
+            window.location.href = "../../cryptogram/game/cryptogram.php";
         }
     });
 
@@ -117,7 +110,7 @@ function validateWords() {
     const secretWords = [
         getCookie('invisible'),
         getCookie('ascii'),
-        getCookie('hidden')
+        getCookie('binary')
     ].map(word => word.toLowerCase()).sort();
 
     const inputWords = [

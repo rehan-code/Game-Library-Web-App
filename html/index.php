@@ -58,7 +58,6 @@
     <section class="container">
         <!-- This is the clue word that the user has to find -->
         <p class="invisible-text info-text" id="invisible-word"><p>
-        <script type="module" src="./word_puzzle/clues/puzzle_clues.js"></script>
 
         <div class="grid-item-1-center">
             <h1 class="main-heading">
@@ -91,7 +90,6 @@
         </div>
     </section>
     
-    
     <form class="submission-form">
         <h1 class="main-heading mx-auto" style="width: 400px">
             <i>Found the <span>hidden</span> words? Enter them here...</i>
@@ -100,7 +98,7 @@
             <input type="text" id="secret_one" name="secret_one" class="form-control"><br><br>
             <input type="text" id="secret_two" name="secret_two" class="form-control"><br><br>
             <input type="text" id="secret_three" name="secret_three" class="form-control"><br><br>
-            <input type="submit" value="Submit" id="btn" class="btn btn-primary">
+            <input type="submit" value="Submit" id="btn" class="btn btn-primary mx-auto">
         </div>
     </form>
 
