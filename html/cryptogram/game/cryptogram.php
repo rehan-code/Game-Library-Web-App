@@ -17,11 +17,17 @@
         <div class="container">
             <div class="source">Source: <span id="source-name">Homer Simpson</span></div>
             <div id="cryptogram"></div>
-            <button class="Button" onclick = "window.location.href='../congrats/congrats_page.php'">
+            <button class="Button" id="submitCryptogram">
                 <span class="Button-inner">
                     Submit
                 </span>
             </button>
+        </div>
+        <div id="popupContainer">
+            <p>Please complete the cryptogram!</p>
+            <div class="center">
+                <button id="popupOkButton" onclick="document.getElementById('popupContainer').style.display='none';">OK</button>
+            </div>
         </div>
         <script type="module">
             <?php require "./cryptogram.js"; ?>
