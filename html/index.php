@@ -58,7 +58,6 @@
     <section class="container">
         <!-- This is the clue word that the user has to find -->
         <p class="invisible-text info-text" id="invisible-word"><p>
-        <script type="module" src="./word_puzzle/clues/puzzle_clues.js"></script>
 
         <div class="grid-item-1-center">
             <h1 class="main-heading">
@@ -90,7 +89,6 @@
             </div>
         </div>
     </section>
-    
     
     <form class="submission-form">
         <h1 class="main-heading mx-auto" style="width: 400px">
