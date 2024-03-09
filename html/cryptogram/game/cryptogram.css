@@ -84,3 +84,49 @@ body {
     flex-direction: column;
     margin-bottom: 10px;
 }
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  #popupContainer {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#popupOkButton {
+    font-family: 'Courier New', monospace;
+    padding: 10px 20px;
+    border: none;
+    background-color: #0a5396;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Optional: Add hover effect for the button */
+#popupOkButton:hover {
+    background-color: #083c61; /* Darker shade of blue for hover effect */
+}

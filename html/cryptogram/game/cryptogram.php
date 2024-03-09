@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cryptogram Puzzle</title>
-        <!-- <link rel="stylesheet" href="cryptogram.css"> -->
         <style>
             <?php require './cryptogram.css'; ?>
             <?php require '../congrats/congrats.css'; ?>
@@ -17,11 +16,17 @@
         <div class="container">
             <div class="source">Source: <span id="source-name">Homer Simpson</span></div>
             <div id="cryptogram"></div>
-            <button class="Button" onclick = "window.location.href='../congrats/congrats_page.php'">
-            <span class="Button-inner">
-                Submit
-            </span>
-        </button>
+            <button class="Button" id="submitCryptogram">
+                <span class="Button-inner">
+                    Submit
+                </span>
+            </button>
+        </div>
+        <div id="popupContainer">
+            <p>Please complete the cryptogram!</p>
+            <div class="center">
+                <button id="popupOkButton" onclick="document.getElementById('popupContainer').style.display='none';">OK</button>
+            </div>
         </div>
         <script type="module">
             <?php require "./cryptogram.js"; ?>

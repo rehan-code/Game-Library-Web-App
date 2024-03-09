@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const sentence = "This is a sample cryptogram puzzle. Edit below!";
+    const sentence = "This is a sample cryptogram puzzle Edit below";
     const cryptogramContainer = document.getElementById('cryptogram');
 
     function createLetterMapping() {
@@ -44,20 +44,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 const encryptedChar = container.dataset.encrypted;
                 const originalChar = Object.keys(letterMapping).find(key => letterMapping[key] === encryptedChar);
                 const guess = this.value.toUpperCase();
-
+    
                 if (guess === originalChar) {
                     // Correct guess, update all inputs with the same encryptedChar
                     const allInputs = cryptogramContainer.querySelectorAll(`.letter-container[data-encrypted="${encryptedChar}"] input`);
                     allInputs.forEach(input => input.value = guess);
                     checkSolution(letterMapping);
                 } else {
-                    // Incorrect guess, clear this input
+                    // Incorrect guess, clear this input and shake
                     this.value = '';
+                    container.classList.add('shake');
+                    setTimeout(() => container.classList.remove('shake'), 500); // Remove class after animation duration
                 }
             });
         });
     }
-
+    
     function checkSolution(letterMapping) {
         const inputs = cryptogramContainer.querySelectorAll('input');
         const decryptedMessage = Array.from(inputs).map(input => input.value.toUpperCase() || '?').join('');
@@ -71,5 +73,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const letterMapping = createLetterMapping();
     generateCryptogram(sentence, letterMapping);
     setupInputHandlers(letterMapping);
-});
 
+    // Add an event listener to the submit button
+    document.getElementById('submitCryptogram').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        checkAllBoxesFilled();
+    });
+
+    function checkAllBoxesFilled() {
+        const inputs = document.querySelectorAll('#cryptogram input');
+        const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+    
+        if (allFilled) {
+            // Redirect to the congrats page
+            window.location.href = '../congrats/congrats_page.php';
+        } else {
+            // Show the custom popup
+            document.getElementById('popupContainer').style.display = 'block';
+        }
+    }    
+});
