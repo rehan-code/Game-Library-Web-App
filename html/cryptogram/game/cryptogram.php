@@ -18,10 +18,10 @@
             <div class="source">Source: <span id="source-name">Homer Simpson</span></div>
             <div id="cryptogram"></div>
             <button class="Button" onclick = "window.location.href='../congrats/congrats_page.php'">
-            <span class="Button-inner">
-                Submit
-            </span>
-        </button>
+                <span class="Button-inner">
+                    Submit
+                </span>
+            </button>
         </div>
         <script type="module">
             <?php require "./cryptogram.js"; ?>

@@ -100,7 +100,7 @@
             <input type="text" id="secret_one" name="secret_one" class="form-control"><br><br>
             <input type="text" id="secret_two" name="secret_two" class="form-control"><br><br>
             <input type="text" id="secret_three" name="secret_three" class="form-control"><br><br>
-            <input type="submit" value="Submit" id="btn" class="btn btn-primary">
+            <input type="submit" value="Submit" id="btn" class="btn btn-primary mx-auto">
         </div>
     </form>
 
