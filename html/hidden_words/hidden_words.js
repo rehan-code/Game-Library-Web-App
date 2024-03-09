@@ -59,7 +59,7 @@ function pick_random_words(amount, word_pool) {
  * @param {*} value that you want for the cookie
  * @param {*} exdays num of days it will be valid for
  */
-function setCookie(name, value, exdays) {
+export function setCookie(name, value, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000)); //days after which it will expire
     let expires = "expires="+ d.toUTCString();
