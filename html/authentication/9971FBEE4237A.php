@@ -17,7 +17,7 @@
     <title>Authentication</title>
     <style>
         <?php require '../style.css'; ?>
-        <?php require '../word_puzzle/secret_page/secret_page.css'; ?>
+        <?php require '../hidden_words/secret_page/secret_page.css'; ?>
     </style>
     <script type='module' src="./authentication.js"></script>
 </head>
@@ -30,7 +30,7 @@
                 Authentication
             </h1>
             <div class="form-items mx-auto" style="width: 400px;">
-                <input type="text" id="field" class="form-control"><br><br>
+                <input type="text" id="auth_text" class="form-control"><br><br>
                 <input type="submit" value="Submit" id="btn" class="btn btn-primary mx-auto">
             </div>
         </form>
