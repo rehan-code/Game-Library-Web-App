@@ -99,7 +99,7 @@
                         "name" => "Harir",
                         "image" => "user.jpg",
                         "email" => "mailto:halrubay@uoguelph.ca",
-                        "linkedin" => "../word_puzzle/binary_page.php"
+                        "linkedin" => "../hidden_words/binary_page/binary_page.php"
                     ),
                     array(
                         "name" => "Nour",
