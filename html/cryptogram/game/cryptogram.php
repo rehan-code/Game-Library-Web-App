@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cryptogram Puzzle</title>
+        <!-- <link rel="stylesheet" href="cryptogram.css"> -->
         <style>
             <?php require './cryptogram.css'; ?>
             <?php require '../congrats/congrats.css'; ?>
