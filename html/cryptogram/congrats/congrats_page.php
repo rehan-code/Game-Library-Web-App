@@ -46,7 +46,7 @@
         </p>
         <br>
         <p><i>Unravel the whole mystery...</i></p>
-        <button class="Button" onclick = "window.location.href='https://www.google.ca/';">
+        <button class="Button" onclick = "window.location.href='https://cis4250w24-09.socs.uoguelph.ca/puzzle';">
             <span class="Button-inner">
                 Next Website
             </span>
