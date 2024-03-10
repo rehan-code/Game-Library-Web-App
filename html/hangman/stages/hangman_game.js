@@ -1,5 +1,5 @@
 import wordsJSON from '../words.json' assert { type: 'json' };
-import hiddenWordsJSON from '../../hidden_words/hidden_words.json' assert { type: 'json' };
+import hintsJS from '../../hidden_words/hints.js';
 import { getASCIIString, getCookie } from "../../hidden_words/hidden_words.js";
 
 const currentScript = document.querySelector('script[src="hangman_game.js"]')
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     window.showHint = function(difficulty) {
-        console.log(difficulty);
         // traverse the dict according to difficulty level and retrieve hint message 
         var hintMessage = '';
         var words = [];
@@ -166,9 +165,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     gameOverScrn.innerHTML = gameOverScrn.innerHTML + getASCIIString(getCookie("ascii"));
                 }
             } else {
-                var hints = hiddenWordsJSON.hints;
+                var hints = hintsJS.hints;
                 var hintChance = Math.floor(Math.random() * 10) + 1;
-                if (hintChance == 2) {
+
+                if (hintChance <= 2) {
                     var hintIndex = Math.floor(Math.random() * hints.length);
                     gameOverScrn.innerHTML = gameOverScrn.innerHTML + "<br><i>" + hints[hintIndex] + '<i>';
                 }
