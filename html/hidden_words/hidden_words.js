@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (getCookie("authenticated") == "true") {
         document.querySelector('.main-heading').innerHTML = "";
         document.querySelector('.main-heading').appendChild(document.createRange().createContextualFragment(
-            `<h1><span>The Detective Chronicles</span><h1>
+            `<h2><span>The Detective Chronicles</span><h2>
             <h3>―The Loose Ends―<h3>`
         ));
         document.getElementById('landing-text').innerHTML = "";
         document.getElementById('landing-text').appendChild(document.createRange().createContextualFragment(
-        "<br><p style='text-align: justify;'><strong>Farmer’s Secret</strong><br><br>I uncovered several " +
+        "<p style='text-align: justify;'><strong>Farmer’s Secret</strong><br><br>I uncovered several " +
         "alarming details in the file. Firstly, it contained information about the illegal slaughter " +
         "of animals. The photographs of these slaughterhouses depicted a deplorable state, indicating " +
         "a lack of funding for proper maintenance and an inability to acquire suitable equipment " + 
