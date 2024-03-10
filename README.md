@@ -1,5 +1,5 @@
-# W24 CIS*4250 Team 8 Sprint 5
-Team Lead: Nour Tayem
+# W24 CIS*4250 Team 8 Sprint 6
+Team Lead: Harikrishan Singh
 
 ## Authors
  Harir Al-Rubaye, Nour Tayem, Thulasi Jothiravi, Rehan Nagoor Mohideen, Harikrishan Singh, and Ivan Odiel Magtangob
@@ -25,6 +25,13 @@ During Sprint 5, the team focused on updating the game functionality. Several fe
 5. **Secrets**: A secret word is added on the homepage, gameoverpage and about us page. These are stored in cokkies and changed each time the webpage reloads.
 
 6. **See word if u lose hangman**:Now you can see the words on the game over screen after you lose the hangman game.
+
+### What's New in Sprint 6
+ We just wrapped up Sprint 6, and it's packed with cool stuff to enhance your experience with our cryptogram puzzle game. Let’s dive into what we’ve been up to:
+
+1. **Cryptogram Magic**: The frontend and backend got a major facelift, making puzzles more fun and interactive.
+2. Jumping into solving puzzles is now faster with our streamlined authentication and smoother navigation.
+3. We’ve hidden a riddle within the cryptograms. Solve it, and bask in the glory of your puzzle mastery.
 
 
 ## Visuals
