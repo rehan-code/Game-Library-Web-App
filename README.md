@@ -32,6 +32,7 @@ During Sprint 5, the team focused on updating the game functionality. Several fe
 1. **Cryptogram Magic**: The frontend and backend got a major facelift, making puzzles more fun and interactive.
 2. Jumping into solving puzzles is now faster with our streamlined authentication and smoother navigation.
 3. We’ve hidden a riddle within the cryptograms. Solve it, and bask in the glory of your puzzle mastery.
+4. Added [JavaScript Linting Guide](https://gitlab.socs.uoguelph.ca/cis4250_w24/team_8/-/wikis/JavaScript-Linting-Guide) to Project Wiki.
 
 
 ## Visuals
