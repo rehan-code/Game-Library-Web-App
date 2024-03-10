@@ -114,6 +114,19 @@ a {
   line-height: 55px;
 }
 
+.main-heading h1 {
+  text-align: center;
+  font-size: 38px;
+  line-height: 10px;
+}
+
+.main-heading h3 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+}
+
 .main-heading span {
   color: var(--primary-color);
 }

@@ -96,7 +96,7 @@ p.alternate {
 
 .Button:focus .Button-inner {
     border-color: #fff;
-    box-shadow: 0 0 0 2px #456BD9;
+    box-shadow: 0 0 0 2px #0a5396;
 }
 
 .Button:hover .Button-inner {
@@ -105,4 +105,8 @@ p.alternate {
 
 .Button:active .Button-inner {
     filter: brightness(0.9);
+}
+
+.justify {
+    text-align: justify;
 }

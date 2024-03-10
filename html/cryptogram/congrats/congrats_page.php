@@ -23,10 +23,29 @@
 <body>
     <?php require "../../components/navbar/navbar.php"; ?>
     <div class="container">
-        <img src="../../images/cryptogram/reward.png" alt="reward" class="image-size">
-        <h1>Congratulations!</h1>
-        <p>You have solved the mystery cryptogram puzzle.</p>
-        <p>Feel free to click below to go the next website.</p>
+        <img src="../../images/cryptogram/money.png" alt="reward" class="image-size">
+        <h1>The Investment Banker</h1>
+        <p class="justify">
+            An investment banker involved in various unethical and illegal activities 
+            who abuses his money and power to avoid all forms of legal repercussions. 
+            That being said, his charges mainly include manipulating the market, 
+            embezzlement of funds, bribery, loan sharking, and various other forms of 
+            bank or market financial schemes. He doesn't seem to be involved with the 
+            underground to the level of kidnapping and nor does he seem to be of that 
+            type.
+        </p>
+        <p class="justify">
+            Most recently, he has seized land from farmers due to the farmer’s inability 
+            to pay off a loan with him, most likely through some form of unfair contract 
+            or legal loophole. With this in mind, it can be concluded that this individual 
+            is probably not involved with the kidnapping or the list of missing individuals 
+            that was found on the farmer’s computer like the food safety department 
+            initially thought. Since the farmers most likely hate this individual due to 
+            being cheated. That being said, however, I believe there is more to this 
+            situation than we initially thought.
+        </p>
+        <br>
+        <p><i>Unravel the whole mystery...</i></p>
         <button class="Button" onclick = "window.location.href='https://www.google.ca/';">
             <span class="Button-inner">
                 Next Website

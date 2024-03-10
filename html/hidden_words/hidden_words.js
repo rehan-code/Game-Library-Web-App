@@ -15,12 +15,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('invisible-word').innerText = getCookie('invisible');
 
+    // if it is authenticated then update the text to the story
+    if (getCookie("authenticated") == "true") {
+        document.querySelector('.main-heading').innerHTML = "";
+        document.querySelector('.main-heading').appendChild(document.createRange().createContextualFragment(
+            `<h1><span>The Detective Chronicles</span><h1>
+            <h3>―The Loose Ends―<h3>`
+        ));
+        document.getElementById('landing-text').innerHTML = "";
+        document.getElementById('landing-text').appendChild(document.createRange().createContextualFragment(
+        "<br><p style='text-align: justify;'><strong>Farmer’s Secret</strong><br><br>I uncovered several " +
+        "alarming details in the file. Firstly, it contained information about the illegal slaughter " +
+        "of animals. The photographs of these slaughterhouses depicted a deplorable state, indicating " +
+        "a lack of funding for proper maintenance and an inability to acquire suitable equipment " + 
+        "for the humane treatment of animals. The meat from these <span style='color: #fafbfb;'>illicit</span> " +
+        "operations was being distributed to an unidentified individual, a practice that had persisted for a " +
+        "while.<br><br>Furthermore, the file contained data on individuals who had gone missing. Despite the " +
+        "cases being officially closed with no concrete evidence found, the file included " +
+        "photographs of these missing persons. Upon closer examination, it became evident that " +
+        "the evidence within this file had never been brought to light. The food safety department " +
+        "escalated the situation to the authorities, who dispatched a police officer to arrest the " +
+        "farmer for illegal animal slaughter and for further investigation.</p>"));
+        document.getElementById('invisible-word').remove();
+    }
+
     // add the event listener for hidden words input
     const form = document.querySelector('.submission-form');
     form.addEventListener('submit', function(event) {
         event.preventDefault()
         if (validateWords()) {
-            window.location.href = "../../cryptogram/game/cryptogram.php";
+            if (getCookie("authenticated") == "true") {
+                window.location.href = "../../cryptogram/game/cryptogram.php";
+            }else {
+                window.location.href = "secret_page/secret_page.php";
+            }
         }
     });
 
@@ -107,17 +135,26 @@ export function getASCIIString(word) {
  * @returns true if all words match (in any order) or false otherwise
  */
 function validateWords() {
-    const secretWords = [
+    let secretWords = [
         getCookie('invisible'),
         getCookie('ascii'),
         getCookie('binary')
     ].map(word => word.toLowerCase()).sort();
+
+    if (getCookie("authenticated") == "true") {
+        secretWords = [
+            "illicit",
+            "dispatched",
+            "labyrinth",    
+        ].map(word => word.toLowerCase()).sort();
+    }
 
     const inputWords = [
         document.querySelector('#secret_one').value,
         document.querySelector('#secret_two').value,
         document.querySelector('#secret_three').value,    
     ].map(word => word.toLowerCase()).sort();
+
 
     return secretWords.join(',') === inputWords.join(',')
 }
