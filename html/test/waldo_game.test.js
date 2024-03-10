@@ -5,11 +5,9 @@
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
 
-// const { zoomIn, notFound, isFound, updateScoreboard } = require(
-//     '../waldo_game/stages/waldo_game.js'
-// );
-
-import { zoomIn, notFound, isFound, updateScoreboard } from '../waldo_game/stages/waldo_game.js';
+const { zoomIn, notFound, isFound, updateScoreboard } = require(
+    '../waldo_game/stages/waldo_game.js'
+);
 
 document.body.innerHTML = `
   <div class="image-container">
