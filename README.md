@@ -11,22 +11,7 @@ Team Lead: Harikrishan Singh
  * Installation
  * Usage (Local Development)
 
-## Description [NEW]
-During Sprint 5, the team focused on updating the game functionality. Several features and improvements were implemented:
-
-1. **Hint button**: In both the games a hint button was added. This button generates a corresponding hint to the level when playing 'i-spot'games.
-
-2. **Hint I-spot**: The hint button generates a corresponding hint to the level when playing 'i-spot'games.
-
-3. **Hint Hangman**: The hint button in the game produces a brief explanation on the word the user is trying to guess.
-
-4. **Seceret Page**: There is a secret page that user reaches by finding the 3 clues spread throughout the website.
-
-5. **Secrets**: A secret word is added on the homepage, gameoverpage and about us page. These are stored in cokkies and changed each time the webpage reloads.
-
-6. **See word if u lose hangman**:Now you can see the words on the game over screen after you lose the hangman game.
-
-### What's New in Sprint 6
+### What's [NEW] in Sprint 6
  We just wrapped up Sprint 6, and it's packed with cool stuff to enhance your experience with our cryptogram puzzle game. Let’s dive into what we’ve been up to:
 
 1. **Cryptogram Magic**: The frontend and backend got a major facelift, making puzzles more fun and interactive.
@@ -36,6 +21,21 @@ During Sprint 5, the team focused on updating the game functionality. Several fe
 
 
 ## Visuals
+
+### Hidden puzzle
+|                   Hidden puzzle                    |                         Hidden puzzle value Menu                          |
+| :--------------------------------------------------: | :--------------------------------------------------------: |
+| ![starting_game](html/images/screens/puzzle-updated.png) | ![select_stage](html/images/screens/puzzle-filled.png) |
+
+### Cryptogram puzzle
+|                   Cryptogram                   |                         Congralatuation Menu                          |
+| :--------------------------------------------------: | :--------------------------------------------------------: |
+| ![starting_game](html/images/screens/cryptogram.png) | ![select_stage](html/images/screens/congo.png) |
+
+### Hints 
+|                   Hangman                   |                         about us hint Menu                          |
+| :--------------------------------------------------: | :--------------------------------------------------------: |
+| ![starting_game](html/images/screens/hangman-hint.png) | ![select_stage](html/images/screens/aboutus-hint.png) |
 
 ### Hangman Game Menu
 |                   Game Start Page                    |                         Game Menu                          |
