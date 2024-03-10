@@ -126,9 +126,8 @@ body {
     cursor: pointer;
 }
 
-/* Optional: Add hover effect for the button */
 #popupOkButton:hover {
-    background-color: #083c61; /* Darker shade of blue for hover effect */
+    background-color: #083c61; 
 }
 
 body {
@@ -171,8 +170,8 @@ body {
     justify-content: center;
     align-items: center;
     font-size: large;
-    width: 30px; /* Match the size of the input blocks */
-    height: 30px; /* Match the size of the input blocks */
+    width: 30px; 
+    height: 30px;
 }
 
 .input-block input {
