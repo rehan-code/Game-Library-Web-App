@@ -31,7 +31,7 @@
                 <br />
                 website
             </h1>
-            <p class="info-text">
+            <p class="info-text" id="landing-text">
                 Team 8 presents two exciting games. I-Spot,
                 inspired by "Where's Waldo," takes you beyond
                 the search for Waldo, adding unique icons
@@ -95,10 +95,10 @@
             <i>Found the <span>hidden</span> words? Enter them here...</i>
         </h1>
         <div class="form-items mx-auto" style="width: 400px;">
-            <input type="text" id="secret_one" name="secret_one" class="form-control"><br><br>
-            <input type="text" id="secret_two" name="secret_two" class="form-control"><br><br>
-            <input type="text" id="secret_three" name="secret_three" class="form-control"><br><br>
-            <input type="submit" value="Submit" id="btn" class="btn btn-primary mx-auto">
+        <input type="text" id="secret_one" name="secret_one" class="form-control" placeholder="Things are hidden in plain sight"><br><br>
+        <input type="text" id="secret_two" name="secret_two" class="form-control" placeholder="Let's socialize "><br><br>
+        <input type="text" id="secret_three" name="secret_three" class="form-control" placeholder="Save a man's life"><br><br>
+        <input type="submit" value="Submit" id="btn" class="btn btn-primary mx-auto">
         </div>
     </form>
 
