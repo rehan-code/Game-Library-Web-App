@@ -1,3 +1,5 @@
+import hintsJS from '../../hidden_words/hints.js';
+
 let isZoomed = false;
 let score = 10; // Initialize score
 
@@ -107,6 +109,15 @@ function isFound(event) {
     if (event) event.stopPropagation();
     var screen = document.querySelector(".game-over-screen");
     var image = document.querySelector(".image-container img");
+    let gameOverScrn = document.querySelector(".game-over-screen h1");
+
+    var hints = hintsJS.hints;
+    var hintChance = Math.floor(Math.random() * 10) + 1; 
+
+    if (hintChance == 2) {
+        var hintIndex = Math.floor(Math.random() * hints.length);
+        gameOverScrn.innerHTML = gameOverScrn.innerHTML + "<br><i>" + hints[hintIndex] + "<i>";
+    }
 
     screen.style.display = "block";
     image.classList.add("blur");

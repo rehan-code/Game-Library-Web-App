@@ -1,4 +1,5 @@
 import wordsJSON from '../words.json' assert { type: 'json' };
+import hintsJS from '../../hidden_words/hints.js';
 import { getASCIIString, getCookie } from "../../hidden_words/hidden_words.js";
 
 const currentScript = document.querySelector('script[src="hangman_game.js"]')
@@ -41,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     window.showHint = function(difficulty) {
-        console.log(difficulty);
         // traverse the dict according to difficulty level and retrieve hint message 
         var hintMessage = '';
         var words = [];
@@ -129,9 +129,49 @@ document.addEventListener("DOMContentLoaded", function() {
         // If word is complete then display game over
         if (!displayedWord.includes('_')) {
             let gameOverScrn = document.querySelector(".game-over-screen h1");
-            gameOverScrn.innerHTML = "Congratulations! </br> You're a Winner! </br> ";  
+            gameOverScrn.innerHTML = "Congratulations! </br> You're a Winner! </br> "; 
+            //for hard difficulty 
             if (currentScript.getAttribute("difficulty") == "hard") {
-                gameOverScrn.innerHTML = gameOverScrn.innerHTML + getASCIIString(getCookie("ascii"));
+                // if its authenticated show a different output
+                if (getCookie("authenticated") == "true") {
+                    
+                    gameOverScrn.appendChild(document.createRange().createContextualFragment(
+                        `<p style='font-weight: normal;text-align: center;font-size: 20px; margin-left: 10%; margin-right: 10%;'>
+                        <br>
+                        <strong>The Secret Game</strong>
+                        <br><br>
+                        `
+                    ));
+                    gameOverScrn.appendChild(document.createRange().createContextualFragment(
+                        `<p style='font-weight: normal;text-align: justify;font-size: 20px; margin-left: 10%; margin-right: 10%;'>
+                        I have received a report from some sources of a giant hidden ${getASCIIString("labyrinth")} 
+                        under construction by some philanthropist billionaire. Though his identity 
+                        is uncertain, rumor has it that he loves puzzles and games, especially 
+                        ones with high stakes on the line. My reports suggested that something 
+                        seemed off in this individual's love for the high stakes; He seemed to 
+                        love it to an unnatural degree.
+                        <br><br>
+                        I received another report of kidnappings employed by a person wearing a 
+                        mask. Some of the people related to the kidnappees often mentioned that 
+                        they received a phone call or other forms of messages regarding playing 
+                        in a game. What types of games are meant here?
+                        <br><br>
+                        Although it's uncertain whether both these reports are linked; the detective 
+                        in me tells me that they are in some way, shape, or form. There are no 
+                        coincidences in this line of business.
+                        `
+                    ));
+                } else {
+                    gameOverScrn.innerHTML = gameOverScrn.innerHTML + getASCIIString(getCookie("ascii"));
+                }
+            } else {
+                var hints = hintsJS.hints;
+                var hintChance = Math.floor(Math.random() * 10) + 1;
+
+                if (hintChance <= 2) {
+                    var hintIndex = Math.floor(Math.random() * hints.length);
+                    gameOverScrn.innerHTML = gameOverScrn.innerHTML + "<br><i>" + hints[hintIndex] + '<i>';
+                }
             }
             gameover();
         }

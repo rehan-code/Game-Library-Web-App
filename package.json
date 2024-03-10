@@ -9,6 +9,7 @@
     "type":"module"
   },
   "jest": {
-    "testEnvironment": "jest-environment-jsdom"
+    "testEnvironment": "jest-environment-jsdom",
+    "type": "module"
   }
 }
