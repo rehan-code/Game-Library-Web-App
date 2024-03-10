@@ -1,4 +1,5 @@
 import wordsJSON from '../words.json' assert { type: 'json' };
+import hiddenWordsJSON from '../../hidden_words/hidden_words.json' assert { type: 'json' };
 import { getASCIIString, getCookie } from "../../hidden_words/hidden_words.js";
 
 const currentScript = document.querySelector('script[src="hangman_game.js"]')
@@ -129,7 +130,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // If word is complete then display game over
         if (!displayedWord.includes('_')) {
             let gameOverScrn = document.querySelector(".game-over-screen h1");
-            gameOverScrn.innerHTML = "Congratulations! </br> You're a Winner! </br> ";  
+            gameOverScrn.innerHTML = "Congratulations! </br> You're a Winner! </br> "; 
+            //for hard difficulty 
             if (currentScript.getAttribute("difficulty") == "hard") {
                 // if its authenticated show a different output
                 if (getCookie("authenticated") == "true") {
@@ -162,6 +164,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     ));
                 } else {
                     gameOverScrn.innerHTML = gameOverScrn.innerHTML + getASCIIString(getCookie("ascii"));
+                }
+            } else {
+                var hints = hiddenWordsJSON.hints;
+                var hintChance = Math.floor(Math.random() * 10) + 1;
+                if (hintChance == 2) {
+                    var hintIndex = Math.floor(Math.random() * hints.length);
+                    gameOverScrn.innerHTML = gameOverScrn.innerHTML + "<br><i>" + hints[hintIndex] + '<i>';
                 }
             }
             gameover();
