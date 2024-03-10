@@ -22,7 +22,7 @@
 
 <body>
     <?php require "../../components/navbar/navbar.php"; ?>
-    <div class="container">
+    <div class="container congrats-width">
         <img src="../../images/cryptogram/money.png" alt="reward" class="image-size">
         <h1>The Investment Banker</h1>
         <p class="justify">

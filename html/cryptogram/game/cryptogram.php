@@ -14,7 +14,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cryptogram Puzzle</title>
-        <!-- <link rel="stylesheet" href="cryptogram.css"> -->
         <style>
             <?php require './cryptogram.css'; ?>
             <?php require '../congrats/congrats.css'; ?>
@@ -23,7 +22,7 @@
     <body>
         <?php require "../../components/navbar/navbar.php"; ?>
         <h1 class="alternate">Cryptogram Puzzle</h1>
-        <div class="container">
+        <div class="container crypto-width">
             <div id="cryptogram"></div>
             <button class="Button" id="submitCryptogram">
                 <span class="Button-inner">
