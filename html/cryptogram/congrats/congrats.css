@@ -6,7 +6,6 @@ body {
 }
 
 .container {
-    max-width: 800px;
     margin: 50px auto;
     padding-top: 20px;
     background-color: #fff;
@@ -15,6 +14,15 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
+
+.congrats-width {
+    max-width: 800px;
+}
+
+.crypto-width {
+    max-width: 1400px;
+}
+
 
 h1 {
     color: #0a5396;
@@ -31,7 +39,7 @@ p {
 
 h1.alternate {
     color: #0a5396;
-    font-size: 28px;
+    font-size: 33px;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
