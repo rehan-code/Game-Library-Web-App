@@ -126,7 +126,127 @@ body {
     cursor: pointer;
 }
 
-/* Optional: Add hover effect for the button */
 #popupOkButton:hover {
-    background-color: #083c61; /* Darker shade of blue for hover effect */
+    background-color: #083c61; 
 }
+
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 150px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#cryptogram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.block,
+.input-block {
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.block, .punctuation-container {
+    background-color: #dae0e9;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    width: 30px; 
+    height: 30px;
+}
+
+.input-block input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: large;
+    font-family: 'Courier New', monospace;
+    outline-color: #0a5396;
+}
+
+.word {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.letter-container, .punctuation-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#letterFrequencies {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.frequency {
+    padding: 5px;
+    background-color: #dae0e9;
+    border-radius: 5px;
+}
+
+#frequencyChart {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 20px;
+}
+
+.barContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar {
+    width: 20px;
+    background-color: #0a5396;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.bar:hover {
+    opacity: 0.8;
+}
+
+.barLabel {
+    font-size: 12px;
+}
+
+.non-letter-container {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 30px;
+    background-color: #dae0e9;
+}
+
+
+
