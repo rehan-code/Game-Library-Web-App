@@ -1,4 +1,5 @@
-import hiddenWordsJSON from '../../hidden_words/hidden_words.json' assert { type: 'json' };
+import hintsJS from '../../hidden_words/hints.js';
+
 let isZoomed = false;
 let score = 10; // Initialize score
 
@@ -110,7 +111,7 @@ function isFound(event) {
     var image = document.querySelector(".image-container img");
     let gameOverScrn = document.querySelector(".game-over-screen h1");
 
-    var hints = hiddenWordsJSON.hints;
+    var hints = hintsJS.hints;
     var hintChance = Math.floor(Math.random() * 10) + 1; 
 
     if (hintChance == 2) {
