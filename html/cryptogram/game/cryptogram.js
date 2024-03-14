@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         const prompts=[
             `According to all known laws of aviation, there is no way a bee should be able to fly.
-            Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway:
-            because bees don't care what humans think is impossible...`,
+            Its wings are too small to get its fat little body off the ground. The bee, of course,
+            flies anyway: because bees don't care what humans think is impossible...`,
             'The quick brown fox jumps over the lazy dog.',
             `There once was a boy named Evan. He lived with his parents in their house and played video games all day.
             One day there was this new game called Palworld. Evan was excited to play the game, but he sucked. The end`,

@@ -95,7 +95,7 @@
                     Cryptogram
                 </h1>
                 <p class="info-text">
-                    Decrypt the hidden story adasdasdasdasdasdasdasdadasdsdasdasdasdasdasdasd
+                    Decrypt the hidden story
                 </p>
             </div>
         </div>

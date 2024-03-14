@@ -330,7 +330,7 @@ footer {
 
   .featured-info p {
     line-height: 23px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   /* Wrapper */
@@ -537,7 +537,6 @@ footer {
 }
 
 .movie-card .info-text {
-  padding-left: 10rem;
   width: 100%;
   font-weight: bold;
   font-size: 22px;
@@ -546,6 +545,7 @@ footer {
   position: relative;
   color: #ffffff;
   text-align: center;
+  display: contents;
 }
 
 .movie-card .main-heading {
