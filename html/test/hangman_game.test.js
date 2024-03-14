@@ -38,29 +38,19 @@ describe('isCorrectLetter', () => {
     let displayedWord;
 
     // Function to reset the game state before each test
-    beforeEach(() => {
-        // Initialize or reset the displayedWord to all underscores
+    beforeEach(() => {s
         displayedWord = word.split('').map(() => '_');
-
-        // Mock the updateDisplay function to prevent actual DOM manipulation
         global.updateDisplay = jest.fn();
-
-        // Mock the gameover function to prevent actual game over sequence
         global.gameover = jest.fn();
     });
 
     it('correctly reveals letters when a correct letter is guessed', () => {
-        // Simulate guessing a correct letter
-        isCorrectLetter('T'); // Assuming isCorrectLetter is globally accessible
-
-        // 'T' should now be revealed in the displayedWord
+        isCorrectLetter('T');
         expect(displayedWord).toEqual(['T', '_', '_', 'T']);
-        // Ensure the display is updated
         expect(updateDisplay).toHaveBeenCalled();
     });
 
     it('completes the game when all letters are guessed correctly', () => {
-        // Simulate guessing all correct letters
         isCorrectLetter('E');
         isCorrectLetter('S');
         isCorrectLetter('T');
@@ -74,9 +64,8 @@ describe('isCorrectLetter', () => {
 });
 
 describe('updateDisplay', () => {
-    // Mock the initial setup
     let displayedWord;
-    document.body.innerHTML = '<div id="word-display"></div>'; // Simulate the part of the DOM manipulated by updateDisplay
+    document.body.innerHTML = '<div id="word-display"></div>';
   
     beforeEach(() => {
         // Reset state before each test
@@ -87,12 +76,11 @@ describe('updateDisplay', () => {
     });
   
     test('correctly updates the display content', () => {
-        updateDisplay(); // Call the function
+        updateDisplay();
         expect(document.getElementById('word-display').textContent).toBe('__A_B');
     });
   
     test('updates display after changing displayedWord', () => {
-        // Simulate guessing a letter correctly
         displayedWord[1] = 'C'; // Change the state
         updateDisplay(); // Update the display based on the new state
         expect(document.getElementById('word-display').textContent).toBe('_CAB');
