@@ -34,11 +34,9 @@ describe('getWordPool', () => {
 });
 
 describe('isCorrectLetter', () => {
-    // Mock word to be guessed in the game
     const word = "TEST".toUpperCase();
     let displayedWord;
 
-    // Function to reset the game state before each test
     beforeEach(() => {s
         displayedWord = word.split('').map(() => '_');
         global.updateDisplay = jest.fn();
@@ -56,10 +54,8 @@ describe('isCorrectLetter', () => {
         isCorrectLetter('S');
         isCorrectLetter('T');
 
-        // The game should recognize all letters are guessed
         expect(displayedWord.includes('_')).toBe(false);
 
-        // The gameover sequence should be triggered
         expect(gameover).toHaveBeenCalled();
     });
 });
@@ -69,7 +65,6 @@ describe('updateDisplay', () => {
     document.body.innerHTML = '<div id="word-display"></div>';
   
     beforeEach(() => {
-        // Reset state before each test
         displayedWord = ['_', '_', 'A', '_', 'B'];
         global.updateDisplay = function() {
             document.getElementById('word-display').textContent = displayedWord.join(' ');
@@ -82,8 +77,8 @@ describe('updateDisplay', () => {
     });
   
     test('updates display after changing displayedWord', () => {
-        displayedWord[1] = 'C'; // Change the state
-        updateDisplay(); // Update the display based on the new state
+        displayedWord[1] = 'C';
+        updateDisplay();
         expect(document.getElementById('word-display').textContent).toBe('_CAB');
     });
 });
