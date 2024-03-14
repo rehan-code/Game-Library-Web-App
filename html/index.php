@@ -87,6 +87,17 @@
                     Unravel the mystery word before the hangman's fate is sealed!
                 </p>
             </div>
+            <div
+                class="movie-card movie-card-cryptogram"
+                onclick="window.location.href='cryptogram/game/cryptogram.php';"
+            >
+                <h1 class="main-heading-2">
+                    Cryptogram
+                </h1>
+                <p class="info-text">
+                    Decrypt the hidden story adasdasdasdasdasdasdasdadasdsdasdasdasdasdasdasd
+                </p>
+            </div>
         </div>
     </section>
     
