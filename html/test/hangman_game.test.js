@@ -1,3 +1,10 @@
+/**
+ * Javascript test cases
+ * php version 8.1.2
+ * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
+ *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
+ */
+
 const { getWordPool, isCorrectLetter, updateDisplay, isWrongLetter, gameover, showHint } = require(
     '../hangman/stages/hangman_game.js'
 );
