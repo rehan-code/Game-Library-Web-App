@@ -60,7 +60,7 @@ h1#question {
     z-index: 6;
     width: 100%;
     height: 100%;
-    top: 15rem;
+    top: 10rem;
     position: absolute;
     text-align: center;
     align-items: center;
@@ -84,8 +84,9 @@ h1#question {
 }
 
 .game-over-screen h1 {
-    color: white;
+    color: black;
     font-size: 2.5rem;
+    top: 2rem;
 }
 
 .game-content {
@@ -145,7 +146,17 @@ h1#question {
     margin-top: 5%;
 }
 
-.game-over-screen h2, .game-over-screen p {
+.game-over-screen h2 {
+    color: black;
+    font-size: 20px; 
+}
+
+.game-over-screen p {
     color: white;
     font-size: 20px; 
 }
+
+.game-over-screen h1 {
+    color: black; /* Set the text color to black */
+}
+

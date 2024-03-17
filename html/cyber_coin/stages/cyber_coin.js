@@ -40,6 +40,22 @@ async function showGameOverScreen(correctAnswerText, totalScore) {
     }
     gameOverElement.appendChild(friendlyMessage);
 
+    const optionsContainer = document.createElement("div");
+    optionsContainer.classList.add("options2");
+
+    const homeButton = document.createElement("button");
+    homeButton.classList.add("option-button", "button1");
+    homeButton.onclick = function() { window.location.href = '../../index.php'; };
+
+    const replayButton = document.createElement("button");
+    replayButton.classList.add("option-button", "button2");
+    replayButton.onclick = function() { window.location.href = 'cyber_coin_stage_1.php'; };
+
+    optionsContainer.appendChild(homeButton);
+    optionsContainer.appendChild(replayButton);
+
+    gameOverElement.appendChild(optionsContainer);
+
     gameOverElement.classList.add("active");
     document.querySelector(".game-content").classList.add("blur");
 }
