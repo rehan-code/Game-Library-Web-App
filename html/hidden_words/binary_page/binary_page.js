@@ -28,12 +28,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // const wordContainer = document.getElementById('wordContainer');
         // const word = wordContainer.getAttribute('data-word')
         // convert word to binary
-        const word = getCookie('binary');
-
-        for (let i = 0; i < word.length; i++) {
-            binary += word[i].charCodeAt(0).toString(2) + ' ';
-        }
-
-        document.getElementById('binaryOutput').innerText = binary.trim();
+        
+        setBinaryWord();
     }
 });
+
+function setBinaryWord() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        var data = JSON.parse(this.responseText);
+        if (data['error'] == null) {
+            let binary = '';
+            for (let i = 0; i < data['result']; i++) {
+                binary += data['result'][i].charCodeAt(0).toString(2) + ' ';
+            }
+            document.getElementById('binaryOutput-word').innerText = binary.trim();
+        } else {
+            alert(data['error']);
+        }
+    }
+    xhttp.open("POST", "../authentication/authenticate.php", false);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({
+        "functionname": 'decrypt',
+        "word": getCookie('binary')
+    }));
+}

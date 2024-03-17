@@ -2,18 +2,18 @@ import wordsJSON from './hidden_words.json' assert { type: 'json' };
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const words = wordsJSON.words;
-    const hidden_words = pick_random_words(3, words);
+    // const words = wordsJSON.words;
+    // const hidden_words = pick_random_words(3, words);
 
     // Set the hidden cookie (with the words for the puzzles) if it is not set
     if (getCookie("invisible") == "" || getCookie("ascii") == "" || getCookie("binary") == "") {
         //set the cookie that expires in one day
+        var hidden_words = getWords();
         setCookie("invisible", hidden_words[0], 1);
         setCookie("ascii", hidden_words[1], 1);
         setCookie("binary", hidden_words[2], 1);
     }
-
-    document.getElementById('invisible-word').innerText = getCookie('invisible');
+    setInvisibleWord();
 
     // if it is authenticated then update the text to the story
     if (getCookie("authenticated") == "true") {
@@ -43,13 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector('.submission-form');
     form.addEventListener('submit', function(event) {
         event.preventDefault()
-        if (validateWords()) {
-            if (getCookie("authenticated") == "true") {
-                window.location.href = "../../cryptogram/game/cryptogram.php?secret=true";
-            }else {
-                window.location.href = "secret_page/secret_page.php";
-            }
-        }
+        validateWords()
     });
 
 });
@@ -135,26 +129,90 @@ export function getASCIIString(word) {
  * @returns true if all words match (in any order) or false otherwise
  */
 function validateWords() {
-    let secretWords = [
-        getCookie('invisible'),
-        getCookie('ascii'),
-        getCookie('binary')
-    ].map(word => word.toLowerCase()).sort();
-
-    if (getCookie("authenticated") == "true") {
-        secretWords = [
-            "illicit",
-            "dispatched",
-            "labyrinth",    
-        ].map(word => word.toLowerCase()).sort();
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        console.log(this.responseText)
+        var data = JSON.parse(this.responseText);
+        if (data['error'] == null) {
+            let secretWords = data['result'].map(word => word.toLowerCase()).sort();
+        
+            if (getCookie("authenticated") == "true") {
+                secretWords = [
+                    "illicit",
+                    "dispatched",
+                    "labyrinth",    
+                ].map(word => word.toLowerCase()).sort();
+            }
+        
+            const inputWords = [
+                document.querySelector('#secret_one').value,
+                document.querySelector('#secret_two').value,
+                document.querySelector('#secret_three').value,    
+            ].map(word => word.toLowerCase()).sort();
+        
+            if (secretWords.join(',') === inputWords.join(',')) {
+                if (getCookie("authenticated") == "true") {
+                    window.location.href = "../../cryptogram/game/cryptogram.php?secret=true";
+                }else {
+                    window.location.href = "./secret_page/secret_page.php";
+                }
+            } else {
+                alert('Those aren\'t the right secrets! Keep looking!');
+            }
+        } else {
+            alert(data['error']);
+        }
     }
+    xhttp.open("POST", "../authentication/authenticate.php", false);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({
+        "functionname": 'decrypt_words',
+        "words": [
+            getCookie('invisible'),
+            getCookie('ascii'),
+            getCookie('binary')
+        ]
+    }));
 
-    const inputWords = [
-        document.querySelector('#secret_one').value,
-        document.querySelector('#secret_two').value,
-        document.querySelector('#secret_three').value,    
-    ].map(word => word.toLowerCase()).sort();
+
+    
+}
 
 
-    return secretWords.join(',') === inputWords.join(',')
+function getWords() {
+    var words;
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        var data = JSON.parse(this.responseText);
+        if (data['error'] == null) {
+            words = data['result']
+        } else {
+            alert(data['error']);
+        }
+    }
+    xhttp.open("POST", "../authentication/authenticate.php", false);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({
+        "functionname": 'get_words',
+    }));
+
+    return words;
+}
+
+function setInvisibleWord() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        var data = JSON.parse(this.responseText);
+        if (data['error'] == null) {
+            document.getElementById('invisible-word').innerText = data['result'];
+        } else {
+            alert(data['error']);
+        }
+    }
+    xhttp.open("POST", "../authentication/authenticate.php", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({
+        "functionname": 'decrypt',
+        "word": getCookie('invisible')
+    }));
 }

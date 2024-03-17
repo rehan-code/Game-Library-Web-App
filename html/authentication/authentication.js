@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (data['error'] == null) {
                 if (data['result'] == true) {
                     alert("Authentication Successful");
+                    document.cookie = "authenticated=true;expires=0;path=/";
                     window.location.href = "../index.php";
                 } else {
                     alert("Authentication Failed");
@@ -24,13 +25,5 @@ document.addEventListener("DOMContentLoaded", function() {
             "functionname": 'authenticate',
             "arguments": document.querySelector('#auth_pass').value.toLowerCase()
         }));
-        // 
-        // if (document.querySelector('#auth_pass').value.toLowerCase() == "cash cow") {
-        //     document.cookie = "authenticated=true;expires=0;path=/";
-        //     alert("Authentication Successful");
-        //     window.location.href = "../index.php";
-        // } else {
-        //         alert("Authentication Failed");
-        // }
     });
 });

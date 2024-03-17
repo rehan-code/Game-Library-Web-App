@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         `
                     ));
                 } else {
-                    gameOverScrn.innerHTML = gameOverScrn.innerHTML + getASCIIString(getCookie("ascii"));
+                    setASCIIWord();
                 }
             } else {
                 var hints = hintsJS.hints;
@@ -203,5 +203,27 @@ document.addEventListener("DOMContentLoaded", function() {
      */
     function updateDisplay() {
         document.getElementById('word-display').textContent = displayedWord.join(' ');
-    }    
+    }
+    
+
+    function setASCIIWord() {
+        let gameOverScrn = document.querySelector(".game-over-screen h1");
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            var data = JSON.parse(this.responseText);
+            if (data['error'] == null) {
+                gameOverScrn.innerHTML = gameOverScrn.innerHTML + getASCIIString(data["result"]);
+            } else {
+                alert(data['error']);
+            }
+        }
+        xhttp.open("POST", "../../authentication/authenticate.php", false);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send(JSON.stringify({
+            "functionname": 'decrypt',
+            "word": getCookie('ascii')
+        }));
+    }
+    
 });
+
