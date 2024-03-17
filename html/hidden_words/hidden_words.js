@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault()
         if (validateWords()) {
             if (getCookie("authenticated") == "true") {
-                window.location.href = "../../cryptogram/game/cryptogram.php";
+                window.location.href = "../../cryptogram/game/cryptogram.php?secret=true";
             }else {
                 window.location.href = "secret_page/secret_page.php";
             }
