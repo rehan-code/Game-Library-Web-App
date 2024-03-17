@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function generateCryptogram(sentence, letterMapping) {
         const encryptedSentence = sentence.toUpperCase().split('').map(char => {
             if (/[A-Z]/.test(char)) {
-                return letterMapping[char] || char; // Apply mapping or keep original character
+                return letterMapping[char] || char;
             } else {
-                return char; // Keep non-alphabetic characters as they are
+                return char;
             }
         }).join('');
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     `;
                 } else {
-                    return `<div class="non-letter-container">${char}</div>`; // Non-letter characters are directly displayed
+                    return `<div class="non-letter-container">${char}</div>`;
                 }
             }).join('');
 
@@ -46,22 +46,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function checkSolution() {
-        // Convert inputs to a single string, removing non-letter characters and ignoring case
         const inputString = Array.from(document.querySelectorAll('#cryptogram input')).map(input => input.value.toUpperCase()).join('');
         const originalString = sentence.toUpperCase().replace(/[^A-Z]/g, '');
 
-        // Check if the input matches the original sentence
         if (inputString === originalString) {
-            // Redirect to the congrats page
             window.location.href = '../congrats/congrats_page.php';
         } else {
-            // Display the popup container for incorrect guess
             document.getElementById('popupContainer').style.display = 'block';
         }
     }
 
     document.getElementById('submitCryptogram').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default form submission behavior
+        event.preventDefault();
         checkSolution();
     });
 
@@ -72,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const container = this.closest('.letter-container');
                 const encryptedChar = container.dataset.encrypted;
                 const guess = this.value.toUpperCase();
-                // Update all inputs with the same encryptedChar regardless of correctness
                 const allInputs = cryptogramContainer.querySelectorAll(`.letter-container[data-encrypted="${encryptedChar}"] input`);
                 allInputs.forEach(input => input.value = guess);
             });
@@ -83,9 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
     generateCryptogram(sentence, letterMapping);
     setupInputHandlers();
 
-    // Add an event listener to the submit button
     document.getElementById('submitCryptogram').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default form submission behavior
+        event.preventDefault();
         checkAllBoxesFilled();
     });
 
@@ -94,10 +88,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
     
         if (allFilled) {
-            // Redirect to the congrats page
             window.location.href = '../congrats/congrats_page.php';
         } else {
-            // Show the custom popup
             document.getElementById('popupContainer').style.display = 'block';
         }
     }    
