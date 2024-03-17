@@ -266,6 +266,6 @@
   "license": "ISC",
   "scripts": {
     "lint": "eslint .",
-    "format": "prettier --write ."
-  }
+    "format:check": "prettier --check ."
+  }  
 }

@@ -1,59 +1,43 @@
 stages:
   - build
   - lint
+  - format
   - test
   - deploy
 
 build-job:
   stage: build
+  image: node:latest
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
+    - npm install
 
-php-lint:
+lint-js:
   stage: lint
-  image: php:latest
-  allow_failure: true
-  before_script:
-    - cd codesniffer
+  image: node:latest
   script:
-    - php phpcs.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
-    - php phpcbf.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
+    - npm run lint
+
+format-check:
+  stage: format
+  image: node:latest
+  script:
+    - npm run format:check
+  allow_failure: true
 
 phpunit-tests:
   stage: test
   image: php:latest
-  # before_script:
-  #   # Install composer if not already present in the image
-  #   - 'command -v composer >/dev/null || ( curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer )'
-  #   - composer --version
-  #   # Navigate to the directory containing your composer.json, if necessary
-  #   - cd html/
-  #   # Install project dependencies, including PHPUnit
-  #   - composer install
   script:
     - ./vendor/bin/phpunit html/test/
 
-# Uncomment and adjust if you have a specific testing configuration for Nginx
-# test-nginx:
-#   stage: test
-#   image: nginx:latest
-#   before_script:
-#     - nginx -v
-#   script:
-#     - export CURRENT_DIR=$(pwd)
-#     - nginx -t -c $CURRENT_DIR/nginx.conf
 unit-test:
-  image: node:latest
   stage: test
-  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
-  before_script:
-    - cd html
-    - cd test
-    - npm install --save-dev jsdom 
-    - npm install --save-dev jest-environment-jsdom
+  image: node:latest
   script:
-    - ls
-    # - npx jest waldo_game.test.js
+    - cd html/test
+    - npm install
+    - npm test
   artifacts:
     paths:
       - coverage/
@@ -66,17 +50,17 @@ deploy-prod:
   stage: deploy
   image: debian:12.4
   before_script:
-  - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
-  - eval $(ssh-agent -s)
-  - chmod 400 "$SSH_PRIVATE_KEY"
-  - ssh-add "$SSH_PRIVATE_KEY"
-  - mkdir -p ~/.ssh
-  - chmod 700 ~/.ssh
-  - ssh-keyscan cis4250w24-08.socs.uoguelph.ca >> ~/.ssh/known_hosts
-  - chmod 644 ~/.ssh/known_hosts
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - chmod 400 "$SSH_PRIVATE_KEY"
+    - ssh-add "$SSH_PRIVATE_KEY"
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan cis4250w24-08.socs.uoguelph.ca >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
   script:
-    - echo "On $CI_COMMIT_REF_NAME branch, copying html files...";
-    - scp -r html/* socs@cis4250w24-08.socs.uoguelph.ca:/var/www/html/;
+    - echo "On $CI_COMMIT_REF_NAME branch, copying html files..."
+    - scp -r html/* socs@cis4250w24-08.socs.uoguelph.ca:/var/www/html/
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
   environment: production
