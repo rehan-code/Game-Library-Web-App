@@ -144,3 +144,8 @@ h1#question {
     margin-top: 10px;
     margin-top: 5%;
 }
+
+.game-over-screen h2, .game-over-screen p {
+    color: white;
+    font-size: 20px; 
+}
