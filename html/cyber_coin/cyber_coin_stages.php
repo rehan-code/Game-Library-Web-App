@@ -29,11 +29,12 @@
                 <span>Cyber Coin Quest</span>
             </h1>
             <p class="info-text">
-            Cyber Coin Quest is an action-packed puzzle adventure game set in a computer science
-            world. Players take on the role of a talented hacker on a mission to 
-            collect cyber coins. Cyber Coin Quest offers an exhilarating experience for players seeking thrills in the digital 
-            frontier. Are you ready to dive into the virtual universe and become the<br> Ultimate 
-            Cyber Coin Master?
+                Cyber Coin Quest is an action-packed puzzle adventure game set 
+                in a computer science world. Players take on the role of a 
+                talented hacker on a mission to collect cyber coins. Cyber Coin 
+                Quest offers an exhilarating experience for players seeking thrills 
+                in the digital frontier. Are you ready to dive into the virtual 
+                universe and become the<br> Ultimate Cyber Coin Master?
             </p>
 
             <!-- stages -->
@@ -42,11 +43,28 @@
             </h1>
             <p>
                 <ui>
-                    <li><strong>Guess Correct Answers:</strong>The player must guess the correct answers for 20 questions presented in the game.</li>
-                    <li><strong>Avoid Wrong Answers:</strong>Be careful! If the player guesses one question incorrectly, the game ends.</li>
-                    <li><strong>Earn Coins: </strong>Successfully guessing the answers in a streak earns the player one cyber coin for each correct answer.</li>
-                    <li><strong>Aim for High Score:</strong>Keep guessing correctly to build a streak and earn as many cyber coins as possible. 
-                        How many coins can you collect before making a wrong guess?</li>
+                    <li>
+                        <strong>Guess Correct Answers:</strong>
+                        The player must guess the correct answers
+                        for 20 questions presented in the game.
+                    </li>
+                    <li>
+                        <strong>Avoid Wrong Answers:</strong>
+                        Be careful! If the player guesses one question
+                        incorrectly, the game ends.
+                    </li>
+                    <li>
+                        <strong>Earn Coins: </strong>
+                        Successfully guessing the answers in a
+                        streak earns the player one cyber coin for
+                        each correct answer.
+                    </li>
+                    <li>
+                        <strong>Aim for High Score:</strong>
+                        Keep guessing correctly to build a streak and earn
+                        as many cyber coins as possible. How many coins can
+                        you collect before making a wrong guess?
+                    </li>
                 </ui>
             </p>
 
