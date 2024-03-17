@@ -10,44 +10,30 @@ document.addEventListener('DOMContentLoaded', function() {
         sentence = `An investment banker involved in various unethical and illegal activities who abuses his money and power to avoid all forms of legal repercussions. That being said, his charges mainly include manipulating the market, embezzlement of funds, bribery, loan sharking, and various other forms of bank or market financial schemes.`;
     } else {
         const prompts=[
-            `According to all known laws of aviation, there is no way a bee should be able to fly.
-            Its wings are too small to get its fat little body off the ground. The bee, of course,
-            flies anyway: because bees don't care what humans think is impossible...`,
-            'The quick brown fox jumps over the lazy dog.',
-            `There once was a boy named Evan. He lived with his parents in their house and played video games all day.
-            One day there was this new game called Palworld. Evan was excited to play the game, but he sucked. The end`,
-            `Now, this is a story all about how, my life got flipped, turned upside down,
-            and I'd like to take a minute, just sit right there, I'll tell you how I became
-            the prince of a town called Bel-Air.`,
-            `To be, or not to be, that is the question:
-            Whether 'tis nobler in the mind to suffer
-            The slings and arrows of outrageous fortune,
-            Or to take arms against a sea of troubles
-            And by opposing end them. To die; to sleep,
-            No more; and by a sleep to say we end
-            The heart-ache and the thousand natural shocks
-            That flesh is heir to: 'tis a consummation
-            Devoutly to be wish'd. To die, to sleep...`
+            `t`
+            // `According to all known laws of aviation, there is no way a bee should be able to fly.
+            // Its wings are too small to get its fat little body off the ground. The bee, of course,
+            // flies anyway: because bees don't care what humans think is impossible...`,
+            // 'The quick brown fox jumps over the lazy dog.',
+            // `There once was a boy named Evan. He lived with his parents in their house and played video games all day.
+            // One day there was this new game called Palworld. Evan was excited to play the game, but he sucked. The end`,
+            // `Now, this is a story all about how, my life got flipped, turned upside down,
+            // and I'd like to take a minute, just sit right there, I'll tell you how I became
+            // the prince of a town called Bel-Air.`,
+            // `To be, or not to be, that is the question:
+            // Whether 'tis nobler in the mind to suffer
+            // The slings and arrows of outrageous fortune,
+            // Or to take arms against a sea of troubles
+            // And by opposing end them. To die; to sleep,
+            // No more; and by a sleep to say we end
+            // The heart-ache and the thousand natural shocks
+            // That flesh is heir to: 'tis a consummation
+            // Devoutly to be wish'd. To die, to sleep...`
         ];
         
         var promptIndex = Math.floor(Math.random() * prompts.length);
         sentence = prompts[promptIndex];
     }
-
-    document.getElementById('submitCryptogram').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default form submission behavior
-        var solved = checkSolution();
-        if (solved == true) {
-            if (secret == 'true') {
-                window.location.href = '../congrats/congrats_page.php';
-            } else {
-                //implement game over screen here
-                window.location.href = '../congrats/congrats_page.php';
-            }
-        }
-        
-    });
-
     
     const letterMapping = createLetterMapping();
     generateCryptogram(sentence, letterMapping);
@@ -56,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add an event listener to the submit button
     document.getElementById('submitCryptogram').addEventListener('click', function(event) {
         event.preventDefault(); // Prevent the default form submission behavior
-        checkAllBoxesFilled();
+        checkAllBoxesFilled(sentence);
     });
    
 });
@@ -104,7 +90,7 @@ function generateCryptogram(sentence, letterMapping) {
     cryptogramContainer.innerHTML = wordsHTML;
 }
 
-function checkSolution() {
+function checkSolution(sentence) {
     // Convert inputs to a single string, removing non-letter characters and ignoring case
     const inputString = Array.from(document.querySelectorAll('#cryptogram input')).map(input => input.value.toUpperCase()).join('');
     const originalString = sentence.toUpperCase().replace(/[^A-Z]/g, '');
@@ -135,15 +121,34 @@ function setupInputHandlers() {
     });
 }
 
-function checkAllBoxesFilled() {
+function checkAllBoxesFilled(sentence) {
+    //access url params
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const secret = urlParams.get('secret');
     const inputs = document.querySelectorAll('#cryptogram input');
     const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
 
     if (allFilled) {
-        // Redirect to the congrats page
-        window.location.href = '../congrats/congrats_page.php';
+        // if solution is correct
+        if (checkSolution(sentence) == true) {
+            if (secret == 'true') {
+                window.location.href = '../congrats/congrats_page.php';
+            } else {
+                //implement game over screen here
+                gameover();
+            }
+        }
     } else {
         // Show the custom popup
         document.getElementById('popupContainer').style.display = 'block';
     }
 } 
+
+/**
+ * Function to show the game over page
+ */
+function gameover() {
+    document.querySelector(".game-over-screen").classList.add("active");
+    document.querySelector(".game-content").classList.add("blur");
+}
