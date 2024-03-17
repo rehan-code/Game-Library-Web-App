@@ -88,6 +88,17 @@
                 </p>
             </div>
             <div
+                class="movie-card cyber-coin-bg"
+                onclick="window.location.href='cyber_coin/cyber_coin_stages.php';"
+            >
+                <h1 class="main-heading-2">
+                    Cyber Coin Quest
+                </h1>
+                <p class="info-text">
+                Are you ready to dive into the virtual universe and become the ultimate Cyber Coin Master?
+                </p>
+            </div>
+            <div
                 class="movie-card movie-card-cryptogram"
                 onclick="window.location.href='cryptogram/game/cryptogram.php';"
             >

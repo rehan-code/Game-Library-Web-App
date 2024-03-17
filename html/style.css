@@ -531,6 +531,12 @@ footer {
   background-image: url("../images/hangman/hangman_stage_3.jpg");
 }
 
+.cyber-coin-bg {
+  background-image: url("../images/cyber_coin/cyber_quest_bg.jpeg");
+  background-position: 50% 87%;
+  background-size: cover;
+}
+
 .movie-card-cryptogram {
   background-image: url("../images/cryptogram/cryptogram.png");
   background-position: center;
