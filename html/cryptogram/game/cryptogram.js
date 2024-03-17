@@ -66,89 +66,39 @@ function generateCryptogram(sentence, letterMapping) {
         } else {
             return char; // Keep non-alphabetic characters as they are
         }
-    }).join('');
+    }    
+});
 
-    const words = encryptedSentence.split(' ');
-    const wordsHTML = words.map(word => {
-        const letterContainers = word.split('').map(char => {
-            if (/[A-Z]/.test(char)) {
-                return `
-                    <div class="letter-container" data-encrypted="${char}">
-                        <div class="block">${char}</div>
-                        <div class="input-block"><input type="text" maxlength="1"></div>
-                    </div>
-                `;
-            } else {
-                return `<div class="non-letter-container">${char}</div>`; // Non-letter characters are directly displayed
-            }
-        }).join('');
-
-        return `<div class="word">${letterContainers}</div>`;
-    }).join('');
-
-    const cryptogramContainer = document.getElementById('cryptogram');
-    cryptogramContainer.innerHTML = wordsHTML;
-}
-
-function checkSolution(sentence) {
-    // Convert inputs to a single string, removing non-letter characters and ignoring case
-    const inputString = Array.from(document.querySelectorAll('#cryptogram input')).map(input => input.value.toUpperCase()).join('');
-    const originalString = sentence.toUpperCase().replace(/[^A-Z]/g, '');
-
-    // Check if the input matches the original sentence
-    if (inputString === originalString) {
-        // return true
-        return true;
-    } else {
-        // Display the popup container for incorrect guess
-        document.getElementById('popupContainer').style.display = 'block';
+window.showHint = function(stage) {
+    var hints = [
+        "Misconduct in high finance",
+        "Illegal trading and corruption",
+        "Misdeeds in money management",
+        "The unethical side of Wall Street",
+        "Wrongdoings in investment operations"
+    ];
+    var hintMessage = hints[Math.floor(Math.random() * hints.length)];
+    
+    const speechBubble = document.querySelector('.speech-bubble');
+    if (speechBubble) {
+        speechBubble.textContent = hintMessage;
+        speechBubble.style.display = 'block'; 
     }
-    return false;
-}
 
-function setupInputHandlers() {
-    const cryptogramContainer = document.getElementById('cryptogram');
-    const inputs = cryptogramContainer.querySelectorAll('input');
-    inputs.forEach(input => {
-        input.addEventListener('input', function() {
-            const container = this.closest('.letter-container');
-            const encryptedChar = container.dataset.encrypted;
-            const guess = this.value.toUpperCase();
-            // Update all inputs with the same encryptedChar regardless of correctness
-            const allInputs = cryptogramContainer.querySelectorAll(`.letter-container[data-encrypted="${encryptedChar}"] input`);
-            allInputs.forEach(input => input.value = guess);
-        });
+    speechBubble.addEventListener('click', function(event) {
+        event.stopPropagation();
     });
-}
+};
 
-function checkAllBoxesFilled(sentence) {
-    //access url params
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const secret = urlParams.get('secret');
-    const inputs = document.querySelectorAll('#cryptogram input');
-    const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-
-    if (allFilled) {
-        // if solution is correct
-        if (checkSolution(sentence) == true) {
-            if (secret == 'true') {
-                window.location.href = '../congrats/congrats_page.php';
-            } else {
-                //implement game over screen here
-                gameover();
-            }
-        }
-    } else {
-        // Show the custom popup
-        document.getElementById('popupContainer').style.display = 'block';
+document.addEventListener('click', function() {
+    const speechBubble = document.querySelector('.speech-bubble');
+    if (speechBubble && speechBubble.style.display === 'block') {
+        speechBubble.style.display = 'none';
     }
-} 
+});
 
-/**
- * Function to show the game over page
- */
-function gameover() {
-    document.querySelector(".game-over-screen").classList.add("active");
-    document.querySelector(".game-content").classList.add("blur");
-}
+document.querySelector('.hint-button').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+

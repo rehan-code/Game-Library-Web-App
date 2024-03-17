@@ -45,15 +45,11 @@
         <div class="content-container">
             <div class="image-container">
                 <img src="../../images/hangman/hangman1.png" 
-                 draggable="false" alt="Zoomable Image" id="hangman-image">
+                draggable="false" alt="Zoomable Image" id="hangman-image">
             </div>
 
-            <div class="hint-button-container">
-                <button class="hint-button" onclick="showHint('medium')">
-                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-                </button>
-                <div class="speech-bubble" style="display: none;"></div>
-            </div>
+            <?php $stage = 'medium';?>
+            <?php require "../../components/hint_button/hint_button.php"; ?>
         </div>
 
         <div class="word-container">
