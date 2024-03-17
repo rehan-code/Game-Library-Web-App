@@ -1,69 +1,62 @@
-var currentQuestionIndex = 0;
-var correctAnswers = 0;
+var totalCorrectAnswers = 0;
 
-
-async function fetchQuestions() {
+async function fetchAllQuestions() {
     const response = await fetch('../questions.json');
-    const data = await response.json();
-    return data.questions;
+    const questionsData = await response.json();
+    return questionsData.questions;
 }
 
-async function gameover() {
-    const questions = await fetchQuestions();
-    const question = questions[currentQuestionIndex];
-    const correctAnswer = question.correct_answer;
+function shuffleOptions(optionsArray) {
+    for (let i = optionsArray.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [optionsArray[i], optionsArray[randomIndex]] = [optionsArray[randomIndex], optionsArray[i]]; // Swap elements
+    }
+}
 
-    const gameOverScreen = document.querySelector(".game-over-screen");
-    const correctAnswerElement = document.createElement("p");
-    correctAnswerElement.textContent = "Correct Answer: " + correctAnswer;
+async function showGameOverScreen(correctAnswerText) {
+    const gameOverElement = document.querySelector(".game-over-screen");
+    gameOverElement.innerHTML = '';
 
-    correctAnswerElement.classList.add("correct-answer");
+    const correctAnswerDisplay = document.createElement("p");
+    correctAnswerDisplay.textContent = "Correct Answer: " + correctAnswerText;
+    correctAnswerDisplay.classList.add("correct-answer");
 
-    gameOverScreen.appendChild(correctAnswerElement);
+    gameOverElement.appendChild(correctAnswerDisplay);
 
-    gameOverScreen.classList.add("active");
+    gameOverElement.classList.add("active");
     document.querySelector(".game-content").classList.add("blur");
 }
 
-async function displayQuestion() {
-    const questions = await fetchQuestions();
-    const question = questions[currentQuestionIndex];
-    const questionElement = document.getElementById('question');
-    const optionsElement = document.getElementById('options');
-    const resultElement = document.getElementById('result');
-    const scoreElement = document.getElementById('score');
-    const gameOverScreen = document.querySelector('.game-over-screen');
+async function displayRandomQuestion() {
+    const allQuestions = await fetchAllQuestions();
+    const randomQuestionIndex = Math.floor(Math.random() * allQuestions.length);
+    const selectedQuestion = allQuestions[randomQuestionIndex];
 
+    const questionTextElement = document.getElementById('question');
+    const answerOptionsElement = document.getElementById('options');
+    const scoreDisplayElement = document.getElementById('score');
 
-    questionElement.textContent = question.question;
-    scoreElement.textContent = "Score: "+correctAnswers;
+    questionTextElement.textContent = selectedQuestion.question;
+    scoreDisplayElement.textContent = "Score: " + totalCorrectAnswers;
     
-    optionsElement.innerHTML = '';
-    question.options.forEach(function(option, index) {
-        const optionElement = document.createElement('button');
-        optionElement.textContent = option;
-        optionElement.onclick = function() {
-
-            if (option === question.correct_answer) {
-
-                // resultElement.textContent = 'Correct!';
-                correctAnswers++;
-                scoreElement.textContent = correctAnswers;
-
-                currentQuestionIndex++;
-
-                displayQuestion();
+    answerOptionsElement.innerHTML = '';
+    shuffleOptions(selectedQuestion.options);
+    selectedQuestion.options.forEach(function(answerOption) {
+        const optionButtonElement = document.createElement('button');
+        optionButtonElement.textContent = answerOption;
+        optionButtonElement.onclick = function() {
+            if (answerOption === selectedQuestion.correct_answer) {
+                totalCorrectAnswers++;
+                scoreDisplayElement.textContent = "Score: " + totalCorrectAnswers;
+                displayRandomQuestion();
             } else {           
-                
-                gameover();
+                showGameOverScreen(selectedQuestion.correct_answer);
             }
         };
-        optionsElement.appendChild(optionElement);
+        answerOptionsElement.appendChild(optionButtonElement);
     });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-
-    console.log("DOMContentLoaded event fired");
-    displayQuestion();
+    displayRandomQuestion();
 });
