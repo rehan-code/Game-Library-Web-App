@@ -330,7 +330,7 @@ footer {
 
   .featured-info p {
     line-height: 23px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   /* Wrapper */
@@ -531,6 +531,11 @@ footer {
   background-image: url("../images/hangman/hangman_stage_3.jpg");
 }
 
+.movie-card-cryptogram {
+  background-image: url("../images/cryptogram/cryptogram.png");
+  background-position: center;
+}
+
 .cyber-coin-bg {
   background-image: url("../images/cyber_coin/cyber_quest_bg.jpeg");
   background-position: 50% 87%;
@@ -538,7 +543,6 @@ footer {
 }
 
 .movie-card .info-text {
-  padding-left: 10rem;
   width: 100%;
   font-weight: bold;
   font-size: 22px;
@@ -547,6 +551,7 @@ footer {
   position: relative;
   color: #ffffff;
   text-align: center;
+  display: contents;
 }
 
 .movie-card .main-heading {

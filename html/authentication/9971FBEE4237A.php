@@ -26,12 +26,14 @@
     <?php require "../components/navbar/navbar.php"; ?>
     <div class="container">
         <form class="authentication-form">
-            <h1 class="main-heading mx-auto alternate" style="width: 400px; font-size: 2.0rem">
+            <h1 class="main-heading mx-auto alternate" 
+            style="width: 400px; font-size: 2.0rem">
                 Authentication
             </h1>
             <div class="form-items mx-auto" style="width: 400px;">
                 <input type="password" id="auth_pass" class="form-control"><br><br>
-                <input type="submit" value="Submit" id="btn" class="btn btn-primary mx-auto">
+                <input type="submit" value="Submit" 
+                id="btn" class="btn btn-primary mx-auto">
             </div>
         </form>
     </div>
