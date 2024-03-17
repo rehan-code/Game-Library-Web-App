@@ -38,15 +38,21 @@ class SecretPageTest extends TestCase
 
     /**
      * Checks if the redirect button correctly points to an external URL.
-     * This is a bit outside the scope of typical PHPUnit tests, as it's more related to functionality
-     * than file existence or syntax correctness. You might need a different approach or tool to test
-     * if the button correctly redirects, such as a browser testing tool like Selenium.
+     * This is a bit outside the scope of typical PHPUnit tests, as it's
+     * more related to functionality than file existence or syntax correctness.
+     * You might need a different approach or tool to test
+     * if the button correctly redirects, such as a browser testing tool like
+     * Selenium.
      */
     public function testRedirectButtonPointsToCorrectUrl()
     {
         $expectedUrl = "https://cis4250w24-09.socs.uoguelph.ca/QrwEstJy"; 
         $buttonUrl = $expectedUrl; 
-        $this->assertEquals($expectedUrl, $buttonUrl, "The button's redirect URL does not match the expected URL.");
+        $this->assertEquals(
+            $expectedUrl,
+            $buttonUrl,
+            "The button's redirect URL does not match the expected URL."
+        );
     }
 
 }

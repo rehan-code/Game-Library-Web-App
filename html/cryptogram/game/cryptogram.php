@@ -1,10 +1,10 @@
 <?php
-/**
- * Cryptogram 
- * php version 8.1.2
- * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
- *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
- */
+    /**
+     * Cryptogram 
+     * php version 8.1.2
+     * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
+     *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
+     */
 ?>
 
 <!DOCTYPE html>
@@ -21,23 +21,42 @@
     </head>
     <body>
         <?php require "../../components/navbar/navbar.php"; ?>
-        <h1 class="alternate">Cryptogram Puzzle</h1>
-        <div class="container crypto-width">
-            <div id="cryptogram"></div>
-            <button class="Button" id="submitCryptogram">
-                <span class="Button-inner">
-                    Submit
-                </span>
-            </button>
-        </div>
-        <div id="popupContainer">
-            <p>Incorrect Cryptogram!</p>
-            <div class="center">
-                <button id="popupOkButton" onclick="document.getElementById('popupContainer').style.display='none';">OK</button>
+
+        <div class="game-over-screen">
+            <h1>Game Over</h1>
+            <div class="options">
+                <button class="option-button button1" 
+                onclick="window.location.href='../../index.php'"></button>
+                <button class="option-button button2" 
+                onclick="window.location.href='hangman_stage_3.php'"></button>
             </div>
         </div>
-        <script type="module">
-            <?php require "./cryptogram.js"; ?>
-        </script>
+
+        <div class="game-content">
+
+            <h1 class="alternate">Cryptogram Puzzle</h1>
+            <div class="container crypto-width">
+                <div id="cryptogram"></div>
+                <button class="Button" id="submitCryptogram">
+                    <span class="Button-inner">
+                        Submit
+                    </span>
+                </button>
+            </div>
+            <div id="popupContainer">
+                <p>Incorrect Cryptogram!</p>
+                <div class="center">
+                    <button id="popupOkButton" 
+                    onclick="document.getElementById('popupContainer').
+                    style.
+                    display='none';">
+                        OK
+                    </button>
+                </div>
+            </div>
+            <script type="module">
+                <?php require "./cryptogram.js"; ?>
+            </script>
+        </div>
     </body>
 </html>

@@ -34,12 +34,15 @@ class CyberCoinStageSelectTest extends TestCase
      */
     public function testFirstStagePHPFileExists()
     {
-        $this->assertFileExists(__DIR__ . '/../cyber_coin/stages/cyber_coin_stage_1.php');
+        $this->assertFileExists(
+            __DIR__ . '/../cyber_coin/stages/cyber_coin_stage_1.php'
+        );
     }
 
     /**
-     * This test can be expanded or modified to check for more files or different conditions
-     * based on the structure of your project and what you deem necessary to test.
+     * This test can be expanded or modified to check for more
+     * files or different conditions based on the structure of
+     * your project and what you deem necessary to test.
      */
 }
 
