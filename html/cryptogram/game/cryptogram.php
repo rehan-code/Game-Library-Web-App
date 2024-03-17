@@ -18,10 +18,15 @@
             <?php require './cryptogram.css'; ?>
             <?php require '../congrats/congrats.css'; ?>
         </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <?php require "../../components/navbar/navbar.php"; ?>
+        <?php 
+        require "../../components/navbar/navbar.php"; 
+        ?>
         <h1 class="alternate">Cryptogram Puzzle</h1>
+        <?php $stage = 'cryptogram';?>
+        <?php require "../../components/hint_button/hint_button.php";?>
         <div class="container crypto-width">
             <div id="cryptogram"></div>
             <button class="Button" id="submitCryptogram">

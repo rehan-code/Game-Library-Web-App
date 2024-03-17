@@ -94,3 +94,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }    
 });
+
+window.showHint = function(stage) {
+    var hints = [
+        "Misconduct in high finance",
+        "Illegal trading and corruption",
+        "Misdeeds in money management",
+        "The unethical side of Wall Street",
+        "Wrongdoings in investment operations"
+    ];
+    var hintMessage = hints[Math.floor(Math.random() * hints.length)];
+    
+    const speechBubble = document.querySelector('.speech-bubble');
+    if (speechBubble) {
+        speechBubble.textContent = hintMessage;
+        speechBubble.style.display = 'block'; 
+    }
+
+    speechBubble.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+};
+
+document.addEventListener('click', function() {
+    const speechBubble = document.querySelector('.speech-bubble');
+    if (speechBubble && speechBubble.style.display === 'block') {
+        speechBubble.style.display = 'none';
+    }
+});
+
+document.querySelector('.hint-button').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+
