@@ -1,0 +1,162 @@
+.main-heading {
+    text-align: center;
+    /* display: flex; */
+  }
+  
+.container {
+    margin: 0 auto;
+    max-width: 600px; /* Adjust as needed */
+    padding: 20px;
+    text-align: center;
+}
+
+h1#question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#options button {
+    display: block;
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #335eea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#options button:hover {
+    background-color: #2b50c7;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* Game over screen stylesa */
+.game-over-screen {
+    z-index: 6;
+    width: 100%;
+    /* height: 100%; */
+    top: 20rem;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* display: none; */
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease-out 1s;
+}
+
+.game-over-screen.active {
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    top: 10rem;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    opacity: 1;
+    backdrop-filter: blur(4px);
+}
+
+.game-over-screen.blur {
+    filter: blur(4px) brightness(50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    /* transition: all 1s ease-out 1s; */
+}
+
+.blur {
+    /* filter: blur(4px); Blur the game content when game over */
+    filter: blur(4px) brightness(50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    /* transition: all 1s ease-out 1s; */
+}
+
+.game-over-screen h1 {
+    color: black;
+    font-size: 2.5rem;
+    top: 2rem;
+}
+
+.game-content {
+    height: 100%;
+    padding-top: 2rem;
+}
+
+.options2 {
+    background-color: rgb(242, 242, 242);
+    opacity: 0.75;
+    border-radius: 10px;
+    width: 15%;
+    /* height: 10%; */
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.option-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(242, 242, 242);
+    /* Green, you can change the color */
+    color: black;
+    cursor: pointer;
+    width: 16px;
+    height: 20px;
+    padding: 12%;
+}
+
+.button1 {
+    background-image: url("../../images/home_button.png");
+    /* Set the path to your image */
+    background-size: cover;
+}
+
+.button2 {
+    background-image: url("../../images/replay.png");
+    /* Set the path to your image */
+    background-size: cover;
+}
+
+.game-content {
+    height: 100%;
+    padding-top: 2rem;
+}
+.correct-answer {
+    color: rgb(246, 246, 246);
+    font-weight: bold;
+    margin-top: 10px;
+    margin-top: 5%;
+}
+
+.game-over-screen h2 {
+    color: black;
+    font-size: 20px; 
+}
+
+.game-over-screen p {
+    color: white;
+    font-size: 20px; 
+}
+
+.game-over-screen h1 {
+    color: black; /* Set the text color to black */
+}
+
