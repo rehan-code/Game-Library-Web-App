@@ -21,30 +21,21 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <?php 
-        require "../../components/navbar/navbar.php"; 
-        ?>
-        <h1 class="alternate">Cryptogram Puzzle</h1>
-        <?php $stage = 'cryptogram';?>
-        <?php require "../../components/hint_button/hint_button.php";?>
-        <div class="container crypto-width">
-            <div id="cryptogram"></div>
-            <button class="Button" id="submitCryptogram">
-                <span class="Button-inner">
-                    Submit
-                </span>
-            </button>
-        </div>
-        <div id="popupContainer">
-            <p>Incorrect Cryptogram!</p>
-            <div class="center">
-                <button id="popupOkButton" onclick="document.getElementById('popupContainer').style.display='none';">OK</button>
+        <?php require "../../components/navbar/navbar.php"; ?>
+        <div class="game-over-screen">
+            <h1>Game Over</h1>
+            <div class="options">
+                <button class="option-button button1" 
+                onclick="window.location.href='../../index.php'"></button>
+                <button class="option-button button2" 
+                onclick="window.location.href='hangman_stage_3.php'"></button>
             </div>
         </div>
 
         <div class="game-content">
-
             <h1 class="alternate">Cryptogram Puzzle</h1>
+            <?php $stage = 'cryptogram';?>
+            <?php require "../../components/hint_button/hint_button.php";?>
             <div class="container crypto-width">
                 <div id="cryptogram"></div>
                 <button class="Button" id="submitCryptogram">
