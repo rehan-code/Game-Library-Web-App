@@ -10,8 +10,23 @@ services:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
     depends_on:
       - php
+      - db
   php:
     image: php:8.2-fpm
     volumes:
       - ./html:/app/public
       - ./codesniffer:/app/codesniffer
+  db:  # Define the database service
+    image: mariadb:10.11
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    ports:
+      - "3306:3306"
+
+volumes:
+  data:  # Define the volume to persist database data

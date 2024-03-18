@@ -29,6 +29,8 @@
 
     <div class="main-heading">
         <h1>Find the Lion!</h1>
+        <?php $stage = 'lion';?>
+        <?php require "../../components/hint_button/hint_button.php"; ?>
     </div>
 
     <div class="game-over-screen">
@@ -64,19 +66,11 @@
         <button class="fullscreen-toggle"><i class="fa fa-arrows-alt"></i></button>
         <button class="found-button-1"></button>
     </div>
+    
 
     <div class="scoreboard">
         <h2>Lives: <span class="score">10</span></h2>
     </div>
-
-    <div class="hint-cant">
-        <div class="hint-button-container">
-            <button class="hint-button" onclick="showHint('lion')">
-                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-            </button>
-            <div class="speech-bubble" style="display: none;">Your hint goes here!</div>
-        </div>
-    <div>
         
     <script type='module'>
         <?php require 'waldo_game.js'; ?>
