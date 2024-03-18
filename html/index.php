@@ -19,6 +19,7 @@
     </style>
 </head>
 <script type='module' src="./hidden_words/hidden_words.js"></script>
+<!-- <?php include "./database.php"; ?> -->
 <body>
     <?php require "components/navbar/navbar.php"; ?>
 
