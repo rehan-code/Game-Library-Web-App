@@ -19,9 +19,8 @@
     </style>
 </head>
 <script type='module' src="./hidden_words/hidden_words.js"></script>
-<?php include "./database.php"; ?>
+<!-- <?php include "./database.php"; ?> -->
 <body>
-    <h1><?php include " database.php"; echo $test ?>></h1>
     <?php require "components/navbar/navbar.php"; ?>
 
     <section class="wrapper">

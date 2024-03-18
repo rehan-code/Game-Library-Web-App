@@ -1,14 +1,14 @@
 <?php
    // $q = intval($_GET['q']);
-   $test = '';
+   // $test = '';
 
-   $con = mysqli_connect('localhost','myuser','mypassword');
-   if (!$con) {
-      die('Could not connect: ' . mysqli_error($con));
-      $test = 'failure';
-   }
-   echo "connection successfull";
-   $test = 'test';
+   // $con = mysqli_connect('localhost','myuser','mypassword');
+   // if (!$con) {
+   //    die('Could not connect: ' . mysqli_error($con));
+   //    $test = 'failure';
+   // }
+   // echo "connection successfull";
+   // $test = 'test';
 
 
    // mysqli_select_db($con,"ajax_demo");
@@ -16,5 +16,5 @@
    // $result = mysqli_query($con,$sql);
 
 
-   mysqli_close($con);
+   // mysqli_close($con);
 ?>
