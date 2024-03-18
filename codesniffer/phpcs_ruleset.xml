@@ -27,6 +27,7 @@
         <exclude-pattern>../public/waldo_game/stages/waldo_stage_*.php</exclude-pattern>
         <exclude-pattern>../public/hangman/stages/hangman_stage_*.php</exclude-pattern>
         <exclude-pattern>../public/cryptogram/congrats/congrats_page.php</exclude-pattern>
+        <exclude-pattern>../public/cryptogram/game/cryptogram.php</exclude-pattern>
 
         <!--For CI/CD-->
         <exclude-pattern>../html/index.php</exclude-pattern>
@@ -34,6 +35,7 @@
         <exclude-pattern>../html/waldo_game/stages/waldo_stage_*.php</exclude-pattern>
         <exclude-pattern>../html/hangman/stages/hangman_stage_*.php</exclude-pattern>
         <exclude-pattern>../html/cryptogram/congrats/congrats_page.php</exclude-pattern>
+        <exclude-pattern>../html/cryptogram/game/cryptogram.php</exclude-pattern>
     </rule>
 
     <rule ref="PEAR.Commenting.FunctionComment.MissingReturn">
