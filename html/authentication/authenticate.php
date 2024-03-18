@@ -1,4 +1,13 @@
 <?php
+    /**
+     * Authenticate
+     * php version 8.1.2
+     * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
+     *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
+     */
+?>
+
+<?php
 header('Content-Type: application/json');
 
 $password = "cash cow";
@@ -9,31 +18,37 @@ $input = json_decode(stripslashes(file_get_contents("php://input")));
 $result = [];
 
 switch ($input->functionname) {
-    case 'authenticate':
-        $isAuthenticated = authenticate($input, $password);
-        $result = $isAuthenticated;
-        break;
-    case 'auth_check':
-        $result['result'] = $isAuthenticated;
-        break;
-    case 'get_words':
-        $result = getHiddenWords();
-        break;
-    case 'decrypt':
-        $result['result'] = decrypt($input->word);
-        break;
-    case 'decrypt_words':
-        $result['result'] = decryptWords($input->words);
-        break;
-    default:
-        $result['error'] = 'Function ' . $input->functionname . ' not found!';
-        break;
+case 'authenticate':
+    $isAuthenticated = authenticate($input, $password);
+    $result = $isAuthenticated;
+    break;
+case 'auth_check':
+    $result['result'] = $isAuthenticated;
+    break;
+case 'get_words':
+    $result = getHiddenWords();
+    break;
+case 'decrypt':
+    $result['result'] = decrypt($input->word);
+    break;
+case 'decrypt_words':
+    $result['result'] = decryptWords($input->words);
+    break;
+default:
+    $result['error'] = 'Function ' . $input->functionname . ' not found!';
+    break;
 }
 
 echo json_encode($result);
 
-// ----------FUNCTIONS----------
-
+/**
+ * Authenticates the user-entered password.
+ * 
+ * @param object $input    Object containing user-inputted password
+ * @param string $password The valid password
+ * 
+ * @return array
+ */ 
 function authenticate($input, $password)
 {
     $result = [];
@@ -47,6 +62,12 @@ function authenticate($input, $password)
     return $result;
 }
 
+/**
+ * Generates and returns the three words to hide throughout
+ * the website.
+ * 
+ * @return array
+ */ 
 function getHiddenWords()
 {
     $result = [];
@@ -83,7 +104,15 @@ function getHiddenWords()
     return $result;
 }
 
-function encrypt($string) {
+/**
+ * Encrypts a given string
+ * 
+ * @param string $string The string to encrypt
+ * 
+ * @return string
+ */ 
+function encrypt($string)
+{
     // Store the cipher method
     $ciphering = "AES-128-CTR";
     
@@ -108,7 +137,15 @@ function encrypt($string) {
     return $encryption;
 }
 
-function decrypt($string) {
+/**
+ * Decrypts a given string
+ * 
+ * @param string $string The string to decrypt
+ * 
+ * @return string
+ */ 
+function decrypt($string)
+{
     $ciphering = "AES-128-CTR";
     $decryptionIV = '1234567891011121';
     $decryptionKey = "Greg Klotz";
@@ -125,7 +162,15 @@ function decrypt($string) {
     return $decryption;
 }
 
-function decryptWords($strings) {
+/**
+ * Decrypts multiple given string
+ * 
+ * @param array $strings The array of strings to decrypt
+ * 
+ * @return array
+ */ 
+function decryptWords($strings)
+{
     $decryptions = [];
 
     for ($i = 0; $i < count($strings); $i++) { 

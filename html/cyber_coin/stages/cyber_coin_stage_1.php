@@ -26,6 +26,7 @@
     <?php require "../../components/navbar/navbar.php"; ?>
     <div class="main-heading">
         <h1>Cyber Coin Quest</h1>
+        <h2 id="score">Score: </h2>
     </div>
     
     <div class="game-content">
@@ -33,7 +34,6 @@
             <h1 id="question"></h1>
             <div id="options" class="options"></div>
             <p id="result"></p>
-            <h2 id="score">Score: </h2>
         </div>
      </div>
      <div class="game-over-screen">

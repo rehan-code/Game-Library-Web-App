@@ -1,5 +1,5 @@
-# W24 CIS*4250 Team 8 Sprint 6
-Team Lead: Harikrishan Singh
+# W24 CIS*4250 Team 8 Sprint 7
+Team Lead: Rehan Nagoor Mohideen
 
 ## Authors
  Harir Al-Rubaye, Nour Tayem, Thulasi Jothiravi, Rehan Nagoor Mohideen, Harikrishan Singh, and Ivan Odiel Magtangob
@@ -11,13 +11,17 @@ Team Lead: Harikrishan Singh
  * Installation
  * Usage (Local Development)
 
-### What's [NEW] in Sprint 6
- We just wrapped up Sprint 6, and it's packed with cool stuff to enhance your experience with our cryptogram puzzle game. Let’s dive into what we’ve been up to:
 
-1. **Cryptogram Magic**: The frontend and backend got a major facelift, making puzzles more fun and interactive.
-2. Jumping into solving puzzles is now faster with our streamlined authentication and smoother navigation.
-3. We’ve hidden a riddle within the cryptograms. Solve it, and bask in the glory of your puzzle mastery.
+### What's [NEW] in Sprint 7
+ Below are the breakdown's details for sprint7:
+
+1. Created the 'Cyber Coin Quest' game, which included:
+  * Development of the 'Game Over' screen on the front end.
+  * Design of the screen layout and formulation of questions for the backend.
+2. Added an introduction screen along with instructions to facilitate user onboarding and clarify game mechanics.
+3. Conducted unit testing for the 'Hangman' and 'Cryptogram' games to ensure their stability and performance.
 4. Added [JavaScript Linting Guide](https://gitlab.socs.uoguelph.ca/cis4250_w24/team_8/-/wikis/JavaScript-Linting-Guide) to Project Wiki.
+
 
 
 ## Visuals
