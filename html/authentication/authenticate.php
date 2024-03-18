@@ -1,13 +1,11 @@
 <?php
-    /**
-     * Authenticate
-     * php version 8.1.2
-     * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
-     *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
-     */
-?>
+/**
+ * Authenticate
+ * php version 8.1.2
+ * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
+ *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
+ */
 
-<?php
 header('Content-Type: application/json');
 
 $password = "cash cow";
