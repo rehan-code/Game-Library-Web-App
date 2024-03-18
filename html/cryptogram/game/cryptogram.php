@@ -29,7 +29,7 @@
                 <button class="option-button button1" 
                 onclick="window.location.href='../../index.php'"></button>
                 <button class="option-button button2" 
-                onclick="window.location.href='hangman_stage_3.php'"></button>
+                onclick="window.location.href='./cryptogram.php'"></button>
             </div>
         </div>
 
