@@ -66,8 +66,8 @@ function generateCryptogram(sentence, letterMapping) {
         } else {
             return char; // Keep non-alphabetic characters as they are
         }
-    }    
-});
+    })    
+};
 
 window.showHint = function(stage) {
     var hints = [

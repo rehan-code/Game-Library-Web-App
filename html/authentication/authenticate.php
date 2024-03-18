@@ -10,10 +10,11 @@ $result = [];
 
 switch ($input->functionname) {
     case 'authenticate':
-        $result = authenticate($input, $password);
+        $isAuthenticated = authenticate($input, $password);
+        $result = $isAuthenticated;
         break;
     case 'auth_check':
-        $result = $isAuthenticated;
+        $result['result'] = $isAuthenticated;
         break;
     case 'get_words':
         $result = getHiddenWords();
@@ -74,8 +75,6 @@ function getHiddenWords()
             }
         }
     }
-
-    $result['result'] = ['test', 'bird', 'fly'];
     
     //encrypt the words
     for ($i=0; $i < count($result['result']); $i++) { 
@@ -89,7 +88,6 @@ function encrypt($string) {
     $ciphering = "AES-128-CTR";
     
     // Use OpenSSl Encryption method
-    $iv_length = openssl_cipher_iv_length($ciphering);
     $options = 0;
     
     // Non-NULL Initialization Vector for encryption

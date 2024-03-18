@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let gameOverScrn = document.querySelector(".game-over-screen h1");
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
+            console.log(this.responseText)
             var data = JSON.parse(this.responseText);
             if (data['error'] == null) {
                 gameOverScrn.innerHTML = gameOverScrn.innerHTML + getASCIIString(data["result"]);
@@ -217,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert(data['error']);
             }
         }
-        xhttp.open("POST", "../../authentication/authenticate.php", false);
+        xhttp.open("POST", "../../authentication/authenticate.php", true);
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send(JSON.stringify({
             "functionname": 'decrypt',

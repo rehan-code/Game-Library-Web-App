@@ -38,16 +38,18 @@ function setBinaryWord() {
     xhttp.onload = function() {
         var data = JSON.parse(this.responseText);
         if (data['error'] == null) {
+            var word = data['result'];
             let binary = '';
-            for (let i = 0; i < data['result']; i++) {
-                binary += data['result'][i].charCodeAt(0).toString(2) + ' ';
+            for (let i = 0; i < word.length; i++) {
+                binary += word[i].charCodeAt(0).toString(2) + ' ';
             }
-            document.getElementById('binaryOutput-word').innerText = binary.trim();
+
+            document.getElementById('binaryOutput').innerText = binary.trim();
         } else {
             alert(data['error']);
         }
     }
-    xhttp.open("POST", "../authentication/authenticate.php", false);
+    xhttp.open("POST", "../../authentication/authenticate.php", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify({
         "functionname": 'decrypt',

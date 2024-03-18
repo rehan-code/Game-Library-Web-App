@@ -1,5 +1,3 @@
-import wordsJSON from './hidden_words.json' assert { type: 'json' };
-
 document.addEventListener("DOMContentLoaded", function() {
 
     // const words = wordsJSON.words;
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
         setCookie("ascii", hidden_words[1], 1);
         setCookie("binary", hidden_words[2], 1);
     }
-    setInvisibleWord();
 
     // if it is authenticated then update the text to the story
     if (getCookie("authenticated") == "true") {
@@ -37,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "escalated the situation to the authorities, who dispatched a police officer to arrest the " +
         "farmer for illegal animal slaughter and for further investigation.</p>"));
         document.getElementById('invisible-word').remove();
+    } else {
+        setInvisibleWord();
     }
 
     // add the event listener for hidden words input
@@ -47,31 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
-
-/**
- * Generates a specified amount of random words from a word pool.
- * Ensures each word in the returned array is unique.
- * @param {*} amount - Amount of words to pick from the word pool.
- * @param {*} word_pool  Word pool to pick from.
- * @returns The array of randomly chosen words
- */
-function pick_random_words(amount, word_pool) {
-    var selected_words = [];
-
-    for (let i = 0; i < amount; i++) {
-        while (true) {
-            var index = Math.floor(Math.random() * word_pool.length);
-            var word = word_pool[index].toUpperCase();
-
-            if (!selected_words.includes(word)) {
-                selected_words.push(word);
-                break;
-            }
-        }
-    }
-
-    return selected_words;
-};
 
 // ====================COOKIE FUNCTIONS====================
 
@@ -152,9 +126,9 @@ function validateWords() {
         
             if (secretWords.join(',') === inputWords.join(',')) {
                 if (getCookie("authenticated") == "true") {
-                    window.location.href = "../../cryptogram/game/cryptogram.php?secret=true";
-                }else {
-                    window.location.href = "./secret_page/secret_page.php";
+                    window.location.href = "./cryptogram/game/cryptogram.php?secret=true";
+                } else {
+                    window.location.href = "./hidden_words/secret_page/secret_page.php";
                 }
             } else {
                 alert('Those aren\'t the right secrets! Keep looking!');
