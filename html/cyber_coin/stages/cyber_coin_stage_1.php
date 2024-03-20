@@ -24,26 +24,26 @@
 
 <body>
     <?php require "../../components/navbar/navbar.php"; ?>
-    <div class="main-heading">
-        <h1>Cyber Coin Quest</h1>
-        <h2 id="score">Score: </h2>
-    </div>
     
-    <div class="game-content">
-        <div class="container">
-            <h1 id="question"></h1>
-            <div id="options" class="options"></div>
-            <p id="result"></p>
-        </div>
-     </div>
-     <div class="game-over-screen">
-         <h1>Game Over</h1>
+    <div class="game-over-screen">
+         <h1>Game Over!</h1>
          <div class="options2">
              <button class="option-button button1" 
               onclick="window.location.href='../../index.php'"></button>
              <button class="option-button button2" 
               onclick="window.location.href='cyber_coin_stage_1.php'"></button>
          </div>
+     </div>
+    <div class="game-content">
+        <div class="main-heading">
+            <h1>Cyber Coin Quest</h1>
+            <h2 id="score">Score: </h2>
+        </div>
+        <div class="container">
+            <h1 id="question"></h1>
+            <div id="options" class="options"></div>
+            <p id="result"></p>
+        </div>
      </div>
 
 </body>
