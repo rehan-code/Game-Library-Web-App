@@ -103,8 +103,23 @@ async function showCongratsScreen(totalScore) {
 
 
 async function displayRandomQuestion(questionIndex) {
-    const allQuestions = await fetchAllQuestions();
-    const selectedQuestion = allQuestions[questionIndex];
+    var selectedQuestion;
+    // Get the question from server
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        var data = JSON.parse(this.responseText);
+        if (data['error'] == null) {
+            selectedQuestion = data['result'];
+        } else {
+            alert(data['error']);
+        }
+    }
+    xhttp.open("POST", "../../authentication/authenticate.php", false);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({
+        "functionname": 'get_cyber_question',
+        "index": questionIndex
+    }));
 
     const questionTextElement = document.getElementById('question');
     const answerOptionsElement = document.getElementById('options');
