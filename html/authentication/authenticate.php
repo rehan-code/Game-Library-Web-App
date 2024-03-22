@@ -32,6 +32,9 @@ case 'decrypt':
 case 'decrypt_words':
     $result['result'] = decryptWords($input->words);
     break;
+case 'get_cyber_question':
+    $result['result'] = getCyberQuestion($input->index);
+    break;
 default:
     $result['error'] = 'Function ' . $input->functionname . ' not found!';
     break;
@@ -176,5 +179,110 @@ function decryptWords($strings)
     }
 
     return $decryptions;
+}
+function getCyberQuestion($index) {
+    $questions_1 = [
+        [
+          "question"=> "What does HTML stand for?",
+          "options"=> ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyperlink and Text Markup Language"],
+          "correct_answer"=> "Hyper Text Markup Language"
+        ],
+        [
+          "question"=> "Which of the following is not a programming language?",
+          "options"=> ["Java", "Python", "HTML", "C++"],
+          "correct_answer"=> "HTML"
+        ],
+        [
+          "question"=> "What does CSS stand for?",
+          "options"=> ["Cascading Style Sheets", "Creative Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+          "correct_answer"=> "Cascading Style Sheets"
+        ],
+        [
+          "question"=> "Which of the following is a front-end framework for building user interfaces?",
+          "options"=> ["Node.js", "React", "Express", "Django"],
+          "correct_answer"=> "React"
+        ],
+        [
+          "question"=> "Which of the following is an example of a relational database management system?",
+          "options"=> ["MongoDB", "MySQL", "Redis", "SQLite"],
+          "correct_answer"=> "MySQL"
+        ],
+        [
+          "question"=> "What does CPU stand for?",
+          "options"=> ["Central Processing Unit", "Computer Processing Unit", "Control Processing Unit", "Core Processing Unit"],
+          "correct_answer"=> "Central Processing Unit"
+        ],
+        [
+          "question"=> "Which programming language is known as the 'father' of all programming languages?",
+          "options"=> ["C", "Python", "Fortran", "Java"],
+          "correct_answer"=> "C"
+        ],
+        [
+          "question"=> "What is the capital of Silicon Valley?",
+          "options"=> ["San Francisco", "San Jose", "Santa Clara", "Palo Alto"],
+          "correct_answer"=> "San Jose"
+        ],
+        [
+          "question"=> "What does SQL stand for?",
+          "options"=> ["Structured Query Language", "Sequential Query Language", "Structured Question Language", "Sequential Question Language"],
+          "correct_answer"=> "Structured Query Language"
+        ],
+        [
+          "question"=> "Which company developed the Python programming language?",
+          "options"=> ["Microsoft", "Google", "Apple", "Facebook"],
+          "correct_answer"=> "Google"
+        ],
+        [
+          "question"=> "What is the main purpose of JavaScript?",
+          "options"=> ["Styling web pages", "Creating dynamic content", "Database management", "Server-side scripting"],
+          "correct_answer"=> "Creating dynamic content"
+        ],
+        [
+          "question"=> "What is the name of the algorithm used to sort elements in ascending or descending order?",
+          "options"=> ["Insertion Sort", "Merge Sort", "Quick Sort", "All of the other"],
+          "correct_answer"=> "All of the other"
+        ],
+        [
+          "question"=> "Which protocol is used for secure communication over a computer network?",
+          "options"=> ["HTTP", "FTP", "SSH", "SMTP"],
+          "correct_answer"=> "SSH"
+        ],
+        [
+          "question"=> "Which data structure uses a Last-In-First-Out (LIFO) approach?",
+          "options"=> ["Queue", "Stack", "Tree", "Linked List"],
+          "correct_answer"=> "Stack"
+        ],
+        [
+          "question"=> "What does URL stand for?",
+          "options"=> ["Uniform Resource Locator", "Universal Record Locator", "Uniform Resource Link", "Universal Resource Link"],
+          "correct_answer"=> "Uniform Resource Locator"
+        ],
+        [
+          "question"=> "What is the primary function of a firewall?",
+          "options"=> ["Protecting against viruses", "Filtering network traffic", "Encrypting data", "Managing user authentication"],
+          "correct_answer"=> "Filtering network traffic"
+        ],
+        [
+          "question"=> "Which of the following is not a type of network topology?",
+          "options"=> ["Star", "Ring", "Cube", "Mesh"],
+          "correct_answer"=> "Cube"
+        ],
+        [
+          "question"=> "What is the maximum value that can be represented with a single byte?",
+          "options"=> ["255", "256", "127", "-128"],
+          "correct_answer"=> "255"
+        ],
+        [
+          "question"=> "What is the primary function of an operating system?",
+          "options"=> ["Managing hardware resources", "Executing application software", "Handling user input", "Providing internet connectivity"],
+          "correct_answer"=> "Managing hardware resources"
+        ],
+        [
+          "question"=> "Which of the following is not a programming paradigm?",
+          "options"=> ["Object-Oriented Programming", "Procedural Programming", "Functional Programming", "Logical Programming"],
+          "correct_answer"=> "Logical Programming"
+        ]
+    ];
+    return $questions_1[$index];
 }
 ?>
