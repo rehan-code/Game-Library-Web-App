@@ -96,7 +96,7 @@ async function showCongratsScreen(totalScore) {
 }
 
 
-async function displayRandomQuestion(questionIndex) {
+async function displayRandomQuestion(questionIndex, stageId) {
     var selectedQuestion;
     // Get the question from server
     const xhttp = new XMLHttpRequest();
@@ -112,7 +112,8 @@ async function displayRandomQuestion(questionIndex) {
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify({
         "functionname": 'get_cyber_question',
-        "index": questionIndex
+        "index": questionIndex,
+        "stageId": stageId
     }));
 
     const questionTextElement = document.getElementById('question');
@@ -134,7 +135,7 @@ async function displayRandomQuestion(questionIndex) {
                 if (questionIndex == 19) {
                     showCongratsScreen(totalCorrectAnswers);
                 }
-                displayRandomQuestion(questionIndex+1);
+                displayRandomQuestion(questionIndex+1,stageId);
             } else {           
                 showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers);
             }
@@ -142,7 +143,3 @@ async function displayRandomQuestion(questionIndex) {
         answerOptionsElement.appendChild(optionButtonElement);
     });
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    displayRandomQuestion(0);
-});
