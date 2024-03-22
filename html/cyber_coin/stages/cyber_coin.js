@@ -1,11 +1,5 @@
 var totalCorrectAnswers = 0;
 
-async function fetchAllQuestions() {
-    const response = await fetch('../questions.json');
-    const questionsData = await response.json();
-    return questionsData.questions_1;
-}
-
 function shuffleOptions(optionsArray) {
     for (let i = optionsArray.length - 1; i > 0; i--) {
         const randomIndex = Math.floor(Math.random() * (i + 1));
