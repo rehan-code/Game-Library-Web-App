@@ -542,6 +542,12 @@ footer {
   background-size: cover;
 }
 
+.cyber-coin-stage2 {
+  background-image: url("../images/cyber_coin/stage2.jpg");
+  background-position: 50% 87%;
+  background-size: cover;
+}
+
 .movie-card .info-text {
   width: 100%;
   font-weight: bold;
