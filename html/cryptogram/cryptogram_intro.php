@@ -41,22 +41,22 @@
                 <span>Instructions</span>
             </h1>
             <p>
-                <ui>
-                    <li>
+                <ul class="instruction-list">
+                    <li class="instruction-item">
                         Within the hidden message, each letter is encrypted to another random letter
                         (e.g. all A's become T's, B's become F's, etc.)
                     </li>
-                    <li>
+                    <li class="instruction-item">
                         Two different letters <strong>cannot</strong> be encrypted to the same letter.
                     </li>
-                    <li>
+                    <li class="instruction-item">
                         Decrypt each letter in the hidden message by entering a letter into the box beneath
                         each provided clue.
                     </li>
-                    <li>
+                    <li class="instruction-item">
                         Click <strong>Submit</strong> once you've filled in all the clues to guess the encrypted message.
                     </li>
-                    <li>
+                    <li class="instruction-item">
                         Click the <strong>Hint</strong> button in the top-right corner to reveal some information regarding
                         the encrypted message's context.
                     </li>
@@ -64,6 +64,10 @@
             </p>
 
             <br>
+            <br>
+            <br>
+            <br>
+            
             <div class="movie-card movie-card-cryptogram"
             onclick="window.location.href='./game/cryptogram.php';">
                 <h1 class="main-heading-2">
