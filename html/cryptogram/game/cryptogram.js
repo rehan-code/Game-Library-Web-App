@@ -180,8 +180,14 @@ document.addEventListener('click', function() {
     }
 });
 
-document.querySelector('.hint-button').addEventListener('click', function(event) {
-    event.stopPropagation();
-});
+const el = document.querySelector('.hint-button');
+
+if (el){
+    el.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+}
+
+
 
 
