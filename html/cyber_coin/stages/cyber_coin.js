@@ -59,7 +59,7 @@ async function showCongratsScreen(totalScore) {
     gameOverElement.innerHTML = '';
     // Setting Title
     const gameOverTitle = document.createElement("h1");
-    gameOverTitle.textContent = "Congratulations! you've become a cyber coin millionaire!";
+    gameOverTitle.textContent = "Congratulations! You've become a Cyber Coin millionaire!";
     gameOverElement.appendChild(gameOverTitle);
 
     const correctAnswerDisplay = document.createElement("p");
@@ -72,7 +72,7 @@ async function showCongratsScreen(totalScore) {
     gameOverElement.appendChild(scoreDisplay);
 
     const friendlyMessage = document.createElement("p");
-    friendlyMessage.textContent = "Come again next season to try and be a billionaire";
+    friendlyMessage.textContent = "Come again soon to try and be a billionaire!";
     gameOverElement.appendChild(friendlyMessage);
 
     const optionsContainer = document.createElement("div");
