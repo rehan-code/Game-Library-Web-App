@@ -152,7 +152,7 @@ function gameover() {
     document.querySelector(".game-content").classList.add("blur");
 }
 
-window.showHint = function(stage) {
+window.showHint = function() {
     var hints = [
         "Misconduct in high finance",
         "Illegal trading and corruption",

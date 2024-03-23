@@ -60,7 +60,7 @@ export function setCookie(name, value, exdays) {
     d.setTime(d.getTime() + (exdays*24*60*60*1000)); //days after which it will expire
     let expires = "expires="+ d.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
-};
+}
 
 /**
  * function to get the values of a cookie. taken from https://www.w3schools.com/js/js_cookies.asp
@@ -81,7 +81,7 @@ export function getCookie(cname) {
         }
     }
     return "";
-};
+}
 
 // ====================HIDDEN PUZZLE FUNCTIONS====================
 /**

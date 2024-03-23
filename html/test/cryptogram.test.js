@@ -1,4 +1,9 @@
-const originalModule = require('../cryptogram/game/cryptogram.js');
+/**
+ * Javascript test cases
+ * php version 8.1.2
+ * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
+ *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
+ */
 
 jest.mock('../hangman/stages/hangman_game.js', () => {
     const originalModule = jest.requireActual('../cryptogram/game/cryptogram.js');
@@ -6,12 +11,11 @@ jest.mock('../hangman/stages/hangman_game.js', () => {
         ...originalModule,
         setupInputHandlers: jest.fn(),
         generateCryptogram: jest.fn(),
-        createLetterMapping: jest.fn()
     };
 });
 
 const {
-  setupInputHandlers, generateCryptogram, createLetterMapping
+  setupInputHandlers, generateCryptogram
 } = require('../hangman/stages/hangman_game.js');
 
 describe('Cryptogram Functions', () => {
