@@ -5,22 +5,55 @@
  * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
-   // $q = intval($_GET['q']);
-   // $test = '';
 
-   // $con = mysqli_connect('localhost','myuser','mypassword');
-   // if (!$con) {
-   //    die('Could not connect: ' . mysqli_error($con));
-   //    $test = 'failure';
-   // }
-   // echo "connection successfull";
-   // $test = 'test';
+  $servername = "db";
+  $username = "root";
+  $password = "rootpassword";
+  $dbname = "myDB";
 
+  // Create connection
+  $conn = mysqli_connect($servername, $username, $password, $dbname);
+  // Check connection
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
 
-   // mysqli_select_db($con,"ajax_demo");
-   // $sql="SELECT * FROM user WHERE id = '".$q."'";
-   // $result = mysqli_query($con,$sql);
+  echo "Connection successful";
 
+  // Create database
+  // $sql = "CREATE DATABASE myDB";
+  // if ($conn->query($sql) === TRUE) {
+  //   echo "Database created successfully";
+  // } else {
+  //   echo "Error creating database: " . $conn->error;
+  // }
 
-   // mysqli_close($con);
+  // sql to create table
+  $sql = "CREATE TABLE MyGuests (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  firstname VARCHAR(30) NOT NULL,
+  lastname VARCHAR(30) NOT NULL,
+  email VARCHAR(50),
+  reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  )";
+  
+  if ($conn->query($sql) === TRUE) {
+    echo "Table MyGuests created successfully";
+  } else {
+    echo "Error creating table: " . $conn->error;
+  }
+
+  // $sql = "SELECT id, firstname, lastname FROM MyGuests";
+  // $result = mysqli_query($conn, $sql);
+
+  // if (mysqli_num_rows($result) > 0) {
+  //   // output data of each row
+  //   while($row = mysqli_fetch_assoc($result)) {
+  //     echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  //   }
+  // } else {
+  //   echo "0 results";
+  // }
+
+  mysqli_close($conn);
 ?>

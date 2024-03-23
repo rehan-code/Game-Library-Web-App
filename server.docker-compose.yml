@@ -12,10 +12,14 @@ services:
       - php
       - db
   php:
-    image: php:8.2-fpm
+    build:
+      context: ./
+      dockerfile: dockerfile
     volumes:
       - ./html:/app/public
       - ./codesniffer:/app/codesniffer
+    depends_on:
+      - db
   db:  # Define the database service
     image: mariadb:10.11
     volumes:
