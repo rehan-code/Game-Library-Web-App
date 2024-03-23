@@ -107,7 +107,6 @@ a {
   text-align: center;
 }
 
-
 .main-heading {
   padding-top: 1%;
   padding-bottom: 1%;
@@ -527,4 +526,17 @@ footer {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.instruction-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.instruction-item {
+  margin-bottom: 10px;
+}
+
+.instruction-item strong {
+  font-weight: bold;
 }
