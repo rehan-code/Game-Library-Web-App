@@ -25,7 +25,7 @@ js-css-lint:
   script:
     - npm install
     - npm run lint:js
-    - npm run lint:scss
+    - npm run lint:css
   allow_failure: true
   only:
     - branches
