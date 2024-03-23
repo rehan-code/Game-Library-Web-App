@@ -290,108 +290,108 @@ function getCyberQuestion($index, $stageId) {
 
   } elseif ($stageId == 2) {
     $questions_2 = [
-        [
-            "question" => "Which of the following is the most popular mobile operating system globally?",
-            "options" => ["iOS", "Android", "Windows Phone", "BlackBerry OS"],
-            "correct_answer" => "Android"
-        ],
-        [
-            "question" => "What does 'iOS' stand for?",
-            "options" => ["iPhone Operating System", "Internet Operating System", "Integrated Operating System", "Interactive Operating System"],
-            "correct_answer" => "iPhone Operating System"
-        ],
-        [
-            "question" => "Which company developed the Android operating system?",
-            "options" => ["Apple", "Google", "Microsoft", "Samsung"],
-            "correct_answer" => "Google"
-        ],
-        [
-            "question" => "What programming language is primarily used for Android app development?",
-            "options" => ["Java", "Swift", "C#", "Kotlin"],
-            "correct_answer" => "Kotlin"
-        ],
-        [
-            "question" => "Which framework is commonly used for developing cross-platform mobile apps?",
-            "options" => ["React Native", "Vue.js", "Angular", "Flutter"],
-            "correct_answer" => "Flutter"
-        ],
-        [
-            "question" => "Which architecture pattern is commonly used in Android app development to separate the application logic from the user interface?",
-            "options" => ["MVC (Model-View-Controller)", "MVP (Model-View-Presenter)", "MVVM (Model-View-ViewModel)", "Singleton"],
-            "correct_answer" => "MVVM (Model-View-ViewModel)"
-        ],
-        [
-            "question" => "Which technology is primarily used for short-range wireless communication between mobile devices?",
-            "options" => ["Wi-Fi", "NFC", "Bluetooth", "LTE"],
-            "correct_answer" => "Bluetooth"
-        ],
-        [
-            "question" => "What does the acronym 'SDK' stand for, which is essential in mobile app development?",
-            "options" => ["Software Development Kit", "System Deployment Knowledge", "Server Database Kit", "Software Design Key"],
-            "correct_answer" => "Software Development Kit"
-        ],
-        [
-            "question" => "What is the primary IDE used for developing iOS apps?",
-            "options" => ["Visual Studio", "Xcode", "Android Studio", "Eclipse"],
-            "correct_answer" => "Xcode"
-        ],
-        [
-            "question" => "In mobile app development, what is the purpose of using an emulator?",
-            "options" => ["To compress app files", "To test apps on different devices without needing the actual devices", "To enhance the graphics of the app", "To deploy apps directly to the app store"],
-            "correct_answer" => "To test apps on different devices without needing the actual devices"
-        ],
-        [
-          "question" => "What is the primary programming language used for iOS app development?",
-          "options" => ["Java", "Swift", "Objective-C", "C++"],
-          "correct_answer" => "Swift"
-        ],
-        [
-            "question" => "Which version control system is commonly used in mobile app development?",
-            "options" => ["Git", "SVN", "Mercurial", "Perforce"],
-            "correct_answer" => "Git"
-        ],
-        [
-            "question" => "What is the purpose of using CocoaPods in iOS development?",
-            "options" => ["To manage dependencies", "To design user interfaces", "To write backend code", "To debug applications"],
-            "correct_answer" => "To manage dependencies"
-        ],
-        [
-            "question" => "Which mobile app distribution platform is managed by Apple for iOS apps?",
-            "options" => ["Google Play Store", "Amazon Appstore", "App Store", "Windows Store"],
-            "correct_answer" => "App Store"
-        ],
-        [
-            "question" => "What is the purpose of a provisioning profile in iOS development?",
-            "options" => ["To optimize app performance", "To distribute apps internally within an organization", "To test apps on different devices", "To secure app distribution and installation"],
-            "correct_answer" => "To secure app distribution and installation"
-        ],
-        [
-            "question" => "Which design pattern is commonly used in iOS development for handling communication between objects?",
-            "options" => ["Singleton", "Observer", "Decorator", "Factory"],
-            "correct_answer" => "Observer"
-        ],
-        [
-            "question" => "What is the purpose of Interface Builder in iOS development?",
-            "options" => ["To write code", "To design user interfaces visually", "To debug applications", "To manage dependencies"],
-            "correct_answer" => "To design user interfaces visually"
-        ],
-        [
-            "question" => "Which type of database is commonly used in mobile app development?",
-            "options" => ["Relational Database", "NoSQL Database", "Graph Database", "Object-Oriented Database"],
-            "correct_answer" => "NoSQL Database"
-        ],
-        [
-            "question" => "What does the term 'APK' stand for in Android app development?",
-            "options" => ["Android Package Kit", "Application Program Kit", "Application Package Kit", "Android Program Kit"],
-            "correct_answer" => "Android Package Kit"
-        ],
-        [
-            "question" => "Which tool is commonly used for performance monitoring and debugging in Android development?",
-            "options" => ["Logcat", "Xcode", "Android Studio", "Visual Studio"],
-            "correct_answer" => "Logcat"
-        ]  
-      ];
-      return $questions_2[$index];
-    }
+      [
+        "question"=> "Which popular video game franchise features a protagonist named 'Mario'?",
+        "options"=> ["The Legend of Zelda", "Final Fantasy", "Super Mario", "Pokemon"],
+        "correct_answer"=> "Super Mario"
+      ],
+      [
+          "question"=> "In the game 'The Legend of Zelda: Breath of the Wild', what is the name of the protagonist?",
+          "options"=> ["Link", "Zelda", "Ganondorf", "Sheik"],
+          "correct_answer"=> "Link"
+      ],
+      [
+          "question"=> "Which of the following is a popular battle royale game developed by Epic Games?",
+          "options"=> ["Fortnite", "Apex Legends", "PUBG", "Call of Duty: Warzone"],
+          "correct_answer"=> "Fortnite"
+      ],
+      [
+          "question"=> "What is the main objective in the game 'Minecraft'?",
+          "options"=> ["Survive", "Defeat the Ender Dragon", "Build structures", "Explore"],
+          "correct_answer"=> "Survive"
+      ],
+      [
+          "question"=> "Which popular video game series features a character named 'Master Chief'?",
+          "options"=> ["Halo", "Call of Duty", "Gears of War", "Destiny"],
+          "correct_answer"=> "Halo"
+      ],
+      [
+          "question"=> "Which gaming console is known for franchises like 'God of War' and 'Uncharted'?",
+          "options"=> ["PlayStation", "Xbox", "Nintendo Switch", "PC"],
+          "correct_answer"=> "PlayStation"
+      ],
+      [
+          "question"=> "What is the best-selling video game of all time as of 2022?",
+          "options"=> ["Minecraft", "Tetris", "Grand Theft Auto V", "Wii Sports"],
+          "correct_answer"=> "Minecraft"
+      ],
+      [
+          "question"=> "In the game 'The Witcher 3: Wild Hunt', what is the name of the main character?",
+          "options"=> ["Geralt", "Ciri", "Yennefer", "Triss"],
+          "correct_answer"=> "Geralt"
+      ],
+      [
+          "question"=> "Which company developed the game 'Overwatch'?",
+          "options"=> ["Blizzard Entertainment", "Electronic Arts", "Valve Corporation", "Ubisoft"],
+          "correct_answer"=> "Blizzard Entertainment"
+      ],
+      [
+          "question"=> "What genre of game is 'League of Legends'?",
+          "options"=> ["MOBA (Multiplayer Online Battle Arena)", "MMORPG (Massively Multiplayer Online Role-Playing Game)", "FPS (First-Person Shooter)", "RPG (Role-Playing Game)"],
+          "correct_answer"=> "MOBA (Multiplayer Online Battle Arena)"
+      ],
+      [
+          "question"=> "Which gaming franchise features a post-apocalyptic setting and includes titles like 'Fallout 4'?",
+          "options"=> ["Elder Scrolls", "Doom", "BioShock", "Fallout"],
+          "correct_answer"=> "Fallout"
+      ],
+      [
+          "question"=> "What is the name of the main character in the 'Assassin's Creed' series?",
+          "options"=> ["Ezio Auditore", "Altair Ibn-La'Ahad", "Connor Kenway", "Desmond Miles"],
+          "correct_answer"=> "Altair Ibn-La'Ahad"
+      ],
+      [
+          "question"=> "Which game features a battle between terrorists and counter-terrorists and includes maps like 'Dust II' and 'Mirage'?",
+          "options"=> ["Call of Duty", "Counter-Strike: Global Offensive", "Rainbow Six Siege", "Valorant"],
+          "correct_answer"=> "Counter-Strike: Global Offensive"
+      ],
+      [
+          "question"=> "What is the main mechanic in the game 'Among Us'?",
+          "options"=> ["Solving puzzles", "Building structures", "Survival", "Identifying impostors"],
+          "correct_answer"=> "Identifying impostors"
+      ],
+      [
+          "question"=> "Which game features a battle between two teams of five players each, with the objective of destroying the opposing team's base?",
+          "options"=> ["Dota 2", "Rocket League", "Team Fortress 2", "Starcraft II"],
+          "correct_answer"=> "Dota 2"
+      ],
+      [
+          "question"=> "In the game 'Pokémon', what is the name of the main character that players control?",
+          "options"=> ["Pikachu", "Ash Ketchum", "Red", "Charmander"],
+          "correct_answer"=> "Red"
+      ],
+      [
+          "question"=> "Which game franchise is known for its open-world crime action games, such as 'Grand Theft Auto V'?",
+          "options"=> ["Watch Dogs", "Saints Row", "Red Dead Redemption", "Grand Theft Auto"],
+          "correct_answer"=> "Grand Theft Auto"
+      ],
+      [
+          "question"=> "What is the primary objective in the game 'Dark Souls'?",
+          "options"=> ["Defeat bosses", "Solve puzzles", "Explore dungeons", "Build structures"],
+          "correct_answer"=> "Defeat bosses"
+      ],
+      [
+          "question"=> "Which game features a blocky, procedurally-generated 3D world that allows players to explore and create?",
+          "options"=> ["Terraria", "Roblox", "Stardew Valley", "No Man's Sky"],
+          "correct_answer"=> "Minecraft"
+      ],
+      [
+          "question"=> "What is the name of the character players control in the game 'Half-Life'?",
+          "options"=> ["Gordon Freeman", "Alyx Vance", "Barney Calhoun", "Adrian Shephard"],
+          "correct_answer"=> "Gordon Freeman"
+      ]
+    ];
+    return $questions_2[$index];
   }
+}
 ?>

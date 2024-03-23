@@ -81,7 +81,7 @@
             <div class="movie-card cyber-coin-stage2" 
             onclick="window.location.href='stages/cyber_coin_stage_2.php';">
                 <h1 class="main-heading-2">
-                    Mobile Computing
+                    Video Games
                 </h1>
             </div>
         </div>
