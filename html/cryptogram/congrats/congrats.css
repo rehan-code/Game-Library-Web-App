@@ -7,11 +7,11 @@ body {
 
 .container {
     margin: 50px auto;
+    padding: 40px;
     padding-top: 20px;
     background-color: #fff;
-    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
     text-align: center;
 }
 
@@ -60,7 +60,7 @@ p.alternate {
     display: block;
 }
 
-.Button {
+.button {
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -77,15 +77,15 @@ p.alternate {
     user-select: none;
 }
 
-.Button:focus {
+.button:focus {
     outline: none;
 }
 
-.Button::-moz-focus-inner {
+.button::-moz-focus-inner {
     border: 0;
 }
 
-.Button-inner {
+.button-inner {
     align-items: center;
     background: #0a5396;
     border: 2px solid transparent;
@@ -102,16 +102,16 @@ p.alternate {
     font-size: 14px;
 }
 
-.Button:focus .Button-inner {
+.button:focus .button-inner {
     border-color: #fff;
     box-shadow: 0 0 0 2px #0a5396;
 }
 
-.Button:hover .Button-inner {
+.button:hover .button-inner {
     filter: brightness(1.1);
 }
 
-.Button:active .Button-inner {
+.button:active .button-inner {
     filter: brightness(0.9);
 }
 
