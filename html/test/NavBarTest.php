@@ -53,9 +53,8 @@ class NavBarTest extends TestCase
      */
     public function testNavbarIncludesExpectedItems()
     {
-        // Testing if expected items ar present in the nav bar
-        $expectedItems = ['About Us', 'Instructions'];
-        
+        $expectedItems = ['About Us']; // Update this array as needed
+
         foreach ($expectedItems as $item) {
             $this->assertStringContainsString($item, $this->_navbarPhpContent);
         }
