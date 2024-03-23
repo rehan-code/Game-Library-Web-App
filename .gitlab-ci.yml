@@ -19,29 +19,23 @@ php-lint:
     - php phpcs.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
     - php phpcbf.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
 
+js-css-lint:
+  stage: lint
+  image: node:latest
+  script:
+    - npm install
+    - npm run lint:js
+    - npm run lint:scss
+  allow_failure: true
+  only:
+    - branches
+
 phpunit-tests:
   stage: test
   image: php:latest
-  # before_script:
-  #   # Install composer if not already present in the image
-  #   - 'command -v composer >/dev/null || ( curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer )'
-  #   - composer --version
-  #   # Navigate to the directory containing your composer.json, if necessary
-  #   - cd html/
-  #   # Install project dependencies, including PHPUnit
-  #   - composer install
   script:
     - ./vendor/bin/phpunit html/test/
 
-# Uncomment and adjust if you have a specific testing configuration for Nginx
-# test-nginx:
-#   stage: test
-#   image: nginx:latest
-#   before_script:
-#     - nginx -v
-#   script:
-#     - export CURRENT_DIR=$(pwd)
-#     - nginx -t -c $CURRENT_DIR/nginx.conf
 unit-test:
   image: node:latest
   stage: test
