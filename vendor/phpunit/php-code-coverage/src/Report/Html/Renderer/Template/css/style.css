@@ -3,7 +3,7 @@ body {
  font-size: 1em;
  font-kerning: normal;
  font-variant-ligatures: common-ligatures;
- text-rendering: optimizeLegibility;
+ text-rendering: optimizelegibility;
  padding-top: 10px;
 }
 
@@ -72,7 +72,7 @@ td.small {
 }
 
 td.codeLine {
- font-family: "Source Code Pro", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+ font-family: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
  white-space: pre-wrap;
 }
 
@@ -120,8 +120,7 @@ svg text {
 
 .scrollbox {
  height:245px;
- overflow-x:scroll;
- overflow-y:scroll;
+ overflow:scroll scroll;
 }
 
 table + .structure-heading {

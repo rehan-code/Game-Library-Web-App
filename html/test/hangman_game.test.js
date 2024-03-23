@@ -5,8 +5,6 @@
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
 
-const originalModule = require('../hangman/stages/hangman_game.js');
-
 jest.mock('../hangman/words.json', () => ({
   easy_words: { word1: 'hint1', word2: 'hint2' },
   medium_words: { word3: 'hint3', word4: 'hint4' },

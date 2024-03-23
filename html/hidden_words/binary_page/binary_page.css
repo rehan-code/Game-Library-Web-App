@@ -15,23 +15,32 @@ body {
 
 
 
-#binaryOutput {
+#binary-output {
     font-family: 'Courier New', monospace;
+
     /* Monospace font for binary output */
     background-color: #e8e8e8;
+
     /* Slightly darker grey background for contrast */
     display: inline-block;
+
     /* Makes the background wrap around the text */
     padding: 10px;
+
     /* Increased space above the binary output */
     border-radius: 6px;
+
     /* Slightly larger rounded corners for the binary output background */
-    border: 2px solid #cccccc;
+    border: 2px solid #ccc;
+
     /* Added light grey border for definition */
     font-size: 16px;
+
     /* Increased font size for better readability */
     color: #333;
+
     /* Darker text color for contrast */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+
     /* Subtle shadow for depth */
 }

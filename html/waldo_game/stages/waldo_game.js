@@ -2,6 +2,7 @@ import hintsJS from '../../hidden_words/hints.js';
 
 let isZoomed = false;
 let score = 10; // Initialize score
+let isSpeechBubbleVisible = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".fullscreen-toggle").forEach(button => {
