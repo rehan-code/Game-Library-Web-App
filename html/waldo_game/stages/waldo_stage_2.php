@@ -29,7 +29,7 @@
 
     <div class="main-heading">
         <h1>Find the Dragon!</h1>
-        <?php $stage = 'Dragon';?>
+        <?php $stage = 'dragon';?>
         <?php require "../../components/hint_button/hint_button.php"; ?>
     </div>
 
