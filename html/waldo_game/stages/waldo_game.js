@@ -17,8 +17,12 @@ const buttonPositions = [
     { top: '90%', left: '40%' }
 ];
 
+let currentHintIndex = null;
+
 function setButtonPosition() {
-    const randomPosition = buttonPositions[Math.floor(Math.random() * buttonPositions.length)];
+    const randomIndex = Math.floor(Math.random() * buttonPositions.length);
+    currentHintIndex = randomIndex; // Store the current hint index
+    const randomPosition = buttonPositions[randomIndex];
     const button = document.querySelector('.found-button-random');
     button.style.top = randomPosition.top;
     button.style.left = randomPosition.left;
@@ -236,27 +240,62 @@ function toggleFullScreen(element) {
     }
 }
 window.showHint = function(level) {
-    var hintMessage = 'Sample hint message';
-    switch (level) {
-        case 'lion':
-                hintMessage = 'The giraffe is amazing';
-            break;
-        case 'Dragon':
-                hintMessage = 'Something is visible around the castle';
-            break;
-        case 'Girl':
-                hintMessage = 'What can you see though the windows?';
-            break;
-        default:
-            break;
-    }
     const speechBubble = document.querySelector('.speech-bubble');
-    if (speechBubble) {
-        speechBubble.textContent = hintMessage;
-        speechBubble.style.display = 'block';
-        isSpeechBubbleVisible = true;
+    if (!speechBubble) return;
+
+    // Centralized hints object
+    const hints = {
+        lion: [
+            "The giraffe stands tall in the night.",
+            "By the stone's crest, the king rests.",
+            "Late night conversations between an Sleepysarous and a friendly turtle.",
+            "A lion lingers by the turtle's slow trail.",
+            "The lion is need of a late night sip of water..",
+            "Turtle's pace, rhino's grace, lion's place.",
+            "The bunny lays down by the river.",
+            "Shadowed by stone, the quiet king sits.",
+            "The lion sneaks in for a moonlit drink.",
+            "Through the prickly thorns the lion roars.."
+        ],
+        dragon: [
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance."
+        ],
+        girl: [
+            "High above, the skull shirt girl peers down.",
+            "The skull girl surveys the streets.",
+            "She stands above all",
+            "High on pink, a playful spot.",
+            "The skull girl surveys the streets.",
+            "She spies the scene.",
+            "She spies the scene.",
+            "Through the arches.",
+            "High above, the skull shirt girl peers down.",
+            "She signals from above!"
+        ]
+    };
+
+    const levelHints = hints[level];
+    let hintMessage = "Hint unavailable";
+
+    if (levelHints && currentHintIndex !== null && levelHints[currentHintIndex]) {
+        hintMessage = levelHints[currentHintIndex];
     }
+
+    speechBubble.textContent = hintMessage;
+    speechBubble.style.display = 'block';
+    isSpeechBubbleVisible = true;
 };
+
+
 
 document.addEventListener('click', function(e) {
     const speechBubble = document.querySelector('.speech-bubble');

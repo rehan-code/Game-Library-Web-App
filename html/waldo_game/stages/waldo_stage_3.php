@@ -29,7 +29,7 @@
 
     <div class="main-heading">
         <h1>Find the Skull Shirt Girl!</h1>
-        <?php $stage = 'Girl';?>
+        <?php $stage = 'girl';?>
         <?php require "../../components/hint_button/hint_button.php"; ?>
     </div>
 
