@@ -89,7 +89,7 @@
             </div>
             <div
                 class="movie-card movie-card-cryptogram"
-                onclick="window.location.href='cryptogram/game/cryptogram.php';"
+                onclick="window.location.href='cryptogram/cryptogram_intro.php';"
             >
                 <h1 class="main-heading-2">
                     Cryptogram

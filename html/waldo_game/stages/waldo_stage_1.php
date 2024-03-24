@@ -64,7 +64,7 @@
         <img src="../../images/waldo/waldo_stage_1.jpg" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
         <button class="fullscreen-toggle"><i class="fa fa-arrows-alt"></i></button>
-        <button class="found-button-1"></button>
+        <button class="found-button-random"></button>
     </div>
     
 

@@ -100,7 +100,7 @@ function checkSolution(sentence) {
         return true;
     } else {
         // Display the popup container for incorrect guess
-        document.getElementById('popupContainer').style.display = 'block';
+        document.getElementById('popup-container').style.display = 'block';
     }
     return false;
 }
@@ -140,7 +140,7 @@ function checkAllBoxesFilled(sentence) {
         }
     } else {
         // Show the custom popup
-        document.getElementById('popupContainer').style.display = 'block';
+        document.getElementById('popup-container').style.display = 'block';
     }
 } 
 
@@ -152,7 +152,7 @@ function gameover() {
     document.querySelector(".game-content").classList.add("blur");
 }
 
-window.showHint = function(stage) {
+window.showHint = function() {
     var hints = [
         "Misconduct in high finance",
         "Illegal trading and corruption",

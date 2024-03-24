@@ -15,10 +15,6 @@ document.body.innerHTML = `
   </div>
 `;
 
-
-let isZoomed = false;
-
-
 describe('Test zoomIn function', () => {
   beforeEach(() => {
     document.body.innerHTML = `
@@ -26,7 +22,6 @@ describe('Test zoomIn function', () => {
         <img src="your-image-source" alt="Test Image">
       </div>
     `;
-    isZoomed = false;
   });
 
   test('should set transform origin when not zoomed', () => {

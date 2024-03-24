@@ -51,25 +51,25 @@ document.addEventListener("DOMContentLoaded", function() {
         switch (difficulty) {
             case 'easy':
                 words = wordsJSON.easy_words;
-                for (var key in words) {
-                    if(key == word.toLowerCase()) {
-                        hintMessage = words[key];
+                for (var key1 in words) {
+                    if(key1 == word.toLowerCase()) {
+                        hintMessage = words[key1];
                     }
                 }
                 break;
             case 'medium':
                 words = wordsJSON.medium_words;
-                for (var key in words) {
-                    if(key == word.toLowerCase()) {
-                        hintMessage = words[key];
+                for (var key2 in words) {
+                    if(key2 == word.toLowerCase()) {
+                        hintMessage = words[key2];
                     }
                 }
                 break;
             case 'hard':
                 words = wordsJSON.hard_words;
-                for (var key in words) {
-                    if(key == word.toLowerCase()) {
-                        hintMessage = words[key];
+                for (var key3 in words) {
+                    if(key3 == word.toLowerCase()) {
+                        hintMessage = words[key3];
                     }
                 }
                 break;

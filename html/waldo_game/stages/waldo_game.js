@@ -2,6 +2,84 @@ import hintsJS from '../../hidden_words/hints.js';
 
 let isZoomed = false;
 let score = 10; // Initialize score
+let isSpeechBubbleVisible = false;
+
+const buttonPositions = [
+    { top: '70%', left: '27%' },
+    { top: '70%', left: '1%' },
+    { top: '70%', left: '55%' },
+    { top: '70%', left: '62%' },
+    { top: '90%', left: '63%' },
+    { top: '70%', left: '68%' },
+    { top: '90%', left: '75%' },
+    { top: '90%', left: '85%' },
+    { top: '90%', left: '90%' },
+    { top: '90%', left: '40%' }
+];
+
+function setButtonPosition() {
+    const randomPosition = buttonPositions[Math.floor(Math.random() * buttonPositions.length)];
+    const button = document.querySelector('.found-button-random');
+    button.style.top = randomPosition.top;
+    button.style.left = randomPosition.left;
+    button.addEventListener('click', isFound);
+}
+
+const dragonButtonPositions = [
+    { top: '60%', left: '26.2%' },
+    { top: '60%', left: '20%' },
+    { top: '60%', left: '35%' },
+    { top: '60%', left: '51%' },
+    { top: '60%', left: '60%' },
+    { top: '42%', left: '62%' },
+    { top: '60%', left: '62%' },
+    { top: '70%', left: '62%' },
+    { top: '70%', left: '80%' },
+    { top: '80%', left: '80%' },
+    { top: '80%', left: '85%' },
+    { top: '80%', left: '20%' },
+    { top: '80%', left: '17%' },   
+];
+
+
+function setDragonButtonPosition() {
+
+    const randomPosition = dragonButtonPositions[Math.floor(Math.random() * dragonButtonPositions.length)];
+    const dragonButton = document.querySelector('.found-button-dragon');
+
+    dragonButton.style.top = randomPosition.top;
+    dragonButton.style.left = randomPosition.left;
+
+    dragonButton.addEventListener('click', isFound);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    setDragonButtonPosition();
+});
+const girlButtonPositions = [
+    { top: '45%', left: '11%' },
+    { top: '51%', left: '11%' },
+    { top: '51%', left: '12.5%' },
+    { top: '51%', left: '30%' },
+    { top: '52%', left: '28%' },
+    { top: '25%', left: '60%' },
+    { top: '70%', left: '40%' },
+    { top: '38%', left: '59%' },
+    { top: '38%', left: '62.5%' },
+    { top: '45%', left: '76.5%' },
+];
+
+
+function setGirlButtonPosition() {
+
+    const randomPosition = girlButtonPositions[Math.floor(Math.random() * girlButtonPositions.length)];
+    const girlButton = document.querySelector('.found-button-girl');
+    girlButton.style.top = randomPosition.top;
+    girlButton.style.left = randomPosition.left;
+    girlButton.addEventListener('click', isFound);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    setGirlButtonPosition();
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".fullscreen-toggle").forEach(button => {
@@ -25,6 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleFullScreen(element);
         });
     }
+
+    setButtonPosition();
+    setDragonButtonPosition();
+    setGirlButtonPosition();
 });
 
 

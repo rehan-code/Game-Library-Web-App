@@ -45,11 +45,11 @@
                     </span>
                 </button>
             </div>
-            <div id="popupContainer">
+            <div id="popup-container">
                 <p>Incorrect Cryptogram!</p>
                 <div class="center">
-                    <button id="popupOkButton" 
-                    onclick="document.getElementById('popupContainer').
+                    <button id="popup-ok-button" 
+                    onclick="document.getElementById('popup-container').
                     style.
                     display='none';">
                         OK

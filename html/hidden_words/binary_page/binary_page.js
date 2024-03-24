@@ -1,6 +1,6 @@
 import { getCookie } from "../hidden_words.js";
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     let binary = '';
     if (getCookie("authenticated") == "true") {
         const word = "dispatched";
