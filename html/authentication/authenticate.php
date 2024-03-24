@@ -180,7 +180,15 @@ function decryptWords($strings)
 
     return $decryptions;
 }
-function getCyberQuestion($index) {
+/**
+ * Retrieves the cyber coin questions 
+ * 
+ * @param array $index The array of index to decrypt
+ * 
+ * @return array
+ */ 
+function getCyberQuestion($index) 
+{
     $questions_1 = [
         [
           "question"=> "What does HTML stand for?",
