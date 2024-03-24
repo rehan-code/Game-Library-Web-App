@@ -5,10 +5,7 @@
  * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
-  $servername = "localhost";
-  $username = "cis4250";
-  $password = "team8";
-  $dbname = "teamDB";
+  require 'database_cred.php';
 
   // Create connection
   $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -16,8 +13,9 @@
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
-
   echo "Connection successful";
+  
+
   $sql = "SELECT * FROM cyber_question";
   $result = mysqli_query($conn, $sql);
 
