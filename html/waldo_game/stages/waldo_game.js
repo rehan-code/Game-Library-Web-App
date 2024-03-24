@@ -189,21 +189,23 @@ function notFound(event) {
 
 function isFound(event) {
     if (event) event.stopPropagation();
+
     var screen = document.querySelector(".game-over-screen");
-    var image = document.querySelector(".image-container img");
-    let gameOverScrn = document.querySelector(".game-over-screen h1");
+    var imageContainer = document.querySelector(".image-container");
 
     var hints = hintsJS.hints;
-    var hintChance = Math.floor(Math.random() * 10) + 1; 
+    var hintChance = Math.floor(Math.random() * 10) + 1;
 
-    if (hintChance == 2) {
+    if (hintChance === 2) {
         var hintIndex = Math.floor(Math.random() * hints.length);
-        gameOverScrn.innerHTML = gameOverScrn.innerHTML + "<br><i>" + hints[hintIndex] + "<i>";
+        let gameOverScrn = document.querySelector(".game-over-screen h1");
+        gameOverScrn.innerHTML += "<br><i>" + hints[hintIndex] + "</i>";
     }
 
     screen.style.display = "block";
-    image.classList.add("blur");
+    imageContainer.classList.add("blur");
 }
+
 
 // Update scoreboard display
 function updateScoreboard() {
