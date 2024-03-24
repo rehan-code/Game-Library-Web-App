@@ -340,3 +340,48 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.found-button-random {
+  z-index: 2;
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  width: 1%;
+  height: 4%;
+  background-color: rgb(128 0 128 / 0%);
+  background-image: url("../../images/waldo/lion.png");
+  background-size: cover;
+  background-position: 50% 10%;
+  border: none;
+  cursor: pointer;
+}
+
+.found-button-dragon {
+  z-index: 2;
+  position: absolute;
+  top: 60%;
+  left: 26.2%;
+  width: 1.6%;
+  height: 4.9%;
+  background-color: rgba(6, 189, 37, 0);
+  background-image: url("../../images/waldo/dragon.png");
+  background-size: cover;
+  background-position: 50% 10%;
+  border: none;
+  cursor: pointer;
+}
+
+.found-button-girl {
+  z-index: 2;
+  position: absolute;
+  top: 57%;
+  left: 47%;
+  width: 1.6%;
+  height: 4.9%;
+  background-color: rgb(128 0 128 / 0%);
+  background-image: url("../../images/waldo/girl.png");
+  background-size: cover;
+  background-position: 50% 10%;
+  border: none;
+  cursor: pointer;
+}

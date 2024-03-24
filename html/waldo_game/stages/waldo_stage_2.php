@@ -64,7 +64,7 @@
         <img src="../../images/waldo/waldo_stage_2.png" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
         <button class="fullscreen-toggle2 "><i class="fa fa-arrows-alt"></i></button>
-        <button class="found-button-2"></button>
+        <button class="found-button-dragon"></button>
     </div>
 
     <div class="scoreboard">
