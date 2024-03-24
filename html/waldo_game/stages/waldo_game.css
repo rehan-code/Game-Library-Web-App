@@ -366,7 +366,7 @@ body {
   left: 26.2%;
   width: 1.6%;
   height: 4.9%;
-  background-color: rgba(6, 189, 37, 0);
+  background-color: rgb(6 189 37 / 0%);
   background-image: url("../../images/waldo/dragon.png");
   background-size: cover;
   background-position: 50% 10%;
