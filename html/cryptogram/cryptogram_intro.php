@@ -33,8 +33,8 @@
                 Dive into the world of cryptograms,
                 where hidden messages await your deductive prowess.
                 Decipher the encrypted text, unmask the puzzle's secrets,
-                and let your investigative intuition guide you to the ultimate revelation.
-                Are you ready to take on this cryptic challenge?
+                and let your investigative intuition guide you to the ultimate
+                revelation. Are you ready to take on this cryptic challenge?
             </p>
 
             <h1 class="main-heading">
@@ -43,21 +43,25 @@
             <p>
                 <ul class="instruction-list">
                     <li class="instruction-item">
-                        Within the hidden message, each letter is encrypted to another random letter
-                        (e.g. all A's become T's, B's become F's, etc.)
+                        Within the hidden message, each letter is encrypted to
+                        another random letter (e.g. all A's become T's, B's
+                        become F's, etc.)
                     </li>
                     <li class="instruction-item">
-                        Two different letters <strong>cannot</strong> be encrypted to the same letter.
+                        Two different letters <strong>cannot</strong> be encrypted
+                        to the same letter.
                     </li>
                     <li class="instruction-item">
-                        Decrypt each letter in the hidden message by entering a letter into the box beneath
-                        each provided clue.
+                        Decrypt each letter in the hidden message by entering a
+                        letter into the box beneath each provided clue.
                     </li>
                     <li class="instruction-item">
-                        Click <strong>Submit</strong> once you've filled in all the clues to guess the encrypted message.
+                        Click <strong>Submit</strong> once you've filled in all
+                        the clues to guess the encrypted message.
                     </li>
                     <li class="instruction-item">
-                        Click the <strong>Hint</strong> button in the top-right corner to reveal some information regarding
+                        Click the <strong>Hint</strong> button in the top-right
+                        corner to reveal some information regarding
                         the encrypted message's context.
                     </li>
                 </ui>

@@ -68,7 +68,7 @@ async function showCongratsScreen(totalScore) {
     gameOverElement.innerHTML = '';
     // Setting Title
     const gameOverTitle = document.createElement("h1");
-    gameOverTitle.textContent = "Congratulations! you've become a cyber coin millionaire!";
+    gameOverTitle.textContent = "Congratulations! You've become a cyber coin millionaire!";
     gameOverElement.appendChild(gameOverTitle);
 
     const correctAnswerDisplay = document.createElement("p");
