@@ -7,7 +7,7 @@ function shuffleOptions(optionsArray) {
     }
 }
 
-async function showGameOverScreen(correctAnswerText, totalScore) {
+async function showGameOverScreen(correctAnswerText, totalScore, stageId) {
     const gameOverElement = document.querySelector(".game-over-screen");
     gameOverElement.innerHTML = '';
 
@@ -43,7 +43,16 @@ async function showGameOverScreen(correctAnswerText, totalScore) {
 
     const replayButton = document.createElement("button");
     replayButton.classList.add("option-button", "button2");
-    replayButton.onclick = function() { window.location.href = 'cyber_coin_stage_1.php'; };
+    replayButton.onclick = function() {
+        
+        if (stageId == 1) {
+            window.location.href = 'cyber_coin_stage_1.php';
+        } else if (stageId == 2) {
+            window.location.href = 'cyber_coin_stage_2.php';
+        } else if (stageId == 3) {
+            window.location.href = 'cyber_coin_stage_3.php';
+        }
+    };
 
     optionsContainer.appendChild(homeButton);
     optionsContainer.appendChild(replayButton);
@@ -59,7 +68,7 @@ async function showCongratsScreen(totalScore) {
     gameOverElement.innerHTML = '';
     // Setting Title
     const gameOverTitle = document.createElement("h1");
-    gameOverTitle.textContent = "Congratulations! you've become a cyber coin millionaire!";
+    gameOverTitle.textContent = "Congratulations! You've become a cyber coin millionaire!";
     gameOverElement.appendChild(gameOverTitle);
 
     const correctAnswerDisplay = document.createElement("p");
@@ -96,7 +105,7 @@ async function showCongratsScreen(totalScore) {
 }
 
 
-async function displayRandomQuestion(questionIndex) {
+async function displayRandomQuestion(questionIndex, stageId) {
     var selectedQuestion;
     // Get the question from server
     const xhttp = new XMLHttpRequest();
@@ -112,7 +121,8 @@ async function displayRandomQuestion(questionIndex) {
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify({
         "functionname": 'get_cyber_question',
-        "index": questionIndex
+        "index": questionIndex,
+        "stageId": stageId
     }));
 
     const questionTextElement = document.getElementById('question');
@@ -134,15 +144,11 @@ async function displayRandomQuestion(questionIndex) {
                 if (questionIndex == 19) {
                     showCongratsScreen(totalCorrectAnswers);
                 }
-                displayRandomQuestion(questionIndex+1);
+                displayRandomQuestion(questionIndex+1,stageId);
             } else {           
-                showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers);
+                showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers, stageId);
             }
         };
         answerOptionsElement.appendChild(optionButtonElement);
     });
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    displayRandomQuestion(0);
-});

@@ -81,17 +81,20 @@
             <h1 class="main-heading">
                 <span>Stages</span>
             </h1>
-            <div class="movie-card movie-card-waldo-1" onclick="window.location.href='stages/waldo_stage_1.php';">
+            <div class="movie-card movie-card-waldo-1"
+            onclick="window.location.href='stages/waldo_stage_1.php';">
                 <h1 class="main-heading">
                     Forest
                 </h1>
             </div>
-            <div class="movie-card movie-card-waldo-2" onclick="window.location.href='stages/waldo_stage_2.php';">
+            <div class="movie-card movie-card-waldo-2"
+            onclick="window.location.href='stages/waldo_stage_2.php';">
                 <h1 class="main-heading">
                     Kingdom
                 </h1>
             </div>
-            <div class="movie-card movie-card-waldo-3" onclick="window.location.href='stages/waldo_stage_3.php';">
+            <div class="movie-card movie-card-waldo-3"
+            onclick="window.location.href='stages/waldo_stage_3.php';">
                 <h1 class="main-heading">
                     Neighbourhood
                 </h1>
