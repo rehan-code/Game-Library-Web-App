@@ -30,28 +30,9 @@
     top: -4px;
 }
 
-.block,
-.input-block {
-    border: 1px solid #ddd;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 26px;
-}
-
 .block {
     background-color: #dae0e9;
     margin-bottom: 4px;
-}
-
-.input-block input {
-    width: 100%;
-    height: 100%;
-    border: none;
-    text-align: center;
-    font-size: large;
-    font-family: 'Courier New', monospace;
-    outline-color: #0a5396;
 }
 
 .word {
@@ -90,7 +71,7 @@
     animation: shake 0.5s ease-in-out;
 }
 
-#popupContainer {
+#popup-container {
     display: none;
     position: fixed;
     left: 50%;
@@ -99,7 +80,7 @@
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
     z-index: 100;
     text-align: center;
     font-family: 'Courier New', monospace;
@@ -110,7 +91,7 @@
     margin-top: 20px;
 }
 
-#popupOkButton {
+#popup-ok-button {
     font-family: 'Courier New', monospace;
     padding: 10px 20px;
     border: none;
@@ -120,7 +101,7 @@
     cursor: pointer;
 }
 
-#popupOkButton:hover {
+#popup-ok-button:hover {
     background-color: #083c61;
 }
 
@@ -137,16 +118,9 @@ body {
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
     text-align: center;
     position: relative; /* Add position relative here */
-}
-
-#cryptogram {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
 }
 
 .block,
@@ -180,13 +154,6 @@ body {
     outline-color: #0a5396;
 }
 
-.word {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
 .letter-container,
 .punctuation-container {
     display: flex;
@@ -194,7 +161,7 @@ body {
     margin-bottom: 10px;
 }
 
-#letterFrequencies {
+#letter-frequencies {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -207,14 +174,14 @@ body {
     border-radius: 5px;
 }
 
-#frequencyChart {
+#frequency-chart {
     display: flex;
     justify-content: center;
     gap: 4px;
     margin-top: 20px;
 }
 
-.barContainer {
+.bar-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,7 +198,7 @@ body {
     opacity: 0.8;
 }
 
-.barLabel {
+.bar-label {
     font-size: 12px;
 }
 
@@ -261,7 +228,7 @@ body {
   }
   
   .hint-button i {
-    color: #ffffff; 
+    color: #fff; 
     text-shadow: 0 0 3px #fff;
     font-size: 24px; 
   }
@@ -294,12 +261,12 @@ body {
     padding: 10px;
     width: 200px;
     text-align: center;
-    box-shadow: 0px 0px 5px #ccc;
+    box-shadow: 0 0 5 #ccc;
     display: none;
     z-index: 3;
 }
 
-.speech-bubble:after {
+.speech-bubble::after {
     content: '';
     position: absolute;
     bottom: 100%;
@@ -317,14 +284,12 @@ body {
 .game-over-screen {
     z-index: 6;
     width: 100%;
-    /* height: 100%; */
     top: 20rem;
     position: absolute;
     text-align: center;
     align-items: center;
     justify-content: center;
     display: flex;
-    /* display: none; */
     opacity: 0;
     height: 0;
     overflow: hidden;
@@ -356,13 +321,12 @@ body {
   
   .blur {
     filter: blur(4px) brightness(50%);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(0 0 0 / 40%);
     transition: all 1s ease-out 1s;
   }
   
   .options {
-    background-color: rgb(242, 242, 242);
-    opacity: 0.75;
+    background-color: rgb(242 242 242 / 75%);
     border-radius: 10px;
     width: 15%;
     height: 10%;
@@ -377,11 +341,9 @@ body {
   }
   
   .option-button {
-    padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(242, 242, 242);
-    /* Green, you can change the color */
+    background-color: rgb(242 242 242 / 75%);
     color: black;
     cursor: pointer;
     width: 16px;
@@ -391,12 +353,10 @@ body {
   
   .button1 {
     background-image: url("../../images/home_button.png");
-    /* Set the path to your image */
     background-size: cover;
   }
   
   .button2 {
     background-image: url("../../images/replay.png");
-    /* Set the path to your image */
     background-size: cover;
   }

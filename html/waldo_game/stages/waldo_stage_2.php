@@ -29,7 +29,7 @@
 
     <div class="main-heading">
         <h1>Find the Dragon!</h1>
-        <?php $stage = 'Dragon';?>
+        <?php $stage = 'dragon';?>
         <?php require "../../components/hint_button/hint_button.php"; ?>
     </div>
 
@@ -64,7 +64,7 @@
         <img src="../../images/waldo/waldo_stage_2.png" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
         <button class="fullscreen-toggle2 "><i class="fa fa-arrows-alt"></i></button>
-        <button class="found-button-2"></button>
+        <button class="found-button-dragon"></button>
     </div>
 
     <div class="scoreboard">

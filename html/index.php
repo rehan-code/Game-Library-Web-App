@@ -19,7 +19,6 @@
     </style>
 </head>
 <script type='module' src="./hidden_words/hidden_words.js"></script>
-<!-- <?php require "./database.php"; ?> -->
 <body>
     <?php require "components/navbar/navbar.php"; ?>
 
@@ -90,7 +89,7 @@
             </div>
             <div
                 class="movie-card movie-card-cryptogram"
-                onclick="window.location.href='cryptogram/game/cryptogram.php';"
+                onclick="window.location.href='cryptogram/cryptogram_intro.php';"
             >
                 <h1 class="main-heading-2">
                     Cryptogram

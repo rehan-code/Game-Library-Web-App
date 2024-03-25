@@ -35,6 +35,23 @@
             <button class="option-button button2" 
              onclick="window.location.href='hangman_stage_1.php'"></button>
         </div>
+        <div class="other-stages-text">
+            <h1>Other stages available to play:</h1>
+        </div>
+        <div class="movie-cards-container">
+            <div class="movie-card movie-card-2" 
+            onclick="window.location.href='hangman_stage_2.php';">
+                <h1 class="main-heading-2">
+                Medium
+                </h1>
+            </div>
+            <div class="movie-card movie-card-3" 
+            onclick="window.location.href='hangman_stage_3.php';">
+                <h1 class="main-heading">
+                Hard
+                </h1>
+            </div>
+        </div>
     </div>
 
     <div class="game-content">

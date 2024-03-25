@@ -29,7 +29,7 @@
 
     <div class="main-heading">
         <h1>Find the Skull Shirt Girl!</h1>
-        <?php $stage = 'Girl';?>
+        <?php $stage = 'girl';?>
         <?php require "../../components/hint_button/hint_button.php"; ?>
     </div>
 
@@ -64,7 +64,7 @@
         <img src="../../images/waldo/waldo_stage_3.jpg" draggable="false" 
         alt="Zoomable Image" id="waldoImage">
         <button class="fullscreen-toggle2 "><i class="fa fa-arrows-alt"></i></button>
-        <button class="found-button-3"></button>
+        <button class="found-button-girl"></button>
     </div>
 
     <div class="scoreboard">

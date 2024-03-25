@@ -41,14 +41,6 @@
                   About Us
                </a>
             </li>
-            <li class="nav-menu-item">
-               <a
-                  href="../../instruction/instruction.php"
-                  class="nav-menu-link"
-               >
-                  Instructions
-               </a>
-            </li>
             <!--  Testing Purposes -->
             <!-- <li class="nav-menu-item">
                <a

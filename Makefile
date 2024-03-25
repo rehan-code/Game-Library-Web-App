@@ -2,6 +2,8 @@ all: build
 
 build:
 	docker compose -f server.docker-compose.yml up -d
+build_attach:
+	docker compose -f server.docker-compose.yml up
 down:
 	docker compose -f server.docker-compose.yml down
 lint: build
