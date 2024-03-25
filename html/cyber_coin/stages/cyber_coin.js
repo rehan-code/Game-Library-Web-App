@@ -101,6 +101,7 @@ async function displayRandomQuestion(questionIndex) {
     // Get the question from server
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
+        console.log(this.response);
         var data = JSON.parse(this.responseText);
         if (data['error'] == null) {
             selectedQuestion = data['result'];
