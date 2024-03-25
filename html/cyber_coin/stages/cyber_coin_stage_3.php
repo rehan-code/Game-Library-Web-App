@@ -32,7 +32,7 @@
              <button class="option-button button1" 
               onclick="window.location.href='../../index.php'"></button>
              <button class="option-button button2" 
-              onclick="window.location.href='cyber_coin_stage_1.php'"></button>
+              onclick="window.location.href='cyber_coin_stage_3.php'"></button>
          </div>
      </div>
     <div class="game-content">

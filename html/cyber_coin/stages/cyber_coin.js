@@ -7,7 +7,7 @@ function shuffleOptions(optionsArray) {
     }
 }
 
-async function showGameOverScreen(correctAnswerText, totalScore) {
+async function showGameOverScreen(correctAnswerText, totalScore, stageId) {
     const gameOverElement = document.querySelector(".game-over-screen");
     gameOverElement.innerHTML = '';
 
@@ -43,7 +43,16 @@ async function showGameOverScreen(correctAnswerText, totalScore) {
 
     const replayButton = document.createElement("button");
     replayButton.classList.add("option-button", "button2");
-    replayButton.onclick = function() { window.location.href = 'cyber_coin_stage_1.php'; };
+    replayButton.onclick = function() {
+        
+        if (stageId == 1) {
+            window.location.href = 'cyber_coin_stage_1.php';
+        } else if (stageId == 2) {
+            window.location.href = 'cyber_coin_stage_2.php';
+        } else if (stageId == 3) {
+            window.location.href = 'cyber_coin_stage_3.php';
+        }
+    };
 
     optionsContainer.appendChild(homeButton);
     optionsContainer.appendChild(replayButton);
@@ -137,7 +146,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
                 }
                 displayRandomQuestion(questionIndex+1,stageId);
             } else {           
-                showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers);
+                showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers, stageId);
             }
         };
         answerOptionsElement.appendChild(optionButtonElement);
