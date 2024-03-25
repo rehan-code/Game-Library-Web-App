@@ -530,6 +530,7 @@ footer {
 
 .instruction-list {
   list-style-type: none;
+  min-width: 100%;
   padding: 0;
 }
 
