@@ -181,9 +181,14 @@ function decryptWords($strings)
 
   return $decryptions;
 }
-
-function getCyberQuestion($index, $stageId)
-{
+/**
+ * Retrieves the cyber coin questions 
+ * 
+ * @param array $index The array of index to decrypt
+ * @param int $stageId The id of the stage
+ * @return array
+ */ 
+function getCyberQuestion($index, $stageId) {
 
   if ($stageId == 1) {
     $questions_1 = [

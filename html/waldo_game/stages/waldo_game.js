@@ -2,6 +2,88 @@ import hintsJS from '../../hidden_words/hints.js';
 
 let isZoomed = false;
 let score = 10; // Initialize score
+let isSpeechBubbleVisible = false;
+
+const buttonPositions = [
+    { top: '70%', left: '27%' },
+    { top: '70%', left: '1%' },
+    { top: '70%', left: '55%' },
+    { top: '70%', left: '62%' },
+    { top: '90%', left: '63%' },
+    { top: '70%', left: '68%' },
+    { top: '90%', left: '75%' },
+    { top: '90%', left: '85%' },
+    { top: '90%', left: '90%' },
+    { top: '90%', left: '40%' }
+];
+
+let currentHintIndex = null;
+
+function setButtonPosition() {
+    const randomIndex = Math.floor(Math.random() * buttonPositions.length);
+    currentHintIndex = randomIndex; // Store the current hint index
+    const randomPosition = buttonPositions[randomIndex];
+    const button = document.querySelector('.found-button-random');
+    button.style.top = randomPosition.top;
+    button.style.left = randomPosition.left;
+    button.addEventListener('click', isFound);
+}
+
+const dragonButtonPositions = [
+    { top: '60%', left: '26.2%' },
+    { top: '60%', left: '20%' },
+    { top: '60%', left: '35%' },
+    { top: '60%', left: '51%' },
+    { top: '60%', left: '60%' },
+    { top: '42%', left: '62%' },
+    { top: '60%', left: '62%' },
+    { top: '70%', left: '62%' },
+    { top: '70%', left: '80%' },
+    { top: '80%', left: '80%' },
+    { top: '80%', left: '85%' },
+    { top: '80%', left: '20%' },
+    { top: '80%', left: '17%' },   
+];
+
+
+function setDragonButtonPosition() {
+
+    const randomPosition = dragonButtonPositions[Math.floor(Math.random() * dragonButtonPositions.length)];
+    const dragonButton = document.querySelector('.found-button-dragon');
+
+    dragonButton.style.top = randomPosition.top;
+    dragonButton.style.left = randomPosition.left;
+
+    dragonButton.addEventListener('click', isFound);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    setDragonButtonPosition();
+});
+const girlButtonPositions = [
+    { top: '45%', left: '11%' },
+    { top: '51%', left: '11%' },
+    { top: '51%', left: '12.5%' },
+    { top: '51%', left: '30%' },
+    { top: '52%', left: '28%' },
+    { top: '25%', left: '60%' },
+    { top: '70%', left: '40%' },
+    { top: '38%', left: '59%' },
+    { top: '38%', left: '62.5%' },
+    { top: '45%', left: '76.5%' },
+];
+
+
+function setGirlButtonPosition() {
+
+    const randomPosition = girlButtonPositions[Math.floor(Math.random() * girlButtonPositions.length)];
+    const girlButton = document.querySelector('.found-button-girl');
+    girlButton.style.top = randomPosition.top;
+    girlButton.style.left = randomPosition.left;
+    girlButton.addEventListener('click', isFound);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    setGirlButtonPosition();
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".fullscreen-toggle").forEach(button => {
@@ -25,6 +107,10 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleFullScreen(element);
         });
     }
+
+    setButtonPosition();
+    setDragonButtonPosition();
+    setGirlButtonPosition();
 });
 
 
@@ -107,21 +193,23 @@ function notFound(event) {
 
 function isFound(event) {
     if (event) event.stopPropagation();
+
     var screen = document.querySelector(".game-over-screen");
-    var image = document.querySelector(".image-container img");
-    let gameOverScrn = document.querySelector(".game-over-screen h1");
+    var imageContainer = document.querySelector(".image-container");
 
     var hints = hintsJS.hints;
-    var hintChance = Math.floor(Math.random() * 10) + 1; 
+    var hintChance = Math.floor(Math.random() * 10) + 1;
 
-    if (hintChance == 2) {
+    if (hintChance === 2) {
         var hintIndex = Math.floor(Math.random() * hints.length);
-        gameOverScrn.innerHTML = gameOverScrn.innerHTML + "<br><i>" + hints[hintIndex] + "<i>";
+        let gameOverScrn = document.querySelector(".game-over-screen h1");
+        gameOverScrn.innerHTML += "<br><i>" + hints[hintIndex] + "</i>";
     }
 
     screen.style.display = "block";
-    image.classList.add("blur");
+    imageContainer.classList.add("blur");
 }
+
 
 // Update scoreboard display
 function updateScoreboard() {
@@ -152,27 +240,62 @@ function toggleFullScreen(element) {
     }
 }
 window.showHint = function(level) {
-    var hintMessage = 'Sample hint message';
-    switch (level) {
-        case 'lion':
-                hintMessage = 'The giraffe is amazing';
-            break;
-        case 'Dragon':
-                hintMessage = 'Something is visible around the castle';
-            break;
-        case 'Girl':
-                hintMessage = 'What can you see though the windows?';
-            break;
-        default:
-            break;
-    }
     const speechBubble = document.querySelector('.speech-bubble');
-    if (speechBubble) {
-        speechBubble.textContent = hintMessage;
-        speechBubble.style.display = 'block';
-        isSpeechBubbleVisible = true;
+    if (!speechBubble) return;
+
+    // Centralized hints object
+    const hints = {
+        lion: [
+            "The giraffe stands tall in the night.",
+            "By the stone's crest, the king rests.",
+            "Late night conversations between an Sleepysarous and a friendly turtle.",
+            "A lion lingers by the turtle's slow trail.",
+            "The lion is need of a late night sip of water..",
+            "Turtle's pace, rhino's grace, lion's place.",
+            "The bunny lays down by the river.",
+            "Shadowed by stone, the quiet king sits.",
+            "The lion sneaks in for a moonlit drink.",
+            "Through the prickly thorns the lion roars.."
+        ],
+        dragon: [
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance."
+        ],
+        girl: [
+            "High above, the skull shirt girl peers down.",
+            "The skull girl surveys the streets.",
+            "She stands above all",
+            "High on pink, a playful spot.",
+            "The skull girl surveys the streets.",
+            "She spies the scene.",
+            "She spies the scene.",
+            "Through the arches.",
+            "High above, the skull shirt girl peers down.",
+            "She signals from above!"
+        ]
+    };
+
+    const levelHints = hints[level];
+    let hintMessage = "Hint unavailable";
+
+    if (levelHints && currentHintIndex !== null && levelHints[currentHintIndex]) {
+        hintMessage = levelHints[currentHintIndex];
     }
+
+    speechBubble.textContent = hintMessage;
+    speechBubble.style.display = 'block';
+    isSpeechBubbleVisible = true;
 };
+
+
 
 document.addEventListener('click', function(e) {
     const speechBubble = document.querySelector('.speech-bubble');

@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
 * {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
 }
+
 *,
 *::before,
 *::after {
@@ -28,7 +30,7 @@
 /* .nav-container.nav-header {
 } */
 
-@media screen and (min-width: 1040px) {
+@media screen and (width >= 1040px) {
   .nav-container.nav-header {
     width: 1040px;
     margin: 0 auto;
@@ -85,6 +87,7 @@
 
 .nav-menu {
   display: none;
+
   /* align-items: center; */
 }
 
@@ -92,7 +95,7 @@
   right: 3% !important;
 } */
 
-@media screen and (min-width: 768px) {
+@media screen and (width >= 768px) {
   /* .toggle_btn {
     display: none;
   } */
@@ -148,12 +151,14 @@
 }
 
 /* media queries for mobile screens */
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .nav{
     flex-direction: column;
   }
+
   .nav-menu {
     display: block;
+
     /* align-items: center; */
   }
 

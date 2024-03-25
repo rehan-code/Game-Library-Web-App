@@ -42,24 +42,24 @@
                 <span>Instruction</span>
             </h1>
             <p>
-                <ui>
-                    <li>
+                <ul class="instruction-list">
+                    <li class="instruction-item">
                         <strong>Guess Correct Answers:</strong>
                         The player must guess the correct answers
                         for 20 questions presented in the game.
                     </li>
-                    <li>
+                    <li class="instruction-item">
                         <strong>Avoid Wrong Answers:</strong>
                         Be careful! If the player guesses one question
                         incorrectly, the game ends.
                     </li>
-                    <li>
+                    <li class="instruction-item">
                         <strong>Earn Coins: </strong>
                         Successfully guessing the answers in a
                         streak earns the player one cyber coin for
                         each correct answer.
                     </li>
-                    <li>
+                    <li class="instruction-item">
                         <strong>Aim for High Score:</strong>
                         Keep guessing correctly to build a streak and earn
                         as many cyber coins as possible. How many coins can
