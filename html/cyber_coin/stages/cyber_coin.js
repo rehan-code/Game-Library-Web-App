@@ -21,7 +21,7 @@ async function showGameOverScreen(correctAnswerText, totalScore, stageId) {
     gameOverElement.appendChild(correctAnswerDisplay);
 
     const scoreDisplay = document.createElement("p");
-    scoreDisplay.textContent = `Your total score: ${totalScore}`;
+    scoreDisplay.textContent = `Your total coins: ${totalScore}00`;
     gameOverElement.appendChild(scoreDisplay);
 
     const friendlyMessage = document.createElement("p");
@@ -68,7 +68,7 @@ async function showCongratsScreen(totalScore) {
     gameOverElement.innerHTML = '';
     // Setting Title
     const gameOverTitle = document.createElement("h1");
-    gameOverTitle.textContent = "Congratulations! You've become a cyber coin millionaire!";
+    gameOverTitle.textContent = "Congratulations! You've become a Cyber Coin millionaire!";
     gameOverElement.appendChild(gameOverTitle);
 
     const correctAnswerDisplay = document.createElement("p");
@@ -77,11 +77,11 @@ async function showCongratsScreen(totalScore) {
     gameOverElement.appendChild(correctAnswerDisplay);
 
     const scoreDisplay = document.createElement("p");
-    scoreDisplay.textContent = `Your total score: ${totalScore}`;
+    scoreDisplay.textContent = `Your total coins: ${totalScore}00`;
     gameOverElement.appendChild(scoreDisplay);
 
     const friendlyMessage = document.createElement("p");
-    friendlyMessage.textContent = "Come again next season to try and be a billionaire";
+    friendlyMessage.textContent = "Come again soon to try and be a billionaire!";
     gameOverElement.appendChild(friendlyMessage);
 
     const optionsContainer = document.createElement("div");
@@ -110,6 +110,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
     // Get the question from server
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
+        console.log(this.response);
         var data = JSON.parse(this.responseText);
         if (data['error'] == null) {
             selectedQuestion = data['result'];
@@ -130,7 +131,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
     const scoreDisplayElement = document.getElementById('score');
 
     questionTextElement.textContent = selectedQuestion.question;
-    scoreDisplayElement.textContent = "Score: " + totalCorrectAnswers;
+    scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
     
     answerOptionsElement.innerHTML = '';
     shuffleOptions(selectedQuestion.options);
@@ -140,7 +141,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
         optionButtonElement.onclick = function() {
             if (answerOption === selectedQuestion.correct_answer) {
                 totalCorrectAnswers++;
-                scoreDisplayElement.textContent = "Score: " + totalCorrectAnswers;
+                scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
                 if (questionIndex == 19) {
                     showCongratsScreen(totalCorrectAnswers);
                 }
