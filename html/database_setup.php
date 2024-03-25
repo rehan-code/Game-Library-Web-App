@@ -6,7 +6,7 @@
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
 
-include 'database_cred.php';
+require 'database_cred.php';
 
 // Create connection
 // $conn = mysqli_connect($servername, $username, $password);
