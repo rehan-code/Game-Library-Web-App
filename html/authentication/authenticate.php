@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Authenticate
  * php version 8.1.2
@@ -33,7 +34,7 @@ case 'decrypt_words':
     $result['result'] = decryptWords($input->words);
     break;
 case 'get_cyber_question':
-    $result['result'] = getCyberQuestion($input->index);
+    $result['result'] = getCyberQuestion($input->index, $input->stageId);
     break;
 default:
     $result['error'] = 'Function ' . $input->functionname . ' not found!';
@@ -49,7 +50,7 @@ echo json_encode($result);
  * @param string $password The valid password
  * 
  * @return array
- */ 
+ */
 function authenticate($input, $password)
 {
     $result = [];
@@ -68,7 +69,7 @@ function authenticate($input, $password)
  * the website.
  * 
  * @return array
- */ 
+ */
 function getHiddenWords()
 {
     $result = [];
@@ -83,7 +84,7 @@ function getHiddenWords()
         "impound", "support", "graphic", "smash", "mobile",
         "applied", "assembly", "source", "sensitive", "dismiss",
         "yearn", "occupy", "sickness", "hardship", "stand"
-    ];
+      ];
 
     $result['result'] = [];
 
@@ -97,9 +98,9 @@ function getHiddenWords()
             }
         }
     }
-    
+
     //encrypt the words
-    for ($i=0; $i < count($result['result']); $i++) { 
+    for ($i = 0; $i < count($result['result']); $i++) {
         $result['result'][$i] = encrypt($result['result'][$i]);
     }
     return $result;
@@ -111,21 +112,21 @@ function getHiddenWords()
  * @param string $string The string to encrypt
  * 
  * @return string
- */ 
+ */
 function encrypt($string)
 {
     // Store the cipher method
     $ciphering = "AES-128-CTR";
-    
+
     // Use OpenSSl Encryption method
     $options = 0;
-    
+
     // Non-NULL Initialization Vector for encryption
     $encryptionIV = '1234567891011121';
-    
+
     // Store the encryption key
     $encryptionKey = "Greg Klotz";
-    
+
     // Use openssl_encrypt() function to encrypt the data
     $encryption = openssl_encrypt(
         $string,
@@ -144,7 +145,7 @@ function encrypt($string)
  * @param string $string The string to decrypt
  * 
  * @return string
- */ 
+ */
 function decrypt($string)
 {
     $ciphering = "AES-128-CTR";
@@ -169,18 +170,18 @@ function decrypt($string)
  * @param array $strings The array of strings to decrypt
  * 
  * @return array
- */ 
+ */
 function decryptWords($strings)
 {
     $decryptions = [];
 
-    for ($i = 0; $i < count($strings); $i++) { 
+    for ($i = 0; $i < count($strings); $i++) {
         array_push($decryptions, decrypt($strings[$i]));
     }
 
     return $decryptions;
 }
-function getCyberQuestion($index) {
+function getCyberQuestion($index, $stage_num) {
     // $questions_1 = [
     //     [
     //       "question"=> "What does HTML stand for?",
@@ -284,7 +285,8 @@ function getCyberQuestion($index) {
     //     ]
     // ];
     include "../database.php";
-    $result = getCyberQuestions()[$index];
+    //add if empty check
+    $result = getCyberQuestions($stage_num)[$index];
     return [
       "question"=> $result["question"],
       "options"=> [$result["option_1"], $result["option_2"], $result["option_3"], $result["option_4"]],

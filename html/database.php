@@ -6,7 +6,7 @@
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
 
-  function getCyberQuestions() {
+  function getCyberQuestions($stage_num) {
     require 'database_cred.php';
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -18,7 +18,7 @@
     // echo "Connection successful\n";
     
 
-    $sql = "SELECT * FROM cyber_question";
+    $sql = "SELECT * FROM cyber_question WHERE stage_num={$stage_num}";
     $result = mysqli_query($conn, $sql);
     $table = [];
 
@@ -35,4 +35,5 @@
     mysqli_close($conn);
     return $table;
   }
+  // getCyberQuestions(3);
 ?>

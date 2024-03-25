@@ -75,7 +75,19 @@
             <div class="movie-card cyber-coin-bg" 
             onclick="window.location.href='stages/cyber_coin_stage_1.php';">
                 <h1 class="main-heading-2">
-                    Level 1
+                    Fundamentals of Computer Science
+                </h1>
+            </div>
+            <div class="movie-card cyber-coin-stage2" 
+            onclick="window.location.href='stages/cyber_coin_stage_2.php';">
+                <h1 class="main-heading-2">
+                    Video Games
+                </h1>
+            </div>
+            <div class="movie-card cyber-coin-stage3" 
+            onclick="window.location.href='stages/cyber_coin_stage_3.php';">
+                <h1 class="main-heading-2">
+                    Movies
                 </h1>
             </div>
         </div>

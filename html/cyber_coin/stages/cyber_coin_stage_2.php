@@ -1,6 +1,6 @@
 <?php
 /**
- * Cyber coin stage 1 screen
+ * Cyber coin stage 2 screen
  * php version 8.1.2
  * Authors: Rehan Nagoor Mohideen, Ivan Odiel Magtangob, Harir Al-Rubaye,
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
@@ -14,14 +14,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Fundamentals of Computer Science </title>
+    <title> Video Games </title>
     <style>
         <?php require 'cyber_coin.css'; ?>
     </style>
     <script src="cyber_coin.js"></script>
 </head>
-
-
 
 <body>
     <?php require "../../components/navbar/navbar.php"; ?>
@@ -32,7 +30,7 @@
              <button class="option-button button1" 
               onclick="window.location.href='../../index.php'"></button>
              <button class="option-button button2" 
-              onclick="window.location.href='cyber_coin_stage_1.php'"></button>
+              onclick="window.location.href='cyber_coin_stage_2.php'"></button>
          </div>
      </div>
     <div class="game-content">
@@ -48,9 +46,9 @@
      </div>
      <script>
         document.addEventListener("DOMContentLoaded", function() {
-            displayRandomQuestion(0, 1);
+            displayRandomQuestion(0, 2);
         });
-    </script>   
+    </script>
 
 </body>
 

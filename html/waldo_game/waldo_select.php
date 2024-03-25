@@ -47,55 +47,58 @@
 
             <!-- stages -->
             <h1 class="main-heading">
-                <span>Instruction</span>
+                <span>Instructions</span>
             </h1>
             <p>
-            <ul class="instruction-list">
-                <li class="instruction-item">
-                    Click on the hidden item using the
-                    <strong>Mouse</strong> button upon locating the item
-                </li>
-                <li class="instruction-item">
-                    Double-click to <strong>zoom in</strong>
-                </li>
-                <li class="instruction-item">
-                    Failing to click the hidden item deducts
-                    <strong>1 point</strong> from your score
-                </li>
-                <li class="instruction-item">
-                    Losing all points results in a
-                    <strong>Game Over</strong>
-                </li>
-                <li>Press the light bulb-shaped
-                    <strong>Hint Button</strong>
-                    for a clue about the hidden item.
-                </li>
+                <ul class="instruction-list">
+                    <li class="instruction-item">
+                        Click on the hidden item using the
+                        <strong>Mouse</strong> button upon locating the item
+                    </li>
+                    <li class="instruction-item">
+                        Double-click to <strong>Zoom In</strong>
+                    </li>
+                    <li class="instruction-item">
+                        Failing to click the hidden item deducts
+                        <strong>1 point</strong> from your score
+                    </li>
+                    <li class="instruction-item">
+                        Losing all points results in a
+                        <strong>Game Over</strong>
+                    </li>
+                    <li>Press the light bulb-shaped
+                        <strong>Hint Button</strong>
+                        for a clue about the hidden item.
+                    </li>
                 </ui>
-                </p>
+            </p>
 
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+            <br>
+            <br>
+            <br>
+            <br>
+                
+            <h1 class="main-heading">
+                <span>Stages</span>
+            </h1>
+            <div class="movie-card movie-card-waldo-1"
+            onclick="window.location.href='stages/waldo_stage_1.php';">
                 <h1 class="main-heading">
-                    <span>Stages</span>
+                    Forest
                 </h1>
-                <div class="movie-card movie-card-waldo-1" onclick="window.location.href='stages/waldo_stage_1.php';">
-                    <h1 class="main-heading">
-                        Forest
-                    </h1>
-                </div>
-                <div class="movie-card movie-card-waldo-2" onclick="window.location.href='stages/waldo_stage_2.php';">
-                    <h1 class="main-heading">
-                        Kingdom
-                    </h1>
-                </div>
-                <div class="movie-card movie-card-waldo-3" onclick="window.location.href='stages/waldo_stage_3.php';">
-                    <h1 class="main-heading">
-                        Neighbourhood
-                    </h1>
-                </div>
+            </div>
+            <div class="movie-card movie-card-waldo-2"
+            onclick="window.location.href='stages/waldo_stage_2.php';">
+                <h1 class="main-heading">
+                    Kingdom
+                </h1>
+            </div>
+            <div class="movie-card movie-card-waldo-3"
+            onclick="window.location.href='stages/waldo_stage_3.php';">
+                <h1 class="main-heading">
+                    Neighbourhood
+                </h1>
+            </div>
         </div>
     </section>
 </body>

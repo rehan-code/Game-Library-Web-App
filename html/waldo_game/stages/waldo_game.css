@@ -75,7 +75,8 @@ body {
 
 /* Game over screen stylesa */
 .game-over-screen {
-  z-index: 6;
+  z-index: 1000;
+  display: none;
   width: 100%;
   height: 100%;
   top: 25rem;
@@ -83,13 +84,15 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  display: flex;
-  display: none;
 }
 
 .game-over-screen h1 {
   color: white;
   font-size: 2.5rem;
+}
+
+.game-over-screen.active {
+  display: flex;
 }
 
 .blur {
@@ -363,7 +366,7 @@ body {
   left: 26.2%;
   width: 1.6%;
   height: 4.9%;
-  background-color: rgba(6, 189, 37, 0);
+  background-color: rgb(6 189 37 / 0%);
   background-image: url("../../images/waldo/dragon.png");
   background-size: cover;
   background-position: 50% 10%;

@@ -448,6 +448,18 @@ footer {
   background-size: cover;
 }
 
+.cyber-coin-stage2 {
+  background-image: url("../images/cyber_coin/stage2.jpg");
+  background-position: 50% 87%;
+  background-size: cover;
+}
+
+.cyber-coin-stage3 {
+  background-image: url("../images/cyber_coin/stage3.png");
+  background-position: 50% 87%;
+  background-size: cover;
+}
+
 .movie-card .info-text {
   width: 100%;
   font-weight: bold;
@@ -530,6 +542,7 @@ footer {
 
 .instruction-list {
   list-style-type: none;
+  min-width: 100%;
   padding: 0;
 }
 
