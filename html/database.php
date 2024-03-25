@@ -6,34 +6,43 @@
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
 
-  function getCyberQuestions($stage_num) {
-    require 'database_cred.php';
+/**
+ * Function gets cyber all cyber coin questions for a stage
+ * 
+ * @param $stage_num of the stage the user is in
+ * 
+ * @return array of array of quest, options and answer
+ */
+function getCyberQuestions($stage_num)
+{
+    include 'database_cred.php';
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     // Check connection
     if (!$conn) {
-      return [];
-      // die("Connection failed: " . mysqli_connect_error());
+        return [];
+        // die("Connection failed: " . mysqli_connect_error());
     }
     // echo "Connection successful\n";
-    
+
 
     $sql = "SELECT * FROM cyber_question WHERE stage_num={$stage_num}";
     $result = mysqli_query($conn, $sql);
     $table = [];
 
     if (mysqli_num_rows($result) > 0) {
-      while($row = mysqli_fetch_assoc($result)) {
-        array_push($table, $row);
-        // echo "id: " . $row["id"]. " - Question: " . $row["question"]. " " . "<br>";
-      }
-    } 
+        while ($row = mysqli_fetch_assoc($result)) {
+            array_push($table, $row);
+            // echo "id: " . $row["id"]. " - Question: " . 
+            // $row["question"]. " " . "<br>";
+        }
+    }
     // else {
     //   echo "0 results";
     // }
 
     mysqli_close($conn);
     return $table;
-  }
-  // getCyberQuestions(3);
+}
+// getCyberQuestions(3);
 ?>

@@ -6,181 +6,238 @@
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
 
-  $servername = "db";
-  $username = "root";
-  $password = "rootpassword";
-  $dbname = "teamDB";
+$servername = "db";
+$username = "root";
+$password = "rootpassword";
+$dbname = "teamDB";
 
-  // Create connection
-  // $conn = mysqli_connect($servername, $username, $password);
-  // // Check connection
-  // if (!$conn) {
-  //   die("Connection failed: " . mysqli_connect_error());
-  // }
+// Create connection
+// $conn = mysqli_connect($servername, $username, $password);
+// // Check connection
+// if (!$conn) {
+//   die("Connection failed: " . mysqli_connect_error());
+// }
 
-  // echo "Connection successful\n";
+// echo "Connection successful\n";
 
-  // // Create database
-  // $sql = "CREATE DATABASE teamDB";
-  // if ($conn->query($sql) === TRUE) {
-  //   echo "Database created successfully\n";
-  // } else {
-  //   echo "Error creating database: " . $conn->error;
-  // }
-  
-  // mysqli_close($conn);
+// // Create database
+// $sql = "CREATE DATABASE teamDB";
+// if ($conn->query($sql) === TRUE) {
+//   echo "Database created successfully\n";
+// } else {
+//   echo "Error creating database: " . $conn->error;
+// }
+
+// mysqli_close($conn);
 
 
-  // Create connection
-  $conn = mysqli_connect($servername, $username, $password, $dbname);
-  // Check connection
-  if (!$conn) {
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
-  }
+}
 
-  // Drop table
-  $sql = "DROP TABLE cyber_question;";
-  if (mysqli_query($conn, $sql)) {
+// Drop table
+$sql = "DROP TABLE cyber_question;";
+if (mysqli_query($conn, $sql)) {
     echo "Table cyber_question dropped successfully\n";
-  } else {
+} else {
     echo "Error dropping table: " . $conn->error;
-  }
+}
 
-  // sql to create cyber_question table
-  $sql = "CREATE TABLE cyber_question (
-  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  stage_num INT(1) UNSIGNED,
-  question VARCHAR(255) NOT NULL,
-  option_1 VARCHAR(255) NOT NULL,
-  option_2 VARCHAR(255) NOT NULL,
-  option_3 VARCHAR(255) NOT NULL,
-  option_4 VARCHAR(255) NOT NULL,
-  answer VARCHAR(255) NOT NULL
-  );";
-  
-  if (mysqli_query($conn, $sql)) {
+// sql to create cyber_question table
+$sql = "CREATE TABLE cyber_question (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+stage_num INT(1) UNSIGNED,
+question VARCHAR(255) NOT NULL,
+option_1 VARCHAR(255) NOT NULL,
+option_2 VARCHAR(255) NOT NULL,
+option_3 VARCHAR(255) NOT NULL,
+option_4 VARCHAR(255) NOT NULL,
+answer VARCHAR(255) NOT NULL
+);";
+
+if (mysqli_query($conn, $sql)) {
     echo "Table cyber_question created successfully\n";
-  } else {
+} else {
     echo "Error creating table: " . $conn->error;
-  }
+}
 
-  //Delete all data
-  // sql to delete a record
-  $sql = "DELETE FROM cyber_question";
+//Delete all data
+// sql to delete a record
+$sql = "DELETE FROM cyber_question";
 
-  if (mysqli_query($conn, $sql)) {
+if (mysqli_query($conn, $sql)) {
     echo "Record deleted successfully\n";
-  } else {
+} else {
     echo "Error deleting record: " . mysqli_error($conn);
-  }
+}
 
-  // Insert data into table
-  $questions_1 = [
+// Insert data into table
+$questions_1 = [
     [
-      "question"=> "What does HTML stand for?",
-      "options"=> ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyperlink and Text Markup Language"],
-      "correct_answer"=> "Hyper Text Markup Language"
+        "question" => "What does HTML stand for?",
+        "options" => [
+            "Hyper Text Markup Language",
+            "Hyperlinks and Text Markup Language",
+            "Home Tool Markup Language",
+            "Hyperlink and Text Markup Language"
+        ],
+        "correct_answer" => "Hyper Text Markup Language"
     ],
     [
-      "question"=> "Which of the following is not a programming language?",
-      "options"=> ["Java", "Python", "HTML", "C++"],
-      "correct_answer"=> "HTML"
+        "question" => "Which of the following is not a programming language?",
+        "options" => ["Java", "Python", "HTML", "C++"],
+        "correct_answer" => "HTML"
     ],
     [
-      "question"=> "What does CSS stand for?",
-      "options"=> ["Cascading Style Sheets", "Creative Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
-      "correct_answer"=> "Cascading Style Sheets"
+        "question" => "What does CSS stand for?",
+        "options" => [
+            "Cascading Style Sheets",
+            "Creative Style Sheets",
+            "Computer Style Sheets",
+            "Colorful Style Sheets"
+        ],
+        "correct_answer" => "Cascading Style Sheets"
     ],
     [
-      "question"=> "Which of the following is a front-end framework for building user interfaces?",
-      "options"=> ["Node.js", "React", "Express", "Django"],
-      "correct_answer"=> "React"
+        "question" => "Which of the following is a front-end framework 
+    for building user interfaces?",
+        "options" => ["Node.js", "React", "Express", "Django"],
+        "correct_answer" => "React"
     ],
     [
-      "question"=> "Which of the following is an example of a relational database management system?",
-      "options"=> ["MongoDB", "MySQL", "Redis", "SQLite"],
-      "correct_answer"=> "MySQL"
+        "question" => "Which of the following is an example of a 
+    relational database management system?",
+        "options" => ["MongoDB", "MySQL", "Redis", "SQLite"],
+        "correct_answer" => "MySQL"
     ],
     [
-      "question"=> "What does CPU stand for?",
-      "options"=> ["Central Processing Unit", "Computer Processing Unit", "Control Processing Unit", "Core Processing Unit"],
-      "correct_answer"=> "Central Processing Unit"
+        "question" => "What does CPU stand for?",
+        "options" => [
+            "Central Processing Unit",
+            "Computer Processing Unit",
+            "Control Processing Unit",
+            "Core Processing Unit"
+        ],
+        "correct_answer" => "Central Processing Unit"
     ],
     [
-      "question"=> "Which programming language is known as the \'father\' of all programming languages?",
-      "options"=> ["C", "Python", "Fortran", "Java"],
-      "correct_answer"=> "C"
+        "question" => "Which programming language is known as 
+    the \'father\' of all programming languages?",
+        "options" => ["C", "Python", "Fortran", "Java"],
+        "correct_answer" => "C"
     ],
     [
-      "question"=> "What is the capital of Silicon Valley?",
-      "options"=> ["San Francisco", "San Jose", "Santa Clara", "Palo Alto"],
-      "correct_answer"=> "San Jose"
+        "question" => "What is the capital of Silicon Valley?",
+        "options" => ["San Francisco", "San Jose", "Santa Clara", "Palo Alto"],
+        "correct_answer" => "San Jose"
     ],
     [
-      "question"=> "What does SQL stand for?",
-      "options"=> ["Structured Query Language", "Sequential Query Language", "Structured Question Language", "Sequential Question Language"],
-      "correct_answer"=> "Structured Query Language"
+        "question" => "What does SQL stand for?",
+        "options" => [
+            "Structured Query Language",
+            "Sequential Query Language",
+            "Structured Question Language",
+            "Sequential Question Language"
+        ],
+        "correct_answer" => "Structured Query Language"
     ],
     [
-      "question"=> "Which company developed the Python programming language?",
-      "options"=> ["Microsoft", "Google", "Apple", "Facebook"],
-      "correct_answer"=> "Google"
+        "question" => "Which company developed the Python programming language?",
+        "options" => ["Microsoft", "Google", "Apple", "Facebook"],
+        "correct_answer" => "Google"
     ],
     [
-      "question"=> "What is the main purpose of JavaScript?",
-      "options"=> ["Styling web pages", "Creating dynamic content", "Database management", "Server-side scripting"],
-      "correct_answer"=> "Creating dynamic content"
+        "question" => "What is the main purpose of JavaScript?",
+        "options" => [
+            "Styling web pages",
+            "Creating dynamic content",
+            "Database management",
+            "Server-side scripting"
+        ],
+        "correct_answer" => "Creating dynamic content"
     ],
     [
-      "question"=> "What is the name of the algorithm used to sort elements in ascending or descending order?",
-      "options"=> ["Insertion Sort", "Merge Sort", "Quick Sort", "All of the other"],
-      "correct_answer"=> "All of the other"
+        "question" => "What is the name of the algorithm used to 
+    sort elements in ascending or descending order?",
+        "options" => [
+            "Insertion Sort",
+            "Merge Sort",
+            "Quick Sort",
+            "All of the other"
+        ],
+        "correct_answer" => "All of the other"
     ],
     [
-      "question"=> "Which protocol is used for secure communication over a computer network?",
-      "options"=> ["HTTP", "FTP", "SSH", "SMTP"],
-      "correct_answer"=> "SSH"
+        "question" => "Which protocol is used for secure communication 
+    over a computer network?",
+        "options" => ["HTTP", "FTP", "SSH", "SMTP"],
+        "correct_answer" => "SSH"
     ],
     [
-      "question"=> "Which data structure uses a Last-In-First-Out (LIFO) approach?",
-      "options"=> ["Queue", "Stack", "Tree", "Linked List"],
-      "correct_answer"=> "Stack"
+        "question" => "Which data structure uses a Last-In-First-Out (LIFO) 
+        approach?",
+        "options" => ["Queue", "Stack", "Tree", "Linked List"],
+        "correct_answer" => "Stack"
     ],
     [
-      "question"=> "What does URL stand for?",
-      "options"=> ["Uniform Resource Locator", "Universal Record Locator", "Uniform Resource Link", "Universal Resource Link"],
-      "correct_answer"=> "Uniform Resource Locator"
+        "question" => "What does URL stand for?",
+        "options" => [
+            "Uniform Resource Locator",
+            "Universal Record Locator",
+            "Uniform Resource Link",
+            "Universal Resource Link"
+        ],
+        "correct_answer" => "Uniform Resource Locator"
     ],
     [
-      "question"=> "What is the primary function of a firewall?",
-      "options"=> ["Protecting against viruses", "Filtering network traffic", "Encrypting data", "Managing user authentication"],
-      "correct_answer"=> "Filtering network traffic"
+        "question" => "What is the primary function of a firewall?",
+        "options" => [
+            "Protecting against viruses",
+            "Filtering network traffic",
+            "Encrypting data",
+            "Managing user authentication"
+        ],
+        "correct_answer" => "Filtering network traffic"
     ],
     [
-      "question"=> "Which of the following is not a type of network topology?",
-      "options"=> ["Star", "Ring", "Cube", "Mesh"],
-      "correct_answer"=> "Cube"
+        "question" => "Which of the following is not a type of network topology?",
+        "options" => ["Star", "Ring", "Cube", "Mesh"],
+        "correct_answer" => "Cube"
     ],
     [
-      "question"=> "What is the maximum value that can be represented with a single byte?",
-      "options"=> ["255", "256", "127", "-128"],
-      "correct_answer"=> "255"
+        "question" => "What is the maximum value that can be represented 
+    with a single byte?",
+        "options" => ["255", "256", "127", "-128"],
+        "correct_answer" => "255"
     ],
     [
-      "question"=> "What is the primary function of an operating system?",
-      "options"=> ["Managing hardware resources", "Executing application software", "Handling user input", "Providing internet connectivity"],
-      "correct_answer"=> "Managing hardware resources"
+        "question" => "What is the primary function of an operating system?",
+        "options" => [
+            "Managing hardware resources",
+            "Executing application software",
+            "Handling user input",
+            "Providing internet connectivity"
+        ],
+        "correct_answer" => "Managing hardware resources"
     ],
     [
-      "question"=> "Which of the following is not a programming paradigm?",
-      "options"=> ["Object-Oriented Programming", "Procedural Programming", "Functional Programming", "Logical Programming"],
-      "correct_answer"=> "Logical Programming"
+        "question" => "Which of the following is not a programming paradigm?",
+        "options" => [
+            "Object-Oriented Programming",
+            "Procedural Programming",
+            "Functional Programming",
+            "Logical Programming"
+        ],
+        "correct_answer" => "Logical Programming"
     ]
-  ];
-  $questions_2 = [
+];
+$questions_2 = [
     [
         "question" => "Which popular video game franchise
-        features a protagonist named \'Mario\'?",
+      features a protagonist named \'Mario\'?",
         "options" => [
             "The Legend of Zelda",
             "Final Fantasy",
@@ -191,13 +248,13 @@
     ],
     [
         "question" => "In the game \'The Legend of Zelda: Breath of the Wild\',
-        what is the name of the protagonist?",
+      what is the name of the protagonist?",
         "options" => ["Link", "Zelda", "Ganondorf", "Sheik"],
         "correct_answer" => "Link"
     ],
     [
         "question" => "Which of the following is a popular battle
-        royale game developed by Epic Games?",
+      royale game developed by Epic Games?",
         "options" => [
             "Fortnite",
             "Apex Legends",
@@ -208,7 +265,7 @@
     ],
     [
         "question" => "What is the main objective in the game
-        \'Minecraft\'?",
+      \'Minecraft\'?",
         "options" => [
             "Survive",
             "Defeat the Ender Dragon",
@@ -219,7 +276,7 @@
     ],
     [
         "question" => "Which popular video game series features
-        a character named \'Master Chief\'?",
+      a character named \'Master Chief\'?",
         "options" => [
             "Halo",
             "Call of Duty",
@@ -230,7 +287,7 @@
     ],
     [
         "question" => "Which gaming console is known for franchises
-        like \'God of War\' and \'Uncharted\'?",
+      like \'God of War\' and \'Uncharted\'?",
         "options" => [
             "PlayStation",
             "Xbox",
@@ -241,7 +298,7 @@
     ],
     [
         "question" => "What is the best-selling video game of all
-        time as of 2022?",
+      time as of 2022?",
         "options" => [
             "Minecraft",
             "Tetris",
@@ -252,7 +309,7 @@
     ],
     [
         "question" => "In the game \'The Witcher 3: Wild Hunt\',
-        what is the name of the main character?",
+      what is the name of the main character?",
         "options" => [
             "Geralt",
             "Ciri",
@@ -275,7 +332,7 @@
         "question" => "What genre of game is \'League of Legends\'?",
         "options" => [
             "MOBA (Multiplayer Online Battle Arena)",
-            "MMORPG (Massively Multiplayer Online Role-Playing Game)", 
+            "MMORPG (Massively Multiplayer Online Role-Playing Game)",
             "FPS (First-Person Shooter)",
             "RPG (Role-Playing Game)"
         ],
@@ -283,7 +340,7 @@
     ],
     [
         "question" => "Which gaming franchise features a
-        post-apocalyptic setting and includes titles like \'Fallout 4\'?",
+      post-apocalyptic setting and includes titles like \'Fallout 4\'?",
         "options" => [
             "Elder Scrolls",
             "Doom",
@@ -294,7 +351,7 @@
     ],
     [
         "question" => "What is the name of the main character
-        in the \'Assassin\'s Creed\' series?",
+      in the \'Assassin\'s Creed\' series?",
         "options" => [
             "Ezio Auditore",
             "Altair Ibn-La\'Ahad",
@@ -305,8 +362,8 @@
     ],
     [
         "question" => "Which game features a battle between
-        terrorists and counter-terrorists and includes maps
-        like \'Dust II\' and \'Mirage\'?",
+      terrorists and counter-terrorists and includes maps
+      like \'Dust II\' and \'Mirage\'?",
         "options" => [
             "Call of Duty",
             "Counter-Strike: Global Offensive",
@@ -317,7 +374,7 @@
     ],
     [
         "question" => "What is the main mechanic in the game
-        \'Among Us\'?",
+      \'Among Us\'?",
         "options" => [
             "Solving puzzles",
             "Building structures",
@@ -328,8 +385,8 @@
     ],
     [
         "question" => "Which game features a battle between two
-        teams of five players each, with the objective of destroying
-        the opposing team\'s base?",
+      teams of five players each, with the objective of destroying
+      the opposing team\'s base?",
         "options" => [
             "Dota 2",
             "Rocket League",
@@ -340,7 +397,7 @@
     ],
     [
         "question" => "In the game \'Pokémon\', what is the name of
-        the main character that players control?",
+      the main character that players control?",
         "options" => [
             "Pikachu",
             "Ash Ketchum",
@@ -351,7 +408,7 @@
     ],
     [
         "question" => "Which game franchise is known for its
-        open-world crime action games, such as \'Grand Theft Auto V\'?",
+      open-world crime action games, such as \'Grand Theft Auto V\'?",
         "options" => [
             "Watch Dogs",
             "Saints Row",
@@ -362,7 +419,7 @@
     ],
     [
         "question" => "What is the primary objective in the game
-        \'Dark Souls\'?",
+      \'Dark Souls\'?",
         "options" => [
             "Defeat bosses",
             "Solve puzzles",
@@ -373,7 +430,7 @@
     ],
     [
         "question" => "Which game features a blocky, procedurally-generated
-        3D world that allows players to explore and create?",
+      3D world that allows players to explore and create?",
         "options" => [
             "Terraria",
             "Roblox",
@@ -384,7 +441,7 @@
     ],
     [
         "question" => "What is the name of the character players
-        control in the game \'Half-Life\'?",
+      control in the game \'Half-Life\'?",
         "options" => [
             "Gordon Freeman",
             "Alyx Vance",
@@ -393,8 +450,8 @@
         ],
         "correct_answer" => "Gordon Freeman"
     ]
-  ];
-  $questions_3 = [
+];
+$questions_3 = [
     [
         "question" => "Who directed the movie \'Titanic\'?",
         "options" => [
@@ -407,8 +464,8 @@
     ],
     [
         "question" => "What is the name of the fictional
-        British spy in the movie series created by Ian
-        Fleming?",
+      British spy in the movie series created by Ian
+      Fleming?",
         "options" => [
             "Jason Bourne",
             "Ethan Hunt",
@@ -419,7 +476,7 @@
     ],
     [
         "question" => "Which movie features the song
-        \'Hakuna Matata\'?",
+      \'Hakuna Matata\'?",
         "options" => [
             "Frozen",
             "The Lion King",
@@ -430,7 +487,7 @@
     ],
     [
         "question" => "In which movie does the character
-        Harry Potter first appear?",
+      Harry Potter first appear?",
         "options" => [
             "Harry Potter and the Chamber of Secrets",
             "Harry Potter and the Sorcerer\'s Stone",
@@ -441,7 +498,7 @@
     ],
     [
         "question" => "What is the name of the island in
-        \'Jurassic Park\'",
+      \'Jurassic Park\'",
         "options" => [
             "Skull Island",
             "Monster Island",
@@ -472,7 +529,7 @@
     ],
     [
         "question" => "What is the main character\'s name in
-        \'The Matrix\'?",
+      \'The Matrix\'?",
         "options" => [
             "Morpheus",
             "Neo",
@@ -483,7 +540,7 @@
     ],
     [
         "question" => "In \'Finding Nemo\', what type of fish
-        is Nemo?",
+      is Nemo?",
         "options" => [
             "Clownfish",
             "Goldfish",
@@ -494,7 +551,7 @@
     ],
     [
         "question" => "Who is the famous British secret agent in
-        movies?",
+      movies?",
         "options" => [
             "Jason Bourne",
             "Ethan Hunt",
@@ -520,7 +577,7 @@
     ],
     [
         "question" => "In which movie series is the fictional
-        character \'Rocky Balboa\' the main character?",
+      character \'Rocky Balboa\' the main character?",
         "options" => ["Rocky", "Rambo", "Terminator", "Die Hard"],
         "correct_answer" => "Rocky"
     ],
@@ -531,7 +588,7 @@
     ],
     [
         "question" => "Who played the main character in the
-        1994 film \'Forrest Gump\'?",
+      1994 film \'Forrest Gump\'?",
         "options" => [
             "Tom Hanks",
             "Brad Pitt",
@@ -542,13 +599,13 @@
     ],
     [
         "question" => "What year was the original
-        \'Jurassic Park\' movie released?",
+      \'Jurassic Park\' movie released?",
         "options" => ["1990", "1993", "1996", "1999"],
         "correct_answer" => "1993"
     ],
     [
         "question" => "In \'Back to the Future\', what makes time
-        travel possible?",
+      travel possible?",
         "options" => [
             "A black hole",
             "A magic spell",
@@ -579,105 +636,106 @@
     ],
     [
         "question" => "What color is the pill that Neo takes in
-        \'The Matrix\'?",
+      \'The Matrix\'?",
         "options" => ["Red", "Blue", "Green", "Yellow"],
         "correct_answer" => "Red"
     ],
 
-  ];
-  foreach ($questions_1 as $item) {
+];
+foreach ($questions_1 as $item) {
     $sql = "INSERT INTO cyber_question (
-      question,
-      stage_num,
-      option_1,
-      option_2,
-      option_3,
-      option_4,
-      answer
-    )
-    VALUES (
-    '{$item["question"]}',
-    1,
-    '{$item["options"][0]}', 
-    '{$item["options"][1]}', 
-    '{$item["options"][2]}', 
-    '{$item["options"][3]}',
-    '{$item["correct_answer"]}'
-    );";
-    
+    question,
+    stage_num,
+    option_1,
+    option_2,
+    option_3,
+    option_4,
+    answer
+  )
+  VALUES (
+  '{$item["question"]}',
+  1,
+  '{$item["options"][0]}', 
+  '{$item["options"][1]}', 
+  '{$item["options"][2]}', 
+  '{$item["options"][3]}',
+  '{$item["correct_answer"]}'
+  );";
+
     if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully\n";
+        echo "New record created successfully\n";
     } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-  }
-  foreach ($questions_2 as $item) {
+}
+foreach ($questions_2 as $item) {
     $sql = "INSERT INTO cyber_question (
-      question,
-      stage_num,
-      option_1,
-      option_2,
-      option_3,
-      option_4,
-      answer
-    )
-    VALUES (
-    '{$item["question"]}',
-    2,
-    '{$item["options"][0]}', 
-    '{$item["options"][1]}', 
-    '{$item["options"][2]}', 
-    '{$item["options"][3]}',
-    '{$item["correct_answer"]}'
-    );";
-    
+    question,
+    stage_num,
+    option_1,
+    option_2,
+    option_3,
+    option_4,
+    answer
+  )
+  VALUES (
+  '{$item["question"]}',
+  2,
+  '{$item["options"][0]}', 
+  '{$item["options"][1]}', 
+  '{$item["options"][2]}', 
+  '{$item["options"][3]}',
+  '{$item["correct_answer"]}'
+  );";
+
     if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully\n";
+        echo "New record created successfully\n";
     } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-  }
-  foreach ($questions_3 as $item) {
+}
+foreach ($questions_3 as $item) {
     $sql = "INSERT INTO cyber_question (
-      question,
-      stage_num,
-      option_1,
-      option_2,
-      option_3,
-      option_4,
-      answer
-    )
-    VALUES (
-    '{$item["question"]}',
-    3,
-    '{$item["options"][0]}', 
-    '{$item["options"][1]}', 
-    '{$item["options"][2]}', 
-    '{$item["options"][3]}',
-    '{$item["correct_answer"]}'
-    );";
-    
+    question,
+    stage_num,
+    option_1,
+    option_2,
+    option_3,
+    option_4,
+    answer
+  )
+  VALUES (
+  '{$item["question"]}',
+  3,
+  '{$item["options"][0]}', 
+  '{$item["options"][1]}', 
+  '{$item["options"][2]}', 
+  '{$item["options"][3]}',
+  '{$item["correct_answer"]}'
+  );";
+
     if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully\n";
+        echo "New record created successfully\n";
     } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-  }
+}
 
 
-  // Select all from cyber questions table
-  $sql = "SELECT * FROM cyber_question";
-  $result = mysqli_query($conn, $sql);
+// Select all from cyber questions table
+$sql = "SELECT * FROM cyber_question";
+$result = mysqli_query($conn, $sql);
 
-  if (mysqli_num_rows($result) > 0) {
+if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-      echo "id: " . $row["id"]. " - stage: " . $row["stage_num"]. " - Question: " . $row["question"]. " " . "<br>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"] . " - stage: " . 
+        $row["stage_num"] . " - Question: " . $row["question"] . " " . "<br>";
     }
-  } else {
+} else {
     echo "0 results";
-  }
+}
 
-  mysqli_close($conn);
+mysqli_close($conn);
 
 ?>
