@@ -1,4 +1,5 @@
 var totalCorrectAnswers = 0;
+var selectedQuestion;
 
 function shuffleOptions(optionsArray) {
     for (let i = optionsArray.length - 1; i > 0; i--) {
@@ -106,7 +107,6 @@ async function showCongratsScreen(totalScore) {
 
 
 async function displayRandomQuestion(questionIndex, stageId) {
-    var selectedQuestion;
     // Get the question from server
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
@@ -151,20 +151,22 @@ async function displayRandomQuestion(questionIndex, stageId) {
             }
         };
         answerOptionsElement.appendChild(optionButtonElement);
+        updateTimer(stageId)
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+async function updateTimer(stageId){
     var timerElement = document.getElementById('timer');
     var timeLeft = 30; // countdown in seconds
     var interval = setInterval(function() {
         if (timeLeft <= 0) {
             clearInterval(interval);
             timerElement.innerHTML = 'Done!';
-            
+            showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers, stageId);
+
         } else {
             timeLeft--;
             timerElement.innerHTML = timeLeft + 's';
         }
-    }, 1000);
-});
+    }, 1000); // every second
+}
