@@ -153,3 +153,18 @@ async function displayRandomQuestion(questionIndex, stageId) {
         answerOptionsElement.appendChild(optionButtonElement);
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var timerElement = document.getElementById('timer');
+    var timeLeft = 30; // countdown in seconds
+    var interval = setInterval(function() {
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            timerElement.innerHTML = 'Done!';
+            
+        } else {
+            timeLeft--;
+            timerElement.innerHTML = timeLeft + 's';
+        }
+    }, 1000);
+});

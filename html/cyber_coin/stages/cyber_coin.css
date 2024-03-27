@@ -2,11 +2,12 @@
     text-align: center;
 
     /* display: flex; */
-  }
-  
+}
+
 .container {
     margin: 0 auto;
-    max-width: 600px; /* Adjust as needed */
+    max-width: 600px;
+    /* Adjust as needed */
     padding: 20px;
     text-align: center;
 }
@@ -19,7 +20,8 @@ h1#question {
 #options button {
     display: block;
     width: 100%;
-    max-width: 400px; /* Adjust as needed */
+    max-width: 400px;
+    /* Adjust as needed */
     margin: 10px auto;
     padding: 10px 20px;
     font-size: 18px;
@@ -153,11 +155,30 @@ h1#question {
 
 .game-over-screen h2 {
     color: black;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 .game-over-screen p {
     color: white;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
+.timer-container {
+    /* background-color: #e9f5ff; */
+    border-radius: 20px;
+    padding: 10px 20px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+    display: inline-flex;
+    align-items: center;
+}
+
+.timer-icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.timer-text {
+    font-size: 24px;
+    color: #333;
+}

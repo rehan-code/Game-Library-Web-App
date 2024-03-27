@@ -37,6 +37,11 @@
         <div class="main-heading">
             <h1>Cyber Coin Quest</h1>
             <h2 id="score">Score: </h2>
+            <div class="timer-container">
+                <span class="timer-icon">&#9202;</span>
+                <span id="timer" class="timer-text">30s</span>
+            </div>
+    </div>
         </div>
         <div class="container">
             <h1 id="question"></h1>
