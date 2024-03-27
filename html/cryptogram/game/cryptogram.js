@@ -10,24 +10,25 @@ document.addEventListener('DOMContentLoaded', function() {
         sentence = `An investment banker involved in various unethical and illegal activities who abuses his money and power to avoid all forms of legal repercussions. That being said, his charges mainly include manipulating the market, embezzlement of funds, bribery, loan sharking, and various other forms of bank or market financial schemes.`;
     } else {
         const prompts=[
-            `According to all known laws of aviation, there is no way a bee should be able to fly.
-            Its wings are too small to get its fat little body off the ground. The bee, of course,
-            flies anyway: because bees don't care what humans think is impossible...`,
-            'The quick brown fox jumps over the lazy dog.',
-            `There once was a boy named Evan. He lived with his parents in their house and played video games all day.
-            One day there was this new game called Palworld. Evan was excited to play the game, but he sucked. The end`,
-            `Now, this is a story all about how, my life got flipped, turned upside down,
-            and I'd like to take a minute, just sit right there, I'll tell you how I became
-            the prince of a town called Bel-Air.`,
-            `To be, or not to be, that is the question:
-            Whether 'tis nobler in the mind to suffer
-            The slings and arrows of outrageous fortune,
-            Or to take arms against a sea of troubles
-            And by opposing end them. To die; to sleep,
-            No more; and by a sleep to say we end
-            The heart-ache and the thousand natural shocks
-            That flesh is heir to: 'tis a consummation
-            Devoutly to be wish'd. To die, to sleep...`
+            "According to all known laws of aviation, there is no way a bee should be able to fly."
+            + " Its wings are too small to get its fat little body off the ground. The bee, of course,"
+            + " flies anyway: because bees don't care what humans think is impossible...",
+            "The quick brown fox jumps over the lazy dog.",
+            "I see a little silhouetto of a man"
+            + " Scaramouche, Scaramouche, will you do the Fandango?"
+            + " Thunderbolt and lightning, very, very frightening me,",
+            "Now, this is a story all about how, my life got flipped, turned upside down,"
+            + " and I'd like to take a minute, just sit right there, I'll tell you how I became"
+            + " the prince of a town called Bel-Air.",
+            "To be, or not to be, that is the question:"
+            + " Whether 'tis nobler in the mind to suffer"
+            + ' The slings and arrows of outrageous fortune,'
+            + " Or to take arms against a sea of troubles"
+            + " And by opposing end them. To die; to sleep,"
+            + " No more; and by a sleep to say we end"
+            + " The heart-ache and the thousand natural shocks"
+            + " That flesh is heir to: 'tis a consummation"
+            + " Devoutly to be wish'd. To die, to sleep..."
         ];
         
         var promptIndex = Math.floor(Math.random() * prompts.length);
@@ -116,8 +117,44 @@ function setupInputHandlers() {
             // Update all inputs with the same encryptedChar regardless of correctness
             const allInputs = cryptogramContainer.querySelectorAll(`.letter-container[data-encrypted="${encryptedChar}"] input`);
             allInputs.forEach(input => input.value = guess);
+            highlightDuplicates(inputs, allInputs);
         });
     });
+}
+
+function highlightDuplicates(inputs) {
+    const guesses = new Map();
+
+    inputs.forEach(input => {
+        const container = input.closest('.letter-container');
+        const encryptedChar = container.dataset.encrypted;
+        const inputValue = input.value;
+
+        if (inputValue && inputValue != '?') {
+            const encryptedChars = guesses.get(inputValue) || new Set();
+            encryptedChars.add(encryptedChar);
+            guesses.set(inputValue, encryptedChars);
+
+            input.style.color = 'black';
+
+            if (encryptedChars.size > 1) {
+                inputs.forEach(input => {
+                    if (input.value === inputValue) {
+                        input.style.color = 'red';
+                    }
+                });
+            }
+        }
+    })
+}
+
+function highlightEmpty(inputs) {
+    inputs.forEach(input => {
+        if (!input.value) {
+            input.value = '?';
+            input.style.color = 'red';
+        }
+    })
 }
 
 function checkAllBoxesFilled(sentence) {
@@ -139,7 +176,8 @@ function checkAllBoxesFilled(sentence) {
             }
         }
     } else {
-        // Show the custom popup
+        // Show the custom popup + highlight empty boxes
+        highlightEmpty(inputs);
         document.getElementById('popup-container').style.display = 'block';
     }
 } 
