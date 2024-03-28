@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Setup database for local dev
  * php version 8.1.2
@@ -9,23 +10,23 @@
 require 'database_cred.php';
 
 // Create connection
-// $conn = mysqli_connect($servername, $username, $password);
-// // Check connection
-// if (!$conn) {
-//   die("Connection failed: " . mysqli_connect_error());
-// }
+$conn = mysqli_connect($servername, $username, $password);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-// echo "Connection successful\n";
+echo "Connection successful\n";
 
-// // Create database
-// $sql = "CREATE DATABASE teamDB";
-// if ($conn->query($sql) === TRUE) {
-//   echo "Database created successfully\n";
-// } else {
-//   echo "Error creating database: " . $conn->error;
-// }
+// Create database
+$sql = "CREATE DATABASE teamDB";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully\n";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
 
-// mysqli_close($conn);
+mysqli_close($conn);
 
 
 // Create connection
@@ -36,12 +37,12 @@ if (!$conn) {
 }
 
 // Drop table
-$sql = "DROP TABLE cyber_question;";
-if (mysqli_query($conn, $sql)) {
-    echo "Table cyber_question dropped successfully\n";
-} else {
-    echo "Error dropping table: " . $conn->error;
-}
+// $sql = "DROP TABLE cyber_question;";
+// if (mysqli_query($conn, $sql)) {
+//     echo "Table cyber_question dropped successfully\n";
+// } else {
+//     echo "Error dropping table: " . $conn->error;
+// }
 
 // sql to create cyber_question table
 $sql = "CREATE TABLE cyber_question (
@@ -637,6 +638,207 @@ $questions_3 = [
         "options" => ["Red", "Blue", "Green", "Yellow"],
         "correct_answer" => "Red"
     ],
+    [
+        "question" => "Which film features a giant great white shark?",
+        "options" => [
+            "Deep Blue Sea",
+            "Jaws",
+            "The Meg",
+            "Sharknado"
+        ],
+        "correct_answer" => "Jaws"
+    ],
+    [
+        "question" => "Who starred as the titular character in the 1984 film 'The Terminator'?",
+        "options" => [
+            "Sylvester Stallone",
+            "Arnold Schwarzenegger",
+            "Bruce Willis",
+            "Jean-Claude Van Damme"
+        ],
+        "correct_answer" => "Arnold Schwarzenegger"
+    ],
+    [
+        "question" => "What year was the first 'Star Wars' film released?",
+        "options" => [
+            "1975",
+            "1977",
+            "1979",
+            "1981"
+        ],
+        "correct_answer" => "1977"
+    ],
+    [
+        "question" => "What is the name of the princess in 'The Princess Bride'?",
+        "options" => [
+            "Princess Buttercup",
+            "Princess Aurora",
+            "Princess Daisy",
+            "Princess Zelda"
+        ],
+        "correct_answer" => "Princess Buttercup"
+    ],
+    [
+        "question" => "In 'The Godfather', who was the head of the Corleone family before Michael?",
+        "options" => [
+            "Sonny Corleone",
+            "Vito Corleone",
+            "Fredo Corleone",
+            "Tom Hagen"
+        ],
+        "correct_answer" => "Vito Corleone"
+    ],
+    [
+        "question" => "What fictional city is the setting of 'Batman Begins'?",
+        "options" => [
+            "Metropolis",
+            "Gotham City",
+            "Central City",
+            "Star City"
+        ],
+        "correct_answer" => "Gotham City"
+    ],
+    [
+        "question" => "Who directed 'Pulp Fiction'?",
+        "options" => [
+            "Martin Scorsese",
+            "Quentin Tarantino",
+            "Steven Spielberg",
+            "Coen Brothers"
+        ],
+        "correct_answer" => "Quentin Tarantino"
+    ],
+    [
+        "question" => "What is the main theme of 'Avatar'?",
+        "options" => [
+            "Time travel",
+            "Virtual reality",
+            "Space exploration",
+            "Environmental conservation"
+        ],
+        "correct_answer" => "Environmental conservation"
+    ],
+    [
+        "question" => "Who composed the score for 'Interstellar'?",
+        "options" => [
+            "John Williams",
+            "Hans Zimmer",
+            "Danny Elfman",
+            "Howard Shore"
+        ],
+        "correct_answer" => "Hans Zimmer"
+    ],
+    [
+        "question" => "What is the highest-grossing film of all time?",
+        "options" => [
+            "Avatar",
+            "Titanic",
+            "Avengers: Endgame",
+            "Star Wars: The Force Awakens"
+        ],
+        "correct_answer" => "Avatar"
+    ],
+    [
+        "question" => "Which movie is known for the quote, 'Here's looking at you, kid'?",
+        "options" => [
+            "Casablanca",
+            "Gone with the Wind",
+            "The Maltese Falcon",
+            "Citizen Kane"
+        ],
+        "correct_answer" => "Casablanca"
+    ],
+    [
+        "question" => "Who plays the lead role in 'Mad Max: Fury Road'?",
+        "options" => [
+            "Mel Gibson",
+            "Tom Hardy",
+            "Christian Bale",
+            "Russell Crowe"
+        ],
+        "correct_answer" => "Tom Hardy"
+    ],
+    [
+        "question" => "In which movie does the character Andy Dufresne appear?",
+        "options" => [
+            "The Shawshank Redemption",
+            "The Green Mile",
+            "Forrest Gump",
+            "Catch Me If You Can"
+        ],
+        "correct_answer" => "The Shawshank Redemption"
+    ],
+    [
+        "question" => "What is the name of the virtual reality world in 'Ready Player One'?",
+        "options" => [
+            "The Grid",
+            "The Oasis",
+            "Cyberspace",
+            "Metaverse"
+        ],
+        "correct_answer" => "The Oasis"
+    ],
+    [
+        "question" => "Who played the role of Jack Dawson in 'Titanic'?",
+        "options" => [
+            "Leonardo DiCaprio",
+            "Matt Damon",
+            "Brad Pitt",
+            "Johnny Depp"
+        ],
+        "correct_answer" => "Leonardo DiCaprio"
+    ],
+    [
+        "question" => "In 'The Lord of the Rings', what is the name of Frodo's hometown?",
+        "options" => [
+            "Rivendell",
+            "Rohan",
+            "The Shire",
+            "Mordor"
+        ],
+        "correct_answer" => "The Shire"
+    ],
+    [
+        "question" => "Which movie features a fight club as a central element?",
+        "options" => [
+            "Rocky",
+            "Fight Club",
+            "Raging Bull",
+            "Warrior"
+        ],
+        "correct_answer" => "Fight Club"
+    ],
+    [
+        "question" => "Who directed 'The Grand Budapest Hotel'?",
+        "options" => [
+            "Wes Anderson",
+            "Steven Spielberg",
+            "Tim Burton",
+            "David Fincher"
+        ],
+        "correct_answer" => "Wes Anderson"
+    ],
+    [
+        "question" => "Who won the Academy Award for Best Actress for her role in 'La La Land'?",
+        "options" => [
+            "Emma Stone",
+            "Anne Hathaway",
+            "Jennifer Lawrence",
+            "Natalie Portman"
+        ],
+        "correct_answer" => "Emma Stone"
+    ],
+    [
+        "question" => "What is the fictional African country featured in 'Black Panther'?",
+        "options" => [
+            "Wakanda",
+            "Zamunda",
+            "Latveria",
+            "Genosha"
+        ],
+        "correct_answer" => "Wakanda"
+    ]
+
 
 ];
 foreach ($questions_1 as $item) {
@@ -726,13 +928,11 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while ($row = mysqli_fetch_assoc($result)) {
-        echo "id: " . $row["id"] . " - stage: " . 
-        $row["stage_num"] . " - Question: " . $row["question"] . " " . "<br>";
+        echo "id: " . $row["id"] . " - stage: " .
+            $row["stage_num"] . " - Question: " . $row["question"] . " " . "<br>";
     }
 } else {
     echo "0 results";
 }
 
 mysqli_close($conn);
-
-?>
