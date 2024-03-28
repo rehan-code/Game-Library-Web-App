@@ -1,5 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var sentence = '';
+    const currentPrompt = initializeCryptogram();
+    var currentHintIndex = -1;
+
+    window.showHint = function() {
+        var hintMessage = "";
+        var hintIndex = currentHintIndex;
+    
+        const hints = currentPrompt.hints;
+
+        // Don't show the same hint twice in a row
+        while (hints.length > 0 && hintIndex == currentHintIndex) {
+            hintIndex = Math.floor(Math.random() * hints.length);
+        }
+
+        hintMessage = hints[hintIndex];
+        currentHintIndex = hintIndex;
+
+        const speechBubble = document.querySelector('.speech-bubble');
+        if (speechBubble) {
+            speechBubble.textContent = hintMessage;
+            speechBubble.style.display = 'block'; 
+        }
+    
+        speechBubble.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    };
+});
+
+function initializeCryptogram() {
+    var prompt = {};
     
     //access url params
     const queryString = window.location.search;
@@ -7,45 +37,176 @@ document.addEventListener('DOMContentLoaded', function() {
     const secret = urlParams.get('secret');
 
     if (secret == 'true') {
-        sentence = `An investment banker involved in various unethical and illegal activities who abuses his money and power to avoid all forms of legal repercussions. That being said, his charges mainly include manipulating the market, embezzlement of funds, bribery, loan sharking, and various other forms of bank or market financial schemes.`;
+        prompt = {
+            message: "An investment banker involved in various unethical"
+                + " and illegal activities who abuses his money and power to avoid"
+                + " all forms of legal repercussions. That being said, his charges"
+                + " mainly include manipulating the market, embezzlement of funds,"
+                + " bribery, loan sharking, and various other forms of bank or market"
+                + " financial schemes.",
+            hints: [
+                "Misconduct in high finance.",
+                "Illegal trading and corruption.",
+                "Misdeeds in money management.",
+                "The unethical side of Wall Street.",
+                "Wrongdoings in investment operations."
+            ]
+        }
     } else {
         const prompts=[
-            "According to all known laws of aviation, there is no way a bee should be able to fly."
-            + " Its wings are too small to get its fat little body off the ground. The bee, of course,"
-            + " flies anyway: because bees don't care what humans think is impossible...",
-            "The quick brown fox jumps over the lazy dog.",
-            "I see a little silhouetto of a man"
-            + " Scaramouche, Scaramouche, will you do the Fandango?"
-            + " Thunderbolt and lightning, very, very frightening me,",
-            "Now, this is a story all about how, my life got flipped, turned upside down,"
-            + " and I'd like to take a minute, just sit right there, I'll tell you how I became"
-            + " the prince of a town called Bel-Air.",
-            "To be, or not to be, that is the question:"
-            + " Whether 'tis nobler in the mind to suffer"
-            + ' The slings and arrows of outrageous fortune,'
-            + " Or to take arms against a sea of troubles"
-            + " And by opposing end them. To die; to sleep,"
-            + " No more; and by a sleep to say we end"
-            + " The heart-ache and the thousand natural shocks"
-            + " That flesh is heir to: 'tis a consummation"
-            + " Devoutly to be wish'd. To die, to sleep..."
+            {
+                message: "According to all known laws of aviation, there is no way a bee should be able to fly."
+                    + " Its wings are too small to get its fat little body off the ground. The bee, of course,"
+                    + " flies anyway: because bees don't care what humans think is impossible...",
+                hints: [
+                    "Iconic movie opening.",
+                    "Defies laws of physics.",
+                    "Do you like jazz?"
+                ]
+            },
+            {
+                message: "No, you clearly don't know who you're talking to, so let me clue you in."
+                    + " I am not in danger, Skyler. I am the danger!"
+                    + " A guy opens his door and gets shot and you think that of me?"
+                    + " No. I am the one who knocks!",
+                hints: [
+                    "An iconic TV show scene.",
+                    "Breaking what?",
+                    "Knock knock..."
+                ]
+            },
+            {
+                message: "Now, this is a story all about how, my life got flipped, turned upside down,"
+                    + " and I'd like to take a minute, just sit right there, I'll tell you how I became"
+                    + " the prince of a town called Bel-Air.",
+                hints: [
+                    "A '90s sitcom intro.",
+                    "A prince most fresh.",
+                    "Sit down, hear a story."
+                ]
+            },
+            {
+                message: "I see a little silhouetto of a man"
+                    + " Scaramouche, Scaramouche, will you do the Fandango?"
+                    + " Thunderbolt and lightning, very, very frightening me!",
+                hints: [
+                    "A classic rhapsody.",
+                    "A person's outline.",
+                    "Dramatic weather."
+                ]
+            },
+            {
+                message: "Just a small town girl"
+                    + " Livin' in a lonely world"
+                    + " She took the midnight train going anywhere..."
+                    + " Just a city boy"
+                    + " Born and raised in South Detroit"
+                    + " He took the midnight train going anywhere...",
+                hints: [
+                    "A classic rock anthem.",
+                    "Late-night travel.",
+                    "Lonely girl, tiny town."
+                ]
+            },
+            {
+                message: "To be, or not to be, that is the question:"
+                    + " Whether 'tis nobler in the mind to suffer"
+                    + ' The slings and arrows of outrageous fortune,'
+                    + " Or to take arms against a sea of troubles"
+                    + " And by opposing end them.",
+                hints: [
+                    "A famous soliloquy.",
+                    "Existential dilemma.",
+                    "Hold up a skull."
+                ]
+            },
+            {
+                message: "O Romeo, Romeo, wherefore art thou Romeo?"
+                    + " Deny thy father and refuse thy name,"
+                    + " Or, if thou wilt not, be but sworn my love,"
+                    + " And I'll no longer be a Capulet.",
+                hints: [
+                    "A plea on the balcony.",
+                    "Star-crossed lovers.",
+                    "Defies family names."
+                ]
+            },
+            {
+                message: "Twinkle, twinkle, little star,"
+                    + " How I wonder what you are!"
+                    + " Up above the world so high,"
+                    + " Like a diamond in the sky.",
+                hints: [
+                    "A nursery rhyme.",
+                    "Skyward lullaby.",
+                    "Like jewels."
+                ]
+            },
+            {
+                message: "Mary had a little lamb,"
+                    + " Its fleece was white as snow."
+                    + " And everywhere that Mary went,"
+                    + " The lamb was sure to go."
+                    + " He followed her to school one day,"
+                    + " That was against the rule."
+                    + " It made the children laugh and play"
+                    + " To see a lamb at school.",
+                hints: [
+                    "A nursery rhyme.",
+                    "Faithful, fluffy pet.",
+                    "Constant companion."
+                ]
+            },
+            {
+                message: "Three blind mice, three blind mice"
+                    + " See how they run, see how they run"
+                    + " They all ran after the farmer's wife"
+                    + " She cut off their tails with a carving knife"
+                    + " Did you ever see such a sight in your life as three blind mice?",
+                hints: [
+                    "A nursery rhyme.",
+                    "Visual impairment.",
+                    "Considered pests by many."
+                ]
+            },
+            {
+                message: "Peter Piper picked a peck of pickled peppers."
+                    + " A peck of pickled peppers Peter Piper picked."
+                    + " If Peter Piper picked a peck of pickled peppers,"
+                    + " Where's the peck of pickled peppers Peter Piper picked?",
+                hints: [
+                    "A tongue twister.",
+                    "Heavy alliteration.",
+                    "Pickled produce."
+                ]
+            },
+            {
+                message: "The quick brown fox jumps over the lazy dog.",
+                hints: [
+                    "All letters.",
+                    "Tests keyboards.",
+                    "Features two canines."
+                ]
+            }
         ];
         
         var promptIndex = Math.floor(Math.random() * prompts.length);
-        sentence = prompts[promptIndex];
+        prompt = prompts[promptIndex];
     }
     
     const letterMapping = createLetterMapping();
-    generateCryptogram(sentence, letterMapping);
+
+    generateCryptogram(prompt.message, letterMapping);
     setupInputHandlers();
 
     // Add an event listener to the submit button
     document.getElementById('submitCryptogram').addEventListener('click', function(event) {
         event.preventDefault(); // Prevent the default form submission behavior
-        checkAllBoxesFilled(sentence);
+        checkAllBoxesFilled(prompt.message);
     });
-   
-});
+    
+    return prompt;
+}
 
 function createLetterMapping() {
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
@@ -189,27 +350,6 @@ function gameover() {
     document.querySelector(".game-over-screen").classList.add("active");
     document.querySelector(".game-content").classList.add("blur");
 }
-
-window.showHint = function() {
-    var hints = [
-        "Misconduct in high finance",
-        "Illegal trading and corruption",
-        "Misdeeds in money management",
-        "The unethical side of Wall Street",
-        "Wrongdoings in investment operations"
-    ];
-    var hintMessage = hints[Math.floor(Math.random() * hints.length)];
-    
-    const speechBubble = document.querySelector('.speech-bubble');
-    if (speechBubble) {
-        speechBubble.textContent = hintMessage;
-        speechBubble.style.display = 'block'; 
-    }
-
-    speechBubble.addEventListener('click', function(event) {
-        event.stopPropagation();
-    });
-};
 
 document.addEventListener('click', function() {
     const speechBubble = document.querySelector('.speech-bubble');
