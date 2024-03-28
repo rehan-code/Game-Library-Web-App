@@ -45,8 +45,9 @@
         </div>
      </div>
      <script>
+        const randomIndex = Math.floor(Math.random() * 20);
         document.addEventListener("DOMContentLoaded", function() {
-            displayRandomQuestion(0, 2);
+            displayRandomQuestion(randomIndex, 2);
         });
     </script>
 
