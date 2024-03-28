@@ -233,15 +233,14 @@ $questions_1 = [
 ];
 $questions_2 = [
     [
-        "question" => "Which popular video game franchise
-      features a protagonist named \'Mario\'?",
+        "question" => "What is the name of Nintendo\'s flagship, red Italian plumber?",
         "options" => [
-            "The Legend of Zelda",
-            "Final Fantasy",
-            "Super Mario",
-            "Pokemon"
+            "Luigi",
+            "Toad",
+            "Mario",
+            "Bowser"
         ],
-        "correct_answer" => "Super Mario"
+        "correct_answer" => "Mario"
     ],
     [
         "question" => "In the game \'The Legend of Zelda: Breath of the Wild\',
@@ -336,15 +335,14 @@ $questions_2 = [
         "correct_answer" => "MOBA (Multiplayer Online Battle Arena)"
     ],
     [
-        "question" => "Which gaming franchise features a
-      post-apocalyptic setting and includes titles like \'Fallout 4\'?",
+        "question" => "Which gaming franchise features titles like \'Skyrim\'?",
         "options" => [
             "Elder Scrolls",
             "Doom",
             "BioShock",
             "Fallout"
         ],
-        "correct_answer" => "Fallout"
+        "correct_answer" => "Elder Scrolls"
     ],
     [
         "question" => "What is the name of the main character
@@ -404,8 +402,8 @@ $questions_2 = [
         "correct_answer" => "Red"
     ],
     [
-        "question" => "Which game franchise is known for its
-      open-world crime action games, such as \'Grand Theft Auto V\'?",
+        "question" => "Which game franchise spawned popular titles such
+      such as \'Vice City\' and \'San Andreas\'?",
         "options" => [
             "Watch Dogs",
             "Saints Row",
@@ -430,11 +428,11 @@ $questions_2 = [
       3D world that allows players to explore and create?",
         "options" => [
             "Terraria",
-            "Roblox",
+            "The Sims 4",
             "Stardew Valley",
             "No Man\'s Sky"
         ],
-        "correct_answer" => "Minecraft"
+        "correct_answer" => "Terraria"
     ],
     [
         "question" => "What is the name of the character players
