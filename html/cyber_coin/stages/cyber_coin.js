@@ -129,7 +129,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
     const scoreDisplayElement = document.getElementById('score');
 
     questionTextElement.textContent = selectedQuestion.question;
-    scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
+    scoreDisplayElement.textContent = totalCorrectAnswers + "00";
     
     answerOptionsElement.innerHTML = '';
     shuffleOptions(selectedQuestion.options);
@@ -140,7 +140,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
         optionButtonElement.onclick = function() {
             if (answerOption === selectedQuestion.correct_answer) {
                 totalCorrectAnswers++;
-                scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
+                scoreDisplayElement.textContent = totalCorrectAnswers + "00";
                 if (questionIndex == 19) {
                     showCongratsScreen(totalCorrectAnswers);
                 } else {
