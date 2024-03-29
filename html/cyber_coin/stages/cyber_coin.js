@@ -130,7 +130,9 @@ async function displayRandomQuestion(questionIndex, stageId) {
     const scoreDisplayElement = document.getElementById('score');
 
     questionTextElement.textContent = selectedQuestion.question;
-    scoreDisplayElement.textContent = totalCorrectAnswers + "00";
+    scoreDisplayElement.textContent = totalCorrectAnswers > 0
+        ? totalCorrectAnswers + "00"
+        : "0";
     
     answerOptionsElement.innerHTML = '';
     shuffleOptions(selectedQuestion.options);
@@ -141,16 +143,20 @@ async function displayRandomQuestion(questionIndex, stageId) {
         optionButtonElement.onclick = function() {
             if (answerOption === selectedQuestion.correct_answer) {
                 totalCorrectAnswers++;
-                scoreDisplayElement.textContent = totalCorrectAnswers + "00";
-                if (questionIndex == 19) {
+
+                scoreDisplayElement.textContent = totalCorrectAnswers > 0
+                    ? totalCorrectAnswers + "00"
+                    : "0";
+
+                if (answeredQuestions.length == 39) {
                     showCongratsScreen(totalCorrectAnswers);
                 } else {
                     answeredQuestions.push(questionIndex);
                     var randomIndex = questionIndex;
     
                     while (answeredQuestions.includes(randomIndex)) {
-                        randomIndex = Math.floor(Math.random() * 20);
-                    }
+                        randomIndex = Math.floor(Math.random() * 40);
+                    };
     
                     displayRandomQuestion(randomIndex,stageId);
                     timeLeft = 30;
