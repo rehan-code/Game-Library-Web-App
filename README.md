@@ -11,8 +11,8 @@ Team Lead: Ivan Odiel Magtangob
  * [Usage (Local Development)](#usage-local-development)
 
 
-## What's [NEW] in Sprint 8
- Below are the breakdown's details for sprint7:
+## What's [NEW] in Sprint 9
+ Below are the breakdown's details for sprint 9:
 
 1. Cyber Coin Game: 
 - Question Expansion: We plan to add 20 new questions to each theme
