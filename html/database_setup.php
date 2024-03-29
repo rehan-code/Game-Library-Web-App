@@ -228,6 +228,161 @@ $questions_1 = [
             "Logical Programming"
         ],
         "correct_answer" => "Logical Programming"
+    ],
+    [
+        "question" => "What does API stand for?",
+        "options" => [
+            "Application Programming Interface",
+            "Application Protocol Interface",
+            "Advanced Programming Interface",
+            "Automated Programming Interface"
+        ],
+        "correct_answer" => "Application Programming Interface"
+    ],
+    [
+        "question" => "Which of the following is a NoSQL database?",
+        "options" => ["PostgreSQL", "MongoDB", "Oracle", "SQL Server"],
+        "correct_answer" => "MongoDB"
+    ],
+    [
+        "question" => "What is the main purpose of the HTTP protocol?",
+        "options" => [
+            "Data encryption",
+            "File transfer",
+            "Web browsing",
+            "Email exchange"
+        ],
+        "correct_answer" => "Web browsing"
+    ],
+    [
+        "question" => "Which language is primarily used for styling web pages?",
+        "options" => ["JavaScript", "Python", "CSS", "HTML"],
+        "correct_answer" => "CSS"
+    ],
+    [
+        "question" => "What is a feature of Object-Oriented Programming?",
+        "options" => ["Inheritance", "Recursion", "Pointers", "Threading"],
+        "correct_answer" => "Inheritance"
+    ],
+    [
+        "question" => "Which of these is not a valid IP address?",
+        "options" => ["192.168.1.1", "255.255.255.255", "256.0.0.0", "127.0.0.1"],
+        "correct_answer" => "256.0.0.0"
+    ],
+    [
+        "question" => "What is Git primarily used for?",
+        "options" => [
+            "Version control",
+            "Machine learning",
+            "Text editing",
+            "Graphic design"
+        ],
+        "correct_answer" => "Version control"
+    ],
+    [
+        "question" => "Which of the following is a cloud computing platform?",
+        "options" => ["GitHub", "WordPress", "Azure", "MySQL"],
+        "correct_answer" => "Azure"
+    ],
+    [
+        "question" => "What does LAN stand for?",
+        "options" => [
+            "Local Area Network",
+            "Large Area Network",
+            "Long Area Network",
+            "Linked Area Network"
+        ],
+        "correct_answer" => "Local Area Network"
+    ],
+    [
+        "question" => "Which of these is a logic gate?",
+        "options" => ["AND", "NOR", "XOR", "All of the above"],
+        "correct_answer" => "All of the above"
+    ],
+    [
+        "question" => "What does 'public static void main(String[] args)' signify in Java?",
+        "options" => [
+            "A method declaration",
+            "A class declaration",
+            "A variable declaration",
+            "An interface declaration"
+        ],
+        "correct_answer" => "A method declaration"
+    ],
+    [
+        "question" => "What is the primary use of AJAX in web development?",
+        "options" => [
+            "Page styling",
+            "Asynchronous web requests",
+            "Server-side scripting",
+            "Data serialization"
+        ],
+        "correct_answer" => "Asynchronous web requests"
+    ],
+    [
+        "question" => "Which of the following is a statically typed language?",
+        "options" => ["Python", "JavaScript", "C++", "Ruby"],
+        "correct_answer" => "C++"
+    ],
+    [
+        "question" => "What does SSD stand for in computer hardware?",
+        "options" => [
+            "Solid State Drive",
+            "Static State Drive",
+            "Solid State Disk",
+            "Secure Storage Device"
+        ],
+        "correct_answer" => "Solid State Drive"
+    ],
+    [
+        "question" => "What is the main purpose of a compiler?",
+        "options" => [
+            "To convert high-level language to machine language",
+            "To increase the speed of the computer",
+            "To manage the computer's resources",
+            "To protect the computer from viruses"
+        ],
+        "correct_answer" => "To convert high-level language to machine language"
+    ],
+    [
+        "question" => "Which of these is a key feature of Agile software development?",
+        "options" => [
+            "Comprehensive documentation",
+            "Contract negotiation",
+            "Following a plan",
+            "Responding to change"
+        ],
+        "correct_answer" => "Responding to change"
+    ],
+    [
+        "question" => "What is encapsulation in Object-Oriented Programming?",
+        "options" => [
+            "A class-based inheritance model",
+            "The bundling of data with methods that operate on that data",
+            "A programming paradigm based on the concept of 'objects'",
+            "A specific type of data structure"
+        ],
+        "correct_answer" => "The bundling of data with methods that operate on that data"
+    ],
+    [
+        "question" => "Which of the following is an example of a markup language?",
+        "options" => ["Python", "HTML", "C++", "Java"],
+        "correct_answer" => "HTML"
+    ],
+    [
+        "question" => "Which HTTP status code indicates 'Not Found'?",
+        "options" => ["200", "404", "500", "302"],
+        "correct_answer" => "404"
+    ],
+    [
+        "question" => "Which programming paradigm emphasizes functions without side effects?",
+        "options" => [
+            "Object-Oriented Programming",
+            "Procedural Programming",
+            "Functional Programming",
+            "Imperative Programming"
+        ],
+        "correct_answer" => "Functional Programming"
     ]
 ];
 $questions_2 = [
