@@ -1,5 +1,6 @@
 var totalCorrectAnswers = 0;
 const answeredQuestions = [];
+var timeLeft = 30; 
 
 function shuffleOptions(optionsArray) {
     for (let i = optionsArray.length - 1; i > 0; i--) {
@@ -152,19 +153,18 @@ async function displayRandomQuestion(questionIndex, stageId) {
                     }
     
                     displayRandomQuestion(randomIndex,stageId);
+                    timeLeft = 30;
                 }
             } else {           
                 showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers, stageId);
             }
         };
         answerOptionsElement.appendChild(optionButtonElement);
-        updateTimer(stageId)
     });
 }
 
 async function updateTimer(stageId){
     var timerElement = document.getElementById('timer');
-    var timeLeft = 30; // countdown in seconds
     var interval = setInterval(function() {
         if (timeLeft <= 0) {
             clearInterval(interval);
