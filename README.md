@@ -27,7 +27,7 @@ Team Lead: Ivan Odiel Magtangob
 - UI Enhancements: Updated the UI to provide feedback on incorrect guesses
 - Fixed Mismatched Hints: corrected mismatched hints for a smoother user experience.
 
-3. New Game Development: we are developing a new game, Slide Puzzle
+3. New Game Development: we developed a new game, Slide Puzzle
 
 
 ## Requirements
