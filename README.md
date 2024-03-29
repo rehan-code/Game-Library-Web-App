@@ -14,11 +14,19 @@ Team Lead: Ivan Odiel Magtangob
 ## What's [NEW] in Sprint 8
  Below are the breakdown's details for sprint7:
 
-1. Made I-spot game have random solution locations
-2. Added more stages and game over to Cyber Coin Quest game
-3. Shifted instructions to the stage select pages of games
-4. Set-up Javascript linting
-5. Documentation (Lots of things moved to wiki)
+1. Cyber Coin Game: 
+- Question Expansion: We plan to add 20 new questions to each theme
+- Question Randomization
+- Leadership Board: Introducing a leaderboard to display top scores, fostering a competitive environment.
+- Timer Addition: adding a timer to add challenge and pace to the game
+- UI Updates: Updating the user interface
+
+2. Cryptogram Game:
+- Content Update: Adding new messages
+- UI Enhancements: Updating the UI to provide feedback on incorrect guesses
+- Fixed Mismatched Hints: correct mismatched hints for a smoother user experience.
+
+3. New Game Development: we are developing a new game, Slide Puzzle
 
 
 ## Requirements
