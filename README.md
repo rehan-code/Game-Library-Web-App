@@ -15,16 +15,17 @@ Team Lead: Ivan Odiel Magtangob
  Below are the breakdown's details for sprint 9:
 
 1. Cyber Coin Game: 
-- Question Expansion: We plan to add 20 new questions to each theme
+- Question Expansion: we added 20 new questions to each theme
 - Question Randomization
-- Leadership Board: Introducing a leaderboard to display top scores, fostering a competitive environment.
-- Timer Addition: adding a timer to add challenge and pace to the game
-- UI Updates: Updating the user interface
+- Leadership Board: introduced a leaderboard to display top scores, fostering a competitive environment.
+- Timer Addition: added a timer to add challenge and pace to the game
+- UI Updates: Updated the user interface
+
 
 2. Cryptogram Game:
-- Content Update: Adding new messages
-- UI Enhancements: Updating the UI to provide feedback on incorrect guesses
-- Fixed Mismatched Hints: correct mismatched hints for a smoother user experience.
+- Content Update: Added new messages
+- UI Enhancements: Updated the UI to provide feedback on incorrect guesses
+- Fixed Mismatched Hints: corrected mismatched hints for a smoother user experience.
 
 3. New Game Development: we are developing a new game, Slide Puzzle
 
