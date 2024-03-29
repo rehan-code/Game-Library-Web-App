@@ -26,11 +26,19 @@
 
 <body>
     <?php require "../../components/navbar/navbar.php"; ?>
+    <div class="game-over-screen">
+        <h1>Game Over</h1>
+        <div class="options">
+            <button class="option-button button1" 
+             onclick="window.location.href='../../index.php'"></button>
+            <button class="option-button button2" 
+             onclick="window.location.href='hangman_stage_1.php'"></button>
+        </div>
+    </div>
     
-    <img id="title" src="../../images/mosaic/stage1/logo.png">
+    <h1>Turns: <span id="turns">0</span></h1>
     <div id="board">
     </div>
-    <h1>Turns: <span id="turns">0</span></h1>
 </body>
 
 </html>

@@ -80,6 +80,49 @@ body {
   transition: all 1s ease-out 1s;
 }
 
+.options {
+  background-color: rgb(242 242 242);
+  opacity: 0.75;
+  border-radius: 10px;
+  width: 15%;
+  height: 10%;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.option-button {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(242 242 242);
+
+  /* Green, you can change the color */
+  color: black;
+  cursor: pointer;
+  width: 16px;
+  height: 20px;
+  padding: 12%;
+}
+
+.button1 {
+  background-image: url("../../images/home_button.png");
+
+  /* Set the path to your image */
+  background-size: cover;
+}
+
+.button2 {
+  background-image: url("../../images/replay.png");
+
+  /* Set the path to your image */
+  background-size: cover;
+}
+
 
 #title {
   height: 150px;
