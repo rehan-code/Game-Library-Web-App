@@ -147,14 +147,14 @@ async function displayRandomQuestion(questionIndex, stageId) {
                     ? "Coins: " + totalCorrectAnswers + "00"
                     : "Coins: 0";
 
-                if (answeredQuestions.length == 19) {
+                if (answeredQuestions.length == 39) {
                     showCongratsScreen(totalCorrectAnswers);
                 } else {
                     answeredQuestions.push(questionIndex);
                     var randomIndex = questionIndex;
     
                     while (answeredQuestions.includes(randomIndex)) {
-                        randomIndex = Math.floor(Math.random() * 20);
+                        randomIndex = Math.floor(Math.random() * 40);
                     };
     
                     displayRandomQuestion(randomIndex,stageId);

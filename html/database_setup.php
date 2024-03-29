@@ -445,8 +445,229 @@ $questions_2 = [
             "Adrian Shephard"
         ],
         "correct_answer" => "Gordon Freeman"
+    ],
+    [
+        "question" => "In the game \'Portal,\' what is the name
+        of the AI that guides the player through the test chambers?",
+        "options" => [
+            "GLaDOS",
+            "Chell",
+            "ATLAS",
+            "Wheatley"
+        ],
+        "correct_answer" => "GLaDOS"
+    ],
+    [
+        "question" => "Which popular video game franchise features characters
+        like \'Solid Snake\' and \'Big Boss\'?",
+        "options" => [
+            "Metal Gear",
+            "Assassin\'s Creed",
+            "Dark Souls",
+            "Elder Scrolls"
+        ],
+        "correct_answer" => "Metal Gear"
+    ],
+    [
+        "question" => "In the game \'Bioshock,\' what is the name of the
+        underwater city where the game takes place?",
+        "options" => [
+            "Rapture",
+            "Atlantic Express",
+            "The Lighthouse",
+            "Dionysus Park"
+        ],
+        "correct_answer" => "Rapture"
+    ],
+    [
+        "question" => "Which video game company is known for creating the
+        \'Sonic the Hedgehog\' series?",
+        "options" => [
+            "Sega",
+            "Nintendo",
+            "Valve",
+            "Bethesda"
+        ],
+        "correct_answer" => "Sega"
+    ],
+    [
+        "question" => "In the game \'The Last of Us,\' what is the name of the
+        fungal infection that has taken over the world?",
+        "options" => [
+            "Cordyceps",
+            "Alien",
+            "Carnage",
+            "Flood"
+        ],
+        "correct_answer" => "Cordyceps"
+    ],
+    [
+        "question" => "Which popular video game franchise features a character named
+        \'Lara Croft\'?",
+        "options" => [
+            "Tomb Raider",
+            "Hitman",
+            "Grand Theft Auto",
+            "Metal Gear"
+        ],
+        "correct_answer" => "Tomb Raider"
+    ],
+    [
+        "question" => "In the game \'Fallout,\' what is the name of the post-apocalyptic
+        currency used by survivors?",
+        "options" => [
+            "Bottle Caps",
+            "Souls",
+            "Bells",
+            "Gold"
+        ],
+        "correct_answer" => "Bottle Caps"
+    ],
+    [
+        "question" => "Which video game company is known for creating the
+        \'Final Fantasy\' series?",
+        "options" => [
+            "Square Enix",
+            "Capcom",
+            "Bethesda",
+            "Nintendo"
+        ],
+        "correct_answer" => "Square Enix"
+    ],
+    [
+        "question" => "In the game \'Red Dead Redemption 2,\' what is the name of
+        the gang that the main character, Arthur Morgan, is a part of?",
+        "options" => [
+            "Van der Linde",
+            "Del Lobo",
+            "Laramie",
+            "O\'Driscoll Boys"
+        ],
+        "correct_answer" => "Van der Linde"
+    ],
+    [
+        "question" => "Which popular video game franchise features a character named
+        \'Globox\'?",
+        "options" => [
+            "Rayman",
+            "Crash Bandicoot",
+            "Spyro",
+            "Ratchet & Clank"
+        ],
+        "correct_answer" => "Rayman"
+    ],
+    [
+        "question" => "In the game \'The Elder Scrolls V: Skyrim,\' what is the name
+        of the dragon that appears at the beginning of the game?",
+        "options" => [
+            "Alduin",
+            "Mirmulnir",
+            "Durnehviir",
+            "Vulthuryol"
+        ],
+        "correct_answer" => "Alduin"
+    ],
+    [
+        "question" => "Who developed the first game in the \'Civilization\' series?",
+        "options" => [
+            "Sid Meier",
+            "Hidetaka Miyazaki",
+            "Tarn Adams",
+            "Will Wright"
+        ],
+        "correct_answer" => "Sid Meier"
+    ],
+    [
+        "question" => "In the game \'The Witcher 3: Wild Hunt,\' what
+        is the name of the kingdom where the game primarily takes place?",
+        "options" => [
+            "Temeria",
+            "Redania",
+            "Kerack",
+            "Kaedwen"
+        ],
+        "correct_answer" => "Temeria"
+    ],
+    [
+        "question" => "Which popular video game franchise features a
+        protagonist named \'Kratos\'?",
+        "options" => [
+            "God of War",
+            "Borderlands",
+            "Elder Scrolls",
+            "Mortal Kombat"
+        ],
+        "correct_answer" => "God of War"
+    ],
+    [
+        "question" => "In the game \'Borderlands,\' what is the name of the planet where
+        the game takes place?",
+        "options" => [
+            "Pandora",
+            "Kerwan",
+            "Requiem",
+            "Tuchanka"
+        ],
+        "correct_answer" => "Pandora"
+    ],
+    [
+        "question" => "In the game \'Outer Wilds,\' what is the name of the planet where
+        the player begins?",
+        "options" => [
+            "Timber Hearth",
+            "Brittle Hollow",
+            "Hourglass Twins",
+            "The Interloper"
+        ],
+        "correct_answer" => "Timber Hearth"
+    ],
+    [
+        "question" => "In the game \'Mass Effect,\' what is the name of the ancient
+        machine race that threatens the galaxy?",
+        "options" => [
+            "Reapers",
+            "Assaultrons",
+            "Reploids",
+            "Synthetics"
+        ],
+        "correct_answer" => "Reapers"
+    ],
+    [
+        "question" => "In the game \'Resident Evil,\' what is the name of the
+        pharmaceutical company responsible for the zombie outbreak?",
+        "options" => [
+            "Umbrella Corporation",
+            "Murkoff Corporation",
+            "Abstergo Industries",
+            "Vale Corporation"
+        ],
+        "correct_answer" => "Umbrella Corporation"
+    ],
+    [
+        "question" => "Which video game company is known for creating the
+        \'Gears of War\' series?",
+        "options" => [
+            "Epic Games",
+            "Bethesda",
+            "Blizzard Entertainment",
+            "Capcom"
+        ],
+        "correct_answer" => "Epic Games"
+    ],
+    [
+        "question" => "In the game \'Stardew Valley,\' what is the
+        name of the town where the player\'s farm is located?",
+        "options" => [
+            "Pelican Town",
+            "Portia",
+            "Stardew Villa",
+            "Sandrock"
+        ],
+        "correct_answer" => "Pelican Town"
     ]
 ];
+
+
 $questions_3 = [
     [
         "question" => "Who directed the movie \'Titanic\'?",
