@@ -35,21 +35,33 @@
               onclick="window.location.href='cyber_coin_stage_1.php'"></button>
          </div>
      </div>
-    <div class="game-content">
-        <div class="main-heading">
-            <h1>Cyber Coin Quest</h1>
-            <h2 id="score">Score: </h2>
-            <div class="timer-container">
-                <span class="timer-icon">&#9202;</span>
-                <span id="timer" class="timer-text">30s</span>
+     <div class="game-content">
+            
+            <div class="container congrats-width">
+                
+                <div class="main-heading">
+                    <div class="timer-container">
+                        <h3 class="alternate">Cyber Coin Quest</h3>
+                    </div>
+                    <div class="icons-container">
+                        <div class="timer-container">
+                            <span class="timer-icon">&#0036;</span>
+                            <span id="score" class="timer-text">Coins: </span>
+                        </div>
+                        <div class="timer-container">
+                            <span class="timer-icon">&#9202;</span>
+                            <span id="timer" class="timer-text">30s</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container-2">
+                    <h3 id="question"></h3>
+                    <div id="options" class="options"></div>
+                    <p id="result"></p>
+                </div>
             </div>
         </div>
-        <div class="container">
-            <h1 id="question"></h1>
-            <div id="options" class="options"></div>
-            <p id="result"></p>
-        </div>
-     </div>
      <script>
         document.addEventListener("DOMContentLoaded", function() {
             displayRandomQuestion(0, 1);

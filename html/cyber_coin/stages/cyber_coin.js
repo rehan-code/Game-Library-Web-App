@@ -131,17 +131,18 @@ async function displayRandomQuestion(questionIndex, stageId) {
     const scoreDisplayElement = document.getElementById('score');
 
     questionTextElement.textContent = selectedQuestion.question;
-    scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
+    scoreDisplayElement.textContent = totalCorrectAnswers + "00";
     
     answerOptionsElement.innerHTML = '';
     shuffleOptions(selectedQuestion.options);
     selectedQuestion.options.forEach(function(answerOption) {
         const optionButtonElement = document.createElement('button');
         optionButtonElement.textContent = answerOption;
+        optionButtonElement.classList.add('custom-button');
         optionButtonElement.onclick = function() {
             if (answerOption === selectedQuestion.correct_answer) {
                 totalCorrectAnswers++;
-                scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
+                scoreDisplayElement.textContent = totalCorrectAnswers + "00";
                 if (questionIndex == 19) {
                     showCongratsScreen(totalCorrectAnswers);
                 }
