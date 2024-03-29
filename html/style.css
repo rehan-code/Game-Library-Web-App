@@ -459,6 +459,22 @@ footer {
   background-position: 50% 87%;
   background-size: cover;
 }
+.mosaic-slide-bg {
+  background-image: url("../images/mosaic/mosaicbg.png");
+  background-position: 50% 87%;
+  background-size: cover;
+}
+.movie-card-mosaic-1 {
+  background-image: url("../images/mosaic/mosaicbg.png");
+}
+
+.movie-card-mosaic-2 {
+  background-image: url("../images/mosaic/mosaic_stage_2.jpg");
+}
+
+.movie-card-mosaic-3 {
+  background-image: url("../images/mosaic/mosaic_stage_3.jpg");
+}
 
 .movie-card .info-text {
   width: 100%;
