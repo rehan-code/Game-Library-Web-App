@@ -228,9 +228,10 @@ body {
   }
   
   .hint-button i {
-    color: #fff; 
+    color: #fff;
     text-shadow: 0 0 3px #fff;
     font-size: 24px; 
+    pointer-events: none; /* Bug fix: Allow click passes through the icon to the button */
   }
   
   .hint-button:hover {
@@ -280,7 +281,6 @@ body {
     z-index: 3;
 }
 
-/* Game over screen stylesa */
 .game-over-screen {
     z-index: 6;
     width: 100%;
