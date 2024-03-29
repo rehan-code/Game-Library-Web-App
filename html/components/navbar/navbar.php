@@ -60,7 +60,7 @@
             </li> -->
             <!-- <li class="nav-menu-item">
                <a
-                  href="../../cryptogram/game/cryptogram.php"
+                  href="../../cryptogram/congrats/congrats_page.php"
                   class="nav-menu-link"
                >
                cryptogram page
