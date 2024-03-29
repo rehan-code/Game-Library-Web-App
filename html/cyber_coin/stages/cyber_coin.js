@@ -149,7 +149,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
     
                     while (answeredQuestions.includes(randomIndex)) {
                         randomIndex = Math.floor(Math.random() * 20);
-                    };
+                    }
     
                     displayRandomQuestion(randomIndex,stageId);
                 }

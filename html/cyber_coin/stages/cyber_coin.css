@@ -8,8 +8,8 @@
     flex: 0 0 calc(50% - 10px);
     margin: 5px;
     padding: 10px 20px;
-    background-color: #ffffff;
-    border: 2px solid rgba(0, 123, 255, 0.5);
+    background-color: #fff;
+    border: 2px solid rgb(0 123 255 / 50%);
     border-radius: 10px;
     outline: none;
     font-size: 16px;
@@ -19,10 +19,7 @@
 
 #options button:hover {
     background-color: #f0f0f0;
-}
-
-#options button:hover {
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 0 2px rgb(0 123 255 / 50%);
 }
 
 #result {
@@ -68,23 +65,16 @@
 .game-over-screen.blur {
     filter: blur(4px) brightness(50%);
     background-color: rgb(0 0 0 / 40%);
-
-    /* transition: all 1s ease-out 1s; */
 }
 
 .blur {
-    /* filter: blur(4px); Blur the game content when game over */
     filter: blur(4px) brightness(50%);
     background-color: rgb(0 0 0 / 40%);
-
-    /* transition: all 1s ease-out 1s; */
 }
 
 .game-over-screen h1 {
     color: white;
     font-size: 2.5rem;
-
-    /* top: 2rem; */
 }
 
 .game-content {
@@ -97,8 +87,6 @@
     opacity: 0.75;
     border-radius: 10px;
     width: 15%;
-
-    /* height: 10%; */
     position: relative;
     top: 5%;
     left: 50%;
@@ -113,8 +101,6 @@
     border: none;
     border-radius: 5px;
     background-color: rgb(242 242 242);
-
-    /* Green, you can change the color */
     color: black;
     cursor: pointer;
     width: 16px;
@@ -124,15 +110,11 @@
 
 .button1 {
     background-image: url("../../images/home_button.png");
-
-    /* Set the path to your image */
     background-size: cover;
 }
 
 .button2 {
     background-image: url("../../images/replay.png");
-
-    /* Set the path to your image */
     background-size: cover;
 }
 
@@ -167,7 +149,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-
 }
 
 h3.alternate {
