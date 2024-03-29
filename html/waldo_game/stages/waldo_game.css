@@ -283,26 +283,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px; /* Circle size */
-  height: 50px; /* Circle size */
-  border-radius: 50%; /* Makes it a circle */
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%;
   padding: 0;
-  background-color: #2b50c7; /* Light background color */
-  box-shadow: 0 0 5px #ccc; /* Shadow for a "lifted" effect */
+  background-color: #2b50c7;
+  box-shadow: 0 0 5px #ccc;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .hint-button i {
-  color: #fff; /* Lightbulb color */
+  color: #fff;
   text-shadow: 0 0 3px #fff;
-  font-size: 24px; /* Icon size, adjust as needed */
+  font-size: 24px;
+  pointer-events: none; /* Bug fix: Allow click passes through the icon to the button */
 }
 
 .hint-button:hover {
-  background-color: #e9e9e9; /* Darker background on hover */
-  box-shadow: 0 0 8px #bbb; /* Larger shadow on hover */
+  background-color: #e9e9e9;
+  box-shadow: 0 0 8px #bbb; 
 }
 
 .hint-button:focus {
@@ -311,35 +312,34 @@ body {
 
 .speech-bubble {
   position: absolute;
-  top: 60px; /* Adjust so it appears below the button */
+  top: 60px;
   right: 0;
   background-color: #f9f9f9;
   border-radius: 4px;
   padding: 10px;
-  width: 200px; /* Adjust width as needed */
+  width: 200px;
   text-align: center;
   box-shadow: 0 0 5px #ccc;
-  display: none; /* Initially hidden */
+  display: none; 
 }
 
-/* Adjustments for speech bubble arrow to point upwards */
 .speech-bubble::after {
   content: '';
   position: absolute;
-  bottom: 100%; /* Arrow now appears at the top of the speech bubble */
+  bottom: 100%;
   left: 50%;
   margin-left: -10px;
   border-style: solid;
-  border-width: 10px 10px 0; /* Adjust arrow to point upwards */
-  border-color: #f9f9f9 transparent transparent; /* Adjust arrow color */
+  border-width: 10px 10px 0; 
+  border-color: #f9f9f9 transparent transparent; 
   display: block;
   width: 0;
 }
 
 .hint-cant {
   position: absolute;
-  top: 50px; /* Adjust as needed */
-  right: 50px; /* Adjust as needed */
+  top: 50px;
+  right: 50px;
   display: flex;
   justify-content: center;
 }
