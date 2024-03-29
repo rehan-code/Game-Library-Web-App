@@ -6,11 +6,11 @@
  *          Harikrishan Singh, Nour Tayem, Thulasi Jothiravi
  */
 
- // Credentials for server
-   // $servername = "localhost";
-   // $username = "cis4250";
-   // $password = "team8";
-   // $dbname = "teamDB";
+//  // Credentials for server
+//    $servername = "localhost";
+//    $username = "cis4250";
+//    $password = "team8";
+//    $dbname = "teamDB";
 
 // Credentials for local dev
    $servername = "db";

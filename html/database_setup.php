@@ -10,23 +10,23 @@
 require 'database_cred.php';
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+// $conn = mysqli_connect($servername, $username, $password);
+// // Check connection
+// if (!$conn) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
 
-echo "Connection successful\n";
+// echo "Connection successful\n";
 
-// Create database
-$sql = "CREATE DATABASE teamDB";
-if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully\n";
-} else {
-    echo "Error creating database: " . $conn->error;
-}
+// // Create database
+// $sql = "CREATE DATABASE teamDB";
+// if ($conn->query($sql) === TRUE) {
+//     echo "Database created successfully\n";
+// } else {
+//     echo "Error creating database: " . $conn->error;
+// }
 
-mysqli_close($conn);
+// mysqli_close($conn);
 
 
 // Create connection
@@ -37,12 +37,12 @@ if (!$conn) {
 }
 
 // Drop table
-// $sql = "DROP TABLE cyber_question;";
-// if (mysqli_query($conn, $sql)) {
-//     echo "Table cyber_question dropped successfully\n";
-// } else {
-//     echo "Error dropping table: " . $conn->error;
-// }
+$sql = "DROP TABLE cyber_question;";
+if (mysqli_query($conn, $sql)) {
+    echo "Table cyber_question dropped successfully\n";
+} else {
+    echo "Error dropping table: " . $conn->error;
+}
 
 // sql to create cyber_question table
 $sql = "CREATE TABLE cyber_question (
@@ -234,15 +234,14 @@ $questions_1 = [
 ];
 $questions_2 = [
     [
-        "question" => "Which popular video game franchise
-      features a protagonist named \'Mario\'?",
+        "question" => "What is the name of Nintendo\'s flagship, red Italian plumber?",
         "options" => [
-            "The Legend of Zelda",
-            "Final Fantasy",
-            "Super Mario",
-            "Pokemon"
+            "Luigi",
+            "Toad",
+            "Mario",
+            "Bowser"
         ],
-        "correct_answer" => "Super Mario"
+        "correct_answer" => "Mario"
     ],
     [
         "question" => "In the game \'The Legend of Zelda: Breath of the Wild\',
@@ -337,15 +336,14 @@ $questions_2 = [
         "correct_answer" => "MOBA (Multiplayer Online Battle Arena)"
     ],
     [
-        "question" => "Which gaming franchise features a
-      post-apocalyptic setting and includes titles like \'Fallout 4\'?",
+        "question" => "Which gaming franchise features titles like \'Skyrim\'?",
         "options" => [
             "Elder Scrolls",
             "Doom",
             "BioShock",
             "Fallout"
         ],
-        "correct_answer" => "Fallout"
+        "correct_answer" => "Elder Scrolls"
     ],
     [
         "question" => "What is the name of the main character
@@ -405,8 +403,8 @@ $questions_2 = [
         "correct_answer" => "Red"
     ],
     [
-        "question" => "Which game franchise is known for its
-      open-world crime action games, such as \'Grand Theft Auto V\'?",
+        "question" => "Which game franchise spawned popular titles such
+      such as \'Vice City\' and \'San Andreas\'?",
         "options" => [
             "Watch Dogs",
             "Saints Row",
@@ -431,11 +429,11 @@ $questions_2 = [
       3D world that allows players to explore and create?",
         "options" => [
             "Terraria",
-            "Roblox",
+            "The Sims 4",
             "Stardew Valley",
             "No Man\'s Sky"
         ],
-        "correct_answer" => "Minecraft"
+        "correct_answer" => "Terraria"
     ],
     [
         "question" => "What is the name of the character players
@@ -649,7 +647,7 @@ $questions_3 = [
         "correct_answer" => "Jaws"
     ],
     [
-        "question" => "Who starred as the titular character in the 1984 film 'The Terminator'?",
+        "question" => "Who starred as the titular character in the 1984 film \'The Terminator\'?",
         "options" => [
             "Sylvester Stallone",
             "Arnold Schwarzenegger",
@@ -659,7 +657,7 @@ $questions_3 = [
         "correct_answer" => "Arnold Schwarzenegger"
     ],
     [
-        "question" => "What year was the first 'Star Wars' film released?",
+        "question" => "What year was the first \'Star Wars\' film released?",
         "options" => [
             "1975",
             "1977",
@@ -669,7 +667,7 @@ $questions_3 = [
         "correct_answer" => "1977"
     ],
     [
-        "question" => "What is the name of the princess in 'The Princess Bride'?",
+        "question" => "What is the name of the princess in \'The Princess Bride\'?",
         "options" => [
             "Princess Buttercup",
             "Princess Aurora",
@@ -679,7 +677,7 @@ $questions_3 = [
         "correct_answer" => "Princess Buttercup"
     ],
     [
-        "question" => "In 'The Godfather', who was the head of the Corleone family before Michael?",
+        "question" => "In \'The Godfather\', who was the head of the Corleone family before Michael?",
         "options" => [
             "Sonny Corleone",
             "Vito Corleone",
@@ -689,7 +687,7 @@ $questions_3 = [
         "correct_answer" => "Vito Corleone"
     ],
     [
-        "question" => "What fictional city is the setting of 'Batman Begins'?",
+        "question" => "What fictional city is the setting of \'Batman Begins\'?",
         "options" => [
             "Metropolis",
             "Gotham City",
@@ -699,7 +697,7 @@ $questions_3 = [
         "correct_answer" => "Gotham City"
     ],
     [
-        "question" => "Who directed 'Pulp Fiction'?",
+        "question" => "Who directed \'Pulp Fiction\'?",
         "options" => [
             "Martin Scorsese",
             "Quentin Tarantino",
@@ -709,7 +707,7 @@ $questions_3 = [
         "correct_answer" => "Quentin Tarantino"
     ],
     [
-        "question" => "What is the main theme of 'Avatar'?",
+        "question" => "What is the main theme of \'Avatar\'?",
         "options" => [
             "Time travel",
             "Virtual reality",
@@ -719,7 +717,7 @@ $questions_3 = [
         "correct_answer" => "Environmental conservation"
     ],
     [
-        "question" => "Who composed the score for 'Interstellar'?",
+        "question" => "Who composed the score for \'Interstellar\'?",
         "options" => [
             "John Williams",
             "Hans Zimmer",
@@ -739,7 +737,7 @@ $questions_3 = [
         "correct_answer" => "Avatar"
     ],
     [
-        "question" => "Which movie is known for the quote, 'Here's looking at you, kid'?",
+        "question" => "Which movie is known for the quote, \'Here\'s looking at you, kid\'?",
         "options" => [
             "Casablanca",
             "Gone with the Wind",
@@ -749,7 +747,7 @@ $questions_3 = [
         "correct_answer" => "Casablanca"
     ],
     [
-        "question" => "Who plays the lead role in 'Mad Max: Fury Road'?",
+        "question" => "Who plays the lead role in \'Mad Max: Fury Road\'?",
         "options" => [
             "Mel Gibson",
             "Tom Hardy",
@@ -769,7 +767,7 @@ $questions_3 = [
         "correct_answer" => "The Shawshank Redemption"
     ],
     [
-        "question" => "What is the name of the virtual reality world in 'Ready Player One'?",
+        "question" => "What is the name of the virtual reality world in \'Ready Player One\'?",
         "options" => [
             "The Grid",
             "The Oasis",
@@ -779,7 +777,7 @@ $questions_3 = [
         "correct_answer" => "The Oasis"
     ],
     [
-        "question" => "Who played the role of Jack Dawson in 'Titanic'?",
+        "question" => "Who played the role of Jack Dawson in \'Titanic\'?",
         "options" => [
             "Leonardo DiCaprio",
             "Matt Damon",
@@ -789,7 +787,7 @@ $questions_3 = [
         "correct_answer" => "Leonardo DiCaprio"
     ],
     [
-        "question" => "In 'The Lord of the Rings', what is the name of Frodo's hometown?",
+        "question" => "In \'The Lord of the Rings\', what is the name of Frodo\'s hometown?",
         "options" => [
             "Rivendell",
             "Rohan",
@@ -809,7 +807,7 @@ $questions_3 = [
         "correct_answer" => "Fight Club"
     ],
     [
-        "question" => "Who directed 'The Grand Budapest Hotel'?",
+        "question" => "Who directed \'The Grand Budapest Hotel\'?",
         "options" => [
             "Wes Anderson",
             "Steven Spielberg",
@@ -819,7 +817,7 @@ $questions_3 = [
         "correct_answer" => "Wes Anderson"
     ],
     [
-        "question" => "Who won the Academy Award for Best Actress for her role in 'La La Land'?",
+        "question" => "Who won the Academy Award for Best Actress for her role in \'La La Land\'?",
         "options" => [
             "Emma Stone",
             "Anne Hathaway",
@@ -829,7 +827,7 @@ $questions_3 = [
         "correct_answer" => "Emma Stone"
     ],
     [
-        "question" => "What is the fictional African country featured in 'Black Panther'?",
+        "question" => "What is the fictional African country featured in \'Black Panther\'?",
         "options" => [
             "Wakanda",
             "Zamunda",

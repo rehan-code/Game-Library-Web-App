@@ -1,4 +1,5 @@
 var totalCorrectAnswers = 0;
+const answeredQuestions = [];
 
 function shuffleOptions(optionsArray) {
     for (let i = optionsArray.length - 1; i > 0; i--) {
@@ -104,13 +105,11 @@ async function showCongratsScreen(totalScore) {
     document.querySelector(".game-content").classList.add("blur");
 }
 
-
 async function displayRandomQuestion(questionIndex, stageId) {
     var selectedQuestion;
     // Get the question from server
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        console.log(this.response);
         var data = JSON.parse(this.responseText);
         if (data['error'] == null) {
             selectedQuestion = data['result'];
@@ -131,7 +130,10 @@ async function displayRandomQuestion(questionIndex, stageId) {
     const scoreDisplayElement = document.getElementById('score');
 
     questionTextElement.textContent = selectedQuestion.question;
-    scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
+
+    scoreDisplayElement.textContent = totalCorrectAnswers > 0
+        ? "Coins: " + totalCorrectAnswers + "00"
+        : "Coins: 0";
     
     answerOptionsElement.innerHTML = '';
     shuffleOptions(selectedQuestion.options);
@@ -141,11 +143,22 @@ async function displayRandomQuestion(questionIndex, stageId) {
         optionButtonElement.onclick = function() {
             if (answerOption === selectedQuestion.correct_answer) {
                 totalCorrectAnswers++;
-                scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
-                if (questionIndex == 19) {
+                scoreDisplayElement.textContent = totalCorrectAnswers > 0
+                    ? "Coins: " + totalCorrectAnswers + "00"
+                    : "Coins: 0";
+
+                if (answeredQuestions.length == 19) {
                     showCongratsScreen(totalCorrectAnswers);
+                } else {
+                    answeredQuestions.push(questionIndex);
+                    var randomIndex = questionIndex;
+    
+                    while (answeredQuestions.includes(randomIndex)) {
+                        randomIndex = Math.floor(Math.random() * 20);
+                    };
+    
+                    displayRandomQuestion(randomIndex,stageId);
                 }
-                displayRandomQuestion(questionIndex+1,stageId);
             } else {           
                 showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers, stageId);
             }
