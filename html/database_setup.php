@@ -8,7 +8,7 @@
 
 require 'database_cred.php';
 
-// Create connection
+// // Create connection
 // $conn = mysqli_connect($servername, $username, $password);
 // // Check connection
 // if (!$conn) {
@@ -27,7 +27,6 @@ require 'database_cred.php';
 
 // mysqli_close($conn);
 
-
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
@@ -35,7 +34,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Drop table
+// // Drop table
 $sql = "DROP TABLE cyber_question;";
 if (mysqli_query($conn, $sql)) {
     echo "Table cyber_question dropped successfully\n";

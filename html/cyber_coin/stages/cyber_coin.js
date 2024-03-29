@@ -106,7 +106,6 @@ async function showCongratsScreen(totalScore) {
 }
 
 async function displayRandomQuestion(questionIndex, stageId) {
-    var selectedQuestion;
     // Get the question from server
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
@@ -130,24 +129,19 @@ async function displayRandomQuestion(questionIndex, stageId) {
     const scoreDisplayElement = document.getElementById('score');
 
     questionTextElement.textContent = selectedQuestion.question;
-
-    scoreDisplayElement.textContent = totalCorrectAnswers > 0
-        ? "Coins: " + totalCorrectAnswers + "00"
-        : "Coins: 0";
+    scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
     
     answerOptionsElement.innerHTML = '';
     shuffleOptions(selectedQuestion.options);
     selectedQuestion.options.forEach(function(answerOption) {
         const optionButtonElement = document.createElement('button');
         optionButtonElement.textContent = answerOption;
+        optionButtonElement.classList.add('custom-button');
         optionButtonElement.onclick = function() {
             if (answerOption === selectedQuestion.correct_answer) {
                 totalCorrectAnswers++;
-                scoreDisplayElement.textContent = totalCorrectAnswers > 0
-                    ? "Coins: " + totalCorrectAnswers + "00"
-                    : "Coins: 0";
-
-                if (answeredQuestions.length == 19) {
+                scoreDisplayElement.textContent = "Coins: " + totalCorrectAnswers + "00";
+                if (questionIndex == 19) {
                     showCongratsScreen(totalCorrectAnswers);
                 } else {
                     answeredQuestions.push(questionIndex);
@@ -164,5 +158,22 @@ async function displayRandomQuestion(questionIndex, stageId) {
             }
         };
         answerOptionsElement.appendChild(optionButtonElement);
+        updateTimer(stageId)
     });
+}
+
+async function updateTimer(stageId){
+    var timerElement = document.getElementById('timer');
+    var timeLeft = 30; // countdown in seconds
+    var interval = setInterval(function() {
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            timerElement.innerHTML = 'Done!';
+            showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers, stageId);
+
+        } else {
+            timeLeft--;
+            timerElement.innerHTML = timeLeft + 's';
+        }
+    }, 1000); // every second
 }
