@@ -109,6 +109,17 @@
                     Are you ready to dive into the virtual universe and become the ultimate Cyber Coin Master?
                 </p>
             </div>
+            <div
+                class="movie-card mosaic-slide-bg"
+                onclick="window.location.href='mosaic_slide/mosaic_select.php';"
+            >
+                <h1 class="main-heading-2">
+                    Mosaic Slide
+                </h1>
+                <p class="info-text">
+                    Can you rearrange the tiles to reveal the hidden masterpiece?
+                </p>
+            </div>
         </div>
     </section>
     
