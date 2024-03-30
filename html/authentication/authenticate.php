@@ -37,6 +37,15 @@ case 'decrypt_words':
 case 'get_cyber_question':
     $result['result'] = getCyberQuestion($input->index, $input->stageId);
     break;
+case 'check_cyber_answer':
+    $result['result'] = checkCyberAnswer($input->answer, $input->index, $input->stageId);
+    break;
+case 'get_cyber_leaderboard':
+    $result['result'] = getCyberLeaderboard();
+    break;
+case 'add_user_to_cyber_leaderboard':
+    $result['result'] = addToCyberLeaderboard($input->name, $input->points);
+    break;
 case 'get_mosaic_order':
     $mosaic_order = getMosaicOrder($input->difficulty);
     $result['result'] = $mosaic_order;
@@ -208,10 +217,32 @@ function getCyberQuestion($index, $stage_num)
         $result["option_3"], 
         $result["option_4"]
       ],
-      "correct_answer"=> $result["answer"],
     ];
 }
 
+/**
+ * Check if the answer the user provided is the correct answer 
+ * 
+ * @param string $answer    The answer the user provided
+ * @param string $index     The array of index to decrypt
+ * @param string $stage_num The id of the stage
+ * 
+ * @return boolean true if answer was correct
+ */
+function checkCyberAnswer($answer, $index, $stage_num) 
+{
+    include "../database.php";
+    $result = getCyberQuestions($stage_num)[$index];
+    return $answer == $result["answer"];
+}
+
+/**
+ * Get array of correct sequence of images 
+ * 
+ * @param string $difficulty the user has selected
+ * 
+ * @return array array of caoorect order of images
+ */
 function getMosaicOrder($difficulty) {
     $mosaic_order = [];
     switch ($difficulty) {
@@ -232,5 +263,29 @@ function getMosaicOrder($difficulty) {
     }
     shuffle($mosaic_order);
     return $mosaic_order;
+}
+
+/**
+ * Get array of correct sequence of images 
+ * 
+ * @param string $difficulty the user has selected
+ * 
+ * @return array array of caoorect order of images
+ */
+function getCyberLeaderboard() {
+    include "../database.php";
+    return getCyberLeaderboardDB();
+}
+
+/**
+ * Get array of correct sequence of images 
+ * 
+ * @param string $difficulty the user has selected
+ * 
+ * @return boolean array of caoorect order of images
+ */
+function addToCyberLeaderboard($user, $points) {
+    include "../database.php";
+    return addUserToLeaderboard($user, $points);
 }
 ?>
