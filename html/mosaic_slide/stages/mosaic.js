@@ -9,9 +9,7 @@ var turns = 0;
 
 const currentScript = document.querySelector('script[src="mosaic.js"]');
 var imageOrder = getImageOrder(currentScript.getAttribute('difficulty'));
-console.log(imageOrder);
-// checkSolution(imageOrder);
-// var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// var imageOrder = ["1", "2", "6", "4", "5", "3", "7", "8", "9"];
 // var imageOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
 
 // sets the images and event listeners for each image
@@ -45,10 +43,19 @@ window.onload = function() {
  */
 function checkGameOver(imageOrder) {
    var count = 1;
-   for (let index = 0; index < imageOrder.length; index++) {
-      if (imageOrder[index] == count++){
-         return false;
-      };
+   // for (let index = 0; index < imageOrder.length; index++) {
+   //    if (imageOrder[index] == count++){
+   //       return false;
+   //    };
+   // }
+   for (let r=0; r < rows; r++) {
+      for (let c=0; c < columns; c++) {
+         //<img id="0-0" src="1.jpg">
+         let tile = document.getElementById(r.toString() + "-" + c.toString());
+         if (tile.getAttribute("src") != "../../images/mosaic/stage1/"+ count++ + ".jpg") {
+            return false;
+         }
+      }
    }
    return true;
 }
@@ -78,32 +85,6 @@ export function getImageOrder(difficulty) {
 
    return imageOrder;
 }
-
-/**
- * Checks if the final order is correct from the database
- * 
- * @returns the array of images based on the difficulty
- */
-export function checkSolution(imageOrder) {
-   const xhttp = new XMLHttpRequest();
-   xhttp.onload = function() {
-      var data = JSON.parse(this.responseText);
-      if (data['error'] == null) {
-         imageOrder = data['result'];
-      } else {
-         alert(data['error']);
-      }
-   }
-   xhttp.open("POST", "../../authentication/authenticate.php", false);
-   xhttp.setRequestHeader("Content-type", "application/json");
-   xhttp.send(JSON.stringify({
-      "functionname": 'check_mosaic_solution',
-      "order":imageOrder
-   }));
-
-   return imageOrder;
-}
-
 
 function dragStart() {
     currTile = this; //this refers to the img tile being dragged
@@ -148,8 +129,8 @@ function dragEnd() {
    let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
 
    if (isAdjacent) {
-      let currImg = currTile.src;
-      let otherImg = otherTile.src;
+      let currImg = currTile.getAttribute("src");
+      let otherImg = otherTile.getAttribute("src");
 
       currTile.src = otherImg;
       otherTile.src = currImg;

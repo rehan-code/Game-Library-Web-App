@@ -41,9 +41,6 @@ case 'get_mosaic_order':
     $mosaic_order = getMosaicOrder($input->difficulty);
     $result['result'] = $mosaic_order;
     break;
-case 'check_mosaic_solution':
-    $result['result'] = checkMosaicSolution($input->order, $mosaic_order);
-    break;
 default:
     $result['error'] = 'Function ' . $input->functionname . ' not found!';
     break;
@@ -235,12 +232,5 @@ function getMosaicOrder($difficulty) {
     }
     shuffle($mosaic_order);
     return $mosaic_order;
-}
-
-function checkMosaicSolution($order, $mosaic_order) {
-    if ($order == $mosaic_order) {
-        return true;
-    }
-    return false;
 }
 ?>

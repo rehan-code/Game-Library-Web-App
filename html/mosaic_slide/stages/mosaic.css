@@ -72,6 +72,7 @@ body {
 .game-content {
   height: 100%;
   padding-top: 2rem;
+  color: #335eea;
 }
 
 .blur {

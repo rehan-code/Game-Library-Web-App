@@ -30,14 +30,15 @@
         <h1>Game Over</h1>
         <div class="options">
             <button class="option-button button1" 
-             onclick="window.location.href='../../index.php'"></button>
+            onclick="window.location.href='../../index.php'"></button>
             <button class="option-button button2" 
-             onclick="window.location.href='hangman_stage_1.php'"></button>
+            onclick="window.location.href='hangman_stage_1.php'"></button>
         </div>
     </div>
-    
-    <h1>Turns: <span id="turns">0</span></h1>
-    <div id="board">
+    <div class="game-content">
+        <h1>Turns: <span id="turns">0</span></h1>
+        <div id="board">
+        </div>
     </div>
 </body>
 
