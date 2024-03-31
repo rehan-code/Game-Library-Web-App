@@ -35,13 +35,93 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// // Drop table
+//#################### Cyber LeaderBoard Setup ####################
+// Drop table cyber_leaderboard
+$sql = "DROP TABLE cyber_leaderboard;";
+if (mysqli_query($conn, $sql)) {
+    echo "Table cyber_leaderboard dropped successfully\n";
+} else {
+    echo "Error dropping table: " . $conn->error;
+}
+
+// sql to create cyber_leaderboard table
+$sql = "CREATE TABLE cyber_leaderboard (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+points INT(4) UNSIGNED NOT NULL
+);";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Table cyber_leaderboard created successfully\n";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
+//Delete all data
+$sql = "DELETE FROM cyber_leaderboard;";
+if (mysqli_query($conn, $sql)) {
+    echo "Record deleted successfully\n";
+} else {
+    echo "Error deleting record: " . mysqli_error($conn);
+}
+
+//Add dummy data
+$sql = "INSERT INTO cyber_leaderboard (name, points)
+VALUES ('Joe', 123);";
+$sql .= "INSERT INTO cyber_leaderboard (name, points)
+VALUES ('Bob', 234);";
+$sql .= "INSERT INTO cyber_leaderboard (name, points)
+VALUES ('Brad', 456);";
+$sql .= "INSERT INTO cyber_leaderboard (name, points)
+VALUES ('Hari', 2);";
+$sql .= "INSERT INTO cyber_leaderboard (name, points)
+VALUES ('Yes', 1000);";
+$sql .= "INSERT INTO cyber_leaderboard (name, points)
+VALUES ('Greg', 23);";
+$sql .= "INSERT INTO cyber_leaderboard (name, points)
+VALUES ('John', 4556);";
+$sql .= "INSERT INTO cyber_leaderboard (name, points)
+VALUES ('Jason', 9900);";
+
+
+if (mysqli_multi_query($conn, $sql)) {
+    echo "New records created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+mysqli_close($conn);
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// query to get top 5 elements
+$sql = "SELECT * FROM cyber_leaderboard 
+ORDER BY points
+LIMIT 5;";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["points"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+//#################### Cyber Question Setup ####################
+// Drop table cyber_question
 $sql = "DROP TABLE cyber_question;";
 if (mysqli_query($conn, $sql)) {
     echo "Table cyber_question dropped successfully\n";
 } else {
     echo "Error dropping table: " . $conn->error;
 }
+
 
 // sql to create cyber_question table
 $sql = "CREATE TABLE cyber_question (
@@ -62,7 +142,6 @@ if (mysqli_query($conn, $sql)) {
 }
 
 //Delete all data
-// sql to delete a record
 $sql = "DELETE FROM cyber_question";
 
 if (mysqli_query($conn, $sql)) {
