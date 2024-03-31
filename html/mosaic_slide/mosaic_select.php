@@ -87,13 +87,13 @@
                 </h1>
             </div>
             <div class="movie-card movie-card-mosaic-2" 
-            onclick="window.location.href='stages/stage_1.php';">
+            onclick="window.location.href='stages/stage_2.php';">
                 <h1 class="main-heading-2">
                     Medium
                 </h1>
             </div>
             <div class="movie-card movie-card-mosaic-3" 
-            onclick="window.location.href='stages/stage_1.php';">
+            onclick="window.location.href='stages/stage_3.php';">
                 <h1 class="main-heading-2">
                     Hard
                 </h1>
