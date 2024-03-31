@@ -22,11 +22,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<script type='module' src="mosaic.js" difficulty='easy'></script>
+<script type='module' src="mosaic.js" difficulty='medium'></script>
 
 <body>
     <?php require "../../components/navbar/navbar.php"; ?>
-    <h1>Easy Stage</h1>
+    <h1>Medium Stage</h1>
     <div class="game-over-screen">
         <h1>Game Over</h1>
         <div class="options">

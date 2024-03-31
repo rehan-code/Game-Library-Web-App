@@ -14,61 +14,25 @@ var imageOrder = getImageOrder(currentScript.getAttribute('difficulty'));
 
 // sets the images and event listeners for each image
 window.onload = function() {
-   for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < columns; c++) {
+   for (let r=0; r < rows; r++) {
+      for (let c=0; c < columns; c++) {
+
+            //<img id="0-0" src="1.jpg">
             let tile = document.createElement("img");
             tile.id = r.toString() + "-" + c.toString();
             tile.src = "../../images/mosaic/stage1/"+ imageOrder.shift() + ".jpg";
-            tile.addEventListener("click", tileClicked);
+
+            //DRAG FUNCTIONALITY
+            tile.addEventListener("dragstart", dragStart);  //click an image to drag
+            tile.addEventListener("dragover", dragOver);    //moving image around while clicked
+            tile.addEventListener("dragenter", dragEnter);  //dragging image onto another one
+            tile.addEventListener("dragleave", dragLeave);  //dragged image leaving anohter image
+            tile.addEventListener("drop", dragDrop);        //drag an image over another image, drop the image
+            tile.addEventListener("dragend", dragEnd);      //after drag drop, swap the two tiles
+
             document.getElementById("board").append(tile);
+
       }
-   }
-}
-
-/**
- * Function to handle tile clicks
- * @param event - The DOM event triggered by clicking a tile.
- * @return 
- */
-function tileClicked() {
-   let clickedTile = this; // 'this' refers to the img tile that was clicked
-   let emptyTile = document.querySelector('img[src$="blank.jpg"]');
-   if (isAdjacent(clickedTile, emptyTile)) {
-       slideTile(clickedTile, emptyTile);
-   }
-}
-
-/**
- * Function to check if two tiles are adjacent
- * @param tile1 - The first tile element to check.
- * @param tile2 - The second tile element to check.
- * @returns Boolean - Returns true if the tiles are adjacent, or else false.
- */
-function isAdjacent(tile1, tile2) {
-   let coords1 = tile1.id.split("-");
-   let coords2 = tile2.id.split("-");
-   let distance = Math.abs(coords1[0] - coords2[0]) + Math.abs(coords1[1] - coords2[1]);
-   return distance == 1; // They are adjacent if the distance is 1
-}
-
-/**
- * Function to slide a tile into the empty space
- * @param clickedTile - The tile that was clicked and is to be slid into the empty space.
- * @param emptyTile - The tile representing the empty space.
- * @return 
- */
-function slideTile(clickedTile, emptyTile) {
-   let clickedImg = clickedTile.getAttribute("src");
-   let emptyImg = emptyTile.getAttribute("src");
-
-   clickedTile.src = emptyImg;
-   emptyTile.src = clickedImg;
-
-   turns += 1;
-   document.getElementById("turns").innerText = turns;
-
-   if (checkGameOver()) {
-      gameover();
    }
 }
 
@@ -79,6 +43,11 @@ function slideTile(clickedTile, emptyTile) {
  */
 function checkGameOver(imageOrder) {
    var count = 1;
+   // for (let index = 0; index < imageOrder.length; index++) {
+   //    if (imageOrder[index] == count++){
+   //       return false;
+   //    };
+   // }
    for (let r=0; r < rows; r++) {
       for (let c=0; c < columns; c++) {
          //<img id="0-0" src="1.jpg">
@@ -115,6 +84,64 @@ export function getImageOrder(difficulty) {
    }));
 
    return imageOrder;
+}
+
+function dragStart() {
+    currTile = this; //this refers to the img tile being dragged
+}
+
+function dragOver(e) {
+    e.preventDefault();
+}
+
+function dragEnter(e) {
+    e.preventDefault();
+}
+
+function dragLeave() {
+
+}
+
+function dragDrop() {
+    otherTile = this; //this refers to the img tile being dropped on
+}
+
+function dragEnd() {
+   if (!otherTile.src.includes("3.jpg")) {
+      return;
+   }
+
+   // get coordinates of current tile
+   let currCoords = currTile.id.split("-"); //ex) "0-0" -> ["0", "0"]
+   let r = parseInt(currCoords[0]);
+   let c = parseInt(currCoords[1]);
+   // get coordinates of other tile
+   let otherCoords = otherTile.id.split("-");
+   let r2 = parseInt(otherCoords[0]);
+   let c2 = parseInt(otherCoords[1]);
+
+   let moveLeft = r == r2 && c2 == c-1;
+   let moveRight = r == r2 && c2 == c+1;
+
+   let moveUp = c == c2 && r2 == r-1;
+   let moveDown = c == c2 && r2 == r+1;
+   //check if the tiles are adjacent
+   let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
+
+   if (isAdjacent) {
+      let currImg = currTile.getAttribute("src");
+      let otherImg = otherTile.getAttribute("src");
+
+      currTile.src = otherImg;
+      otherTile.src = currImg;
+
+      turns += 1;
+      document.getElementById("turns").innerText = turns;
+
+      if (checkGameOver()) {
+         gameover();
+      }
+   }
 }
 
 /**
