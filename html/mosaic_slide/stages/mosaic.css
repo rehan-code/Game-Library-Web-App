@@ -35,16 +35,12 @@ body {
 .game-over-screen {
   z-index: 6;
   width: 100%;
-
-  /* height: 100%; */
   top: 20rem;
   position: absolute;
   text-align: center;
   align-items: center;
   justify-content: center;
   display: flex;
-
-  /* display: none; */
   opacity: 0;
   height: 0;
   overflow: hidden;
@@ -101,8 +97,6 @@ body {
   border: none;
   border-radius: 5px;
   background-color: rgb(242 242 242);
-
-  /* Green, you can change the color */
   color: black;
   cursor: pointer;
   width: 16px;
@@ -112,15 +106,11 @@ body {
 
 .button1 {
   background-image: url("../../images/home_button.png");
-
-  /* Set the path to your image */
   background-size: cover;
 }
 
 .button2 {
   background-image: url("../../images/replay.png");
-
-  /* Set the path to your image */
   background-size: cover;
 }
 
@@ -136,16 +126,26 @@ body {
   background-color: lightblue;
   border: 10px solid #0c67ae;
   margin: 0 auto;
-  display: grid; /* Change display property to grid */
-  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
-  gap: 5px; /* Add gap between images */
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 5px; 
 }
 
 
 #board img {
-  width: 100%; /* Set image width to 100% of parent container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  height: auto;
   border: 1px solid #0c67ae;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.empty-tile {
+  border: 2px dashed #0c67ae;
+}
+
+.active-tile {
+  outline: 3px solid #0c67ae;
 }
 
  

@@ -14,25 +14,48 @@ var imageOrder = getImageOrder(currentScript.getAttribute('difficulty'));
 
 // sets the images and event listeners for each image
 window.onload = function() {
-   for (let r=0; r < rows; r++) {
-      for (let c=0; c < columns; c++) {
-
-            //<img id="0-0" src="1.jpg">
+   for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < columns; c++) {
             let tile = document.createElement("img");
             tile.id = r.toString() + "-" + c.toString();
             tile.src = "../../images/mosaic/stage1/"+ imageOrder.shift() + ".jpg";
-
-            //DRAG FUNCTIONALITY
-            tile.addEventListener("dragstart", dragStart);  //click an image to drag
-            tile.addEventListener("dragover", dragOver);    //moving image around while clicked
-            tile.addEventListener("dragenter", dragEnter);  //dragging image onto another one
-            tile.addEventListener("dragleave", dragLeave);  //dragged image leaving anohter image
-            tile.addEventListener("drop", dragDrop);        //drag an image over another image, drop the image
-            tile.addEventListener("dragend", dragEnd);      //after drag drop, swap the two tiles
-
+            // Add click listener instead of drag listeners
+            tile.addEventListener("click", tileClicked);
             document.getElementById("board").append(tile);
-
       }
+   }
+}
+
+// Define the new tileClicked function
+function tileClicked() {
+   let clickedTile = this; // 'this' refers to the img tile that was clicked
+   let emptyTile = document.querySelector('img[src$="blank.jpg"]');
+   if (isAdjacent(clickedTile, emptyTile)) {
+       slideTile(clickedTile, emptyTile);
+   }
+}
+
+// Function to check if two tiles are adjacent
+function isAdjacent(tile1, tile2) {
+   let coords1 = tile1.id.split("-");
+   let coords2 = tile2.id.split("-");
+   let distance = Math.abs(coords1[0] - coords2[0]) + Math.abs(coords1[1] - coords2[1]);
+   return distance == 1; // They are adjacent if the distance is 1
+}
+
+// Function to slide a tile into the empty space
+function slideTile(clickedTile, emptyTile) {
+   let clickedImg = clickedTile.getAttribute("src");
+   let emptyImg = emptyTile.getAttribute("src");
+
+   clickedTile.src = emptyImg;
+   emptyTile.src = clickedImg;
+
+   turns += 1;
+   document.getElementById("turns").innerText = turns;
+
+   if (checkGameOver()) {
+      gameover();
    }
 }
 
