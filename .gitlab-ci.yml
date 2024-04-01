@@ -1,0 +1,76 @@
+stages:
+  - build
+  - lint
+  - test
+  - deploy
+
+build-job:
+  stage: build
+  script:
+    - echo "Hello, $GITLAB_USER_LOGIN!"
+
+php-lint:
+  stage: lint
+  image: php:latest
+  allow_failure: true
+  before_script:
+    - cd codesniffer
+  script:
+    - php phpcs.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
+    - php phpcbf.phar -s --standard=phpcs_ruleset.xml --ignore=*.js ../html
+
+js-css-lint:
+  stage: lint
+  image: node:latest
+  script:
+    - npm install
+    - npm run lint:js
+    - npm run lint:css
+  allow_failure: true
+  only:
+    - branches
+
+phpunit-tests:
+  stage: test
+  image: php:latest
+  script:
+    - ./vendor/bin/phpunit html/test/
+
+unit-test:
+  image: node:latest
+  stage: test
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  before_script:
+    - cd html
+    - cd test
+    - npm install --save-dev jsdom 
+    - npm install --save-dev jest-environment-jsdom
+  script:
+    - ls
+    # - npx jest waldo_game.test.js
+  artifacts:
+    paths:
+      - coverage/
+    when: always
+    reports:
+      junit:
+        - junit.xml
+
+deploy-prod:
+  stage: deploy
+  image: debian:12.4
+  before_script:
+  - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+  - eval $(ssh-agent -s)
+  - chmod 400 "$SSH_PRIVATE_KEY"
+  - ssh-add "$SSH_PRIVATE_KEY"
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - ssh-keyscan cis4250w24-08.socs.uoguelph.ca >> ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+  script:
+    - echo "On $CI_COMMIT_REF_NAME branch, copying html files...";
+    - scp -r html/* socs@cis4250w24-08.socs.uoguelph.ca:/var/www/html/;
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  environment: production
