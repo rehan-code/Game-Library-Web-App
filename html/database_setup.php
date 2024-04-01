@@ -106,8 +106,9 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["points"]. "<br>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - Name: " . 
+        $row["name"]. " " . $row["points"]. "<br>";
     }
 } else {
     echo "0 results";
@@ -380,7 +381,8 @@ $questions_1 = [
         "correct_answer" => "All of the other"
     ],
     [
-        "question" => "What does \'public static void main(String[] args)\' signify in Java?",
+        "question" => 
+        "What does \'public static void main(String[] args)\' signify in Java?",
         "options" => [
             "A method declaration",
             "A class declaration",
@@ -425,7 +427,8 @@ $questions_1 = [
         "correct_answer" => "To convert high-level language to machine language"
     ],
     [
-        "question" => "Which of these is a key feature of Agile software development?",
+        "question" => 
+        "Which of these is a key feature of Agile software development?",
         "options" => [
             "Comprehensive documentation",
             "Contract negotiation",
@@ -442,7 +445,8 @@ $questions_1 = [
             "A programming paradigm based on the concept of \'objects\'",
             "A specific type of data structure"
         ],
-        "correct_answer" => "The bundling of data with methods that operate on that data"
+        "correct_answer" => 
+        "The bundling of data with methods that operate on that data",
     ],
     [
         "question" => "Which of the following is an example of a markup language?",
@@ -455,7 +459,8 @@ $questions_1 = [
         "correct_answer" => "404"
     ],
     [
-        "question" => "Which programming paradigm emphasizes functions without side effects?",
+        "question" => 
+        "Which programming paradigm emphasizes functions without side effects?",
         "options" => [
             "Object-Oriented Programming",
             "Procedural Programming",
@@ -467,7 +472,8 @@ $questions_1 = [
 ];
 $questions_2 = [
     [
-        "question" => "What is the name of Nintendo\'s flagship, red Italian plumber?",
+        "question" => 
+        "What is the name of Nintendo\'s flagship, red Italian plumber?",
         "options" => [
             "Luigi",
             "Toad",
@@ -746,7 +752,8 @@ $questions_2 = [
         "correct_answer" => "Tomb Raider"
     ],
     [
-        "question" => "In the game \'Fallout,\' what is the name of the post-apocalyptic
+        "question" => 
+        "In the game \'Fallout,\' what is the name of the post-apocalyptic
         currency used by survivors?",
         "options" => [
             "Bottle Caps",
@@ -833,7 +840,8 @@ $questions_2 = [
         "correct_answer" => "God of War"
     ],
     [
-        "question" => "In the game \'Borderlands,\' what is the name of the planet where
+        "question" => 
+        "In the game \'Borderlands,\' what is the name of the planet where
         the game takes place?",
         "options" => [
             "Pandora",
@@ -844,7 +852,8 @@ $questions_2 = [
         "correct_answer" => "Pandora"
     ],
     [
-        "question" => "In the game \'Outer Wilds,\' what is the name of the planet where
+        "question" =>
+        "In the game \'Outer Wilds,\' what is the name of the planet where
         the player begins?",
         "options" => [
             "Timber Hearth",
@@ -1101,7 +1110,8 @@ $questions_3 = [
         "correct_answer" => "Jaws"
     ],
     [
-        "question" => "Who starred as the titular character in the 1984 film \'The Terminator\'?",
+        "question" =>
+        "Who starred as the titular character in the 1984 film \'The Terminator\'?",
         "options" => [
             "Sylvester Stallone",
             "Arnold Schwarzenegger",
@@ -1131,7 +1141,9 @@ $questions_3 = [
         "correct_answer" => "Princess Buttercup"
     ],
     [
-        "question" => "In \'The Godfather\', who was the head of the Corleone family before Michael?",
+        "question" => 
+        "In \'The Godfather\', who was the head of the ".
+        "Corleone family before Michael?",
         "options" => [
             "Sonny Corleone",
             "Vito Corleone",
@@ -1191,7 +1203,8 @@ $questions_3 = [
         "correct_answer" => "Avatar"
     ],
     [
-        "question" => "Which movie is known for the quote, \'Here\'s looking at you, kid\'?",
+        "question" => 
+        "Which movie is known for the quote, \'Here\'s looking at you, kid\'?",
         "options" => [
             "Casablanca",
             "Gone with the Wind",
@@ -1221,7 +1234,8 @@ $questions_3 = [
         "correct_answer" => "The Shawshank Redemption"
     ],
     [
-        "question" => "What is the name of the virtual reality world in \'Ready Player One\'?",
+        "question" => 
+        "What is the name of the virtual reality world in \'Ready Player One\'?",
         "options" => [
             "The Grid",
             "The Oasis",
@@ -1241,7 +1255,8 @@ $questions_3 = [
         "correct_answer" => "Leonardo DiCaprio"
     ],
     [
-        "question" => "In \'The Lord of the Rings\', what is the name of Frodo\'s hometown?",
+        "question" => 
+        "In \'The Lord of the Rings\', what is the name of Frodo\'s hometown?",
         "options" => [
             "Rivendell",
             "Rohan",
@@ -1271,7 +1286,8 @@ $questions_3 = [
         "correct_answer" => "Wes Anderson"
     ],
     [
-        "question" => "Who won the Academy Award for Best Actress for her role in \'La La Land\'?",
+        "question" => 
+        "Who won the Academy Award for Best Actress for her role in \'La La Land\'?",
         "options" => [
             "Emma Stone",
             "Anne Hathaway",
@@ -1281,7 +1297,8 @@ $questions_3 = [
         "correct_answer" => "Emma Stone"
     ],
     [
-        "question" => "What is the fictional African country featured in \'Black Panther\'?",
+        "question" => 
+        "What is the fictional African country featured in \'Black Panther\'?",
         "options" => [
             "Wakanda",
             "Zamunda",

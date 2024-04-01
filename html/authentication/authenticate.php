@@ -38,7 +38,9 @@ case 'get_cyber_question':
     $result['result'] = getCyberQuestion($input->index, $input->stageId);
     break;
 case 'check_cyber_answer':
-    $result['result'] = checkCyberAnswer($input->answer, $input->index, $input->stageId);
+    $result['result'] = checkCyberAnswer(
+        $input->answer, $input->index, $input->stageId
+    );
     break;
 case 'get_cyber_leaderboard':
     $result['result'] = getCyberLeaderboard();
@@ -243,48 +245,50 @@ function checkCyberAnswer($answer, $index, $stage_num)
  * 
  * @return array array of caoorect order of images
  */
-function getMosaicOrder($difficulty) {
+function getMosaicOrder($difficulty) 
+{
     $mosaic_order = [];
     switch ($difficulty) {
-        case 'easy':
-            $mosaic_order = ["1","2","3","4","5","6","7","8","9"];
-            break;
-        case 'medium':
-            $mosaic_order = ["1","2","3","4","5","6","7","8","9","10",
-                "11","12","13","14","15","16"];
-            break;
-        case 'hard':
-            $mosaic_order = ["1","2","3","4","5","6","7","8","9","10",
-                "11","12","13","14","15","16","17","18","19","20",
-                "21","22","23","24","25"];  
-            break;
-        default:
-            break;
+    case 'easy':
+        $mosaic_order = ["1","2","3","4","5","6","7","8","9"];
+        break;
+    case 'medium':
+        $mosaic_order = ["1","2","3","4","5","6","7","8","9","10",
+            "11","12","13","14","15","16"];
+        break;
+    case 'hard':
+        $mosaic_order = ["1","2","3","4","5","6","7","8","9","10",
+            "11","12","13","14","15","16","17","18","19","20",
+            "21","22","23","24","25"];  
+        break;
+    default:
+        break;
     }
     shuffle($mosaic_order);
     return $mosaic_order;
 }
 
 /**
- * Get array of correct sequence of images 
- * 
- * @param string $difficulty the user has selected
+ * Get array of correct sequence of images
  * 
  * @return array array of caoorect order of images
  */
-function getCyberLeaderboard() {
+function getCyberLeaderboard() 
+{
     include "../database.php";
     return getCyberLeaderboardDB();
 }
 
 /**
- * Get array of correct sequence of images 
+ * Add value to cyber coin databse
  * 
- * @param string $difficulty the user has selected
+ * @param string $user   the user name
+ * @param string $points the points they got
  * 
- * @return boolean array of caoorect order of images
+ * @return boolean true if successfull
  */
-function addToCyberLeaderboard($user, $points) {
+function addToCyberLeaderboard($user, $points) 
+{
     include "../database.php";
     return addUserToLeaderboard($user, $points);
 }

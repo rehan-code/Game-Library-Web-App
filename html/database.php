@@ -45,7 +45,8 @@ function getCyberQuestions($stage_num)
  * 
  * @return array of leaderboard entries
  */
-function getCyberLeaderboardDB() {
+function getCyberLeaderboardDB() 
+{
     include 'database_cred.php';
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -63,9 +64,9 @@ function getCyberLeaderboardDB() {
 
     $table = [];
     if (mysqli_num_rows($result) > 0) {
-        while($row = mysqli_fetch_assoc($result)) {
-            // echo " - Name: " . $row["name"]. " " . $row["points"]. "<br>";
+        while ($row = mysqli_fetch_assoc($result)) {
             array_push($table, $row);
+            // echo " - Name: " . $row["name"]. " " . $row["points"]. "<br>";
         }
     }
 
@@ -78,11 +79,13 @@ getCyberLeaderboardDB();
 /**
  * Function to add user to leader board
  * 
- * @param $name name of the user 
+ * @param $name   name of the user 
+ * @param $points points of the user 
  * 
  * @return boolean success or failure when adding the new user
  */
-function addUserToLeaderboard($name, $points) {
+function addUserToLeaderboard($name, $points) 
+{
     include 'database_cred.php';
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
