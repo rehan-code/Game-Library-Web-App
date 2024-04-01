@@ -4,7 +4,7 @@ let isZoomed = false;
 let score = 10; // Initialize score
 let isSpeechBubbleVisible = false;
 
-const buttonPositions = [
+const lionButtonPositions = [
     { top: '70%', left: '27%' },
     { top: '70%', left: '1%' },
     { top: '70%', left: '55%' },
@@ -19,10 +19,10 @@ const buttonPositions = [
 
 let currentHintIndex = null;
 
-function setButtonPosition() {
-    const randomIndex = Math.floor(Math.random() * buttonPositions.length);
+function setLionButtonPositions() {
+    const randomIndex = Math.floor(Math.random() * lionButtonPositions.length);
     currentHintIndex = randomIndex; // Store the current hint index
-    const randomPosition = buttonPositions[randomIndex];
+    const randomPosition = lionButtonPositions[randomIndex];
     const button = document.querySelector('.found-button-random');
     button.style.top = randomPosition.top;
     button.style.left = randomPosition.left;
@@ -47,13 +47,10 @@ const dragonButtonPositions = [
 
 
 function setDragonButtonPosition() {
-
     const randomPosition = dragonButtonPositions[Math.floor(Math.random() * dragonButtonPositions.length)];
     const dragonButton = document.querySelector('.found-button-dragon');
-
     dragonButton.style.top = randomPosition.top;
     dragonButton.style.left = randomPosition.left;
-
     dragonButton.addEventListener('click', isFound);
 }
 document.addEventListener('DOMContentLoaded', () => {
@@ -74,7 +71,6 @@ const girlButtonPositions = [
 
 
 function setGirlButtonPosition() {
-
     const randomPosition = girlButtonPositions[Math.floor(Math.random() * girlButtonPositions.length)];
     const girlButton = document.querySelector('.found-button-girl');
     girlButton.style.top = randomPosition.top;
@@ -108,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    setButtonPosition();
+    setLionButtonPositions();
     setDragonButtonPosition();
     setGirlButtonPosition();
 });
@@ -205,7 +201,7 @@ function isFound(event) {
         let gameOverScrn = document.querySelector(".game-over-screen h1");
         gameOverScrn.innerHTML += "<br><i>" + hints[hintIndex] + "</i>";
     }
-
+    
     screen.style.display = "block";
     imageContainer.classList.add("blur");
 }
@@ -267,6 +263,9 @@ window.showHint = function(level) {
             "Check behind the royal dance.",
             "Check behind the royal dance.",
             "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
+            "Check behind the royal dance.",
             "Check behind the royal dance."
         ],
         girl: [
@@ -294,8 +293,6 @@ window.showHint = function(level) {
     speechBubble.style.display = 'block';
     isSpeechBubbleVisible = true;
 };
-
-
 
 document.addEventListener('click', function(e) {
     const speechBubble = document.querySelector('.speech-bubble');

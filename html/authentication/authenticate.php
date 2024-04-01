@@ -11,6 +11,7 @@ header('Content-Type: application/json');
 
 $password = "cash cow";
 $isAuthenticated = false;
+$mosaic_order = [];
 
 $input = json_decode(stripslashes(file_get_contents("php://input")));
 // $v = json_decode(stripslashes($_GET["data"])); // for GET requests
@@ -35,6 +36,21 @@ case 'decrypt_words':
     break;
 case 'get_cyber_question':
     $result['result'] = getCyberQuestion($input->index, $input->stageId);
+    break;
+case 'check_cyber_answer':
+    $result['result'] = checkCyberAnswer(
+        $input->answer, $input->index, $input->stageId
+    );
+    break;
+case 'get_cyber_leaderboard':
+    $result['result'] = getCyberLeaderboard();
+    break;
+case 'add_user_to_cyber_leaderboard':
+    $result['result'] = addToCyberLeaderboard($input->name, $input->points);
+    break;
+case 'get_mosaic_order':
+    $mosaic_order = getMosaicOrder($input->difficulty);
+    $result['result'] = $mosaic_order;
     break;
 default:
     $result['error'] = 'Function ' . $input->functionname . ' not found!';
@@ -203,7 +219,77 @@ function getCyberQuestion($index, $stage_num)
         $result["option_3"], 
         $result["option_4"]
       ],
-      "correct_answer"=> $result["answer"],
     ];
+}
+
+/**
+ * Check if the answer the user provided is the correct answer 
+ * 
+ * @param string $answer    The answer the user provided
+ * @param string $index     The array of index to decrypt
+ * @param string $stage_num The id of the stage
+ * 
+ * @return boolean true if answer was correct
+ */
+function checkCyberAnswer($answer, $index, $stage_num) 
+{
+    include "../database.php";
+    $result = getCyberQuestions($stage_num)[$index];
+    return $answer == $result["answer"];
+}
+
+/**
+ * Get array of correct sequence of images 
+ * 
+ * @param string $difficulty the user has selected
+ * 
+ * @return array array of caoorect order of images
+ */
+function getMosaicOrder($difficulty) 
+{
+    $mosaic_order = [];
+    switch ($difficulty) {
+    case 'easy':
+        $mosaic_order = ["1","2","3","4","5","6","7","8","9"];
+        break;
+    case 'medium':
+        $mosaic_order = ["1","2","3","4","5","6","7","8","9","10",
+            "11","12","13","14","15","16"];
+        break;
+    case 'hard':
+        $mosaic_order = ["1","2","3","4","5","6","7","8","9","10",
+            "11","12","13","14","15","16","17","18","19","20",
+            "21","22","23","24","25"];  
+        break;
+    default:
+        break;
+    }
+    shuffle($mosaic_order);
+    return $mosaic_order;
+}
+
+/**
+ * Get array of correct sequence of images
+ * 
+ * @return array array of caoorect order of images
+ */
+function getCyberLeaderboard() 
+{
+    include "../database.php";
+    return getCyberLeaderboardDB();
+}
+
+/**
+ * Add value to cyber coin databse
+ * 
+ * @param string $user   the user name
+ * @param string $points the points they got
+ * 
+ * @return boolean true if successfull
+ */
+function addToCyberLeaderboard($user, $points) 
+{
+    include "../database.php";
+    return addUserToLeaderboard($user, $points);
 }
 ?>

@@ -28,6 +28,9 @@
         <exclude-pattern>../public/hangman/stages/hangman_stage_*.php</exclude-pattern>
         <exclude-pattern>../public/cryptogram/congrats/congrats_page.php</exclude-pattern>
         <exclude-pattern>../public/cryptogram/game/cryptogram.php</exclude-pattern>
+        <exclude-pattern>../public/mosaic_slide/stages/stage_1.php</exclude-pattern>
+        <exclude-pattern>../public/mosaic_slide/stages/stage_2.php</exclude-pattern>
+        <exclude-pattern>../public/mosaic_slide/stages/stage_3.php</exclude-pattern>
 
         <!--For CI/CD-->
         <exclude-pattern>../html/index.php</exclude-pattern>

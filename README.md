@@ -1,5 +1,5 @@
-# W24 CIS*4250 Team 8 Sprint 8
-Team Lead: Ivan Odiel Magtangob
+# W24 CIS*4250 Team 8 Sprint 9:
+Team Lead: harir al-rubaye 
 
 ## Authors
  Harir Al-Rubaye, Nour Tayem, Thulasi Jothiravi, Rehan Nagoor Mohideen, Harikrishan Singh, and Ivan Odiel Magtangob
@@ -11,14 +11,23 @@ Team Lead: Ivan Odiel Magtangob
  * [Usage (Local Development)](#usage-local-development)
 
 
-## What's [NEW] in Sprint 8
- Below are the breakdown's details for sprint7:
+## What's [NEW] in Sprint 9
+ Below are the breakdown's details for sprint 9:
 
-1. Made I-spot game have random solution locations
-2. Added more stages and game over to Cyber Coin Quest game
-3. Shifted instructions to the stage select pages of games
-4. Set-up Javascript linting
-5. Documentation (Lots of things moved to wiki)
+1. Cyber Coin Game: 
+- Question Expansion: we added 20 new questions to each theme
+- Question Randomization
+- Leadership Board: introduced a leaderboard to display top scores, fostering a competitive environment.
+- Timer Addition: added a timer to add challenge and pace to the game
+- UI Updates: Updated the user interface
+
+
+2. Cryptogram Game:
+- Content Update: Added new messages
+- UI Enhancements: Updated the UI to provide feedback on incorrect guesses
+- Fixed Mismatched Hints: corrected mismatched hints for a smoother user experience.
+
+3. New Game Development: we developed a new game, Slide Puzzle
 
 
 ## Requirements
