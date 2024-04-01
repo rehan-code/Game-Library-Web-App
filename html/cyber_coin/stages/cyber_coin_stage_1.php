@@ -66,7 +66,7 @@
         const randomIndex = Math.floor(Math.random() * 40);
         document.addEventListener("DOMContentLoaded", function() {
             displayRandomQuestion(randomIndex, 1);
-            updateTimer(1);
+            updateTimer(randomIndex, 1);
         });
     </script>   
 
