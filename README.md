@@ -1,5 +1,5 @@
-# W24 CIS*4250 Team 8 Sprint 8
-Team Lead: Ivan Odiel Magtangob
+# W24 CIS*4250 Team 8 Sprint 9:
+Team Lead: harir al-rubaye 
 
 ## Authors
  Harir Al-Rubaye, Nour Tayem, Thulasi Jothiravi, Rehan Nagoor Mohideen, Harikrishan Singh, and Ivan Odiel Magtangob
