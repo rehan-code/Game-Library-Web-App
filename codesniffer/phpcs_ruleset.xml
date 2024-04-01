@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ruleset name="CustomRuleset">
+    <description>Custom ruleset to exclude specific sniffs.</description>
+    
+    <!--Rules to exclude in general-->
+    <rule ref="PEAR">
+        <exclude name="Generic.Files.LineEndings"/>
+
+        <exclude name="PEAR.Commenting.FileComment.MissingAuthorTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingPackageTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLicenseTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLinkTag"/>
+
+        <exclude name="PEAR.Commenting.ClassComment.MissingAuthorTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingPackageTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
+    </rule>
+
+    <!--File-specific rule exclusions-->
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <!--For local Docker-->
+        <exclude-pattern>../public/index.php</exclude-pattern>
+        <exclude-pattern>../public/about_us/about_us.php</exclude-pattern>
+        <exclude-pattern>../public/waldo_game/stages/waldo_stage_*.php</exclude-pattern>
+        <exclude-pattern>../public/hangman/stages/hangman_stage_*.php</exclude-pattern>
+        <exclude-pattern>../public/cryptogram/congrats/congrats_page.php</exclude-pattern>
+        <exclude-pattern>../public/cryptogram/game/cryptogram.php</exclude-pattern>
+        <exclude-pattern>../public/mosaic_slide/stages/stage_1.php</exclude-pattern>
+        <exclude-pattern>../public/mosaic_slide/stages/stage_2.php</exclude-pattern>
+        <exclude-pattern>../public/mosaic_slide/stages/stage_3.php</exclude-pattern>
+
+        <!--For CI/CD-->
+        <exclude-pattern>../html/index.php</exclude-pattern>
+        <exclude-pattern>../html/about_us/about_us.php</exclude-pattern>
+        <exclude-pattern>../html/waldo_game/stages/waldo_stage_*.php</exclude-pattern>
+        <exclude-pattern>../html/hangman/stages/hangman_stage_*.php</exclude-pattern>
+        <exclude-pattern>../html/cryptogram/congrats/congrats_page.php</exclude-pattern>
+        <exclude-pattern>../html/cryptogram/game/cryptogram.php</exclude-pattern>
+    </rule>
+
+    <rule ref="PEAR.Commenting.FunctionComment.MissingReturn">
+        <!--For local Docker-->
+        <exclude-pattern>../public/test/*.php</exclude-pattern>
+        
+        <!--For CI/CD-->
+        <exclude-pattern>../html/test/*.php</exclude-pattern>
+    </rule>
+</ruleset>
