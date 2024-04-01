@@ -1,6 +1,7 @@
 var totalCorrectAnswers = 0;
 const answeredQuestions = [];
 var timeLeft = 30; 
+var selectedQuestion;
 
 function shuffleOptions(optionsArray) {
     for (let i = optionsArray.length - 1; i > 0; i--) {
@@ -254,6 +255,7 @@ async function showCongratsScreen(totalScore) {
     document.querySelector(".game-content").classList.add("blur");
 }
 
+// eslint-disable-next-line no-unused-vars
 async function displayRandomQuestion(questionIndex, stageId) {
     // Get the question from server
     const xhttp = new XMLHttpRequest();
@@ -290,7 +292,8 @@ async function displayRandomQuestion(questionIndex, stageId) {
         optionButtonElement.classList.add('custom-button');
         optionButtonElement.onclick = async function() {
             // request to server to check the right answer
-            result = false;
+            // eslint-disable-next-line no-unused-vars
+            var result = false;
             const xhttp = new XMLHttpRequest();
             xhttp.onload = async function() {
                 var data = JSON.parse(this.responseText);
@@ -335,6 +338,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
     });
 }
 
+// eslint-disable-next-line no-unused-vars
 async function updateTimer(stageId){
     var timerElement = document.getElementById('timer');
     var interval = setInterval(function() {
