@@ -227,6 +227,11 @@ function getCyberQuestion($index, $stage_num)
 
 /**
  * Retrieves the correct answer to the question 
+ * 
+ * @param $index     index of question
+ * @param $stage_num stage num
+ * 
+ * @return string correct_answer 
  */
 function getCyberAnswer($index, $stage_num) 
 {
