@@ -367,7 +367,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
 }
 
 // eslint-disable-next-line no-unused-vars
-async function updateTimer(stageId){
+async function updateTimer(questionIndex, stageId){
     var timerElement = document.getElementById('timer');
     var interval = setInterval(function() {
         if (timeLeft <= 0) {
