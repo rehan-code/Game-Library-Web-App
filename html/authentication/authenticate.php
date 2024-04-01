@@ -37,6 +37,9 @@ case 'decrypt_words':
 case 'get_cyber_question':
     $result['result'] = getCyberQuestion($input->index, $input->stageId);
     break;
+case 'get_cyber_answer':
+    $result['result'] = getCyberAnswer($input->index, $input->stageId);
+    break;
 case 'check_cyber_answer':
     $result['result'] = checkCyberAnswer(
         $input->answer, $input->index, $input->stageId
@@ -220,6 +223,17 @@ function getCyberQuestion($index, $stage_num)
         $result["option_4"]
       ],
     ];
+}
+
+/**
+ * Retrieves the correct answer to the question 
+ */
+function getCyberAnswer($index, $stage_num) 
+{
+    include "../database.php";
+    //add if empty check
+    $result = getCyberQuestions($stage_num)[$index];
+    return $result["answer"];
 }
 
 /**

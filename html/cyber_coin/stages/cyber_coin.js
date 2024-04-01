@@ -34,6 +34,33 @@ async function getLeaderBoardData() {
 }
 
 /**
+ * Gets the correct answer from server
+ * @param {*} questionIndex question index in db
+ * @param {*} stageId       stage id
+ * @return String of correct answer
+ */
+async function getCorrectAnswer(questionIndex, stageId) {
+    var answer = ""
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        var data = JSON.parse(this.responseText);
+        if (data['error'] == null) {
+            answer = data['result'];
+        } else {
+            answer = "error"
+        }
+    }
+    xhttp.open("POST", "../../authentication/authenticate.php", false);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({
+        "functionname": 'get_cyber_answer',
+        "index": questionIndex,
+        "stageId": stageId
+    }));
+    return answer;
+}
+
+/**
  * Gets the leaderboard fata from server
  * @return array of data
  */
@@ -110,7 +137,8 @@ async function addTable(){
 }
 
 
-async function showGameOverScreen(correctAnswerText, totalScore, stageId) {
+async function showGameOverScreen(totalScore, stageId, questionIndex) {
+    var correctAnswerText = await getCorrectAnswer(questionIndex, stageId);
     const gameOverElement = document.querySelector(".game-over-screen");
     gameOverElement.innerHTML = '';
   
@@ -319,7 +347,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
                             timeLeft = 30;
                         }
                     } else {
-                        showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers, stageId);
+                        showGameOverScreen(totalCorrectAnswers, stageId, questionIndex);
                     }
                 } else {
                     alert(data['error']);
@@ -345,7 +373,7 @@ async function updateTimer(stageId){
         if (timeLeft <= 0) {
             clearInterval(interval);
             timerElement.innerHTML = 'Done!';
-            showGameOverScreen(selectedQuestion.correct_answer, totalCorrectAnswers, stageId);
+            showGameOverScreen(totalCorrectAnswers, stageId, questionIndex);
 
         } else {
             timeLeft--;
