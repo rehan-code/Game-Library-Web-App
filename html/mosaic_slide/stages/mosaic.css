@@ -153,6 +153,46 @@ body {
   transition: transform 0.3s ease;
 }
 
+#board-2 {
+  width: 600px;
+  height: 600px;
+  background-color: lightblue;
+  border: 10px solid #0c67ae;
+  margin: 0 auto;
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 5px; 
+}
+
+
+#board-2 img {
+  width: 100%; 
+  height: auto;
+  border: 1px solid #0c67ae;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#board-3 {
+  width: 600px;
+  height: 600px;
+  background-color: lightblue;
+  border: 10px solid #0c67ae;
+  margin: 0 auto;
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 5px; 
+}
+
+
+#board-3 img {
+  width: 100%; 
+  height: auto;
+  border: 1px solid #0c67ae;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
 .empty-tile {
   border: 2px dashed #0c67ae;
 }
@@ -189,7 +229,7 @@ body {
 }
 
 .movie-card-1 {
-  background-image: url("../..//images/mosaic/mosaicbg.png");
+  background-image: url("../../images/mosaic/mosaicbg.png");
   background-size: cover;
   background-position: top;
 }
