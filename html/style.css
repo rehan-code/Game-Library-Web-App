@@ -459,11 +459,13 @@ footer {
   background-position: 50% 87%;
   background-size: cover;
 }
+
 .mosaic-slide-bg {
   background-image: url("../images/mosaic/mosaicbg.png");
   background-position: 50% 87%;
   background-size: cover;
 }
+
 .movie-card-mosaic-1 {
   background-image: url("../images/mosaic/mosaicbg.png");
 }

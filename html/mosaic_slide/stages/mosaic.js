@@ -1,9 +1,9 @@
-let score = 0;
 let rows;
 let columns;
 
 var currTile;
 var otherTile; //blank tile
+var board;
 
 var turns = 0;
 
@@ -31,13 +31,13 @@ var imageOrder = getImageOrder(difficulty);
 // sets the images and event listeners for each image
 window.onload = function() {
    if (difficulty === 'easy') {
-      var board = document.getElementById("board");
+      board = document.getElementById("board");
    }
    else if (difficulty === 'medium') {
-      var board = document.getElementById("board-2");
+      board = document.getElementById("board-2");
    }
    else if (difficulty === 'hard') {
-      var board = document.getElementById("board-3");
+      board = document.getElementById("board-3");
    }
    
    board.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
@@ -86,13 +86,9 @@ window.onload = function() {
  * @param imageOrder array containing the image order
  * @return true if it is in the correct order
  */
-function checkGameOver(imageOrder) {
+function checkGameOver() {
    var count = 1;
-   // for (let index = 0; index < imageOrder.length; index++) {
-   //    if (imageOrder[index] == count++){
-   //       return false;
-   //    };
-   // }
+   
    for (let r=0; r < rows; r++) {
       for (let c=0; c < columns; c++) {
          //<img id="0-0" src="1.jpg">

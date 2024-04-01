@@ -310,7 +310,7 @@ async function displayRandomQuestion(questionIndex, stageId) {
             
                             while (answeredQuestions.includes(randomIndex)) {
                                 randomIndex = Math.floor(Math.random() * 40);
-                            };
+                            }
             
                             displayRandomQuestion(randomIndex,stageId);
                             timeLeft = 30;
